@@ -1,0 +1,84 @@
+﻿<header>
+    <section id="navbar">
+        <div class="header-section header-menu-center section bg-white d-none d-xl-block">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col">
+                        <div class="header-logo">
+                            @*   <a asp-controller="Home" asp-action="Index">
+                            <img style="margin-bottom: 20px;"
+                            src="~/assets/img/home/web-img-white.png" alt="Learts Logo">
+                            </a>  *@
+
+                            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
+                                <img style="margin-bottom: 20px;"
+                                     src="~/assets/img/home/web-img-white.png" alt="Learts Logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <nav style="margin-left: -90px;"
+                             class="site-main-menu menu-height-100 justify-content-center">
+                            <ul>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index"><span>Home</span></a>
+                                </li>
+                                <li><a asp-controller="Shop" asp-action="Index"><span class="menu-text">Shop</span></a></li>
+                                </li>
+                                <li><a asp-controller="About" asp-action="Index"><span class="menu-text">About</span></a></li>
+                                </li>
+                                <li>
+                                    <a asp-controller="Blog" asp-action="Index"><span class="menu-text">Blog</span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Contact" asp-action="Index"><span class="menu-text">Contact us</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col">
+                        <div class="header-tools justify-content-end">
+
+
+                            <div style="width: 120px;" class="col-auto d-none d-xl-block">
+                                <div class="header2-search">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search...">
+                                        <button class="btn"><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                            <div class="user-account-dropdown">
+                                <a class="user-icon-btn" id="userAccountBtn">
+                                    <i class="fas fa-user"></i>
+                                </a>
+                                <div class="dropdown-menu" id="userDropdown" style="margin-right: -5pc;background-color: white; ">
+                                    <a asp-controller="Account" asp-action="Login" class="dropdown-item"> Login</a>
+                                    <a asp-controller="Account" asp-action="Register" class="dropdown-item"> Register</a>
+                                </div>
+                            </div>
+                            <div class="header-wishlist">
+                                <a asp-controller="Wishlist" asp-action="Index" class="offcanvas-toggle">
+                                    <span class="wishlist-count">3</span><i class="far fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="header-cart">
+                                <a asp-controller="Basket" asp-action="Index" class="offcanvas-toggle">
+                                    <span class="cart-count">3</span><i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</header>

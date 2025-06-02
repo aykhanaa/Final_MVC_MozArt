@@ -1,0 +1,112 @@
+﻿@section css {
+    <link rel="stylesheet" href="~/assets/css/wishlist/wishlist.css">
+}
+
+
+<main>
+    <section id="wishlist-title-area">
+        <div class="page-title-size section" style="margin-bottom: 4pc;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="page-title">
+                            <h1 class="title">Wishlist</h1>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li class="breadcrumb-item active">Wishlish</li>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="wishlist-area">
+        <div class="wishlist-size section-padding">
+            <div class="container">
+                <form class="cart-form" action="#">
+                    <table class="cart-wishlist-table table">
+                        <thead>
+                            <tr>
+                                <th class="name" colspan="2">Product</th>
+                                <th class="price">Unit Price</th>
+                                <th class="add-to-cart">&nbsp;</th>
+                                <th class="remove">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="thumbnail">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/wishlist/cart-product-1.webp"
+                                             alt="wishlist-product-1">
+                                    </a>
+                                </td>
+                                <td class="name"> <a href="product-details.html">Walnut Cutting Board</a></td>
+                                <td class="price"><span>$100.00</span></td>
+                                <td class="add-to-cart">
+                                    <a href="basket.html" class="btn btn-light btn-hover-dark">
+                                        <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                                    </a>
+                                </td>
+                                <td class="remove"><a href="#" class="btn">×</a></td>
+                            </tr>
+                            <tr>
+                                <td class="thumbnail">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/wishlist/cart-product-2.webp"
+                                             alt="wishlist-product-2">
+                                    </a>
+                                </td>
+                                <td class="name"> <a href="product-details.html">Lucky Wooden Elephant</a></td>
+                                <td class="price"><span>$35.00</span></td>
+                                <td class="add-to-cart">
+                                    <a href="basket.html" class="btn btn-light btn-hover-dark">
+                                        <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                                    </a>
+                                </td>
+                                <td class="remove"><a href="" class="btn">×</a></td>
+                            </tr>
+                            <tr>
+                                <td class="thumbnail">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/wishlist/cart-product-3.webp"
+                                             alt="wishlist-product-3">
+                                    </a>
+                                </td>
+                                <td class="name"> <a href="product-details.html">Fish Cut Out Set</a></td>
+                                <td class="price"><span>$9.00</span></td>
+                                <td class="add-to-cart">
+                                    <a href="basket.html" class="btn btn-light btn-hover-dark">
+                                        <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                                    </a>
+                                </td>
+                                <td class="remove"><a href="#" class="btn">×</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col text-center mb-n3">
+                            <a class="btn btn-light btn-hover-dark mr-3 mb-3" asp-controller="Shop" asp-action="Index">Continue Shopping</a>
+                            <a class="btn btn-dark btn-outline-hover-dark mb-3" asp-controller="Basket" asp-action="Index">
+                                View
+                                Cart
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+</main>
+
+
+@section scripts {
+    <script src="~/assets/js/wishlist/wishlist.js"></script>
+}

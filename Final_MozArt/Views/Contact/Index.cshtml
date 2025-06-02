@@ -1,0 +1,138 @@
+﻿@section css {
+    <link rel="stylesheet" href="~/assets/css/contact/contact.css">
+}
+
+<main>
+    <section id="contact-title-area">
+        <div class="page-title-size section" style="margin-bottom: 4pc;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="page-title">
+                            <h1 class="title">Contact us</h1>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li class="breadcrumb-item active">Contact us</li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="information-map-area">
+        <div class="information-map-size section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2 class="title" style="font-family: system-ui;font-weight: 400;font-size: 33px;">
+                        Keep in touch
+                        with us
+                    </h2>
+                    <p style="width: 40pc;margin-left: 16pc;line-height: 2.0;font-family: system-ui;margin-top: 28px;">
+                        Been tearing your hair out to find the perfect gift for your loved ones? Try visiting our
+                        nationwide local stores. You can also contact us to become partner or distributor. Call us,
+                        send
+                        us an email or make an appointment now.
+                    </p>
+                </div>
+
+
+                <div class="row learts-mb-n30" style="margin-top: 4pc;">
+                    <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
+                        <div class="contact-info">
+                            <h4 class="title" style="font-family: system-ui;">ADDRESS</h4>
+                            <span class="info" style="font-family: system-ui;font-size: 16px;">
+                                <i class="icon fas fa-map-marker-alt"></i> 1800 Abbot Kinney Blvd. Unit D & E
+                                Venice
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
+                        <div class="contact-info">
+                            <h4 class="title" style="font-family: system-ui;">CONTACT</h4>
+                            <span class="info" style="font-family: system-ui;font-size: 16px;">
+                                <i class="icon fas fa-phone-alt"></i> Mobile: (+88) – 1990 – 6886 <br> Hotline:
+                                1800 –
+                                1102
+                            </span>
+                            <span class="info" style="font-family: system-ui;font-size: 16px;">
+                                <i class="icon far fa-envelope"></i> Mail: <a href="#">contact@leartsstore.com</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
+                        <div class="contact-info">
+                            <h4 class="title" style="font-family: system-ui;"> HOUR OF OPERATION</h4>
+                            <span class="info" style="font-family: system-ui;font-size: 16px;">
+                                <i class="icon far fa-clock"></i> Monday – Friday : 09:00 – 20:00 <br> Sunday &
+                                Saturday: 10:30 – 22:00
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row learts-mt-60">
+                    <div class="col">
+                        <iframe class="contact-map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5778.080553758315!2d49.8513705758253!3d40.37719087144594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e1!3m2!1sen!2saz!4v1748341545690!5m2!1sen!2saz"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact-area">
+        <div class="contact-size section-padding pt-0">
+            <div class="container">
+                <div class="contact-title text-center">
+                    <h2 class="title">Send a message</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <div class="contact-form">
+                            <form action="assets/php/contact-mail.php" id="contact-form" method="post">
+                                <div class="row learts-mb-n30">
+                                    <div class="col-md-6 col-12 learts-mb-30">
+                                        <input type="text"
+                                               placeholder="Your Name *" name="name">
+                                    </div>
+                                    <div class="col-md-6 col-12 learts-mb-30">
+                                        <input type="email"
+                                               placeholder="Email *" name="email">
+                                    </div>
+                                    <div class="col-12 learts-mb-30">
+                                        <textarea name="message"
+                                                  placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-12 text-center learts-mb-30">
+                                        <button class="btn btn-dark btn-outline-hover-dark">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="form-messege"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+@section scripts {
+    <script src="~/assets/js/contact/contact.js"></script>
+}

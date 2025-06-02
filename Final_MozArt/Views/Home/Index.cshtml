@@ -1,0 +1,1202 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section css {
+    <link rel="stylesheet" href="~/assets/css/home/home.css">
+}
+
+<main>
+    <section id="main-slider">
+        <div class="container">
+            <div class="home-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
+                        <div class="home-slide-image">
+                            <img src="~/assets/img/home/slide-1.webp"
+                                 alt="Home 4 Slider Image">
+                        </div>
+                        <div class="home-slide-content">
+                             
+                            <h2 class="title">Monamii Jade-green<br> Wall Clock</h2>
+                            <div class="link">
+                                <a href="shop.html" class="btn btn-black btn-outline-hover-black">
+                                    shop
+                                    now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
+                        <div class="home-slide-image">
+                            <img src="~/assets/img/home/slide-2.webp"
+                                 alt="Home 4 Slider Image">
+                        </div>
+                        <div class="home-slide-content">
+                             
+                            <h2 class="title">Homemade Creative Food<br> Cutting Board</h2>
+                            <div class="link">
+                                <a href="shop.html" class="btn btn-black btn-outline-hover-black">
+                                    shop
+                                    now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
+                        <div class="home-slide-image">
+                            <img src="~/assets/img/home/slide-3.webp    "
+                                 alt="Home 4 Slider Image">
+                        </div>
+                        <div class="home-slide-content">
+                             
+                            <h2 class="title">Handmade Wooden<br> Rounded Bowl</h2>
+                            <div class="link">
+                                <a href="shop.html" class="btn btn-black btn-outline-hover-black">
+                                    shop
+                                    now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-slider-prev swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="home-slider-next swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="home-slider-pagination swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-about-us">
+        <div class="about-us section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8 col-12 mx-auto">
+                        <div class="about-us-home">
+                            <div class="inner">
+                                <h2 style="font-family: 'Playfair Display', serif; font-size: 72px;" class="title">
+                                    Live out your life
+                                </h2>
+                                <h5 style="   color: #72A499;" class="sub-title">WELCOME TO LEARTS STORE</h5>
+                                <div class="desc">
+                                    <p>
+                                        Learts is an online shop of two passionate craftsmen where they sell
+                                        handicrafts
+                                        and
+                                        arts’ works in the US. We provide high-end unique vases, wall arts, home
+                                        accessories, and furniture pieces.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="category-banner">
+        <div class="category-banner-home section-padding pt-0">
+            <div class="container">
+                <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 learts-mb-n40">
+
+                    <div class="col learts-mb-40">
+                        <div class="category-banner-main">
+                            <a href="shop.html" class="inner">
+                                <div class="image"><img src="~/assets/img/home/category-img-1.webp" alt=""></div>
+                                <div class="content" data-bg-color="#f4ede7">
+                                    <h3 class="title">Gift ideas</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-40">
+                        <div class="category-banner-main">
+                            <a href="shop.html" class="inner">
+                                <div class="image"><img src="~/assets/img/home/category-img-2.webp" alt=""></div>
+                                <div class="content" data-bg-color="#e8f5f2">
+                                    <h3 class="title">Home Decor</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-40">
+                        <div class="category-banner-main">
+                            <a href="shop.html" class="inner">
+                                <div class="image"><img src="~/assets/img/home/category-img-3.webp" alt=""></div>
+                                <div class="content" data-bg-color="#e3e4f5">
+                                    <h3 class="title">Toys</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-40">
+                        <div class="category-banner-main">
+                            <a href="shop.html" class="inner">
+                                <div class="image"><img src="~/assets/img/home/category-img-4.webp" alt=""></div>
+                                <div class="content" data-bg-color="#faf5e5">
+                                    <h3 class="title">Kitchen</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="line-area">
+        <div class="container">
+            <hr class="between-line">
+        </div>
+    </section>
+
+    <section id="product-area">
+        <div class="product-size section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="product-tab-list nav">
+                            <li><a class="active" data-bs-toggle="tab" href="#tab-new-sale">New arrivals</a></li>
+                            <li><a data-bs-toggle="tab" href="#tab-sale-items">Sale items</a></li>
+                            <li><a data-bs-toggle="tab" href="#tab-best-sellers">Best sellers</a></li>
+                        </ul>
+                        <div class="prodyct-tab-content1 tab-content">
+                            <div class="tab-pane fade show active" id="tab-new-sale">
+                                <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-1-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-1-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">Boho Beard Mug</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-2-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-2-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Motorized
+                                                        Tricycle
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-3-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-3-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Walnut Cutting
+                                                        Board
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-4-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-4-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Pizza Plate
+                                                        Tray
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-5-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-5-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Minimalist Ceramic
+                                                        Pot
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-6-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-6-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Clear Cilicate
+                                                        Teapot
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-7-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-7-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Lucky Wooden
+                                                        Elephant
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-8-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-8-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Decarative
+                                                        Christmas
+                                                        Fox
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-sale-items">
+                                <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-7-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-7-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Lucky Wooden
+                                                        Elephant
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-6-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-6-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Clear Cilicate
+                                                        Teapot
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-5-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-5-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Minimalist Ceramic
+                                                        Pot
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-3-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-3-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Walnut Cutting
+                                                        Board
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-4-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-4-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Pizza Plate
+                                                        Tray
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-8-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-8-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Decarative
+                                                        Christmas
+                                                        Fox
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-1-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-1-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">Boho Beard Mug</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-2-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-2-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Motorized
+                                                        Tricycle
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-best-sellers">
+                                <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-3-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-3-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Walnut Cutting
+                                                        Board
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-7-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-7-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Lucky Wooden
+                                                        Elephant
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-8-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-8-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Decarative
+                                                        Christmas
+                                                        Fox
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-1-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-1-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">Boho Beard Mug</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-2-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-2-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Motorized
+                                                        Tricycle
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-4-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-4-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Pizza Plate
+                                                        Tray
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-9-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="~/assets/img/home/product-9-2.webp"
+                                                         alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Ceramic
+                                                        Equestrian
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a asp-controller="ProductDetails" asp-action ="Index" class="image">
+                                                    <img src="~/assets/img/home/product-10-1.webp"
+                                                         alt="Product Image">
+                                                    <img class="image-hover "
+                                                         src="~/assets/img/home/product-10-2.webp" alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                   data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index">
+                                                        Fish Cut Out
+                                                        Set
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
+                                                       data-hint="View"><i class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                       data-hint="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0 justify-content-center learts-mt-50">
+                    <a href="#" class="btn p-0"><i class="fa-solid fa-plus"></i> load more ...</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="line-area">
+        <div class="container">
+            <hr class="between-line">
+        </div>
+    </section>
+
+
+
+    <section id="brands-area">
+        <div class="brands-size section-padding">
+            <div class="container">
+                <div class="brands-title text-md-left text-center row justify-content-between align-items-center">
+                    <div class="col-md-auto col-12">
+
+                        <h2 class="title title-icon-right">Shop by brands</h2>
+
+                    </div>
+                </div>
+
+                <div class="row align-items-center row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n50">
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-1.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-2.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-3.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-4.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-5.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-6.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-7.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="brand-item">
+                            <a href="#"><img src="~/assets/img/home/brand-8.webp" alt="Brands Image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="line-area">
+        <div class="container">
+            <hr class="between-line">
+        </div>
+    </section>
+
+    <section id="testimonial-area">
+        <div class="testimonial-size section-padding">
+            <div class="container">
+                <div class="testimonial-title row justify-content-between align-items-center">
+                    <div class="col-md-auto col-12">
+                        <h2 class="title title-icon-right">We love our clients</h2>
+                    </div>
+                </div>
+
+                <div class="testimonial-carousel">
+                    <div class="col">
+                        <div class="testimonial">
+                            <p>
+                                There's nothing would satisfy me much more than a worry-free clean and responsive
+                                theme
+                                for
+                                my high-traffic site.
+                            </p>
+                            <div class="author">
+                                <div class="content">
+                                    <h6 class="name">Anais Coulon</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="testimonial">
+                            <p>
+                                Really good design/documentation, pretty much everything is nicely setup. The best
+                                choice
+                                for
+                                Woocommerce shop.
+                            </p>
+                            <div class="author">
+                                <div class="content">
+                                    <h6 class="name">Ian Schneider</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="testimonial">
+                            <p>
+                                ThemeMove deserves 5 star for theme’s features, design quality, flexibility,
+                                customizability
+                                and support service!
+                            </p>
+                            <div class="author">
+                                <div class="content">
+                                    <h6 class="name">Florence Polla</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="testimonial">
+                            <p>
+                                Thanks for always keeping your WordPress themes up to date. Your level of support is
+                                second
+                                to none.
+                            </p>
+                            <div class="author">
+                                <div class="content">
+                                    <h6 class="name">Sally Ramsey</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="instagram-area">
+        <div class="instagram-size instagram-padding pt-0">
+            <div class="container">
+                <div class="row row-cols-lg-2 row-cols-1 learts-mb-n50">
+                    <div class="col align-self-center learts-mb-50 order-lg-2">
+                        <div class="instagram-title text-center m-0"
+                             data-bg-image="assets/images/title/title-3.webp">
+                            <h2 class="title">Follow us on Instagram</h2>
+                            <p class="desc">MozArt</p>
+                        </div>
+                    </div>
+
+                    <div class="col learts-mb-50">
+                        <div class="instafeed instafeed-carousel instafeed-carousel2">
+                            <a class="instafeed-item" href="#">
+                                <img src="~/assets/img/home/instagram-1.webp" alt="instagram image" />
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="instafeed-item" href="#">
+                                <img src="~/assets/img/home/instagram-2.webp" alt="instagram image" />
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="instafeed-item" href="#">
+                                <img src="~/assets/img/home/instagram-3.webp" alt="instagram image" />
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="instafeed-item" href="#">
+                                <img src="~/assets/img/home/instagram-4.webp" alt="instagram image" />
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@section scripts {
+    <script src="~/assets/js/home/home.js"></script>
+}
