@@ -962,53 +962,15 @@
 
                 <div class="row align-items-center row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n50">
 
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-1.webp" alt="Brands Image"></a>
+                    @foreach (var item in Model.Brands)
+                    {
+                        <div class="col learts-mb-50">
+                            <div class="brand-item">
+                                <a href="#"><img src="~/assets/img/home/@item.Image" alt="Brands Image"></a>
+                            </div>
                         </div>
-                    </div>
+                    }
 
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-2.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-3.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-4.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-5.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-6.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-7.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-50">
-                        <div class="brand-item">
-                            <a href="#"><img src="~/assets/img/home/brand-8.webp" alt="Brands Image"></a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1110,22 +1072,15 @@
 
                     <div class="col learts-mb-50">
                         <div class="instafeed instafeed-carousel instafeed-carousel2">
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/home/instagram-1.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/home/instagram-2.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/home/instagram-3.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/home/instagram-4.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
+
+                            @foreach (var item in Model.Instagrams)
+                            {
+                                <a class="instafeed-item" href="#">
+                                    <img src="~/assets/img/home/@item.Image" alt="instagram image" />
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            }
+
 
                         </div>
                     </div>

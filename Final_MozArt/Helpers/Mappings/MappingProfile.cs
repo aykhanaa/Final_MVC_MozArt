@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Final_MozArt.Models;
+using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
+using Final_MozArt.ViewModels.Instagram;
 using Final_MozArt.ViewModels.Slider;
 
 namespace Final_MozArt.Helpers.Mappings
@@ -16,6 +18,14 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<Category, CategoryVM>();
             CreateMap<CategoryCreateVM, Category>();
             CreateMap<CategoryVM, CategoryEditVM>();
+
+            CreateMap<Brand, BrandVM>();
+            CreateMap<BrandCreateVM, Brand>();
+            CreateMap<BrandVM, BrandEditVM>();
+
+            CreateMap<Instagram, InstagramVM>();
+            CreateMap<InstagramCreateVM, Instagram>();
+            CreateMap<InstagramVM, InstagramEditVM>();
         }
     }
 }

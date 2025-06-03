@@ -29,8 +29,8 @@ namespace Final_MozArt.Services
 
         public async Task<CategoryVM> GetByIdAsync(int id)
         {
-            var slider = await _context.Categories.FirstOrDefaultAsync(s => s.Id == id);
-            return _mapper.Map<CategoryVM>(slider);
+            var category = await _context.Categories.FirstOrDefaultAsync(s => s.Id == id);
+            return _mapper.Map<CategoryVM>(category);
         }
 
         public async Task CreateAsync(CategoryCreateVM request)
@@ -62,7 +62,7 @@ namespace Final_MozArt.Services
         public async Task EditAsync(CategoryEditVM request)
         {
             var category = await _context.Categories.FirstOrDefaultAsync(s => s.Id == request.Id);
-            if (category == null) throw new Exception("Slider not found");
+            if (category == null) throw new Exception("Category not found");
 
             string fileName = category.Image;
 

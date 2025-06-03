@@ -9,6 +9,10 @@ namespace Final_MozArt
         {
             services.AddScoped<ISliderService, SliderService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<IInstagramService, InstagramService>();
+
+
 
 
 

@@ -12,6 +12,8 @@ namespace Final_MozArt.Data
        
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Instagram> Instagrams { get; set; }
 
     }
 }
