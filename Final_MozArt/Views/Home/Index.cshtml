@@ -1,7 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
+﻿
+@model HomeVM
+ 
 @section css {
     <link rel="stylesheet" href="~/assets/css/home/home.css">
 }
@@ -11,54 +10,25 @@
         <div class="container">
             <div class="home-slider swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
-                        <div class="home-slide-image">
-                            <img src="~/assets/img/home/slide-1.webp"
-                                 alt="Home 4 Slider Image">
-                        </div>
-                        <div class="home-slide-content">
-                             
-                            <h2 class="title">Monamii Jade-green<br> Wall Clock</h2>
-                            <div class="link">
-                                <a href="shop.html" class="btn btn-black btn-outline-hover-black">
-                                    shop
-                                    now
-                                </a>
+                    @foreach (var item in Model.Sliders)
+                    {
+                        <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
+                            <div class="home-slide-image">
+                                <img src="~/assets/img/home/@item.Image"
+                                     alt="Home 4 Slider Image">
+                            </div>
+                            <div class="home-slide-content">
+
+                                <h2 class="title">@item.Title</h2>
+                                <div class="link">
+                                    <a asp-controller="Shop" asp-action="Index" class="btn btn-black btn-outline-hover-black">
+                                        shop
+                                        now
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
-                        <div class="home-slide-image">
-                            <img src="~/assets/img/home/slide-2.webp"
-                                 alt="Home 4 Slider Image">
-                        </div>
-                        <div class="home-slide-content">
-                             
-                            <h2 class="title">Homemade Creative Food<br> Cutting Board</h2>
-                            <div class="link">
-                                <a href="shop.html" class="btn btn-black btn-outline-hover-black">
-                                    shop
-                                    now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide-item swiper-slide" data-swiper-autoplay="5000">
-                        <div class="home-slide-image">
-                            <img src="~/assets/img/home/slide-3.webp    "
-                                 alt="Home 4 Slider Image">
-                        </div>
-                        <div class="home-slide-content">
-                             
-                            <h2 class="title">Handmade Wooden<br> Rounded Bowl</h2>
-                            <div class="link">
-                                <a href="shop.html" class="btn btn-black btn-outline-hover-black">
-                                    shop
-                                    now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
                 <div class="home-slider-prev swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
                 <div class="home-slider-next swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
@@ -1154,7 +1124,6 @@
             </div>
         </div>
     </section>
-
 
 
     <section id="instagram-area">
