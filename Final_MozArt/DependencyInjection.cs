@@ -8,6 +8,7 @@ namespace Final_MozArt
         public static IServiceCollection AddServiceLayer(this IServiceCollection services)
         {
             services.AddScoped<ISliderService, SliderService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
 
 

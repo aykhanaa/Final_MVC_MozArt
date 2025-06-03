@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\helpers\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\helpers\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\viewmodels\\category\\categoryvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\category\\categoryvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\viewmodels\\category\\categoryeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\category\\categoryeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\viewmodels\\slider\\slidereditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\slider\\slidereditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\viewmodels\\category\\categorycreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\category\\categorycreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\viewmodels\\slider\\slidercreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\slider\\slidercreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,89 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Helpers\\Mappings\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Helpers\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Helpers\\Mappings\\MappingProfile.cs",
-              "RelativeToolTip": "Final_MozArt\\Helpers\\Mappings\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:17:47.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryVM.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Category\\CategoryVM.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\Category\\CategoryVM.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Category\\CategoryVM.cs",
-              "RelativeToolTip": "Final_MozArt\\ViewModels\\Category\\CategoryVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:15:38.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryEditVM.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Category\\CategoryEditVM.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\Category\\CategoryEditVM.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Category\\CategoryEditVM.cs",
-              "RelativeToolTip": "Final_MozArt\\ViewModels\\Category\\CategoryEditVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:15:20.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SliderEditVM.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Slider\\SliderEditVM.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\Slider\\SliderEditVM.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Slider\\SliderEditVM.cs",
-              "RelativeToolTip": "Final_MozArt\\ViewModels\\Slider\\SliderEditVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:15:16.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SliderCreateVM.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Slider\\SliderCreateVM.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\Slider\\SliderCreateVM.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Slider\\SliderCreateVM.cs",
-              "RelativeToolTip": "Final_MozArt\\ViewModels\\Slider\\SliderCreateVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:14:59.774Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoryCreateVM.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Category\\CategoryCreateVM.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\Category\\CategoryCreateVM.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\Category\\CategoryCreateVM.cs",
-              "RelativeToolTip": "Final_MozArt\\ViewModels\\Category\\CategoryCreateVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:12:53.836Z",
-              "EditorCaption": ""
             }
           ]
         }

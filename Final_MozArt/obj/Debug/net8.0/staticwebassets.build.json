@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xqR4e0dhuwF5r3P5UbjQIChbSxF6djnrfZ4sm6ZA05I=",
+  "Hash": "1KiaU4a0bFyVlgOJo2Sv+r5SecPXf79VkSEim2caI/8=",
   "Source": "Final_MozArt",
   "BasePath": "_content/Final_MozArt",
   "Mode": "Default",
@@ -10676,6 +10676,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\home\\26adb222-efab-4efa-a068-607ea99d5a8e-Screenshot 2024-04-28 194703.png"
     },
     {
+      "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\home\\420409c0-665e-49df-a1f8-8ad380b40a46-category-img-3.webp",
+      "SourceId": "Final_MozArt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\",
+      "BasePath": "_content/Final_MozArt",
+      "RelativePath": "assets/img/home/420409c0-665e-49df-a1f8-8ad380b40a46-category-img-3.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\420409c0-665e-49df-a1f8-8ad380b40a46-category-img-3.webp"
+    },
+    {
       "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\home\\46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp",
       "SourceId": "Final_MozArt",
       "SourceType": "Discovered",
@@ -10714,6 +10733,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\home\\52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp"
     },
     {
+      "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\home\\62120f69-28d5-474a-b861-b25a9bd04b4c-category-img-1.webp",
+      "SourceId": "Final_MozArt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\",
+      "BasePath": "_content/Final_MozArt",
+      "RelativePath": "assets/img/home/62120f69-28d5-474a-b861-b25a9bd04b4c-category-img-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\62120f69-28d5-474a-b861-b25a9bd04b4c-category-img-1.webp"
+    },
+    {
       "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\home\\90f53e42-1ad0-4645-9922-538c01c11bea-Screenshot 2024-04-28 194703.png",
       "SourceId": "Final_MozArt",
       "SourceType": "Discovered",
@@ -10731,6 +10769,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\home\\90f53e42-1ad0-4645-9922-538c01c11bea-Screenshot 2024-04-28 194703.png"
+    },
+    {
+      "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\home\\aa828779-3205-4385-a50e-0ea985534393-category-img-2.webp",
+      "SourceId": "Final_MozArt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\",
+      "BasePath": "_content/Final_MozArt",
+      "RelativePath": "assets/img/home/aa828779-3205-4385-a50e-0ea985534393-category-img-2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\aa828779-3205-4385-a50e-0ea985534393-category-img-2.webp"
     },
     {
       "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\home\\brand-1.webp",

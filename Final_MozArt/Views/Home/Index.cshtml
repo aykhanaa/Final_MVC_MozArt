@@ -70,49 +70,19 @@
             <div class="container">
                 <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 learts-mb-n40">
 
-                    <div class="col learts-mb-40">
-                        <div class="category-banner-main">
-                            <a href="shop.html" class="inner">
-                                <div class="image"><img src="~/assets/img/home/category-img-1.webp" alt=""></div>
-                                <div class="content" data-bg-color="#f4ede7">
-                                    <h3 class="title">Gift ideas</h3>
-                                </div>
-                            </a>
+                    @foreach (var item in Model.Categories.OrderByDescending(x=>x.CreateDate).Take(4))
+                    {
+                        <div class="col learts-mb-40">
+                            <div class="category-banner-main">
+                                <a href="shop.html" class="inner">
+                                    <div class="image"><img src="~/assets/img/home/@item.Image" alt=""></div>
+                                    <div class="content" data-bg-color="#f4ede7">
+                                        <h3 class="title">@item.Name</h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col learts-mb-40">
-                        <div class="category-banner-main">
-                            <a href="shop.html" class="inner">
-                                <div class="image"><img src="~/assets/img/home/category-img-2.webp" alt=""></div>
-                                <div class="content" data-bg-color="#e8f5f2">
-                                    <h3 class="title">Home Decor</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-40">
-                        <div class="category-banner-main">
-                            <a href="shop.html" class="inner">
-                                <div class="image"><img src="~/assets/img/home/category-img-3.webp" alt=""></div>
-                                <div class="content" data-bg-color="#e3e4f5">
-                                    <h3 class="title">Toys</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-40">
-                        <div class="category-banner-main">
-                            <a href="shop.html" class="inner">
-                                <div class="image"><img src="~/assets/img/home/category-img-4.webp" alt=""></div>
-                                <div class="content" data-bg-color="#faf5e5">
-                                    <h3 class="title">Kitchen</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>

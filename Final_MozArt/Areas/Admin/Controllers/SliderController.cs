@@ -19,13 +19,13 @@ namespace Final_MozArt.Areas.Admin.Controllers
             _sliderService = sliderService;
             _mapper = mapper;
         }
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var sliders = await _sliderService.GetAllAsync();
             return View(sliders);
         }
-
+        [HttpGet]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null)
