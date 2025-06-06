@@ -17,6 +17,9 @@ namespace Final_MozArt
             services.AddScoped<IVideoService, VideoService>();
             services.AddScoped<IAdvantageService, AdvantageService>();
             services.AddScoped<IContactIntroService, ContactIntroService>();
+            services.AddScoped<IBlogCategoryService, BlogCategoryService>();
+            services.AddScoped<IBlogService, BlogService>();
+
 
 
 

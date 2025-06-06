@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VDfDSg4NSIcka0oKYVm8TDnj5+AJyRT3QnUCgjemTmc=",
+  "Hash": "IHNO8qO11d74voBmXVZj1hCtAxeHljhSG78Iffcmgio=",
   "Source": "Final_MozArt",
   "BasePath": "_content/Final_MozArt",
   "Mode": "Default",
@@ -10294,6 +10294,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\basket\\cart-product-3.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\blog\\5cb6a323-d13f-49aa-b5ac-62851019439d-instagram-2.webp",
+      "SourceId": "Final_MozArt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\",
+      "BasePath": "_content/Final_MozArt",
+      "RelativePath": "assets/img/blog/5cb6a323-d13f-49aa-b5ac-62851019439d-instagram-2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\5cb6a323-d13f-49aa-b5ac-62851019439d-instagram-2.webp"
     },
     {
       "Identity": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\wwwroot\\assets\\img\\blog\\blog-1.webp",

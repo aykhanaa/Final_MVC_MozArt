@@ -2,6 +2,8 @@
 using Final_MozArt.Models;
 using Final_MozArt.ViewModels.About;
 using Final_MozArt.ViewModels.Advantage;
+using Final_MozArt.ViewModels.Blog;
+using Final_MozArt.ViewModels.BlogCategory;
 using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.ContactIntro;
@@ -46,7 +48,7 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<Video, VideoVM>();
             CreateMap<VideoCreateVM, Video>();
             CreateMap<VideoVM, VideoEditVM>();
-
+                
             CreateMap<Advantage, AdvantageVM>();
             CreateMap<AdvantageCreateVM, Advantage>();
             CreateMap<AdvantageVM, AdvantageEditVM>();
@@ -54,6 +56,21 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<ContactIntro, ContactIntroVM>();
             CreateMap<ContactIntroCreateVM, ContactIntro>();
             CreateMap<ContactIntroVM, ContactIntroEditVM>();
+
+            CreateMap<BlogCategory, BlogCategoryVM>();
+            CreateMap<BlogCategoryCreateVM, BlogCategory>();
+            CreateMap<BlogCategoryVM, BlogCategoryEditVM>();
+
+            CreateMap<Blog, BlogVM>()
+              .ForMember(dest => dest.BlogCategoryName, opt => opt.MapFrom(src => src.BlogCategory.Name));
+
+            CreateMap<BlogCreateVM, Blog>();
+            CreateMap<BlogVM, BlogEditVM>();
+
+
+
+
+
 
         }
     }

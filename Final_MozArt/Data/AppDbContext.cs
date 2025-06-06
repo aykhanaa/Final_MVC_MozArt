@@ -20,6 +20,8 @@ namespace Final_MozArt.Data
         public DbSet<Video> Videos { get; set; }
         public DbSet<Advantage> Advantages { get; set; }
         public DbSet<ContactIntro> ContactIntros { get; set; }
+        public DbSet<BlogCategory> BlogCategories { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
 
 
 
