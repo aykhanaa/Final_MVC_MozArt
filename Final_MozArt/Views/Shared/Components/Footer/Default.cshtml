@@ -1,4 +1,6 @@
-﻿<footer>
+﻿  @model Dictionary<string,string>
+
+<footer>
     <section id="footer-area">
         <div class="footer-section section section-padding" style="background-color: #f8f8f8;margin-top: 45px;">
             <div class="container">
@@ -21,7 +23,7 @@
                         <div class="row">
                             <div class="col">
                                 <ul class="widget-list">
-                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">@Model["Adress"]</a></li>
                                     <li><a href="#">Store location</a></li>
                                     <li><a href="#">Contact</a></li>
                                     <li><a href="#">Orders</a></li>

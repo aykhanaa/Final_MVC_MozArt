@@ -14,6 +14,11 @@ namespace Final_MozArt.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Instagram> Instagrams { get; set; }
+        public DbSet<Support> Supports { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Video> Videos { get; set; }
+
 
     }
 }

@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="~/assets/css/about/about.css">
 }
 
+@model AboutUIVM
 
 <main>
     <section id="shop-title-area">
@@ -31,21 +32,22 @@
                 <div class="row learts-mb-n30">
 
                     <div class="col-md-6 col-12 align-self-center learts-mb-30">
-                        <div class="about-us">
-                            <span class="sub-title">Live out your life.</span>
-                            <h2 class="title">The happiness of <br> crafting artworks</h2>
+                        <div class="about-us"> 
+
+                            <span class="sub-title">@Model.Abouts.FirstOrDefault()?.Subtitle
+                            </span>
+                            <h2 class="title">@Model.Abouts.FirstOrDefault()?.Title</h2>
                             <div class="desc">
                                 <p>
-                                    It’s all about the joy when finally you have done something beautiful on your own
-                                    and
-                                    observe it with quite a great deal of proud & successful feeling.
+                                    @Model.Abouts.FirstOrDefault()?.Description
+
                                 </p>
                             </div>
                             <a asp-controller="Blog" asp-action="Index" class="link" style="margin-right: 24pc;">Learn more</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-12 text-center learts-mb-30">
-                        <img src="~/assets/img/about/about-1.webp" alt="">
+                        <img src="~/assets/img/about/@Model.Abouts.FirstOrDefault()?.Image" alt="">
                     </div>
 
                 </div>
@@ -61,44 +63,23 @@
             <div class="container">
                 <div class="row row-cols-md-3 row-cols-1 learts-mb-n30">
 
-                    <div class="col learts-mb-30">
-                        <div class="icon-box">
-                            <div class="inner">
-                                <div class="content" style="margin-right: 10pc;">
-                                    <h6 class="title">FREE SHIPPING</h6>
-                                    <p>
-                                        Once receiving your order, we will turn your products around in 3- 5 business
-                                        days.
-                                    </p>
+                   @foreach (var item in Model.Supports)
+                    {
+                        <div class="col learts-mb-30">
+                            <div class="icon-box">
+                                <div class="inner">
+                                    <div class="content" style="margin-right: 10pc;">
+                                        <h6 class="title">@item.Title</h6>
+                                        <p>
+                                           @item.Description
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        
+                    }
 
-                    <div class="col border-left border-right learts-mb-30">
-                        <div class="icon-box">
-                            <div class="inner">
-                                <div class="content">
-                                    <h6 class="title">FREE RETURNS</h6>
-                                    <p>
-                                        We accept returns for freshly purchased products within 7 days from the
-                                        payment.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col learts-mb-30">
-                        <div class="icon-box" style="margin-right: -8pc;">
-                            <div class="inner">
-                                <div class="content">
-                                    <h6 class="title">SECURE PAYMENT</h6>
-                                    <img class="img-hover-color " src="~/assets/img/about/pay.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -111,9 +92,9 @@
         <div class="video-banner-size">
             <div class="container">
                 <div class="video-banner"
-                     style="background-image: url(assets/img/about/video-banner-2.webp);background-repeat: no-repeat; margin-bottom: 10pc;">
+                     style="background-image: url(assets/img/about/@Model.Videos.FirstOrDefault().Image);background-repeat: no-repeat; margin-bottom: 10pc;">
                     <div class="content" style="margin-bottom: 16pc;">
-                        <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="video-popup">
+                        <a href="@Model.Videos.FirstOrDefault().VideoURL" class="video-popup">
                             <img src="~/assets/img/about/button-play-light.webp" alt="">
                         </a>
                     </div>
@@ -139,7 +120,7 @@
             <div class="container">
                 <div class="row learts-mb-n30">
                     <div class="col-xl-3 col-lg-4 col-12 me-auto learts-mb-30">
-                        <h1 class="fw-400">The difference when you shop Learts!</h1>
+                        <h1 class="fw-400">The difference when you shop MozArt!</h1>
                     </div>
                     <div class="col-lg-8 col-12 learts-mb-30">
                         <div class="row learts-mb-n30">
@@ -210,38 +191,13 @@
                 <div class="insta-slider-container">
                     <div class="slider-wrapper">
                         <div class="instafeed-carousel" id="instafeed-slider">
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-1.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-2.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-3.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-4.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-3.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-3.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-3.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="instafeed-item" href="#">
-                                <img src="~/assets/img/about/instagram-3.webp" alt="instagram image" />
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                            @foreach (var item in Model.Instagrams)
+                            {
+                                <a class="instafeed-item" href="#">
+                                    <img src="~/assets/img/home/@item.Image" alt="instagram image" />
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            }
                         </div>
                     </div>
 

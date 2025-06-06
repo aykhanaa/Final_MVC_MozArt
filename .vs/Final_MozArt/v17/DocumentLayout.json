@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\instagram\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\instagram\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\viewmodels\\ui\\aboutuivm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\ui\\aboutuivm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\video\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\video\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\video\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\video\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\video\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\video\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\video\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\video\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\areas\\admin\\controllers\\videocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\controllers\\videocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\hp\\desktop\\final_mozart\\final_mozart\\services\\videoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\services\\videoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,42 +66,148 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Index.cshtml",
-              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-03T15:46:29.03Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "Final_MozArt\\Controllers\\AboutController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T09:14:36.793Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AboutUIVM.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\UI\\AboutUIVM.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\UI\\AboutUIVM.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\ViewModels\\UI\\AboutUIVM.cs",
+              "RelativeToolTip": "Final_MozArt\\ViewModels\\UI\\AboutUIVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T09:13:15.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final_MozArt\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Final_MozArt\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAACQEAAAAAAAAAAAAADQEAAAdAAAA",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Views\\About\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Views\\About\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Views\\About\\Index.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Views\\About\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAADkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-03T15:43:41.168Z",
+              "WhenOpened": "2025-06-06T09:13:10.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Final_MozArt\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAiwBMAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T09:10:58.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T09:10:56.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Detail.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Detail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T07:56:53.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T07:56:35.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Index.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T07:55:55.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T07:55:50.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T07:55:36.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VideoController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Controllers\\VideoController.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Controllers\\VideoController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Areas\\Admin\\Controllers\\VideoController.cs",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Controllers\\VideoController.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T15:40:37.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T07:54:50.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VideoService.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Services\\VideoService.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Services\\VideoService.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Final_MozArt\\Final_MozArt\\Services\\VideoService.cs",
+              "RelativeToolTip": "Final_MozArt\\Services\\VideoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T07:53:11.945Z"
             }
           ]
         }

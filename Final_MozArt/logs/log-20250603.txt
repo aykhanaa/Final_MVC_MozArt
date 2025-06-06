@@ -1,0 +1,120 @@
+2025-06-03 20:33:02.908 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-03 20:33:03.247 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-03 20:33:03.255 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-03 20:33:03.265 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-03 20:33:03.269 +04:00 [INF] Hosting environment: Development
+2025-06-03 20:33:03.274 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-03 20:33:05.676 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-03 20:33:06.060 +04:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-03 20:33:06.077 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-03 20:33:06.182 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-03 20:33:09.931 +04:00 [INF] Executed DbCommand (133ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-03 20:33:10.164 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-03 20:33:10.228 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-03 20:33:10.285 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-03 20:33:10.337 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-03 20:33:11.113 +04:00 [INF] Executed ViewResult - view Index executed in 776.6945ms.
+2025-06-03 20:33:11.137 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 4944.9182ms
+2025-06-03 20:33:11.148 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-03 20:33:11.193 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 5524.9127ms
+2025-06-03 20:33:11.412 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp - null null
+2025-06-03 20:33:11.412 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp - null null
+2025-06-03 20:33:11.412 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/d406ff83-151c-48f2-b139-fb5bdd8d4106-slide-1.webp - null null
+2025-06-03 20:33:11.412 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-03 20:33:11.413 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp - null null
+2025-06-03 20:33:11.449 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - null null
+2025-06-03 20:33:11.449 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/home/home.js - null null
+2025-06-03 20:33:11.450 +04:00 [INF] The file /assets/img/home/46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp was not modified
+2025-06-03 20:33:11.497 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp - null null
+2025-06-03 20:33:11.504 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp - null null
+2025-06-03 20:33:11.511 +04:00 [INF] The file /assets/img/home/52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp was not modified
+2025-06-03 20:33:11.532 +04:00 [INF] The file /assets/img/home/d406ff83-151c-48f2-b139-fb5bdd8d4106-slide-1.webp was not modified
+2025-06-03 20:33:11.586 +04:00 [INF] The file /assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp was not modified
+2025-06-03 20:33:11.603 +04:00 [INF] The file /assets/img/home/4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp was not modified
+2025-06-03 20:33:11.617 +04:00 [INF] The file /assets/js/home/home.js was not modified
+2025-06-03 20:33:11.621 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp - 304 null image/webp 208.5027ms
+2025-06-03 20:33:11.637 +04:00 [INF] The file /assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp was not modified
+2025-06-03 20:33:11.653 +04:00 [INF] The file /assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp was not modified
+2025-06-03 20:33:11.662 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp - 304 null image/webp 250.0542ms
+2025-06-03 20:33:11.665 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/d406ff83-151c-48f2-b139-fb5bdd8d4106-slide-1.webp - 304 null image/webp 253.203ms
+2025-06-03 20:33:11.678 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp - 304 null image/webp 264.3388ms
+2025-06-03 20:33:11.683 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - 304 null image/webp 234.2754ms
+2025-06-03 20:33:11.686 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/home/home.js - 304 null text/javascript 237.2363ms
+2025-06-03 20:33:11.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp - null null
+2025-06-03 20:33:11.715 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp - 304 null image/webp 218.1285ms
+2025-06-03 20:33:11.719 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp - 304 null image/webp 215.3895ms
+2025-06-03 20:33:11.739 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp - null null
+2025-06-03 20:33:11.758 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp - null null
+2025-06-03 20:33:11.779 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp - null null
+2025-06-03 20:33:11.798 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp - null null
+2025-06-03 20:33:11.835 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp - null null
+2025-06-03 20:33:11.852 +04:00 [INF] The file /assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp was not modified
+2025-06-03 20:33:11.896 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - null null
+2025-06-03 20:33:11.926 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp - null null
+2025-06-03 20:33:11.958 +04:00 [INF] The file /assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp was not modified
+2025-06-03 20:33:11.968 +04:00 [INF] The file /assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp was not modified
+2025-06-03 20:33:11.983 +04:00 [INF] The file /assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp was not modified
+2025-06-03 20:33:11.997 +04:00 [INF] The file /assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp was not modified
+2025-06-03 20:33:12.011 +04:00 [INF] The file /assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp was not modified
+2025-06-03 20:33:12.014 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp - 304 null image/webp 303.1451ms
+2025-06-03 20:33:12.029 +04:00 [INF] The file /assets/img/home/2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp was not modified
+2025-06-03 20:33:12.041 +04:00 [INF] The file /assets/img/home/9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp was not modified
+2025-06-03 20:33:12.046 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp - 304 null image/webp 307.087ms
+2025-06-03 20:33:12.051 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp - 304 null image/webp 292.7331ms
+2025-06-03 20:33:12.056 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp - 304 null image/webp 277.0101ms
+2025-06-03 20:33:12.064 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp - 304 null image/webp 266.9235ms
+2025-06-03 20:33:12.083 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp - 304 null image/webp 248.3277ms
+2025-06-03 20:33:12.134 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - null null
+2025-06-03 20:33:12.143 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - 304 null image/webp 246.4114ms
+2025-06-03 20:33:12.149 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp - 304 null image/webp 222.4029ms
+2025-06-03 20:33:12.168 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp - null null
+2025-06-03 20:33:12.229 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp - null null
+2025-06-03 20:33:12.248 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-03 20:33:12.310 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 895.7329ms
+2025-06-03 20:33:12.352 +04:00 [INF] The file /assets/img/home/4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp was not modified
+2025-06-03 20:33:12.385 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-03 20:33:12.481 +04:00 [INF] The file /assets/img/home/dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp was not modified
+2025-06-03 20:33:14.235 +04:00 [INF] The file /assets/img/home/344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp was not modified
+2025-06-03 20:33:14.320 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - 304 null image/webp 2185.9181ms
+2025-06-03 20:33:14.370 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp - 304 null image/webp 2201.7047ms
+2025-06-03 20:33:14.402 +04:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-03 20:33:14.405 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp - 304 null image/webp 2175.5187ms
+2025-06-03 20:33:14.512 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 2126.4969ms
+2025-06-03 20:33:14.550 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-03 20:33:14.583 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2335.3108ms
+2025-06-03 20:35:22.259 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Wishlist - null null
+2025-06-03 20:35:22.340 +04:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-03 20:35:22.349 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.WishlistController.Index (Final_MozArt)'
+2025-06-03 20:35:22.383 +04:00 [INF] Route matched with {action = "Index", controller = "Wishlist", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.WishlistController (Final_MozArt).
+2025-06-03 20:35:22.418 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-03 20:35:22.494 +04:00 [INF] Executed ViewResult - view Index executed in 90.8378ms.
+2025-06-03 20:35:22.501 +04:00 [INF] Executed action Final_MozArt.Controllers.WishlistController.Index (Final_MozArt) in 109.7201ms
+2025-06-03 20:35:22.507 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.WishlistController.Index (Final_MozArt)'
+2025-06-03 20:35:22.513 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Wishlist - 200 null text/html; charset=utf-8 255.1546ms
+2025-06-03 20:35:22.641 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/wishlist/cart-product-2.webp - null null
+2025-06-03 20:35:22.644 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/wishlist/wishlist.css - null null
+2025-06-03 20:35:22.645 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/wishlist/cart-product-1.webp - null null
+2025-06-03 20:35:22.645 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/wishlist/cart-product-3.webp - null null
+2025-06-03 20:35:22.656 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/wishlist/wishlist.js - null null
+2025-06-03 20:35:22.667 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-03 20:35:22.674 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-03 20:35:22.773 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 110.1799ms
+2025-06-03 20:35:22.802 +04:00 [INF] Sending file. Request path: '/assets/img/wishlist/cart-product-2.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\wishlist\cart-product-2.webp'
+2025-06-03 20:35:22.815 +04:00 [INF] Sending file. Request path: '/assets/css/wishlist/wishlist.css'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\css\wishlist\wishlist.css'
+2025-06-03 20:35:22.815 +04:00 [INF] Sending file. Request path: '/assets/img/wishlist/cart-product-3.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\wishlist\cart-product-3.webp'
+2025-06-03 20:35:22.815 +04:00 [INF] Sending file. Request path: '/assets/img/wishlist/cart-product-1.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\wishlist\cart-product-1.webp'
+2025-06-03 20:35:22.824 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 150.7849ms
+2025-06-03 20:35:22.840 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/wishlist/cart-product-2.webp - 200 644 image/webp 198.4988ms
+2025-06-03 20:35:22.856 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/wishlist/wishlist.css - 200 4413 text/css 211.7252ms
+2025-06-03 20:35:22.866 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/wishlist/cart-product-3.webp - 200 548 image/webp 220.5878ms
+2025-06-03 20:35:22.870 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/wishlist/cart-product-1.webp - 200 660 image/webp 225.7412ms
+2025-06-03 20:35:23.128 +04:00 [INF] Sending file. Request path: '/assets/js/wishlist/wishlist.js'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\js\wishlist\wishlist.js'
+2025-06-03 20:35:23.136 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/wishlist/wishlist.js - 200 5833 text/javascript 479.6672ms

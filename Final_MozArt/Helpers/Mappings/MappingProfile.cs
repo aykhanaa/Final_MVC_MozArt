@@ -1,9 +1,13 @@
 ﻿using AutoMapper;
 using Final_MozArt.Models;
+using Final_MozArt.ViewModels.About;
 using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Instagram;
+using Final_MozArt.ViewModels.Setting;
 using Final_MozArt.ViewModels.Slider;
+using Final_MozArt.ViewModels.Support;
+using Final_MozArt.ViewModels.Video;
 
 namespace Final_MozArt.Helpers.Mappings
 {
@@ -26,6 +30,25 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<Instagram, InstagramVM>();
             CreateMap<InstagramCreateVM, Instagram>();
             CreateMap<InstagramVM, InstagramEditVM>();
+
+
+            CreateMap<Support, SupportVM>();
+            CreateMap<SupportCreateVM, Support>();
+            CreateMap<SupportVM, SupportEditVM>();
+
+
+            CreateMap<About, AboutVM>();
+            CreateMap<AboutCreateVM, About>();
+            CreateMap<AboutVM, AboutEditVM>();
+
+
+            CreateMap<SettingEditVM, Setting>();
+
+
+            CreateMap<Video, VideoVM>();
+            CreateMap<VideoCreateVM, Video>();
+            CreateMap<VideoVM, VideoEditVM>();
+
         }
     }
 }

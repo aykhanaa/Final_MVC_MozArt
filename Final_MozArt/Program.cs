@@ -3,6 +3,7 @@ using Final_MozArt.Data;
 using Final_MozArt.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,8 +36,19 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedEmail = true;
 });
 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    // .WriteTo.Seq("http://localhost:5341") 
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+
 
 builder.Services.AddServiceLayer();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 

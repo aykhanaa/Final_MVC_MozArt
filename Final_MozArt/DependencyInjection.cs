@@ -11,6 +11,13 @@ namespace Final_MozArt
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IInstagramService, InstagramService>();
+            services.AddScoped<ISupportService, SupportService>();
+            services.AddScoped<IAboutService, AboutService>();
+            services.AddScoped<ISettingService, SettingService>();
+            services.AddScoped<IVideoService, VideoService>();
+
+
+
 
 
 

@@ -1,0 +1,62 @@
+﻿@model List<SupportVM>
+
+
+<div class="container my-5" style="margin-left: 22pc !important; width: 68pc !important; margin-top: 120px !important;">
+    <h1 class="text-center mt-3 mb-3" style="margin-left:200px; margin-top:150px;">Support</h1>
+    @if (Model.Count < 3)
+    {
+        <a class="btn btn-success text-white" asp-action="Create">Create</a>
+    }
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Created Date
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-id="@item.Id">
+                       
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+                            @item.Description
+                        </td>
+                        <td>
+                            @item.CreateDate.ToString("dd/MM/yyyy")
+                        </td>
+
+                        <td>
+                            <a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                           
+                                <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
