@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Final_MozArt.Models;
 using Final_MozArt.ViewModels.About;
+using Final_MozArt.ViewModels.Advantage;
 using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Instagram;
@@ -48,6 +49,10 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<Video, VideoVM>();
             CreateMap<VideoCreateVM, Video>();
             CreateMap<VideoVM, VideoEditVM>();
+
+            CreateMap<Advantage, AdvantageVM>();
+            CreateMap<AdvantageCreateVM, Advantage>();
+            CreateMap<AdvantageVM, AdvantageEditVM>();
 
         }
     }

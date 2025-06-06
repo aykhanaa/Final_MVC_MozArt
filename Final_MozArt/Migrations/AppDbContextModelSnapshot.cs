@@ -57,6 +57,30 @@ namespace Final_MozArt.Migrations
                     b.ToTable("Abouts");
                 });
 
+            modelBuilder.Entity("Final_MozArt.Models.Advantage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Advantages");
+                });
+
             modelBuilder.Entity("Final_MozArt.Models.AppUser", b =>
                 {
                     b.Property<string>("Id")

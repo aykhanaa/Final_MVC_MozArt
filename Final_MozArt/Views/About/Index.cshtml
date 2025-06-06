@@ -125,41 +125,18 @@
                     <div class="col-lg-8 col-12 learts-mb-30">
                         <div class="row learts-mb-n30">
 
-                            <div class="col-md-6 col-12 learts-mb-30" style="margin-left: -4pc;">
-                                <p class="text-heading fw-600 learts-mb-10">Free Shipping</p>
-                                <p style="width: 25pc;font-size: medium;font-family: system-ui;">
-                                    Once receiving your
-                                    order,
-                                    we will turn your products around in 3-5 business days.
-                                </p>
-                            </div>
+                            @foreach (var item in Model.Advantages)
+                            {
+                                <div class="col-md-6 col-12 learts-mb-30" style="margin-left: -4pc;">
+                                    <p class="text-heading fw-600 learts-mb-10">@item.Title</p>
+                                    <p style="width: 22pc;font-size: medium;font-family: system-ui;">
+                                       @item.Description
+                                    </p>
+                                </div>
 
-                            <div class="col-md-6 col-12 learts-mb-30" style="margin-left: 4pc;">
-                                <p class="text-heading fw-600 learts-mb-10">Free Returns</p>
-                                <p style="width: 27pc;font-size: medium;font-family: system-ui;">
-                                    We accept returns
-                                    for
-                                    freshly purchased products within 7 days from the payment.
-                                </p>
-                            </div>
+                            }
 
-                            <div class="col-md-6 col-12 learts-mb-30" style="margin-left: -4pc;">
-                                <p class="text-heading fw-600 learts-mb-10">Superb Quality</p>
-                                <p style="width: 28pc;font-size: medium;font-family: system-ui;">
-                                    We make commitments
-                                    that
-                                    the quality of our products will and always will be superb.
-                                </p>
-                            </div>
 
-                            <div class="col-md-6 col-12 learts-mb-30" style="margin-left: 4pc;">
-                                <p class="text-heading fw-600 learts-mb-10">Free Wrapping</p>
-                                <p style="width: 28pc;font-size: medium;font-family: system-ui;">
-                                    Upon request, items
-                                    bought
-                                    as gifts from our store can receive free wrapping service.
-                                </p>
-                            </div>
 
                         </div>
                     </div>

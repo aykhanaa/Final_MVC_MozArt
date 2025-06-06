@@ -18,6 +18,7 @@ namespace Final_MozArt.Data
         public DbSet<About> Abouts { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Video> Videos { get; set; }
+        public DbSet<Advantage> Advantages { get; set; }
 
 
     }

@@ -2220,3 +2220,1117 @@ FROM [Settings] AS [s]
 2025-06-06 13:47:32.044 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
 2025-06-06 13:47:32.051 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.2973ms
 2025-06-06 13:47:32.051 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.8318ms
+2025-06-06 14:34:29.759 +04:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-06-06 14:34:29.827 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-06-06 14:34:29.830 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-06-06 14:34:29.832 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-06-06 14:34:29.872 +04:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-06-06 14:34:29.886 +04:00 [INF] Applying migration '20250606103415_CreatedAdventageTable'.
+2025-06-06 14:34:29.962 +04:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Advantages] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Advantages] PRIMARY KEY ([Id])
+);
+2025-06-06 14:34:29.975 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250606103415_CreatedAdventageTable', N'8.0.16');
+2025-06-06 14:58:46.727 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 14:58:46.845 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 14:58:46.847 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 14:58:46.852 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 14:58:46.854 +04:00 [INF] Hosting environment: Development
+2025-06-06 14:58:46.855 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 14:58:47.395 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-06 14:58:47.526 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 14:58:47.572 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-06 14:58:48.668 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-06 14:58:48.737 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-06 14:58:48.755 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-06 14:58:48.773 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 14:58:48.789 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:58:48.936 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 14:58:48.974 +04:00 [INF] Executed ViewResult - view Index executed in 186.4315ms.
+2025-06-06 14:58:48.980 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 1403.6932ms
+2025-06-06 14:58:48.983 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 14:58:48.992 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 1598.7505ms
+2025-06-06 14:58:49.091 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:58:49.101 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 10.0327ms
+2025-06-06 14:58:49.107 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:58:49.159 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.1866ms
+2025-06-06 14:58:50.205 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-06 14:58:50.215 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 10.1323ms
+2025-06-06 14:58:50.220 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-06 14:59:35.104 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 14:59:35.215 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 14:59:35.217 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 14:59:35.220 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 14:59:35.221 +04:00 [INF] Hosting environment: Development
+2025-06-06 14:59:35.221 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 14:59:35.765 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-06 14:59:35.842 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 14:59:35.864 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-06 14:59:36.702 +04:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-06 14:59:36.772 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-06 14:59:36.793 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-06 14:59:36.816 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 14:59:36.831 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:36.962 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 14:59:37.001 +04:00 [INF] Executed ViewResult - view Index executed in 169.5498ms.
+2025-06-06 14:59:37.008 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 1138.3624ms
+2025-06-06 14:59:37.011 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 14:59:37.024 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 1259.9082ms
+2025-06-06 14:59:37.046 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:37.056 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 10.2359ms
+2025-06-06 14:59:37.062 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:37.097 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.8849ms
+2025-06-06 14:59:37.141 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-06 14:59:37.150 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 8.0751ms
+2025-06-06 14:59:37.155 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-06 14:59:38.383 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Dashboard - null null
+2025-06-06 14:59:38.395 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.DashboardController.Index (Final_MozArt)'
+2025-06-06 14:59:38.399 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Areas.Admin.Controllers.DashboardController (Final_MozArt).
+2025-06-06 14:59:38.405 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:38.430 +04:00 [INF] Executed ViewResult - view Index executed in 26.653ms.
+2025-06-06 14:59:38.434 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.DashboardController.Index (Final_MozArt) in 32.0577ms
+2025-06-06 14:59:38.437 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.DashboardController.Index (Final_MozArt)'
+2025-06-06 14:59:38.439 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Dashboard - 200 null text/html; charset=utf-8 56.6108ms
+2025-06-06 14:59:38.463 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:38.470 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:38.470 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:38.476 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 12.5014ms
+2025-06-06 14:59:38.486 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 16.1836ms
+2025-06-06 14:59:38.490 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.7619ms
+2025-06-06 14:59:38.491 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:40.172 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 14:59:40.178 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:40.183 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:40.216 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 14:59:40.225 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:40.233 +04:00 [INF] Executed ViewResult - view Index executed in 8.7025ms.
+2025-06-06 14:59:40.236 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 47.8063ms
+2025-06-06 14:59:40.238 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:40.240 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 68.1311ms
+2025-06-06 14:59:40.255 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:40.256 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:40.256 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:40.260 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 4.4021ms
+2025-06-06 14:59:40.263 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.8317ms
+2025-06-06 14:59:40.268 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:40.271 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.8198ms
+2025-06-06 14:59:41.145 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - null null
+2025-06-06 14:59:41.152 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 14:59:41.155 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:41.157 +04:00 [INF] Executing ViewResult, running view Create.
+2025-06-06 14:59:41.186 +04:00 [INF] Executed ViewResult - view Create executed in 28.9233ms.
+2025-06-06 14:59:41.189 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 33.0575ms
+2025-06-06 14:59:41.191 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 14:59:41.192 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - 200 null text/html; charset=utf-8 47.3009ms
+2025-06-06 14:59:41.201 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:41.203 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:41.203 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:41.205 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 3.949ms
+2025-06-06 14:59:41.208 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.81ms
+2025-06-06 14:59:41.213 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.5056ms
+2025-06-06 14:59:41.213 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:43.931 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - multipart/form-data; boundary=----WebKitFormBoundaryBNDNha82BXWJ0Yi4 510
+2025-06-06 14:59:43.939 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 14:59:43.954 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Final_MozArt.ViewModels.Advantage.AdvantageCreateVM) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:44.229 +04:00 [INF] Executed DbCommand (55ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Advantages] ([CreateDate], [Description], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-06-06 14:59:44.255 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 14:59:44.257 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 299.4106ms
+2025-06-06 14:59:44.259 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 14:59:44.260 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - 302 0 null 328.6175ms
+2025-06-06 14:59:44.267 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 14:59:44.271 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:44.273 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:44.283 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 14:59:44.287 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:44.309 +04:00 [INF] Executed ViewResult - view Index executed in 22.6713ms.
+2025-06-06 14:59:44.311 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 36.2004ms
+2025-06-06 14:59:44.312 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:44.314 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 47.4589ms
+2025-06-06 14:59:44.333 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:44.333 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:44.333 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:44.338 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 5.3882ms
+2025-06-06 14:59:44.341 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.3254ms
+2025-06-06 14:59:44.352 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.2741ms
+2025-06-06 14:59:44.354 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:45.638 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Edit/1 - null null
+2025-06-06 14:59:45.645 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Edit (Final_MozArt)'
+2025-06-06 14:59:45.651 +04:00 [INF] Route matched with {area = "Admin", action = "Edit", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(System.Nullable`1[System.Int32]) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:45.761 +04:00 [INF] Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+WHERE [a].[Id] = @__id_0
+2025-06-06 14:59:45.766 +04:00 [INF] Executing ViewResult, running view Edit.
+2025-06-06 14:59:45.782 +04:00 [INF] Executed ViewResult - view Edit executed in 16.9866ms.
+2025-06-06 14:59:45.785 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Edit (Final_MozArt) in 130.3994ms
+2025-06-06 14:59:45.788 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Edit (Final_MozArt)'
+2025-06-06 14:59:45.789 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Edit/1 - 200 null text/html; charset=utf-8 151.6357ms
+2025-06-06 14:59:45.802 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:45.802 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:45.802 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:45.808 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 6.0359ms
+2025-06-06 14:59:45.810 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.6569ms
+2025-06-06 14:59:45.819 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:45.819 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.4398ms
+2025-06-06 14:59:47.995 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Edit/1 - multipart/form-data; boundary=----WebKitFormBoundary1i0CNIkHEMx9DUgx 520
+2025-06-06 14:59:48.001 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Edit (Final_MozArt)'
+2025-06-06 14:59:48.009 +04:00 [INF] Route matched with {area = "Admin", action = "Edit", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Final_MozArt.ViewModels.Advantage.AdvantageEditVM) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:48.032 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+WHERE [a].[Id] = @__request_Id_0
+2025-06-06 14:59:48.051 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Advantages] SET [CreateDate] = @p0, [Description] = @p1, [Title] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2025-06-06 14:59:48.057 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 14:59:48.058 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Edit (Final_MozArt) in 44.1059ms
+2025-06-06 14:59:48.058 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Edit (Final_MozArt)'
+2025-06-06 14:59:48.059 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Edit/1 - 302 0 null 64.6234ms
+2025-06-06 14:59:48.062 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 14:59:48.067 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:48.068 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:48.072 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 14:59:48.074 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:48.076 +04:00 [INF] Executed ViewResult - view Index executed in 2.0276ms.
+2025-06-06 14:59:48.077 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 7.4323ms
+2025-06-06 14:59:48.078 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:48.079 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 17.3445ms
+2025-06-06 14:59:48.092 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:48.095 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 2.9643ms
+2025-06-06 14:59:48.095 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:48.095 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:48.098 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:48.101 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.7779ms
+2025-06-06 14:59:48.107 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.6569ms
+2025-06-06 14:59:49.773 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Detail/1 - null null
+2025-06-06 14:59:49.781 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Detail (Final_MozArt)'
+2025-06-06 14:59:49.785 +04:00 [INF] Route matched with {area = "Admin", action = "Detail", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(System.Nullable`1[System.Int32]) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:49.793 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+WHERE [a].[Id] = @__id_0
+2025-06-06 14:59:49.798 +04:00 [INF] Executing ViewResult, running view Detail.
+2025-06-06 14:59:49.802 +04:00 [INF] Executed ViewResult - view Detail executed in 4.3014ms.
+2025-06-06 14:59:49.803 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Detail (Final_MozArt) in 16.8882ms
+2025-06-06 14:59:49.804 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Detail (Final_MozArt)'
+2025-06-06 14:59:49.806 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Detail/1 - 200 null text/html; charset=utf-8 32.426ms
+2025-06-06 14:59:49.819 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:49.819 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:49.819 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:49.823 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 4.7403ms
+2025-06-06 14:59:49.826 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.1294ms
+2025-06-06 14:59:49.833 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:49.833 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.6634ms
+2025-06-06 14:59:51.542 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 14:59:51.549 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:51.550 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:51.555 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 14:59:51.558 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:51.560 +04:00 [INF] Executed ViewResult - view Index executed in 2.5357ms.
+2025-06-06 14:59:51.562 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 9.6812ms
+2025-06-06 14:59:51.563 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:51.565 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 22.6571ms
+2025-06-06 14:59:51.576 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:51.579 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:51.579 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 3.3229ms
+2025-06-06 14:59:51.579 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:51.582 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.1621ms
+2025-06-06 14:59:51.586 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 14:59:51.595 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.7204ms
+2025-06-06 14:59:53.430 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Delete/1 - application/x-www-form-urlencoded 182
+2025-06-06 14:59:53.436 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Delete (Final_MozArt)'
+2025-06-06 14:59:53.440 +04:00 [INF] Route matched with {area = "Admin", action = "Delete", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:53.484 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-06-06 14:59:53.502 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Advantages]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-06-06 14:59:53.511 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 14:59:53.513 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Delete (Final_MozArt) in 71.643ms
+2025-06-06 14:59:53.514 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Delete (Final_MozArt)'
+2025-06-06 14:59:53.515 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Delete/1 - 302 0 null 85.0971ms
+2025-06-06 14:59:53.518 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 14:59:53.525 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:53.527 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 14:59:53.530 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 14:59:53.532 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 14:59:53.533 +04:00 [INF] Executed ViewResult - view Index executed in 1.2917ms.
+2025-06-06 14:59:53.534 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 6.4472ms
+2025-06-06 14:59:53.535 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 14:59:53.536 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 17.8523ms
+2025-06-06 14:59:53.553 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 14:59:53.553 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 14:59:53.553 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 14:59:53.555 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.7093ms
+2025-06-06 14:59:53.560 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 7.2896ms
+2025-06-06 14:59:53.564 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.0224ms
+2025-06-06 14:59:53.568 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:02.479 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-06 15:00:02.516 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 15:00:02.519 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-06 15:00:02.531 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-06 15:00:02.536 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-06 15:00:02.540 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-06 15:00:02.546 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 15:00:02.548 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:00:02.554 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:00:02.557 +04:00 [INF] Executed ViewResult - view Index executed in 8.8133ms.
+2025-06-06 15:00:02.558 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 36.1225ms
+2025-06-06 15:00:02.560 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 15:00:02.562 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 82.7397ms
+2025-06-06 15:00:02.600 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:02.605 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.6823ms
+2025-06-06 15:00:02.618 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:02.624 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.9357ms
+2025-06-06 15:00:02.725 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-06 15:00:02.728 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 3.8864ms
+2025-06-06 15:00:02.731 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-06 15:00:05.256 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 15:00:05.263 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:00:05.266 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 15:00:05.279 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 15:00:05.299 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 15:00:05.309 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 15:00:05.314 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:00:05.322 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 15:00:05.333 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:00:05.343 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:00:05.348 +04:00 [INF] Executed ViewResult - view Index executed in 15.3675ms.
+2025-06-06 15:00:05.349 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 81.2152ms
+2025-06-06 15:00:05.350 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:00:05.351 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 95.3642ms
+2025-06-06 15:00:05.371 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:05.372 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:05.374 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.9417ms
+2025-06-06 15:00:05.382 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.5996ms
+2025-06-06 15:00:05.392 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp - null null
+2025-06-06 15:00:05.401 +04:00 [INF] The file /assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp was not modified
+2025-06-06 15:00:05.402 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp - 304 null image/webp 9.6185ms
+2025-06-06 15:00:13.440 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - null null
+2025-06-06 15:00:13.447 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:13.448 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:13.450 +04:00 [INF] Executing ViewResult, running view Create.
+2025-06-06 15:00:13.453 +04:00 [INF] Executed ViewResult - view Create executed in 3.0478ms.
+2025-06-06 15:00:13.454 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 4.2498ms
+2025-06-06 15:00:13.455 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:13.457 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - 200 null text/html; charset=utf-8 16.722ms
+2025-06-06 15:00:13.468 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:00:13.471 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 2.4472ms
+2025-06-06 15:00:13.473 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:13.474 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:13.475 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:13.480 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.3555ms
+2025-06-06 15:00:13.487 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.754ms
+2025-06-06 15:00:21.273 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - multipart/form-data; boundary=----WebKitFormBoundary6ugzB1Xw0rzd506n 597
+2025-06-06 15:00:21.280 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:21.282 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Final_MozArt.ViewModels.Advantage.AdvantageCreateVM) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:21.289 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Advantages] ([CreateDate], [Description], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-06-06 15:00:21.291 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 15:00:21.292 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 8.8001ms
+2025-06-06 15:00:21.292 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:21.293 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - 302 0 null 19.7295ms
+2025-06-06 15:00:21.296 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 15:00:21.298 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:00:21.299 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:21.304 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:00:21.306 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:00:21.307 +04:00 [INF] Executed ViewResult - view Index executed in 1.4633ms.
+2025-06-06 15:00:21.309 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 7.3058ms
+2025-06-06 15:00:21.311 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:00:21.312 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 16.418ms
+2025-06-06 15:00:21.322 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:00:21.324 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 2.1279ms
+2025-06-06 15:00:21.327 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:21.327 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:21.328 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:21.330 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.8556ms
+2025-06-06 15:00:21.337 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.1553ms
+2025-06-06 15:00:25.375 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - null null
+2025-06-06 15:00:25.382 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:25.383 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:25.385 +04:00 [INF] Executing ViewResult, running view Create.
+2025-06-06 15:00:25.388 +04:00 [INF] Executed ViewResult - view Create executed in 3.0205ms.
+2025-06-06 15:00:25.390 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 5.1473ms
+2025-06-06 15:00:25.392 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:25.393 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - 200 null text/html; charset=utf-8 17.6963ms
+2025-06-06 15:00:25.403 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:00:25.405 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:25.405 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:25.406 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 3.7115ms
+2025-06-06 15:00:25.408 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.0797ms
+2025-06-06 15:00:25.412 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:25.413 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.1374ms
+2025-06-06 15:00:33.245 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - multipart/form-data; boundary=----WebKitFormBoundaryJUAHJzR4sa3Ac4IJ 594
+2025-06-06 15:00:33.251 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:33.252 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Final_MozArt.ViewModels.Advantage.AdvantageCreateVM) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:33.257 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Advantages] ([CreateDate], [Description], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-06-06 15:00:33.259 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 15:00:33.260 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 6.771ms
+2025-06-06 15:00:33.261 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:33.262 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - 302 0 null 16.9553ms
+2025-06-06 15:00:33.264 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 15:00:33.267 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:00:33.268 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:33.270 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:00:33.273 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:00:33.275 +04:00 [INF] Executed ViewResult - view Index executed in 2.4029ms.
+2025-06-06 15:00:33.276 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 7.3578ms
+2025-06-06 15:00:33.277 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:00:33.278 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 13.7418ms
+2025-06-06 15:00:33.292 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:33.292 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:00:33.292 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:33.294 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.0184ms
+2025-06-06 15:00:33.296 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 4.3411ms
+2025-06-06 15:00:33.301 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.3363ms
+2025-06-06 15:00:33.303 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:38.670 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - null null
+2025-06-06 15:00:38.678 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:38.680 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:38.682 +04:00 [INF] Executing ViewResult, running view Create.
+2025-06-06 15:00:38.684 +04:00 [INF] Executed ViewResult - view Create executed in 1.8286ms.
+2025-06-06 15:00:38.685 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 3.1989ms
+2025-06-06 15:00:38.686 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:38.687 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - 200 null text/html; charset=utf-8 16.9765ms
+2025-06-06 15:00:38.704 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:00:38.704 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:38.704 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:38.709 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 4.8088ms
+2025-06-06 15:00:38.712 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.1129ms
+2025-06-06 15:00:38.717 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.3054ms
+2025-06-06 15:00:38.717 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:48.451 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - multipart/form-data; boundary=----WebKitFormBoundaryxNNs0ONcV6gaYiSu 600
+2025-06-06 15:00:48.456 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:48.457 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Final_MozArt.ViewModels.Advantage.AdvantageCreateVM) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:48.464 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Advantages] ([CreateDate], [Description], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-06-06 15:00:48.466 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 15:00:48.467 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 7.6818ms
+2025-06-06 15:00:48.468 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:00:48.468 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - 302 0 null 17.9636ms
+2025-06-06 15:00:48.471 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 15:00:48.474 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:00:48.475 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:00:48.478 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:00:48.481 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:00:48.482 +04:00 [INF] Executed ViewResult - view Index executed in 1.5761ms.
+2025-06-06 15:00:48.484 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 7.8881ms
+2025-06-06 15:00:48.485 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:00:48.486 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 14.8755ms
+2025-06-06 15:00:48.501 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:00:48.504 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 2.4282ms
+2025-06-06 15:00:48.506 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:00:48.507 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:00:48.507 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:00:48.514 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.6766ms
+2025-06-06 15:00:48.514 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.9727ms
+2025-06-06 15:01:21.357 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 15:01:21.463 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 15:01:21.466 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 15:01:21.469 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 15:01:21.471 +04:00 [INF] Hosting environment: Development
+2025-06-06 15:01:21.472 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 15:01:21.804 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 15:01:21.884 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:01:21.905 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:01:22.818 +04:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:01:22.885 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:01:22.956 +04:00 [INF] Executed ViewResult - view Index executed in 71.9083ms.
+2025-06-06 15:01:22.962 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 1051.1152ms
+2025-06-06 15:01:22.966 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:01:22.972 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:01:22.972 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:01:22.972 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:01:22.977 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 1173.675ms
+2025-06-06 15:01:22.981 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.6722ms
+2025-06-06 15:01:22.986 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 13.2783ms
+2025-06-06 15:01:22.993 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:01:23.000 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.8115ms
+2025-06-06 15:01:23.890 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - null null
+2025-06-06 15:01:23.902 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:01:23.905 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:01:23.910 +04:00 [INF] Executing ViewResult, running view Create.
+2025-06-06 15:01:23.933 +04:00 [INF] Executed ViewResult - view Create executed in 24.5411ms.
+2025-06-06 15:01:23.937 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 30.529ms
+2025-06-06 15:01:23.939 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:01:23.940 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage/Create - 200 null text/html; charset=utf-8 50.4324ms
+2025-06-06 15:01:23.948 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:01:23.951 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 3.2303ms
+2025-06-06 15:01:23.954 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:01:23.954 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:01:23.956 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:01:23.961 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.8539ms
+2025-06-06 15:01:23.971 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.8567ms
+2025-06-06 15:01:39.805 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - multipart/form-data; boundary=----WebKitFormBoundaryEngb2CHzIEab41v6 600
+2025-06-06 15:01:39.814 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:01:39.822 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Final_MozArt.ViewModels.Advantage.AdvantageCreateVM) on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:01:39.934 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Advantages] ([CreateDate], [Description], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-06-06 15:01:39.953 +04:00 [INF] Executing RedirectResult, redirecting to /Admin/Advantage.
+2025-06-06 15:01:39.956 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt) in 131.0501ms
+2025-06-06 15:01:39.957 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Create (Final_MozArt)'
+2025-06-06 15:01:39.957 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Admin/Advantage/Create - 302 0 null 152.6005ms
+2025-06-06 15:01:39.960 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 15:01:39.965 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:01:39.966 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:01:40.008 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:01:40.012 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:01:40.017 +04:00 [INF] Executed ViewResult - view Index executed in 4.5032ms.
+2025-06-06 15:01:40.019 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 51.509ms
+2025-06-06 15:01:40.021 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:01:40.022 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 62.2766ms
+2025-06-06 15:01:40.034 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:01:40.038 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 3.1199ms
+2025-06-06 15:01:40.038 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:01:40.038 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:01:40.041 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:01:40.044 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.6227ms
+2025-06-06 15:01:40.051 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.8543ms
+2025-06-06 15:05:27.508 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 15:05:27.620 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 15:05:27.622 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 15:05:27.625 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 15:05:27.626 +04:00 [INF] Hosting environment: Development
+2025-06-06 15:05:27.627 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 15:05:28.010 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Admin/Advantage - null null
+2025-06-06 15:05:28.111 +04:00 [INF] Executing endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:05:28.138 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Advantage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Areas.Admin.Controllers.AdvantageController (Final_MozArt).
+2025-06-06 15:05:29.073 +04:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:05:29.143 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:05:29.217 +04:00 [INF] Executed ViewResult - view Index executed in 77.7235ms.
+2025-06-06 15:05:29.223 +04:00 [INF] Executed action Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt) in 1078.2256ms
+2025-06-06 15:05:29.227 +04:00 [INF] Executed endpoint 'Final_MozArt.Areas.Admin.Controllers.AdvantageController.Index (Final_MozArt)'
+2025-06-06 15:05:29.236 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Admin/Advantage - 200 null text/html; charset=utf-8 1227.7227ms
+2025-06-06 15:05:29.369 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - null null
+2025-06-06 15:05:29.369 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:05:29.369 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:05:29.381 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 12.4852ms
+2025-06-06 15:05:29.379 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/admin/assets/js/custom.js - 404 0 null 10.0206ms
+2025-06-06 15:05:29.389 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/admin/assets/js/custom.js, Response status code: 404
+2025-06-06 15:05:29.402 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.2385ms
+2025-06-06 15:05:36.444 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-06 15:05:36.457 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 15:05:36.462 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-06 15:05:36.491 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-06 15:05:36.518 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-06 15:05:36.538 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-06 15:05:36.558 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 15:05:36.572 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:05:36.694 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:05:36.717 +04:00 [INF] Executed ViewResult - view Index executed in 146.6622ms.
+2025-06-06 15:05:36.720 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 256.0732ms
+2025-06-06 15:05:36.723 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 15:05:36.725 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 281.0654ms
+2025-06-06 15:05:36.759 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:05:36.768 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.9264ms
+2025-06-06 15:05:36.775 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:05:36.792 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.8794ms
+2025-06-06 15:05:37.194 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-06 15:05:37.198 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 3.8276ms
+2025-06-06 15:05:37.203 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-06 15:05:38.577 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 15:05:38.585 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:05:38.591 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 15:05:38.647 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 15:05:38.668 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 15:05:38.682 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 15:05:38.691 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:05:38.699 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 15:05:38.713 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:05:38.717 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:05:38.733 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:05:38.738 +04:00 [INF] Executed ViewResult - view Index executed in 21.4069ms.
+2025-06-06 15:05:38.741 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 145.8535ms
+2025-06-06 15:05:38.742 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:05:38.744 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 166.2894ms
+2025-06-06 15:05:38.774 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:05:38.776 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:05:38.778 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.3898ms
+2025-06-06 15:05:38.785 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.2785ms
+2025-06-06 15:06:18.668 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-06-06 15:06:18.674 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 6.1133ms
+2025-06-06 15:06:18.677 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-06-06 15:06:18.894 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - null null
+2025-06-06 15:06:18.899 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - 404 0 null 4.5086ms
+2025-06-06 15:06:18.902 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map, Response status code: 404
+2025-06-06 15:07:28.512 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 15:07:28.622 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 15:07:28.625 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 15:07:28.627 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 15:07:28.628 +04:00 [INF] Hosting environment: Development
+2025-06-06 15:07:28.628 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 15:07:29.143 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 15:07:29.225 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:07:29.248 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 15:07:30.081 +04:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 15:07:30.147 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 15:07:30.165 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 15:07:30.186 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:07:30.203 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 15:07:30.220 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:07:30.236 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:07:30.295 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:07:30.325 +04:00 [INF] Executed ViewResult - view Index executed in 89.3578ms.
+2025-06-06 15:07:30.332 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 1079.4533ms
+2025-06-06 15:07:30.335 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:07:30.347 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 1205.3441ms
+2025-06-06 15:07:30.359 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-06-06 15:07:30.373 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:07:30.380 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:07:30.385 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 25.7243ms
+2025-06-06 15:07:30.391 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 17.7373ms
+2025-06-06 15:07:30.396 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-06-06 15:07:30.417 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.0649ms
+2025-06-06 15:07:30.496 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - null null
+2025-06-06 15:07:30.501 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - 404 0 null 5.3774ms
+2025-06-06 15:07:30.505 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map, Response status code: 404
+2025-06-06 15:07:51.128 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 15:07:51.232 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 15:07:51.235 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 15:07:51.237 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 15:07:51.238 +04:00 [INF] Hosting environment: Development
+2025-06-06 15:07:51.239 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 15:07:51.311 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 15:07:51.395 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:07:51.418 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 15:07:52.251 +04:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 15:07:52.317 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 15:07:52.335 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 15:07:52.353 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:07:52.370 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 15:07:52.385 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 15:07:52.401 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:07:52.461 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:07:52.487 +04:00 [INF] Executed ViewResult - view Index executed in 85.9614ms.
+2025-06-06 15:07:52.493 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 1069.4998ms
+2025-06-06 15:07:52.496 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 15:07:52.508 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:07:52.508 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:07:52.508 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 1197.7189ms
+2025-06-06 15:07:52.516 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.1621ms
+2025-06-06 15:07:52.526 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-06-06 15:07:52.534 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 7.5197ms
+2025-06-06 15:07:52.539 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-06-06 15:07:52.543 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.6206ms
+2025-06-06 15:07:52.634 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - null null
+2025-06-06 15:07:52.641 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - 404 0 null 6.7435ms
+2025-06-06 15:07:52.645 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map, Response status code: 404
+2025-06-06 15:08:05.098 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog - null null
+2025-06-06 15:08:05.108 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 15:08:05.111 +04:00 [INF] Route matched with {action = "Index", controller = "Blog", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-06 15:08:05.119 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:08:05.165 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:08:05.177 +04:00 [INF] Executed ViewResult - view Index executed in 61.59ms.
+2025-06-06 15:08:05.180 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.Index (Final_MozArt) in 65.672ms
+2025-06-06 15:08:05.182 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 15:08:05.184 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog - 200 null text/html; charset=utf-8 85.8582ms
+2025-06-06 15:08:05.207 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:08:05.207 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:08:05.211 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.1074ms
+2025-06-06 15:08:05.223 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.9353ms
+2025-06-06 15:08:05.952 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 15:08:05.959 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 15:08:05.961 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 15:08:05.964 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 15:08:06.053 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 15:08:06.065 +04:00 [INF] Executed ViewResult - view Index executed in 101.5623ms.
+2025-06-06 15:08:06.069 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 106.2693ms
+2025-06-06 15:08:06.071 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 15:08:06.073 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 121.4572ms
+2025-06-06 15:08:06.091 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 15:08:06.091 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 15:08:06.097 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.2667ms
+2025-06-06 15:08:06.100 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.1392ms
+2025-06-06 16:02:11.172 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 16:02:11.231 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:02:11.246 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 16:02:11.274 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:11.556 +04:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:11.574 +04:00 [INF] Executed ViewResult - view Index executed in 321.9108ms.
+2025-06-06 16:02:11.577 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 328.4199ms
+2025-06-06 16:02:11.581 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:02:11.585 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 414.0139ms
+2025-06-06 16:02:11.683 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:11.683 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:11.691 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.5363ms
+2025-06-06 16:02:11.697 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.3657ms
+2025-06-06 16:02:15.948 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 16:02:15.954 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 16:02:15.958 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 16:02:15.977 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 16:02:15.986 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 16:02:15.991 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 16:02:15.996 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:16.000 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 16:02:16.004 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 16:02:16.006 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:16.010 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:16.014 +04:00 [INF] Executed ViewResult - view Index executed in 8.8102ms.
+2025-06-06 16:02:16.017 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 58.1401ms
+2025-06-06 16:02:16.019 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 16:02:16.021 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 73.2976ms
+2025-06-06 16:02:16.070 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:16.072 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:16.074 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.3719ms
+2025-06-06 16:02:16.078 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp - null null
+2025-06-06 16:02:16.082 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.1594ms
+2025-06-06 16:02:16.101 +04:00 [INF] The file /assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp was not modified
+2025-06-06 16:02:16.104 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp - 304 null image/webp 25.9424ms
+2025-06-06 16:02:16.652 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog - null null
+2025-06-06 16:02:16.659 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:02:16.663 +04:00 [INF] Route matched with {action = "Index", controller = "Blog", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-06 16:02:16.668 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:16.675 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:16.681 +04:00 [INF] Executed ViewResult - view Index executed in 14.3739ms.
+2025-06-06 16:02:16.684 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.Index (Final_MozArt) in 17.1725ms
+2025-06-06 16:02:16.686 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:02:16.689 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog - 200 null text/html; charset=utf-8 36.7993ms
+2025-06-06 16:02:16.708 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:16.710 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:16.712 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.2059ms
+2025-06-06 16:02:16.720 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.976ms
+2025-06-06 16:02:17.266 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 16:02:17.273 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:02:17.275 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 16:02:17.279 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:17.283 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:17.286 +04:00 [INF] Executed ViewResult - view Index executed in 7.9239ms.
+2025-06-06 16:02:17.289 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 10.608ms
+2025-06-06 16:02:17.291 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:02:17.293 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 26.1901ms
+2025-06-06 16:02:17.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:17.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:17.312 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.2829ms
+2025-06-06 16:02:17.319 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.7498ms
+2025-06-06 16:02:49.788 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-06 16:02:49.796 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 16:02:49.812 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-06 16:02:49.842 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-06 16:02:49.878 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-06 16:02:49.910 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-06 16:02:49.935 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 16:02:49.942 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:50.062 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:50.071 +04:00 [INF] Executed ViewResult - view Index executed in 129.3251ms.
+2025-06-06 16:02:50.073 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 257.6982ms
+2025-06-06 16:02:50.075 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 16:02:50.076 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 288.5331ms
+2025-06-06 16:02:50.102 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:50.105 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.6327ms
+2025-06-06 16:02:50.120 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:50.135 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.3994ms
+2025-06-06 16:02:50.189 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-06 16:02:50.194 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 5.1935ms
+2025-06-06 16:02:50.199 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-06 16:02:51.660 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 16:02:51.665 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:02:51.667 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 16:02:51.671 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:51.676 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:51.681 +04:00 [INF] Executed ViewResult - view Index executed in 9.862ms.
+2025-06-06 16:02:51.683 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 12.1346ms
+2025-06-06 16:02:51.684 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:02:51.685 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 25.3437ms
+2025-06-06 16:02:51.724 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:51.725 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:51.732 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.7908ms
+2025-06-06 16:02:51.733 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.3438ms
+2025-06-06 16:02:53.691 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog - null null
+2025-06-06 16:02:53.697 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:02:53.699 +04:00 [INF] Route matched with {action = "Index", controller = "Blog", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-06 16:02:53.701 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:53.705 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:53.710 +04:00 [INF] Executed ViewResult - view Index executed in 8.7011ms.
+2025-06-06 16:02:53.712 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.Index (Final_MozArt) in 10.6984ms
+2025-06-06 16:02:53.714 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:02:53.715 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog - 200 null text/html; charset=utf-8 23.892ms
+2025-06-06 16:02:53.740 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:53.741 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:53.746 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.5687ms
+2025-06-06 16:02:53.751 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.0986ms
+2025-06-06 16:02:57.508 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/BlogDetails - null null
+2025-06-06 16:02:57.515 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogDetailsController.Index (Final_MozArt)'
+2025-06-06 16:02:57.519 +04:00 [INF] Route matched with {action = "Index", controller = "BlogDetails", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.BlogDetailsController (Final_MozArt).
+2025-06-06 16:02:57.532 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:02:57.543 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:02:57.550 +04:00 [INF] Executed ViewResult - view Index executed in 25.5694ms.
+2025-06-06 16:02:57.552 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogDetailsController.Index (Final_MozArt) in 27.9844ms
+2025-06-06 16:02:57.554 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogDetailsController.Index (Final_MozArt)'
+2025-06-06 16:02:57.555 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/BlogDetails - 200 null text/html; charset=utf-8 47.8603ms
+2025-06-06 16:02:57.567 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/blog-details/blog-detai.css - null null
+2025-06-06 16:02:57.574 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/blog-1.webp - null null
+2025-06-06 16:02:57.574 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/blog-2.webp - null null
+2025-06-06 16:02:57.574 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/comment-2.webp - null null
+2025-06-06 16:02:57.574 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/blog-3.webp - null null
+2025-06-06 16:02:57.575 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/blog-details/blog-details.js - null null
+2025-06-06 16:02:57.575 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:02:57.575 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/comment-4.webp - null null
+2025-06-06 16:02:57.575 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/comment-1.webp - null null
+2025-06-06 16:02:57.576 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-1.webp - null null
+2025-06-06 16:02:57.576 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-2.webp - null null
+2025-06-06 16:02:57.605 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/blog-3.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\blog-3.webp'
+2025-06-06 16:02:57.577 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-banner.webp - null null
+2025-06-06 16:02:57.577 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:02:57.590 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 15.1209ms
+2025-06-06 16:02:57.605 +04:00 [INF] Sending file. Request path: '/assets/css/blog-details/blog-detai.css'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\css\blog-details\blog-detai.css'
+2025-06-06 16:02:57.605 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/blog-1.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\blog-1.webp'
+2025-06-06 16:02:57.605 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/comment-2.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\comment-2.webp'
+2025-06-06 16:02:57.577 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-3.webp - null null
+2025-06-06 16:02:57.605 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/blog-2.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\blog-2.webp'
+2025-06-06 16:02:57.605 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/comment-4.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\comment-4.webp'
+2025-06-06 16:02:57.607 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/blog-3.webp - 200 2742 image/webp 32.6711ms
+2025-06-06 16:02:57.608 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/comment-1.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\comment-1.webp'
+2025-06-06 16:02:57.611 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/widget-1.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\widget-1.webp'
+2025-06-06 16:02:57.616 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/widget-2.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\widget-2.webp'
+2025-06-06 16:02:57.617 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.1689ms
+2025-06-06 16:02:57.618 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/blog-details/blog-detai.css - 200 10575 text/css 50.896ms
+2025-06-06 16:02:57.619 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/blog-1.webp - 200 35992 image/webp 44.9792ms
+2025-06-06 16:02:57.620 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/comment-2.webp - 200 1716 image/webp 46.2084ms
+2025-06-06 16:02:57.625 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/widget-banner.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\widget-banner.webp'
+2025-06-06 16:02:57.627 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/blog-2.webp - 200 6272 image/webp 52.3679ms
+2025-06-06 16:02:57.628 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/comment-4.webp - 200 2442 image/webp 52.6635ms
+2025-06-06 16:02:57.633 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/comment-1.webp - 200 1236 image/webp 57.4643ms
+2025-06-06 16:02:57.634 +04:00 [INF] Sending file. Request path: '/assets/img/blog-details/widget-3.webp'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\img\blog-details\widget-3.webp'
+2025-06-06 16:02:57.634 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-1.webp - 200 2502 image/webp 58.5683ms
+2025-06-06 16:02:57.636 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-2.webp - 200 2470 image/webp 59.8009ms
+2025-06-06 16:02:57.637 +04:00 [INF] Sending file. Request path: '/assets/js/blog-details/blog-details.js'. Physical path: 'C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt\wwwroot\assets\js\blog-details\blog-details.js'
+2025-06-06 16:02:57.651 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-banner.webp - 200 6246 image/webp 73.4762ms
+2025-06-06 16:02:57.661 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog-details/widget-3.webp - 200 786 image/webp 84.2871ms
+2025-06-06 16:02:57.668 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/blog-details/blog-details.js - 200 6375 text/javascript 92.8406ms
+2025-06-06 16:03:14.368 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:14.373 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.2083ms
+2025-06-06 16:03:16.852 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog - null null
+2025-06-06 16:03:16.860 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:03:16.862 +04:00 [INF] Route matched with {action = "Index", controller = "Blog", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-06 16:03:16.864 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:03:16.877 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:16.881 +04:00 [INF] Executed ViewResult - view Index executed in 16.4745ms.
+2025-06-06 16:03:16.882 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.Index (Final_MozArt) in 18.1624ms
+2025-06-06 16:03:16.887 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:03:16.888 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog - 200 null text/html; charset=utf-8 36.2937ms
+2025-06-06 16:03:16.897 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:16.897 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:03:16.901 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.1095ms
+2025-06-06 16:03:16.907 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.0895ms
+2025-06-06 16:03:18.795 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 16:03:18.803 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:03:18.804 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 16:03:18.806 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:03:18.821 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:18.826 +04:00 [INF] Executed ViewResult - view Index executed in 20.6479ms.
+2025-06-06 16:03:18.828 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 22.6031ms
+2025-06-06 16:03:18.830 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:03:18.832 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 37.2909ms
+2025-06-06 16:03:18.848 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:03:18.848 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:18.854 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.0038ms
+2025-06-06 16:03:18.856 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.8699ms
+2025-06-06 16:03:26.202 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 16:03:26.209 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 16:03:26.211 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 16:03:26.223 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 16:03:26.230 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 16:03:26.234 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 16:03:26.238 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:26.244 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 16:03:26.248 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 16:03:26.251 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:03:26.256 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:26.260 +04:00 [INF] Executed ViewResult - view Index executed in 9.295ms.
+2025-06-06 16:03:26.262 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 49.2767ms
+2025-06-06 16:03:26.265 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 16:03:26.266 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 63.9858ms
+2025-06-06 16:03:26.288 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:26.289 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:03:26.292 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.9965ms
+2025-06-06 16:03:26.298 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.2451ms
+2025-06-06 16:03:33.519 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/favicon.ico - null null
+2025-06-06 16:03:33.523 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/favicon.ico - 404 0 null 3.6195ms
+2025-06-06 16:03:33.527 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/favicon.ico, Response status code: 404
+2025-06-06 16:03:40.053 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 16:03:40.061 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 16:03:40.063 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 16:03:40.070 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 16:03:40.073 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 16:03:40.077 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 16:03:40.082 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:40.085 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 16:03:40.088 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 16:03:40.089 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:03:40.091 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:40.094 +04:00 [INF] Executed ViewResult - view Index executed in 4.777ms.
+2025-06-06 16:03:40.096 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 29.1746ms
+2025-06-06 16:03:40.098 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 16:03:40.099 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 46.4478ms
+2025-06-06 16:03:40.111 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:40.111 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:03:40.114 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.7732ms
+2025-06-06 16:03:40.121 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.558ms
+2025-06-06 16:03:40.778 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog - null null
+2025-06-06 16:03:40.785 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:03:40.788 +04:00 [INF] Route matched with {action = "Index", controller = "Blog", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-06 16:03:40.792 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:03:40.797 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:40.799 +04:00 [INF] Executed ViewResult - view Index executed in 7.5364ms.
+2025-06-06 16:03:40.801 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.Index (Final_MozArt) in 9.5356ms
+2025-06-06 16:03:40.803 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-06 16:03:40.804 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog - 200 null text/html; charset=utf-8 26.3492ms
+2025-06-06 16:03:40.822 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:40.823 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:03:40.827 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.9143ms
+2025-06-06 16:03:40.834 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.1826ms
+2025-06-06 16:03:42.891 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 16:03:42.898 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:03:42.901 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 16:03:42.906 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 16:03:42.911 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 16:03:42.917 +04:00 [INF] Executed ViewResult - view Index executed in 11.5251ms.
+2025-06-06 16:03:42.921 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 15.0326ms
+2025-06-06 16:03:42.922 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 16:03:42.924 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 33.0648ms
+2025-06-06 16:03:42.933 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 16:03:42.937 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 16:03:42.939 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.2997ms
+2025-06-06 16:03:42.940 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.1987ms
+2025-06-06 16:04:05.755 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-06-06 16:04:05.758 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 3.4406ms
+2025-06-06 16:04:05.762 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-06-06 16:04:05.838 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - null null
+2025-06-06 16:04:05.842 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - 404 0 null 4.0273ms
+2025-06-06 16:04:05.846 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map, Response status code: 404

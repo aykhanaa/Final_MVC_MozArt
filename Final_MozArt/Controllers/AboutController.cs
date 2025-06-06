@@ -12,6 +12,7 @@ namespace Final_MozArt.Controllers
         private readonly IInstagramService _instagramService;
         private readonly ISettingService _settingService;
         private readonly IVideoService _videoService;
+        private readonly IAdvantageService _advantageService;
 
 
 
@@ -23,7 +24,8 @@ namespace Final_MozArt.Controllers
                                ISupportService supportService,
                                IInstagramService ınstagramService,
                                ISettingService settingService,
-                               IVideoService videoService)
+                               IVideoService videoService,
+                               IAdvantageService advantageService)
 
         {
             _aboutService = aboutService;
@@ -31,6 +33,7 @@ namespace Final_MozArt.Controllers
             _instagramService = ınstagramService;
             _settingService = settingService;
             _videoService = videoService;
+            _advantageService = advantageService;
 
 
 
@@ -42,6 +45,7 @@ namespace Final_MozArt.Controllers
             var instagrams = await _instagramService.GetAllAsync();
             var setting = _settingService.GetSettings();
             var videos = await _videoService.GetAllAsync();
+            var advantages = await _advantageService.GetAllAsync();
 
 
 
@@ -52,7 +56,8 @@ namespace Final_MozArt.Controllers
                 Supports = supports,
                 Instagrams= instagrams,
                 Setting = setting,
-                Videos= videos
+                Videos= videos,
+                Advantages= advantages,
 
 
             };

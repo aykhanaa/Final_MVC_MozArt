@@ -15,6 +15,7 @@ namespace Final_MozArt
             services.AddScoped<IAboutService, AboutService>();
             services.AddScoped<ISettingService, SettingService>();
             services.AddScoped<IVideoService, VideoService>();
+            services.AddScoped<IAdvantageService, AdvantageService>();
 
 
 
