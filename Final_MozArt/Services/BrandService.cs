@@ -4,7 +4,6 @@ using Final_MozArt.Helpers.Extensions;
 using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Brand;
-using Final_MozArt.ViewModels.Category;
 using Microsoft.EntityFrameworkCore;
 
 namespace Final_MozArt.Services

@@ -3,7 +3,6 @@ using Final_MozArt.Data;
 using Final_MozArt.Helpers.Extensions;
 using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
-using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Instagram;
 using Microsoft.EntityFrameworkCore;
 

@@ -3334,3 +3334,198 @@ FROM [Settings] AS [s]
 2025-06-06 16:04:05.838 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - null null
 2025-06-06 16:04:05.842 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map - 404 0 null 4.0273ms
 2025-06-06 16:04:05.846 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js.map, Response status code: 404
+2025-06-06 18:34:34.595 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 18:34:34.716 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 18:34:34.718 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 18:34:34.721 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 18:34:34.723 +04:00 [INF] Hosting environment: Development
+2025-06-06 18:34:34.724 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 18:34:35.208 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-06 18:34:35.327 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 18:34:35.383 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-06 18:34:36.583 +04:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-06 18:34:36.662 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-06 18:34:36.682 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-06 18:34:36.701 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 18:34:36.721 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 18:34:36.872 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:34:36.911 +04:00 [INF] Executed ViewResult - view Index executed in 191.2051ms.
+2025-06-06 18:34:36.917 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 1527.9035ms
+2025-06-06 18:34:36.920 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-06 18:34:36.934 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 1727.6376ms
+2025-06-06 18:34:36.966 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp - null null
+2025-06-06 18:34:36.970 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 18:34:36.976 +04:00 [INF] The file /assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp was not modified
+2025-06-06 18:34:36.978 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.8252ms
+2025-06-06 18:34:36.978 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp - 304 null image/webp 11.6722ms
+2025-06-06 18:34:36.979 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - null null
+2025-06-06 18:34:36.991 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp - null null
+2025-06-06 18:34:36.991 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp - null null
+2025-06-06 18:34:36.992 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp - null null
+2025-06-06 18:34:36.992 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp - null null
+2025-06-06 18:34:36.992 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp - null null
+2025-06-06 18:34:36.992 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp - null null
+2025-06-06 18:34:36.993 +04:00 [INF] The file /assets/img/home/4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp was not modified
+2025-06-06 18:34:36.993 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp - null null
+2025-06-06 18:34:36.993 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp - null null
+2025-06-06 18:34:36.997 +04:00 [INF] The file /assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp was not modified
+2025-06-06 18:34:37.001 +04:00 [INF] The file /assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp was not modified
+2025-06-06 18:34:37.004 +04:00 [INF] The file /assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp was not modified
+2025-06-06 18:34:37.006 +04:00 [INF] The file /assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp was not modified
+2025-06-06 18:34:37.008 +04:00 [INF] The file /assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp was not modified
+2025-06-06 18:34:37.010 +04:00 [INF] The file /assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp was not modified
+2025-06-06 18:34:37.011 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - 304 null image/webp 32.1121ms
+2025-06-06 18:34:37.013 +04:00 [INF] The file /assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp was not modified
+2025-06-06 18:34:37.016 +04:00 [INF] The file /assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp was not modified
+2025-06-06 18:34:37.017 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp - 304 null image/webp 25.4896ms
+2025-06-06 18:34:37.018 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp - 304 null image/webp 26.4787ms
+2025-06-06 18:34:37.019 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp - 304 null image/webp 27.1608ms
+2025-06-06 18:34:37.020 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp - 304 null image/webp 27.824ms
+2025-06-06 18:34:37.021 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp - 304 null image/webp 28.389ms
+2025-06-06 18:34:37.021 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp - 304 null image/webp 29.2872ms
+2025-06-06 18:34:37.024 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp - null null
+2025-06-06 18:34:37.025 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp - 304 null image/webp 31.7564ms
+2025-06-06 18:34:37.026 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp - 304 null image/webp 32.5219ms
+2025-06-06 18:34:37.029 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - null null
+2025-06-06 18:34:37.033 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - null null
+2025-06-06 18:34:37.036 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp - null null
+2025-06-06 18:34:37.039 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp - null null
+2025-06-06 18:34:37.041 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 18:34:37.046 +04:00 [INF] The file /assets/img/home/9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp was not modified
+2025-06-06 18:34:37.055 +04:00 [INF] The file /assets/img/home/2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp was not modified
+2025-06-06 18:34:37.057 +04:00 [INF] The file /assets/img/home/4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp was not modified
+2025-06-06 18:34:37.060 +04:00 [INF] The file /assets/img/home/dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp was not modified
+2025-06-06 18:34:37.066 +04:00 [INF] The file /assets/img/home/344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp was not modified
+2025-06-06 18:34:37.071 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp - 304 null image/webp 46.88ms
+2025-06-06 18:34:37.073 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - 304 null image/webp 43.8214ms
+2025-06-06 18:34:37.075 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - 304 null image/webp 41.4935ms
+2025-06-06 18:34:37.077 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp - 304 null image/webp 40.9635ms
+2025-06-06 18:34:37.079 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp - 304 null image/webp 40.0928ms
+2025-06-06 18:34:37.119 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.667ms
+2025-06-06 18:34:37.604 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-06 18:34:37.610 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 6.1784ms
+2025-06-06 18:34:37.614 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-06 18:34:39.553 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 18:34:39.563 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:34:39.569 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 18:34:39.574 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 18:34:39.599 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:34:39.608 +04:00 [INF] Executed ViewResult - view Index executed in 34.4221ms.
+2025-06-06 18:34:39.610 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 37.6559ms
+2025-06-06 18:34:39.613 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:34:39.614 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 61.308ms
+2025-06-06 18:34:39.629 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 18:34:39.629 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/contact/contact.css - null null
+2025-06-06 18:34:39.635 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.4732ms
+2025-06-06 18:34:39.638 +04:00 [INF] The file /assets/css/contact/contact.css was not modified
+2025-06-06 18:34:39.642 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 18:34:39.642 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/contact/contact.css - 304 null text/css 13.5962ms
+2025-06-06 18:34:39.654 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.9566ms
+2025-06-06 18:34:53.185 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-06 18:34:53.191 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 18:34:53.196 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-06 18:34:53.256 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-06 18:34:53.275 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-06 18:34:53.289 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-06 18:34:53.295 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:34:53.302 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-06 18:34:53.318 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-06 18:34:53.330 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 18:34:53.343 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:34:53.348 +04:00 [INF] Executed ViewResult - view Index executed in 18.3096ms.
+2025-06-06 18:34:53.349 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 151.6082ms
+2025-06-06 18:34:53.351 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-06 18:34:53.353 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 168.1898ms
+2025-06-06 18:34:53.375 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 18:34:53.376 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/about/ca39454a-ffc1-47d6-b265-a12134e23c36-about-1.webp - null null
+2025-06-06 18:34:53.376 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 18:34:53.380 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.2188ms
+2025-06-06 18:34:53.383 +04:00 [INF] The file /assets/img/about/ca39454a-ffc1-47d6-b265-a12134e23c36-about-1.webp was not modified
+2025-06-06 18:34:53.383 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp - null null
+2025-06-06 18:34:53.388 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.7118ms
+2025-06-06 18:34:53.390 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/about/ca39454a-ffc1-47d6-b265-a12134e23c36-about-1.webp - 304 null image/webp 13.524ms
+2025-06-06 18:34:53.392 +04:00 [INF] The file /assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp was not modified
+2025-06-06 18:34:53.397 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/about/e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp - 304 null image/webp 13.2269ms
+2025-06-06 18:34:59.523 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 18:34:59.529 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:34:59.530 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 18:34:59.531 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 18:34:59.536 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:34:59.538 +04:00 [INF] Executed ViewResult - view Index executed in 7.0237ms.
+2025-06-06 18:34:59.540 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 8.7312ms
+2025-06-06 18:34:59.541 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:34:59.543 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 19.7902ms
+2025-06-06 18:34:59.555 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 18:34:59.556 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 18:34:59.563 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.1824ms
+2025-06-06 18:34:59.563 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.6289ms
+2025-06-06 18:51:24.178 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 18:51:24.301 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 18:51:24.302 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 18:51:24.305 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 18:51:24.306 +04:00 [INF] Hosting environment: Development
+2025-06-06 18:51:24.307 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 18:51:24.797 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 18:51:24.917 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:51:24.940 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 18:51:24.957 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 18:51:26.291 +04:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:51:26.387 +04:00 [INF] Executed ViewResult - view Index executed in 1432.7505ms.
+2025-06-06 18:51:26.396 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 1450.9191ms
+2025-06-06 18:51:26.398 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:51:26.415 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 1618.7777ms
+2025-06-06 18:51:27.506 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 18:51:27.506 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 18:51:27.512 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.1697ms
+2025-06-06 18:51:27.539 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.4633ms
+2025-06-06 18:51:44.281 +04:00 [INF] User profile is available. Using 'C:\Users\Hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-06 18:51:44.399 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-06 18:51:44.401 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-06 18:51:44.405 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-06 18:51:44.405 +04:00 [INF] Hosting environment: Development
+2025-06-06 18:51:44.406 +04:00 [INF] Content root path: C:\Users\Hp\Desktop\Final_MozArt\Final_MozArt
+2025-06-06 18:51:44.819 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-06 18:51:44.910 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:51:44.933 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-06 18:51:44.945 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-06 18:51:45.937 +04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-06 18:51:46.011 +04:00 [INF] Executed ViewResult - view Index executed in 1067.1077ms.
+2025-06-06 18:51:46.016 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 1078.8529ms
+2025-06-06 18:51:46.020 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-06 18:51:46.032 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-06 18:51:46.032 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-06 18:51:46.033 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 1214.8917ms
+2025-06-06 18:51:46.046 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 13.4335ms
+2025-06-06 18:51:46.063 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.2552ms

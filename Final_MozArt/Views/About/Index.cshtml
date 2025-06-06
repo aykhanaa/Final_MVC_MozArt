@@ -63,7 +63,7 @@
             <div class="container">
                 <div class="row row-cols-md-3 row-cols-1 learts-mb-n30">
 
-                   @foreach (var item in Model.Supports)
+                   @foreach (var item in Model.Supports.OrderByDescending(l=>l.CreateDate).Take(3))
                     {
                         <div class="col learts-mb-30">
                             <div class="icon-box">

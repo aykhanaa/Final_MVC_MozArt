@@ -16,13 +16,7 @@ namespace Final_MozArt
             services.AddScoped<ISettingService, SettingService>();
             services.AddScoped<IVideoService, VideoService>();
             services.AddScoped<IAdvantageService, AdvantageService>();
-
-
-
-
-
-
-
+            services.AddScoped<IContactIntroService, ContactIntroService>();
 
 
 

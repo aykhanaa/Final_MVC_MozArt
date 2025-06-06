@@ -5,9 +5,7 @@ using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Slider;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.IO;
-using System.Threading.Tasks;
+
 
 namespace Final_MozArt.Services
 {

@@ -198,6 +198,30 @@ namespace Final_MozArt.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Final_MozArt.Models.ContactIntro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContactIntros");
+                });
+
             modelBuilder.Entity("Final_MozArt.Models.Instagram", b =>
                 {
                     b.Property<int>("Id")

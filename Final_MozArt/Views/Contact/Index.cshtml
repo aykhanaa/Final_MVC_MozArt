@@ -1,6 +1,11 @@
-﻿@section css {
+﻿@model ContactVM
+
+
+@section css {
     <link rel="stylesheet" href="~/assets/css/contact/contact.css">
 }
+
+
 
 <main>
     <section id="contact-title-area">
@@ -26,15 +31,13 @@
     <section id="information-map-area">
         <div class="information-map-size section-padding">
             <div class="container">
+
                 <div class="section-title text-center">
                     <h2 class="title" style="font-family: system-ui;font-weight: 400;font-size: 33px;">
-                        Keep in touch
-                        with us
+                        @Model.ContactIntros.FirstOrDefault().Title
                     </h2>
                     <p style="width: 40pc; margin-left: 16pc; line-height: 2.0; font-family: system-ui; margin-top: 28px;">
-                        Got a question? Looking for help? Or maybe you just want to say hello. Whatever it is, we’re here for you!
-                        Visit our website, explore partnership opportunities, or simply get in touch to learn more about us. 
-                        We’d be happy to assist you.
+                        @Model.ContactIntros.FirstOrDefault().Description
                     </p>
 
                 </div>
