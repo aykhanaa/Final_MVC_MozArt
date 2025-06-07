@@ -1,0 +1,30 @@
+﻿@model SettingVM
+
+<div class="container mt-5" style="max-width: 600px;">
+    <h2>Setting Detail</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Key</dt>
+        <dd class="col-sm-9">@Model.Key</dd>
+
+        <dt class="col-sm-3">Value</dt>
+        <dd class="col-sm-9">@Model.Value</dd>
+
+        <dt class="col-sm-3">Image</dt>
+        <dd class="col-sm-9">
+            @if (!string.IsNullOrEmpty(Model.Value) && (Model.Value.EndsWith(".png") || Model.Value.EndsWith(".jpg") || Model.Value.EndsWith(".jpeg") || Model.Value.EndsWith(".gif") || Model.Value.EndsWith(".webp")))
+            {
+                <img src="~/assets/img/settings/@Model.Value" alt="@Model.Key" style="width: 80px; height: 80px;" />
+            }
+            else
+            {
+                <p>No image available.</p>
+            }
+        </dd>
+
+        <dt class="col-sm-3">Created Date</dt>
+        <dd class="col-sm-9">@Model.CreateDate.ToString("dd/MM/yyyy")</dd>
+    </dl>
+
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</div>

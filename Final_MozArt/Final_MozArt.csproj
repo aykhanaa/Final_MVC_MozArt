@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\admin\assets\css\admin\" />
+    <Folder Include="wwwroot\assets\img\settings\" />
   </ItemGroup>
 
 </Project>

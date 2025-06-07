@@ -1,55 +1,44 @@
 ﻿@model List<Setting>
-@{
-    ViewData["Title"] = "Index";
-}
 
-<div class="container" style="margin-left:30px">
-    <h1 class="text-center mt-3 mb-3">Setting</h1>
-    <div class="table-responsive" style="margin-top: 4pc;margin-left: 17pc;width: 75pc;">
-        <table class="table table-striped">
-            <thead>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Settings</h1>
+    <a class="btn btn-success mb-3" asp-action="Create" style="margin-left: 12pc;">Create</a>
+
+    <table class="table table-striped" style="margin-left: 12pc;width: 76pc;">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var setting in Model)
+            {
                 <tr>
-                    <th>
-                        Key
-                    </th>
-                    <th>
-                        Value
-                    </th>
+                    <td>@setting.Key</td>
+                    <td>@setting.Value</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(setting.Value) && (setting.Value.EndsWith(".png") || setting.Value.EndsWith(".jpg") || setting.Value.EndsWith(".jpeg") || setting.Value.EndsWith(".gif") || setting.Value.EndsWith(".webp")))
+                        {
+                            <img src="~/assets/img/settings/@setting.Value" alt="@setting.Key" style="width: 80px; height: 80px;" />
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-info" asp-action="Detail" asp-route-id="@setting.Id">Detail</a>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@setting.Id">Edit</a>
+                        <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@setting.Id">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
 
-                    <th>
-                        Operations
-                    </th>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td class="py-1">
-                            @item.Key
-                        </td>
-
-                        <td class="py-1">
-                            @if (item.Value.Contains("jpg") || item.Value.Contains("png"))
-                            {
-                                <img src="~/assets/img/settings/@item.Value" />
-                            }
-                            else
-                            {
-                                @item.Value
-                            }
-                        </td>
-
-                        <td>
-                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-
-                        </td>
-                    </tr>
-                }
-
-            </tbody>
-        </table>
-    </div>
-
+            }
+        </tbody>
+    </table>
 </div>
-

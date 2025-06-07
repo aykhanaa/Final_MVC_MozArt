@@ -43,6 +43,8 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<AboutCreateVM, About>();
             CreateMap<AboutVM, AboutEditVM>();
 
+            CreateMap<Setting, SettingVM>();
+            CreateMap<SettingCreateVM, Setting>();
             CreateMap<SettingEditVM, Setting>();
 
             CreateMap<Video, VideoVM>();
