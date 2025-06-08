@@ -28,6 +28,8 @@ namespace Final_MozArt.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ProductTag>  ProductTags { get; set; }
 
+        public DbSet<ProductImage> ProductImages { get; set; }
+
 
 
 

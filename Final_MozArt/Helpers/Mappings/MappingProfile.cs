@@ -9,6 +9,7 @@ using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Color;
 using Final_MozArt.ViewModels.ContactIntro;
 using Final_MozArt.ViewModels.Instagram;
+using Final_MozArt.ViewModels.Product;
 using Final_MozArt.ViewModels.Setting;
 using Final_MozArt.ViewModels.Slider;
 using Final_MozArt.ViewModels.Support;
@@ -78,6 +79,55 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<Color, ColorVM>();
             CreateMap<ColorCreateVM, Color>();
             CreateMap<ColorVM, ColorEditVM>();
+
+            // Product -> ProductVM (Index view)
+            CreateMap<Product, ProductVM>()
+    .ForMember(dest => dest.MainImage, opt => opt.MapFrom(src =>
+        src.Images.FirstOrDefault(i => i.IsMain) != null ? src.Images.FirstOrDefault(i => i.IsMain).Image : null))
+    .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+    .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name));
+
+
+
+            // Product -> ProductDetailVM
+            CreateMap<Product, ProductDetailVM>()
+                .ForMember(dest => dest.Images, opt => opt.MapFrom(src =>
+                    src.Images.Select(img => new ProductImageVM
+                    {
+                        Id = img.Id,
+                        Url = img.Image, // ProductImage.Image istifadə olunur
+                        IsMain = img.IsMain
+                    }).ToList()))
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name))
+                .ForMember(dest => dest.TagNames, opt => opt.MapFrom(src =>
+                    src.ProductTags.Select(pt => pt.Tag.Name).ToList()))
+                .ForMember(dest => dest.ColorNames, opt => opt.MapFrom(src =>
+                    src.ProductColors.Select(pc => pc.Color.Name).ToList()));
+
+            // Product -> ProductEditVM
+            CreateMap<Product, ProductEditVM>()
+                .ForMember(dest => dest.ExistingImages, opt => opt.MapFrom(src =>
+                    src.Images.Select(img => new ProductImageVM
+                    {
+                        Id = img.Id,
+                        Url = img.Image, // Image property
+                        IsMain = img.IsMain
+                    }).ToList()))
+                .ForMember(dest => dest.SelectedColorIds, opt => opt.MapFrom(src =>
+                    src.ProductColors.Select(pc => pc.ColorId).ToList()))
+                .ForMember(dest => dest.SelectedTagIds, opt => opt.MapFrom(src =>
+                    src.ProductTags.Select(pt => pt.TagId).ToList()));
+
+            // ProductCreateVM -> Product
+            CreateMap<ProductCreateVM, Product>();
+
+            // ProductEditVM -> Product
+            CreateMap<ProductEditVM, Product>()
+                .ForMember(dest => dest.Images, opt => opt.Ignore())
+                .ForMember(dest => dest.ProductColors, opt => opt.Ignore())
+                .ForMember(dest => dest.ProductTags, opt => opt.Ignore());
+
 
 
 
