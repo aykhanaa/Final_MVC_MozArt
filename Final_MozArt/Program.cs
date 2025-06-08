@@ -36,19 +36,19 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedEmail = true;
 });
 
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
-    // .WriteTo.Seq("http://localhost:5341") 
-    .Enrich.FromLogContext()
-    .CreateLogger();
+//Log.Logger = new LoggerConfiguration()
+//    .MinimumLevel.Information()
+//    .WriteTo.Console()
+//    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+//    // .WriteTo.Seq("http://localhost:5341") 
+//    .Enrich.FromLogContext()
+//    .CreateLogger();
 
 
 
 builder.Services.AddServiceLayer();
 
-builder.Host.UseSerilog();
+//builder.Host.UseSerilog();
 
 var app = builder.Build();
 

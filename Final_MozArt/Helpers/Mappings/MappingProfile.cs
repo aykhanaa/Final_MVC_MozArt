@@ -6,11 +6,13 @@ using Final_MozArt.ViewModels.Blog;
 using Final_MozArt.ViewModels.BlogCategory;
 using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
+using Final_MozArt.ViewModels.Color;
 using Final_MozArt.ViewModels.ContactIntro;
 using Final_MozArt.ViewModels.Instagram;
 using Final_MozArt.ViewModels.Setting;
 using Final_MozArt.ViewModels.Slider;
 using Final_MozArt.ViewModels.Support;
+using Final_MozArt.ViewModels.Tag;
 using Final_MozArt.ViewModels.Video;
 
 namespace Final_MozArt.Helpers.Mappings
@@ -68,6 +70,14 @@ namespace Final_MozArt.Helpers.Mappings
 
             CreateMap<BlogCreateVM, Blog>();
             CreateMap<BlogVM, BlogEditVM>();
+
+            CreateMap<Tag, TagVM>();
+            CreateMap<TagCreateVM, Tag>();
+            CreateMap<TagVM, TagEditVM>();
+
+            CreateMap<Color, ColorVM>();
+            CreateMap<ColorCreateVM, Color>();
+            CreateMap<ColorVM, ColorEditVM>();
 
 
 

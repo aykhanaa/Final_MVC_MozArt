@@ -22,6 +22,12 @@ namespace Final_MozArt.Data
         public DbSet<ContactIntro> ContactIntros { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<ProductColor>  ProductColors { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<ProductTag>  ProductTags { get; set; }
+
 
 
 
