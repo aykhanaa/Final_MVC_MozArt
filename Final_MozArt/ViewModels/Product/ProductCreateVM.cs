@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Final_MozArt.ViewModels.Product
@@ -9,7 +10,7 @@ namespace Final_MozArt.ViewModels.Product
         public string Name { get; set; }
 
         [Required]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Price must be greater than 0.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Qiymət 0-dan böyük olmalıdır.")]
         public decimal Price { get; set; }
 
         [Required]
@@ -17,20 +18,17 @@ namespace Final_MozArt.ViewModels.Product
 
         [Required]
         public int CategoryId { get; set; }
-        public SelectList Categories { get; set; }
 
         [Required]
         public int BrandId { get; set; }
-        public SelectList Brands { get; set; }
-
-        public List<int> SelectedColorIds { get; set; }
-        public MultiSelectList Colors { get; set; }
-
-        public List<int> SelectedTagIds { get; set; }
-        public MultiSelectList Tags { get; set; }
 
         [Required]
-        public List<IFormFile> Photos { get; set; }
-    }
+        public ICollection<int> ColorIds { get; set; }
 
+        [Required]
+        public ICollection<int> TagIds { get; set; }
+
+        [Required]
+        public ICollection<IFormFile> Photos { get; set; }
+    }
 }

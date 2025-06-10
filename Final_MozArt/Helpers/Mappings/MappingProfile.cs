@@ -80,53 +80,42 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<ColorCreateVM, Color>();
             CreateMap<ColorVM, ColorEditVM>();
 
-            // Product -> ProductVM (Index view)
-            CreateMap<Product, ProductVM>()
-    .ForMember(dest => dest.MainImage, opt => opt.MapFrom(src =>
-        src.Images.FirstOrDefault(i => i.IsMain) != null ? src.Images.FirstOrDefault(i => i.IsMain).Image : null))
-    .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
-    .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name));
 
-
-
-            // Product -> ProductDetailVM
             CreateMap<Product, ProductDetailVM>()
-                .ForMember(dest => dest.Images, opt => opt.MapFrom(src =>
-                    src.Images.Select(img => new ProductImageVM
-                    {
-                        Id = img.Id,
-                        Url = img.Image, // ProductImage.Image istifadə olunur
-                        IsMain = img.IsMain
-                    }).ToList()))
-                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
-                .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name))
-                .ForMember(dest => dest.TagNames, opt => opt.MapFrom(src =>
-                    src.ProductTags.Select(pt => pt.Tag.Name).ToList()))
-                .ForMember(dest => dest.ColorNames, opt => opt.MapFrom(src =>
-                    src.ProductColors.Select(pc => pc.Color.Name).ToList()));
+    .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+    .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name))
+    .ForMember(dest => dest.ColorNames, opt => opt.MapFrom(src => src.ProductColors.Select(pc => pc.Color.Name)))
+    .ForMember(dest => dest.TagNames, opt => opt.MapFrom(src => src.ProductTags.Select(pt => pt.Tag.Name)))
+    .ForMember(dest => dest.Images, opt => opt.MapFrom(src => src.Images));
 
-            // Product -> ProductEditVM
-            CreateMap<Product, ProductEditVM>()
-                .ForMember(dest => dest.ExistingImages, opt => opt.MapFrom(src =>
-                    src.Images.Select(img => new ProductImageVM
-                    {
-                        Id = img.Id,
-                        Url = img.Image, // Image property
-                        IsMain = img.IsMain
-                    }).ToList()))
-                .ForMember(dest => dest.SelectedColorIds, opt => opt.MapFrom(src =>
-                    src.ProductColors.Select(pc => pc.ColorId).ToList()))
-                .ForMember(dest => dest.SelectedTagIds, opt => opt.MapFrom(src =>
-                    src.ProductTags.Select(pt => pt.TagId).ToList()));
-
-            // ProductCreateVM -> Product
-            CreateMap<ProductCreateVM, Product>();
-
-            // ProductEditVM -> Product
-            CreateMap<ProductEditVM, Product>()
-                .ForMember(dest => dest.Images, opt => opt.Ignore())
+            CreateMap<ProductCreateVM, Product>()
                 .ForMember(dest => dest.ProductColors, opt => opt.Ignore())
-                .ForMember(dest => dest.ProductTags, opt => opt.Ignore());
+                .ForMember(dest => dest.ProductTags, opt => opt.Ignore())
+                .ForMember(dest => dest.Images, opt => opt.Ignore());
+
+            CreateMap<ProductEditVM, Product>()
+                .ForMember(dest => dest.ProductColors, opt => opt.Ignore())
+                .ForMember(dest => dest.ProductTags, opt => opt.Ignore())
+                .ForMember(dest => dest.Images, opt => opt.Ignore());
+
+            CreateMap<Product, ProductEditVM>()
+                .ForMember(dest => dest.ColorIds, opt => opt.MapFrom(src => src.ProductColors.Select(pc => pc.ColorId)))
+                .ForMember(dest => dest.TagIds, opt => opt.MapFrom(src => src.ProductTags.Select(pt => pt.TagId)))
+                .ForMember(dest => dest.Images, opt => opt.MapFrom(src => src.Images))
+                .ForMember(dest => dest.Photos, opt => opt.Ignore());
+
+            CreateMap<Product, ProductVM>()
+                .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(i => i.IsMain).Image))
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name));
+
+            CreateMap<ProductImage, SetIsMainVM>()
+                .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId))
+                .ForMember(dest => dest.ImageId, opt => opt.MapFrom(src => src.Id));
+
+
+
+
 
 
 

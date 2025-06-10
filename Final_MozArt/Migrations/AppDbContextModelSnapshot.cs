@@ -403,7 +403,7 @@ namespace Final_MozArt.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImage");
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("Final_MozArt.Models.ProductTag", b =>

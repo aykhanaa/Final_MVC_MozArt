@@ -1,53 +1,54 @@
-﻿@model ProductCreateVM
+﻿@model Final_MozArt.ViewModels.Product.ProductCreateVM
 
 @{
     ViewData["Title"] = "Create Product";
 }
 
-<div class="container mt-5">
-    <h2>Create New Product</h2>
-    <form asp-action="Create" enctype="multipart/form-data">
-        <div class="mb-3">
-            <label asp-for="Name" class="form-label"></label>
-            <input asp-for="Name" class="form-control" />
-        </div>
+<h2>Create Product</h2>
 
-        <div class="mb-3">
-            <label asp-for="Price" class="form-label"></label>
-            <input asp-for="Price" class="form-control" />
-        </div>
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
 
-        <div class="mb-3">
-            <label asp-for="Description" class="form-label"></label>
-            <textarea asp-for="Description" class="form-control"></textarea>
-        </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
 
-        <div class="mb-3">
-            <label>Photos</label>
-            <input asp-for="Photos" type="file" class="form-control" multiple />
-        </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
 
-        <div class="mb-3">
-            <label>Colors</label>
-            <select asp-for="SelectedColorIds" asp-items="Model.ColorSelectList" class="form-control" multiple></select>
-        </div>
+    <div class="form-group">
+        <label>Brand</label>
+        <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brands"></select>
+    </div>
 
-        <div class="mb-3">
-            <label>Tags</label>
-            <select asp-for="SelectedTagIds" asp-items="Model.TagSelectList" class="form-control" multiple></select>
-        </div>
+    <div class="form-group">
+        <label>Category</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+    </div>
 
-        <div class="mb-3">
-            <label>Category</label>
-            <select asp-for="CategoryId" asp-items="Model.CategorySelectList" class="form-control"></select>
-        </div>
+    <div class="form-group">
+        <label>Colors</label>
+        <select asp-for="ColorIds" asp-items="ViewBag.Colors" multiple class="form-control"></select>
+    </div>
 
-        <div class="mb-3">
-            <label>Brand</label>
-            <select asp-for="BrandId" asp-items="Model.BrandSelectList" class="form-control"></select>
-        </div>
+    <div class="form-group">
+        <label>Tags</label>
+        <select asp-for="TagIds" asp-items="ViewBag.Tags" multiple class="form-control"></select>
+    </div>
 
-        <button type="submit" class="btn btn-primary">Create</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-    </form>
-</div>
+    <div class="form-group">
+        <label>Images</label>
+        <input asp-for="Photos" type="file" class="form-control" multiple />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

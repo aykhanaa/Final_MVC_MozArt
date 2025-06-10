@@ -1,65 +1,86 @@
-﻿@model ProductEditVM
+﻿@model Final_MozArt.ViewModels.Product.ProductEditVM
 
 @{
     ViewData["Title"] = "Edit Product";
 }
 
-<div class="container mt-5">
-    <h2>Edit Product</h2>
-    <form asp-action="Edit" enctype="multipart/form-data">
-        <input type="hidden" asp-for="Id" />
+<h2>Edit Product</h2>
 
-        <div class="mb-3">
-            <label asp-for="Name" class="form-label"></label>
-            <input asp-for="Name" class="form-control" />
-        </div>
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
 
-        <div class="mb-3">
-            <label asp-for="Price" class="form-label"></label>
-            <input asp-for="Price" class="form-control" />
-        </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
 
-        <div class="mb-3">
-            <label asp-for="Description" class="form-label"></label>
-            <textarea asp-for="Description" class="form-control"></textarea>
-        </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
 
-        <div class="mb-3">
-            <label>New Photos</label>
-            <input asp-for="NewPhotos" type="file" class="form-control" multiple />
-        </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
 
-        <div class="mb-3">
-            <label>Existing Images</label><br />
-            @foreach (var image in Model.ExistingImages)
+    <div class="form-group">
+        <label>Brand</label>
+        <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brands"></select>
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+    </div>
+
+    <div class="form-group">
+        <label>Colors</label>
+        <select asp-for="ColorIds" asp-items="ViewBag.Colors" multiple class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+        <label>Tags</label>
+        <select asp-for="TagIds" asp-items="ViewBag.Tags" multiple class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+        <label>Upload New Images</label>
+        <input asp-for="Photos" type="file" class="form-control" multiple />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+
+<hr />
+
+<h4>Existing Images</h4>
+@if (Model.Images != null && Model.Images.Any())
+{
+    foreach (var image in Model.Images)
+    {
+        <div style="display: inline-block; margin: 10px;">
+            <img src="~/assets/images/@image.Image" width="120" />
+            <form asp-action="DeleteImage" method="post" style="display: inline;">
+                <input type="hidden" name="id" value="@image.Id" />
+                <input type="hidden" name="productId" value="@Model.Id" />
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </form>
+            @if (!image.IsMain)
             {
-                <div class="d-inline-block me-2 mb-2">
-                    <img src="@image.Url" class="img-thumbnail" style="width: 100px;" />
-                </div>
+                <form asp-action="SetMainImage" method="post">
+                    <input type="hidden" name="ProductId" value="@Model.Id" />
+                    <input type="hidden" name="ImageId" value="@image.Id" />
+                    <button class="btn btn-sm btn-warning">Set Main</button>
+                </form>
+            }
+            else
+            {
+                <span class="badge bg-success">Main</span>
             }
         </div>
-
-        <div class="mb-3">
-            <label>Colors</label>
-            <select asp-for="SelectedColorIds" asp-items="Model.ColorSelectList" class="form-control" multiple></select>
-        </div>
-
-        <div class="mb-3">
-            <label>Tags</label>
-            <select asp-for="SelectedTagIds" asp-items="Model.TagSelectList" class="form-control" multiple></select>
-        </div>
-
-        <div class="mb-3">
-            <label>Category</label>
-            <select asp-for="CategoryId" asp-items="Model.CategorySelectList" class="form-control"></select>
-        </div>
-
-        <div class="mb-3">
-            <label>Brand</label>
-            <select asp-for="BrandId" asp-items="Model.BrandSelectList" class="form-control"></select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-    </form>
-</div>
+    }
+}

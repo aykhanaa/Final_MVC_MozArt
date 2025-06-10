@@ -21,6 +21,8 @@ namespace Final_MozArt
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<IColorService, ColorService>();
+            services.AddScoped<IProductService, ProductService>();
+
 
 
 

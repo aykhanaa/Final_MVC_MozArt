@@ -1,298 +1,373 @@
 ﻿using AutoMapper;
 using Final_MozArt.Data;
 using Final_MozArt.Models;
+using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Product;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
-
-public class ProductService : IProductService
+namespace Final_MozArt.Services
 {
-    private readonly AppDbContext _context;
-    private readonly IMapper _mapper;
-
-    public ProductService(AppDbContext context, IMapper mapper)
+    public class ProductService : IProductService
     {
-        _context = context;
-        _mapper = mapper;
-    }
+        private readonly AppDbContext _context; // Burada dəyişdirdik
+        private readonly IMapper _mapper;
+        private readonly string _imageFolderPath = "wwwroot/assets/img/home";
 
-    private async Task<string> UploadImageAsync(IFormFile photo)
-    {
-        if (photo == null || photo.Length == 0) return null;
-
-        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "products");
-        if (!Directory.Exists(uploadsFolder))
-            Directory.CreateDirectory(uploadsFolder);
-
-        var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
-        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        public ProductService(AppDbContext context, IMapper mapper) // Konstruktor parametri də dəyişdi
         {
-            await photo.CopyToAsync(fileStream);
+            _context = context;
+            _mapper = mapper;
+
+            if (!Directory.Exists(_imageFolderPath))
+                Directory.CreateDirectory(_imageFolderPath);
         }
 
-        return "/images/products/" + uniqueFileName;
-    }
-
-    public async Task<List<ProductVM>> GetAllAsync()
-    {
-        var products = await _context.Products
-            .Include(p => p.Category)
-            .Include(p => p.Brand)
-            .Include(p => p.Images)
-            .ToListAsync();
-
-        return _mapper.Map<List<ProductVM>>(products);
-    }
-
-    public async Task<ProductVM> GetByIdWithIncludesAsync(int id)
-    {
-        var product = await _context.Products
-            .Include(p => p.Category)
-            .Include(p => p.Brand)
-            .Include(p => p.Images)
-            .FirstOrDefaultAsync(p => p.Id == id);
-
-        return _mapper.Map<ProductVM>(product);
-    }
-
-    public async Task<ProductDetailVM> GetByIdWithIncludesWithoutTrackingAsync(int id)
-    {
-        var product = await _context.Products
-            .AsNoTracking()
-            .Include(p => p.Category)
-            .Include(p => p.Brand)
-            .Include(p => p.Images)
-            .Include(p => p.ProductTags).ThenInclude(pt => pt.Tag)
-            .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
-            .FirstOrDefaultAsync(p => p.Id == id);
-
-        return _mapper.Map<ProductDetailVM>(product);
-    }
-
-    public async Task<ProductVM> GetByNameWithoutTrackingAsync(string name)
-    {
-        var product = await _context.Products
-            .AsNoTracking()
-            .Include(p => p.Category)
-            .Include(p => p.Images)
-            .FirstOrDefaultAsync(p => p.Name == name);
-
-        return _mapper.Map<ProductVM>(product);
-    }
-
-    public async Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take)
-    {
-        var products = await _context.Products
-            .Include(p => p.Category)
-            .Include(p => p.Images)
-            .Skip((page - 1) * take)
-            .Take(take)
-            .ToListAsync();
-
-        return _mapper.Map<List<ProductVM>>(products);
-    }
-
-    public async Task<List<ProductVM>> GetPaginatedDatasByCategory(int categoryId, int page, int take)
-    {
-        var products = await _context.Products
-            .Where(p => p.CategoryId == categoryId)
-            .Include(p => p.Category)
-            .Include(p => p.Images)
-            .Skip((page - 1) * take)
-            .Take(take)
-            .ToListAsync();
-
-        return _mapper.Map<List<ProductVM>>(products);
-    }
-
-    public async Task<List<ProductVM>> SearchAsync(string searchText, int page, int take)
-    {
-        var query = _context.Products
-            .Where(p => p.Name.Contains(searchText))
-            .Include(p => p.Images)
-            .Include(p => p.Category);
-
-        return _mapper.Map<List<ProductVM>>(await query.Skip((page - 1) * take).Take(take).ToListAsync());
-    }
-
-    public async Task<int> GetCountAsync() => await _context.Products.CountAsync();
-
-    public async Task<int> GetCountByCategoryAsync(int categoryId)
-        => await _context.Products.CountAsync(p => p.CategoryId == categoryId);
-
-    public async Task<int> GetCountBySearch(string searchText)
-        => await _context.Products.CountAsync(p => p.Name.Contains(searchText));
-
-    public async Task<List<ProductVM>> OrderByNameAsc(int page, int take)
-    {
-        return _mapper.Map<List<ProductVM>>(await _context.Products
-            .OrderBy(p => p.Name)
-            .Include(p => p.Images)
-            .Skip((page - 1) * take).Take(take).ToListAsync());
-    }
-
-    public async Task<List<ProductVM>> OrderByNameDesc(int page, int take)
-    {
-        return _mapper.Map<List<ProductVM>>(await _context.Products
-            .OrderByDescending(p => p.Name)
-            .Include(p => p.Images)
-            .Skip((page - 1) * take).Take(take).ToListAsync());
-    }
-
-    public async Task<List<ProductVM>> OrderByPriceAsc(int page, int take)
-    {
-        return _mapper.Map<List<ProductVM>>(await _context.Products
-            .OrderBy(p => p.Price)
-            .Include(p => p.Images)
-            .Skip((page - 1) * take).Take(take).ToListAsync());
-    }
-
-    public async Task<List<ProductVM>> OrderByPriceDesc(int page, int take)
-    {
-        return _mapper.Map<List<ProductVM>>(await _context.Products
-            .OrderByDescending(p => p.Price)
-            .Include(p => p.Images)
-            .Skip((page - 1) * take).Take(take).ToListAsync());
-    }
-
-    public async Task<List<ProductVM>> FilterAsync(int minPrice, int maxPrice)
-    {
-        var products = await _context.Products
-            .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
-            .Include(p => p.Images)
-            .ToListAsync();
-
-        return _mapper.Map<List<ProductVM>>(products);
-    }
-
-    public async Task<int> FilterCountAsync(int minPrice, int maxPrice)
-    {
-        return await _context.Products.CountAsync(p => p.Price >= minPrice && p.Price <= maxPrice);
-    }
-
-    public async Task CreateAsync(ProductCreateVM productCreateVM)
-    {
-        var product = _mapper.Map<Product>(productCreateVM);
-        _context.Products.Add(product);
-        await _context.SaveChangesAsync();
-
-        if (productCreateVM.SelectedColorIds != null)
+        public async Task<ICollection<ProductVM>> GetAllAsync()
         {
-            foreach (var colorId in productCreateVM.SelectedColorIds)
-            {
-                product.ProductColors.Add(new ProductColor { ColorId = colorId, ProductId = product.Id });
-            }
+            var products = await _context.Products
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
         }
 
-        if (productCreateVM.SelectedTagIds != null)
+        public async Task<ProductVM> GetByIdWithIncludesAsync(int id)
         {
-            foreach (var tagId in productCreateVM.SelectedTagIds)
-            {
-                product.ProductTags.Add(new ProductTag { TagId = tagId, ProductId = product.Id });
-            }
+            var product = await _context.Products
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null) return null;
+
+            return _mapper.Map<ProductVM>(product);
         }
 
-        if (productCreateVM.Photos != null && productCreateVM.Photos.Any())
+        public async Task<ProductDetailVM> GetByIdWithIncludesWithoutTrackingAsync(int id)
         {
-            bool isFirst = true;
-            foreach (var photo in productCreateVM.Photos)
+            var product = await _context.Products
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
+                .Include(p => p.ProductTags).ThenInclude(pt => pt.Tag)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null) return null;
+
+            var detailVM = _mapper.Map<ProductDetailVM>(product);
+
+            detailVM.ColorNames = product.ProductColors.Select(pc => pc.Color.Name).ToList();
+            detailVM.TagNames = product.ProductTags.Select(pt => pt.Tag.Name).ToList();
+
+            detailVM.ColorIds = product.ProductColors.Select(pc => pc.ColorId).ToList();
+            detailVM.TagIds = product.ProductTags.Select(pt => pt.TagId).ToList();
+
+            return detailVM;
+        }
+
+        public async Task<ICollection<ProductVM>> GetPaginatedDatasByCategory(int categoryId, int page, int take)
+        {
+            var products = await _context.Products
+                .Where(p => p.CategoryId == categoryId)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ICollection<ProductVM>> GetPaginatedDatasAsync(int page, int take)
+        {
+            var products = await _context.Products
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ProductVM> GetByNameWithoutTrackingAsync(string name)
+        {
+            var product = await _context.Products
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Name.ToLower() == name.ToLower());
+
+            return product == null ? null : _mapper.Map<ProductVM>(product);
+        }
+
+        public async Task<int> GetCountAsync()
+            => await _context.Products.CountAsync();
+
+        public async Task<int> GetCountByCategoryAsync(int categoryId)
+            => await _context.Products.Where(p => p.CategoryId == categoryId).CountAsync();
+
+        public async Task<int> GetCountBySearch(string searchText)
+            => await _context.Products
+                .Where(p => p.Name.Contains(searchText) || p.Description.Contains(searchText))
+                .CountAsync();
+
+        public async Task<ICollection<ProductVM>> SearchAsync(string searchText, int page, int take)
+        {
+            var products = await _context.Products
+                .Where(p => p.Name.Contains(searchText) || p.Description.Contains(searchText))
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ICollection<ProductVM>> OrderByNameAsc(int page, int take)
+        {
+            var products = await _context.Products
+                .OrderBy(p => p.Name)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ICollection<ProductVM>> OrderByNameDesc(int page, int take)
+        {
+            var products = await _context.Products
+                .OrderByDescending(p => p.Name)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ICollection<ProductVM>> OrderByPriceAsc(int page, int take)
+        {
+            var products = await _context.Products
+                .OrderBy(p => p.Price)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ICollection<ProductVM>> OrderByPriceDesc(int page, int take)
+        {
+            var products = await _context.Products
+                .OrderByDescending(p => p.Price)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<ICollection<ProductVM>> FilterAsync(int minPrice, int maxPrice)
+        {
+            var products = await _context.Products
+                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        public async Task<int> FilterCountAsync(int minPrice, int maxPrice)
+            => await _context.Products
+                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
+                .CountAsync();
+
+        public async Task CreateAsync(ProductCreateVM vm)
+        {
+            var product = _mapper.Map<Product>(vm);
+
+            product.ProductColors = vm.ColorIds.Select(colorId => new ProductColor
             {
-                var imageUrl = await UploadImageAsync(photo);
-                if (imageUrl != null)
+                ColorId = colorId,
+                Product = product
+            }).ToList();
+
+            product.ProductTags = vm.TagIds.Select(tagId => new ProductTag
+            {
+                TagId = tagId,
+                Product = product
+            }).ToList();
+
+            product.Images = new List<ProductImage>();
+            foreach (var photo in vm.Photos)
+            {
+                var fileName = await SaveFileAsync(photo);
+                product.Images.Add(new ProductImage
                 {
-                    product.Images.Add(new ProductImage { Image = imageUrl, IsMain = isFirst });
-                    isFirst = false;
+                    Image = fileName,
+                    IsMain = false,
+                    Product = product
+                });
+            }
+
+            await _context.Products.AddAsync(product);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task EditAsync(ProductEditVM vm)
+        {
+            var product = await _context.Products
+                .Include(p => p.ProductColors)
+                .Include(p => p.ProductTags)
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == vm.Id);
+
+            if (product == null)
+                throw new KeyNotFoundException("Product tapilmadi.");
+
+            product.Name = vm.Name;
+            product.Price = vm.Price;
+            product.Description = vm.Description;
+            product.BrandId = vm.BrandId;
+            product.CategoryId = vm.CategoryId;
+
+            _context.ProductColors.RemoveRange(product.ProductColors);
+            product.ProductColors = vm.ColorIds.Select(colorId => new ProductColor
+            {
+                ColorId = colorId,
+                ProductId = product.Id
+            }).ToList();
+
+            _context.ProductTags.RemoveRange(product.ProductTags);
+            product.ProductTags = vm.TagIds.Select(tagId => new ProductTag
+            {
+                TagId = tagId,
+                ProductId = product.Id
+            }).ToList();
+
+            if (vm.Photos != null && vm.Photos.Any())
+            {
+                foreach (var photo in vm.Photos)
+                {
+                    var fileName = await SaveFileAsync(photo);
+                    product.Images.Add(new ProductImage
+                    {
+                        Image = fileName,
+                        IsMain = false,
+                        ProductId = product.Id
+                    });
                 }
             }
+
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync();
         }
 
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task EditAsync(ProductEditVM productEditVM)
-    {
-        var product = await _context.Products
-            .Include(p => p.Images)
-            .Include(p => p.ProductColors)
-            .Include(p => p.ProductTags)
-            .FirstOrDefaultAsync(p => p.Id == productEditVM.Id);
-
-        if (product == null) return;
-
-        _mapper.Map(productEditVM, product);
-
-        product.ProductColors.Clear();
-        if (productEditVM.SelectedColorIds != null)
+        public async Task DeleteAsync(int id)
         {
-            foreach (var colorId in productEditVM.SelectedColorIds)
+            var product = await _context.Products
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null)
+                throw new KeyNotFoundException("Product tapilmadi.");
+
+            foreach (var image in product.Images)
             {
-                product.ProductColors.Add(new ProductColor { ColorId = colorId, ProductId = product.Id });
+                DeleteFileIfExists(image.Image);
             }
+
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
         }
 
-        product.ProductTags.Clear();
-        if (productEditVM.SelectedTagIds != null)
+        public async Task DeleteProductImageAsync(int id)
         {
-            foreach (var tagId in productEditVM.SelectedTagIds)
+            var image = await _context.ProductImages.FindAsync(id);
+            if (image == null)
+                throw new KeyNotFoundException("Image tapilmadi.");
+
+            DeleteFileIfExists(image.Image);
+
+            _context.ProductImages.Remove(image);
+            await _context.SaveChangesAsync();
+        }
+
+
+        public async Task SetMainImageAsync(SetIsMainVM data)
+        {
+            var product = await _context.Products
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == data.ProductId);
+
+            if (product == null)
+                throw new KeyNotFoundException("Product tapilmadi.");
+
+            foreach (var img in product.Images)
+                img.IsMain = img.Id == data.ImageId;
+
+            await _context.SaveChangesAsync();
+        }
+
+        private async Task<string> SaveFileAsync(IFormFile file)
+        {
+            var fileName = $"{Guid.NewGuid()}_{file.FileName}";
+            var filePath = Path.Combine(_imageFolderPath, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                product.ProductTags.Add(new ProductTag { TagId = tagId, ProductId = product.Id });
+                await file.CopyToAsync(stream);
             }
+
+            return fileName;
         }
 
-        if (productEditVM.NewPhotos != null && productEditVM.NewPhotos.Any())
+        private void DeleteFileIfExists(string fileName)
         {
-            foreach (var photo in productEditVM.NewPhotos)
-            {
-                var imageUrl = await UploadImageAsync(photo);
-                if (imageUrl != null)
-                {
-                    product.Images.Add(new ProductImage { Image = imageUrl, IsMain = false });
-                }
-            }
+            var filePath = Path.Combine(_imageFolderPath, fileName);
+            if (File.Exists(filePath))
+                File.Delete(filePath);
         }
-
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task DeleteAsync(int id)
-    {
-        var product = await _context.Products.Include(p => p.Images).FirstOrDefaultAsync(p => p.Id == id);
-        if (product == null) return;
-
-        foreach (var image in product.Images)
-        {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", image.Image.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
-            if (File.Exists(filePath)) File.Delete(filePath);
-        }
-
-        _context.Products.Remove(product);
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task DeleteProductImageAsync(int imageId)
-    {
-        var image = await _context.ProductImages.FindAsync(imageId);
-        if (image == null) return;
-
-        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", image.Image.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
-        if (File.Exists(filePath)) File.Delete(filePath);
-
-        _context.ProductImages.Remove(image);
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task SetMainImageAsync(SetIsMainVM data)
-    {
-        var product = await _context.Products.Include(p => p.Images).FirstOrDefaultAsync(p => p.Id == data.ProductId);
-        if (product == null) return;
-
-        foreach (var img in product.Images)
-        {
-            img.IsMain = img.Id == data.ImageId;
-        }
-
-        await _context.SaveChangesAsync();
     }
 }

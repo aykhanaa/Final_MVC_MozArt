@@ -569,6 +569,7 @@ wwwroot\assets\img\home\46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp
 wwwroot\assets\img\home\47e2cbfc-deb5-4cdc-bbeb-1d76ca3de5fe-category-img-2.webp
 wwwroot\assets\img\home\4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp
 wwwroot\assets\img\home\4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp
+wwwroot\assets\img\home\51cd942b-f4d7-4270-90df-29bb2dd32aa3_9558369e-ae52-494d-8ab7-d9ea59723596-brand-3.webp
 wwwroot\assets\img\home\52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp
 wwwroot\assets\img\home\55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp
 wwwroot\assets\img\home\568044fb-c6ef-4b48-9964-c4d3dda2d71e-about-1.webp
@@ -658,6 +659,8 @@ wwwroot\assets\img\settings\brand-5-caf73cbd-d845-4110-b3f9-b3ccc785909c.webp
 wwwroot\assets\img\settings\c1633e3b-6856-472d-95b9-7eae0bc57c5e-brand-3.webp
 wwwroot\assets\img\settings\e81b5ef9-b0e1-457d-a572-59b4502969f8-brand-1.webp
 wwwroot\assets\img\settings\e9d26f44-2015-44d0-8ce0-f706e94b82a9-brand-4.webp
+wwwroot\assets\img\settings\page-title-1720e4de-f9eb-45ac-8cea-072c9f8041dc.webp
+wwwroot\assets\img\settings\page-title-6e947a7a-527f-4ce3-9229-b99079320c91.webp
 wwwroot\assets\img\settings\slide-1-36288d91-e639-4d9d-80b0-2a4e6e439fa3.webp
 wwwroot\assets\img\shop\3D pot 1-1.webp
 wwwroot\assets\img\shop\3D pot 1-2.webp
