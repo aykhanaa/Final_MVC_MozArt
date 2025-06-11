@@ -55,7 +55,6 @@ namespace Final_MozArt.Controllers
             return View();
         }
 
-        // POST: /Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProductCreateVM vm)
@@ -69,9 +68,10 @@ namespace Final_MozArt.Controllers
                 return View(vm);
             }
 
-            await _productService.CreateAsync(vm);
+            await _productService.CreateAsync(vm); // <-- burada artıq IsMain düzgün təyin olunur
             return RedirectToAction(nameof(Index));
         }
+
 
 
         // GET: /Product/Edit/5

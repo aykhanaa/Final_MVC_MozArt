@@ -239,14 +239,18 @@ namespace Final_MozArt.Services
                 Product = product
             }).ToList();
 
+            // <-- BURADA initialize ET
             product.Images = new List<ProductImage>();
-            foreach (var photo in vm.Photos)
+
+            var photos = vm.Photos.ToList();
+            for (int i = 0; i < photos.Count; i++)
             {
+                var photo = photos[i];
                 var fileName = await SaveFileAsync(photo);
                 product.Images.Add(new ProductImage
                 {
                     Image = fileName,
-                    IsMain = false,
+                    IsMain = i == 0,
                     Product = product
                 });
             }
@@ -254,6 +258,8 @@ namespace Final_MozArt.Services
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
+
+
 
         public async Task EditAsync(ProductEditVM vm)
         {

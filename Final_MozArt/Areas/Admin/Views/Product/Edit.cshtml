@@ -4,83 +4,93 @@
     ViewData["Title"] = "Edit Product";
 }
 
-<h2>Edit Product</h2>
+<div class="container" style="max-width: 900px; margin-top: 4rem;">
+    <h2 class="text-center mb-4">Edit Product</h2>
 
-<form asp-action="Edit" method="post" enctype="multipart/form-data">
-    <input type="hidden" asp-for="Id" />
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
 
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label fw-semibold text-muted"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label fw-semibold text-muted"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Price"></label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
+        <div class="mb-3">
+            <label asp-for="Price" class="form-label fw-semibold text-muted"></label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Brand</label>
-        <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brands"></select>
-    </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted">Brand</label>
+                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brands"></select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted">Category</label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label>Category</label>
-        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
-    </div>
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-muted">Colors</label>
+            <select asp-for="ColorIds" asp-items="ViewBag.Colors" multiple class="form-control"></select>
+        </div>
 
-    <div class="form-group">
-        <label>Colors</label>
-        <select asp-for="ColorIds" asp-items="ViewBag.Colors" multiple class="form-control"></select>
-    </div>
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-muted">Tags</label>
+            <select asp-for="TagIds" asp-items="ViewBag.Tags" multiple class="form-control"></select>
+        </div>
 
-    <div class="form-group">
-        <label>Tags</label>
-        <select asp-for="TagIds" asp-items="ViewBag.Tags" multiple class="form-control"></select>
-    </div>
+        <div class="mb-4">
+            <label class="form-label fw-semibold text-muted">Upload New Images</label>
+            <input asp-for="Photos" type="file" class="form-control" multiple />
+        </div>
 
-    <div class="form-group">
-        <label>Upload New Images</label>
-        <input asp-for="Photos" type="file" class="form-control" multiple />
-    </div>
+        <div class="mb-4 text-end">
+            <button type="submit" class="btn btn-success">Save</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </div>
+    </form>
 
-    <button type="submit" class="btn btn-success">Save</button>
-</form>
+    <hr class="my-4" />
 
-<hr />
-
-<h4>Existing Images</h4>
-@if (Model.Images != null && Model.Images.Any())
-{
-    foreach (var image in Model.Images)
+    <h4 class="mb-3">Existing Images</h4>
+    @if (Model.Images != null && Model.Images.Any())
     {
-        <div style="display: inline-block; margin: 10px;">
-            <img src="~/assets/images/@image.Image" width="120" />
-            <form asp-action="DeleteImage" method="post" style="display: inline;">
-                <input type="hidden" name="id" value="@image.Id" />
-                <input type="hidden" name="productId" value="@Model.Id" />
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </form>
-            @if (!image.IsMain)
+        <div class="d-flex flex-wrap gap-3">
+            @foreach (var image in Model.Images)
             {
-                <form asp-action="SetMainImage" method="post">
-                    <input type="hidden" name="ProductId" value="@Model.Id" />
-                    <input type="hidden" name="ImageId" value="@image.Id" />
-                    <button class="btn btn-sm btn-warning">Set Main</button>
-                </form>
-            }
-            else
-            {
-                <span class="badge bg-success">Main</span>
+                <div class="border p-2 rounded text-center" style="width: 150px;">
+                    <img src="~/assets/img/home/@image.Image" class="img-fluid mb-2 rounded" style="max-height: 100px;" />
+
+                    <form asp-action="DeleteImage" method="post" class="mb-2">
+                        <input type="hidden" name="id" value="@image.Id" />
+                        <input type="hidden" name="productId" value="@Model.Id" />
+                        <button class="btn btn-sm btn-danger w-100">Delete</button>
+                    </form>
+
+                    @if (!image.IsMain)
+                    {
+                        <form asp-action="SetMainImage" method="post">
+                            <input type="hidden" name="ProductId" value="@Model.Id" />
+                            <input type="hidden" name="ImageId" value="@image.Id" />
+                            <button class="btn btn-sm btn-warning w-100">Set Main</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success d-block mt-2">Main</span>
+                    }
+                </div>
             }
         </div>
     }
-}
+</div>

@@ -557,29 +557,37 @@ wwwroot\assets\img\blog\blog-5.webp
 wwwroot\assets\img\blog\blog-6.webp
 wwwroot\assets\img\blog\page-title.webp
 wwwroot\assets\img\contact\page-title.webp
+wwwroot\assets\img\home\0082a2d0-617f-4042-83ed-0baa06b36913_page-title.webp
 wwwroot\assets\img\home\0450c555-192c-4381-9ac3-16c95c5100af-Screenshot 2024-04-28 194703.png
+wwwroot\assets\img\home\08a8ac67-813b-42de-9cbc-4bc0e0cfec44_9558369e-ae52-494d-8ab7-d9ea59723596-brand-3.webp
 wwwroot\assets\img\home\1e89c629-42d5-41cf-8765-0bf45806cc7d-brand-4.webp
 wwwroot\assets\img\home\1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
 wwwroot\assets\img\home\208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp
+wwwroot\assets\img\home\2649ba64-5887-47bc-8be9-d2d0f756c806_blog-5.webp
 wwwroot\assets\img\home\26adb222-efab-4efa-a068-607ea99d5a8e-Screenshot 2024-04-28 194703.png
+wwwroot\assets\img\home\279272ee-4bba-40b6-ab49-b2401bea8664_blog-5.webp
 wwwroot\assets\img\home\2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp
 wwwroot\assets\img\home\31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp
 wwwroot\assets\img\home\344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp
+wwwroot\assets\img\home\35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp
+wwwroot\assets\img\home\3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp
 wwwroot\assets\img\home\46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp
 wwwroot\assets\img\home\47e2cbfc-deb5-4cdc-bbeb-1d76ca3de5fe-category-img-2.webp
 wwwroot\assets\img\home\4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp
 wwwroot\assets\img\home\4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp
-wwwroot\assets\img\home\51cd942b-f4d7-4270-90df-29bb2dd32aa3_9558369e-ae52-494d-8ab7-d9ea59723596-brand-3.webp
 wwwroot\assets\img\home\52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp
 wwwroot\assets\img\home\55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp
 wwwroot\assets\img\home\568044fb-c6ef-4b48-9964-c4d3dda2d71e-about-1.webp
 wwwroot\assets\img\home\68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp
 wwwroot\assets\img\home\6eacc569-6e77-4507-b186-1b4dcac8153c-brand-3.webp
+wwwroot\assets\img\home\7bdda5d6-3987-4801-8b24-d20fd00b48f4_page-title.webp
 wwwroot\assets\img\home\7cab6509-5e16-425e-9c64-441f64b0c8fd-instagram-2.webp
 wwwroot\assets\img\home\810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp
 wwwroot\assets\img\home\8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp
 wwwroot\assets\img\home\90f53e42-1ad0-4645-9922-538c01c11bea-Screenshot 2024-04-28 194703.png
 wwwroot\assets\img\home\9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp
+wwwroot\assets\img\home\a565c997-7205-4eed-afb8-6c4ed8e197b9_blog-6.webp
+wwwroot\assets\img\home\b1064286-1d77-4972-85e8-c3d0c1a604a3_blog-6.webp
 wwwroot\assets\img\home\brand-1.webp
 wwwroot\assets\img\home\brand-2.webp
 wwwroot\assets\img\home\brand-3.webp
@@ -600,6 +608,7 @@ wwwroot\assets\img\home\dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp
 wwwroot\assets\img\home\dd08e4c8-a3dc-4e2b-833a-0f7fbba7b5c2-button-play-light.webp
 wwwroot\assets\img\home\eb4b76b1-60cf-42ae-a66d-b183fd574b6f-Screenshot 2024-04-28 194703.png
 wwwroot\assets\img\home\eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp
+wwwroot\assets\img\home\ef80d6fb-dbe6-4e37-bb61-41528efca3f9_blog-6.webp
 wwwroot\assets\img\home\f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp
 wwwroot\assets\img\home\f6164e4b-bf31-477d-9e5c-1d2e41537268-Screenshot 2024-04-28 194703.png
 wwwroot\assets\img\home\instagram-1.webp
