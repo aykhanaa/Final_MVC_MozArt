@@ -565,11 +565,13 @@ wwwroot\assets\img\home\1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
 wwwroot\assets\img\home\208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp
 wwwroot\assets\img\home\2649ba64-5887-47bc-8be9-d2d0f756c806_blog-5.webp
 wwwroot\assets\img\home\26adb222-efab-4efa-a068-607ea99d5a8e-Screenshot 2024-04-28 194703.png
+wwwroot\assets\img\home\2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
 wwwroot\assets\img\home\2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp
 wwwroot\assets\img\home\31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp
 wwwroot\assets\img\home\344287a1-c5dd-47e1-b6f7-d4710784f70a-category-img-2.webp
 wwwroot\assets\img\home\35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp
 wwwroot\assets\img\home\3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp
+wwwroot\assets\img\home\46492dc0-6727-49fa-ac71-ff888e644b0d_1e89c629-42d5-41cf-8765-0bf45806cc7d-brand-4.webp
 wwwroot\assets\img\home\46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp
 wwwroot\assets\img\home\47e2cbfc-deb5-4cdc-bbeb-1d76ca3de5fe-category-img-2.webp
 wwwroot\assets\img\home\4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp
@@ -580,10 +582,13 @@ wwwroot\assets\img\home\568044fb-c6ef-4b48-9964-c4d3dda2d71e-about-1.webp
 wwwroot\assets\img\home\68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp
 wwwroot\assets\img\home\6eacc569-6e77-4507-b186-1b4dcac8153c-brand-3.webp
 wwwroot\assets\img\home\7cab6509-5e16-425e-9c64-441f64b0c8fd-instagram-2.webp
+wwwroot\assets\img\home\7e001663-55b8-468e-93c0-24cd48989d4b_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
 wwwroot\assets\img\home\810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp
 wwwroot\assets\img\home\8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp
 wwwroot\assets\img\home\90f53e42-1ad0-4645-9922-538c01c11bea-Screenshot 2024-04-28 194703.png
+wwwroot\assets\img\home\9bca08dc-5f38-45f4-9cee-b7cb64a57ee6-category-img-4.webp
 wwwroot\assets\img\home\9d1934fc-7d8b-4904-bc6f-61a12f80335e-instagram-1.webp
+wwwroot\assets\img\home\bbe716cd-68b7-40d2-82ab-2e6e16ffa4a6_1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
 wwwroot\assets\img\home\brand-1.webp
 wwwroot\assets\img\home\brand-2.webp
 wwwroot\assets\img\home\brand-3.webp
@@ -597,16 +602,19 @@ wwwroot\assets\img\home\category-img-2.webp
 wwwroot\assets\img\home\category-img-3.webp
 wwwroot\assets\img\home\category-img-4.webp
 wwwroot\assets\img\home\category-tab-hover.webp
+wwwroot\assets\img\home\cdab4b21-ca59-40ab-b0ad-4dcd2b1e0819_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
 wwwroot\assets\img\home\d406ff83-151c-48f2-b139-fb5bdd8d4106-slide-1.webp
 wwwroot\assets\img\home\d4110250-b86b-4842-ab26-d3d03f05870f-category-img-1.webp
 wwwroot\assets\img\home\d545b54c-88ed-4db2-af29-977ebed5cbab-instagram-1.webp
 wwwroot\assets\img\home\dae3184f-cdd4-4ecd-abfd-87e6c764a42d-instagram-4.webp
 wwwroot\assets\img\home\dd08e4c8-a3dc-4e2b-833a-0f7fbba7b5c2-button-play-light.webp
+wwwroot\assets\img\home\e6e93549-7a0e-4bf2-8bc0-b12bb2e91f31_1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
 wwwroot\assets\img\home\eb4b76b1-60cf-42ae-a66d-b183fd574b6f-Screenshot 2024-04-28 194703.png
 wwwroot\assets\img\home\eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp
 wwwroot\assets\img\home\ef80d6fb-dbe6-4e37-bb61-41528efca3f9_blog-6.webp
 wwwroot\assets\img\home\f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp
 wwwroot\assets\img\home\f6164e4b-bf31-477d-9e5c-1d2e41537268-Screenshot 2024-04-28 194703.png
+wwwroot\assets\img\home\fc11de6b-5458-4216-b4b2-1f4609ec3134_1e89c629-42d5-41cf-8765-0bf45806cc7d-brand-4.webp
 wwwroot\assets\img\home\instagram-1.webp
 wwwroot\assets\img\home\instagram-2.webp
 wwwroot\assets\img\home\instagram-3.webp
@@ -745,11 +753,3 @@ wwwroot\assets\js\shop\shop.js
 wwwroot\assets\js\wishlist\wishlist.js
 wwwroot\templates\register-confirm.html
 wwwroot\templates\reset-password.html
-wwwroot\assets\img\home\2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
-wwwroot\assets\img\home\9bca08dc-5f38-45f4-9cee-b7cb64a57ee6-category-img-4.webp
-wwwroot\assets\img\home\46492dc0-6727-49fa-ac71-ff888e644b0d_1e89c629-42d5-41cf-8765-0bf45806cc7d-brand-4.webp
-wwwroot\assets\img\home\cdab4b21-ca59-40ab-b0ad-4dcd2b1e0819_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
-wwwroot\assets\img\home\e6e93549-7a0e-4bf2-8bc0-b12bb2e91f31_1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
-wwwroot\assets\img\home\7e001663-55b8-468e-93c0-24cd48989d4b_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
-wwwroot\assets\img\home\bbe716cd-68b7-40d2-82ab-2e6e16ffa4a6_1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
-wwwroot\assets\img\home\fc11de6b-5458-4216-b4b2-1f4609ec3134_1e89c629-42d5-41cf-8765-0bf45806cc7d-brand-4.webp

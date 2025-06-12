@@ -87,5 +87,61 @@ namespace Final_MozArt.Services
             return result;
         }
 
+        public async Task ConfirmEmailAsync(string userId, string token)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user is null) throw new ArgumentException("User not found");
+
+            await _userManager.ConfirmEmailAsync(user, token);
+            await _signInManager.SignInAsync(user, false);
+        }
+
+        public async Task<bool> ForgotPasswordAsync(ForgotPasswordVM model)
+        {
+            var existUser = await _userManager.FindByEmailAsync(model.Email);
+
+            if (existUser is null || !existUser.EmailConfirmed)
+            {
+                return false;
+            }
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
+
+            string link = _urlHelper.Action("ResetPassword", "Account", new
+            {
+                userId = existUser.Id,
+                token
+            }, _httpContextAccessor.HttpContext.Request.Scheme);
+
+            string subject = "Reset Password";
+            string html = File.ReadAllText("wwwroot/templates/reset-password.html");
+
+            html = html.Replace("{{fullName}}", existUser.FullName)
+                       .Replace("{{link}}", link);
+
+            _emailService.Send(existUser.Email, subject, html);
+
+            return true;
+        }
+
+        public async Task<IdentityResult> ResetPasswordAsync(ResetPasswordVM model)
+        {
+            var user = await _userManager.FindByIdAsync(model.UserId);
+            if (user is null)
+                return IdentityResult.Failed(new IdentityError { Description = "User not found" });
+
+            if (await _userManager.CheckPasswordAsync(user, model.Password))
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "New password can't be same as old password" });
+            }
+
+            return await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+        }
+
+        public async Task LogoutAsync()
+        {
+            await _signInManager.SignOutAsync();
+        }
+
     }
 }

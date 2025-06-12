@@ -8,6 +8,10 @@ namespace Final_MozArt.Services.Interfaces
     {
         Task<IdentityResult> RegisterAsync(RegisterVM request);
         Task<SignInResult> LoginAsync(LoginVM request);
-        
+        Task ConfirmEmailAsync(string userId, string token);
+        Task<bool> ForgotPasswordAsync(ForgotPasswordVM model);
+        Task<IdentityResult> ResetPasswordAsync(ResetPasswordVM model);
+        Task LogoutAsync();
+
     }
 }

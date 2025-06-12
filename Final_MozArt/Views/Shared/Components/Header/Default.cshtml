@@ -55,14 +55,12 @@
 
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <span>@User.Identity.Name</span>
-                                    <form asp-controller="Account" asp-action="Logout" method="post" style="margin: 0;">
-                                        <button type="submit" style="background: none; border: none; cursor: pointer;">
-                                            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #878787;"></i>
-                                        </button>
-                                    </form>
-                                </div>
+
+                                <form asp-controller="Account" asp-action="Logout" method="post" style="margin: 0;">
+                                    <button type="submit" style="background: none; border: none; cursor: pointer;">
+                                        <i class="fa-solid fa-arrow-right-from-bracket" style="color: #121212;"></i>
+                                    </button>
+                                </form>
                             }
                             else
                             {
