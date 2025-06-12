@@ -1,7 +1,18 @@
-﻿@section css {
+﻿@using Final_MozArt.ViewModels.Account
+
+@model LoginVM
+
+
+
+
+
+
+
+
+@section css {
     <link rel="stylesheet" href="~/assets/css/login/login.css">
 }
-<main>
+ <main>
     <section id="login-title-area">
         <div class="page-title-size section"
              style="margin-bottom: 4pc;background-image: url('/assets/img/blog/page-title.webp');">
@@ -51,16 +62,18 @@
                             <div class="title-divider"></div>
                         </div>
 
-                        <form class="login-form" id="loginForm">
-                            <div class="form-group">
-                                <label for="email" class="form-label">Username or email</label>
-                                <input type="email" id="email" name="email" required class="form-input">
+                        <div style="color:red" ; asp-validation-summary="All"></div>
+                        <form method="post" asp-controller="Account" asp-action="Login">
+                        <div class="form-group">
+                            <label asp-for ="EmailOrUsername" class="form-label">
+                                Username or email</label>
+                            <input asp-for="EmailOrUsername" required class="form-input">
                             </div>
 
                             <div class="form-group">
-                                <label for="passwordInput" class="form-label">Password</label>
+                                <label asp-for="Password" class="form-label">Password</label>
                                 <div class="password-wrapper">
-                                    <input type="password" id="passwordInput" name="password" required
+                                    <input type="password" id="passwordInput" asp-for="Password" required
                                            class="form-input">
                                     <button type="button" class="toggle-password" onclick="togglePassword()">
                                         <i class="fas fa-eye" id="toggleIcon"></i>
@@ -90,6 +103,7 @@
     </section>
 
 </main>
+
 
 
 @section scripts {

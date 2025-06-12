@@ -1,7 +1,9 @@
 using Final_MozArt;
 using Final_MozArt.Data;
+using Final_MozArt.Helpers;
 using Final_MozArt.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -10,8 +12,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailConfig"));
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+
 
 var conString = builder.Configuration.GetConnectionString("Default") ??
      throw new InvalidOperationException("Connection string 'Default'" +
@@ -66,6 +74,18 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthentication();
+
+app.UseStatusCodePages(async context =>
+{
+    var response = context.HttpContext.Response;
+    if (response.StatusCode == 404) {
+        response.Redirect("/NotFound/Index");
+    }
+
+    await Task.CompletedTask;
+});
+
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
