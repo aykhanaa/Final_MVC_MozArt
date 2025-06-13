@@ -1,0 +1,8 @@
+﻿namespace Final_MozArt.ViewModels.Blog
+{
+    public class BlogDetailVM
+    {
+        public List<BlogVM> Blogs { get; set; }
+        public BlogVM Blog { get; set; }
+    }
+}

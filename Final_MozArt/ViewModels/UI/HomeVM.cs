@@ -1,6 +1,7 @@
 ﻿using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Instagram;
+using Final_MozArt.ViewModels.Product;
 using Final_MozArt.ViewModels.Slider;
 
 namespace Final_MozArt.ViewModels.UI
@@ -11,7 +12,7 @@ namespace Final_MozArt.ViewModels.UI
         public IEnumerable<CategoryVM> Categories { get; set; }
         public IEnumerable<BrandVM> Brands { get; set; }
         public IEnumerable<InstagramVM> Instagrams { get; set; }
-
+        public IEnumerable<ProductVM> Products { get; set; }
 
     }
 }

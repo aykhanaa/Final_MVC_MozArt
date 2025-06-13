@@ -227,6 +227,8 @@ namespace Final_MozArt.Services
         {
             var product = _mapper.Map<Product>(vm);
 
+            product.Images = new List<ProductImage>();
+
             product.ProductColors = vm.ColorIds.Select(colorId => new ProductColor
             {
                 ColorId = colorId,
@@ -239,9 +241,6 @@ namespace Final_MozArt.Services
                 Product = product
             }).ToList();
 
-            // <-- BURADA initialize ET
-            product.Images = new List<ProductImage>();
-
             var photos = vm.Photos.ToList();
             for (int i = 0; i < photos.Count; i++)
             {
@@ -251,13 +250,17 @@ namespace Final_MozArt.Services
                 {
                     Image = fileName,
                     IsMain = i == 0,
+                    IsHover = i == 1,
                     Product = product
                 });
             }
 
+           
+
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
+
 
 
 
@@ -294,14 +297,18 @@ namespace Final_MozArt.Services
 
             if (vm.Photos != null && vm.Photos.Any())
             {
-                foreach (var photo in vm.Photos)
+                product.Images.Clear();
+                var photos = vm.Photos.ToList();
+                for (int i = 0; i < photos.Count; i++)
                 {
+                    var photo = photos[i];
                     var fileName = await SaveFileAsync(photo);
                     product.Images.Add(new ProductImage
                     {
                         Image = fileName,
-                        IsMain = false,
-                        ProductId = product.Id
+                        IsMain = i == 0,
+                        IsHover = i == 1,
+                        Product = product
                     });
                 }
             }
@@ -349,7 +356,11 @@ namespace Final_MozArt.Services
 
             if (product == null)
                 throw new KeyNotFoundException("Product tapilmadi.");
-
+            var image = await _context.ProductImages.FirstOrDefaultAsync(x=>x.Id == data.ImageId && x.IsHover==true);
+            if(image != null)
+            {
+                return;
+            }
             foreach (var img in product.Images)
                 img.IsMain = img.Id == data.ImageId;
 
@@ -375,5 +386,21 @@ namespace Final_MozArt.Services
             if (File.Exists(filePath))
                 File.Delete(filePath);
         }
+        public async Task<List<Product>> SearchProductsAsync(string query)
+        {
+            IQueryable<Product> products = _context.Products.Include(p => p.Category);
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                query = query.ToLower();
+
+                products = products.Where(p =>
+                    p.Name.ToLower().Contains(query) ||
+                    p.Category.Name.ToLower().Contains(query));
+            }
+
+            return await products.ToListAsync();
+        }
+
     }
 }

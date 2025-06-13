@@ -1,0 +1,242 @@
+﻿@using Final_MozArt.ViewModels.Blog
+@model BlogDetailVM
+
+@section css {
+    <link rel="stylesheet" href="~/assets/css/blog-details/blog-detai.css">
+}
+
+<main>
+    <section id="blog-title-area">
+        <div class="page-title-size section" style="margin-bottom: 4pc; background-image: url((./assets/img/shop/@Model.Blog.Image);">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="page-title">
+                            <h1 class="title">Blog details</h1>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+                                <li class="breadcrumb-item active">Blog details</li>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-area">
+        <div class="blog-size section-padding">
+            <div class="container">
+                <div class="row learts-mb-n50">
+
+                    <div class="col-xl-9 col-lg-8 col-12 order-lg-2 learts-mb-50">
+                        <div class="single-blog">
+                            <div class="image">
+                                <a href="blog-details.html">
+                                    <img src="~/assets/img/blog/@Model.Blog.Image"
+                                         alt="Blog Image">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h2 class="title">@Model.Blog.Title</h2>
+                                <ul class="meta">
+                                    <li><i class="fa-solid fa-list"></i> <a href="#">@Model.Blog.BlogCategoryName</a></li>
+                                    <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                </ul>
+                                <div class="desc">
+                                    <p>
+                                        @Model.Blog.Description
+                                    </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="related-blog">
+                            <div class="block-title pb-0 border-bottom-0">
+                                <h2 class="title">Related Blog</h2>
+                            </div>
+                            <div class="row learts-mb-n40">
+                                @foreach (var blog in Model.Blogs.OrderBy(m=>m.BlogCategoryName).Take(2))
+                                {
+                                    <div class="col-md-6 col-12 learts-mb-40">
+                                        <div class="blog">
+                                            <div class="image">
+                                                <a href="blog-details.html">
+                                                    <img src="~/assets/img/blog/@blog.Image" alt="Blog Image">
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <ul class="meta">
+                                                    <li>
+                                                        <i class="far fa-calendar"></i><a href="#">January 22, 2020</a>
+                                                    </li>
+                                                   
+                                                </ul>
+                                                <h5 class="title mb-0">
+                                                    <a href="blog-details.html">
+                                                        Tile Tray with Brass
+                                                        Handles
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                       @*  <div class="    ">
+                            <div class="block-title pb-0 border-bottom-0">
+                                <h2 class="title">Comments <span class="text-muted">(4)</span></h2>
+                            </div>
+                            <ul class="comment-list">
+                                <li>
+                                    <div class="comment">
+                                        <div class="thumbnail">
+                                            <img src="~/assets/img/blog/@Model.Image" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="name">Scott James</h4>
+                                            <p>
+                                                Thanks for always keeping your WordPress themes up to date. Your
+                                                level of
+                                                support and dedication is second to none.
+                                            </p>
+                                            <div class="actions">
+                                                <span class="date">April 22, 2020 at 2:10 am</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="comment">
+                                        <div class="thumbnail">
+                                            <img src="~/assets/img/blog/@Model.Image" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="name">Gerhard</h4>
+                                            <p>
+                                                Thanks for always keeping your WordPress themes up to date. Your
+                                                level of
+                                                support and dedication is second to none.
+                                            </p>
+                                            <div class="actions">
+                                                <span class="date">April 22, 2020 at 2:10 am</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="comment">
+                                        <div class="thumbnail">
+                                            <img src="~/assets/img/blog/@Model.Image" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="name">Owen Christ</h4>
+                                            <p>Thank you very much!</p>
+                                            <div class="actions">
+                                                <span class="date">April 22, 2020 at 2:10 am</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="block-title pb-0 border-bottom-0">
+                                <h2 class="title">Leave your thought here</h2>
+                            </div>
+                            <div class="comment-form">
+                                <form action="#">
+                                    <div class="row learts-mb-n20">
+                                        <div class="col-md-6 col-12 learts-mb-20">
+                                            <input type="text" placeholder="Your name (*)">
+                                        </div>
+                                        <div class="col-md-6 col-12 learts-mb-20">
+                                            <input type="text" placeholder="Mail (*)">
+                                        </div>
+                                        <div class="col-12 learts-mb-20">
+                                            <textarea placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="col-12 text-center learts-mb-20 learts-mt-20">
+                                            <button class="btn btn-dark btn-outline-hover-dark">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>  *@
+                    </div>
+
+                  <div class="col-xl-3 col-lg-4 col-12 order-lg-1 learts-mb-10">
+
+                        <div class="single-widget learts-mb-40">
+                            <h3 class="widget-title product-filter-widget-title">Recent Post</h3>
+                            <ul class="widget-blogs">
+                                @foreach(var recent in Model.Blogs.OrderByDescending(m => m.CreateDate).Take(3))
+                                {
+                                    <li class="widget-blog">
+                                        <div class="thumbnail">
+                                            <a href="blog-details.html">
+                                                <img src="~/assets/img/blog/@recent.Image"
+                                                     alt="Widget Blog Post">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="title">
+                                                <a href="blog-details.html">@recent.Title</a>
+                                            </h6>
+                                            <span class="date">@recent.CreateDate.ToString("dd MMM yyyy")</span>
+
+                                        </div>
+                                    </li>
+                                }
+
+                              
+                            </ul>
+                        </div>
+
+                        <div class="single-widget learts-mb-40">
+                            <div class="widget-banner">
+                                <img src="~assets/img/blog/@Model.Blog.Image" alt="">
+                            </div>
+                        </div>
+
+                        <div class="single-widget learts-mb-40">
+                            <h3 class="widget-title product-filter-widget-title">Categories</h3>
+
+                            @{
+                                var groupedCategories = Model.Blogs
+                                .GroupBy(b => b.BlogCategoryName)
+                                .Select(g => new { Category = g.Key, Count = g.Count() });
+                            }
+
+                            <ul class="widget-list">
+                                @foreach (var cat in groupedCategories)
+                                {
+                                    <li><a href="#">@cat.Category</a> <span class="count">@cat.Count</span></li>
+                                }
+                            </ul>
+                        </div>
+
+
+                        <div class="single-widget learts-mb-40">
+                            <h3 class="widget-title product-filter-widget-title">Product Tags</h3>
+                            <div class="widget-tags">
+
+                                <a href="#">design</a>
+                                <a href="#">fashion</a>
+                                <a href="#">learts</a>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@section scripts {
+    <script src="~/assets/js/blog-details/blog-details.js"></script>
+}

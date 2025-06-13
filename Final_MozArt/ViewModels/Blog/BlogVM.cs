@@ -9,10 +9,12 @@
         public string Description { get; set; }
 
         public string Image { get; set; }
+        public string Banner { get; set; }
 
         public int BlogCategoryId { get; set; }
 
-        public string BlogCategoryName { get; set; }  
+        public string BlogCategoryName { get; set; } 
+        
 
         public DateTime CreateDate { get; set; }
     }

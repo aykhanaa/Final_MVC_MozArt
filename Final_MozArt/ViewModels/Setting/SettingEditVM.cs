@@ -12,9 +12,5 @@ namespace Final_MozArt.ViewModels.Setting
 
         [Required]
         public string? Value { get; set; }
-
-        public IFormFile? Photo { get; set; }
-
-        public string? Image { get; set; }
     }
 }

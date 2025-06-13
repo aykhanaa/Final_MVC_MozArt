@@ -11,7 +11,7 @@ namespace Final_MozArt.Services.Interfaces
         Task<List<Setting>> GetAllAsync();
         Task<Setting> GetByIdAsync(int id);
         Task EditAsync(SettingEditVM setting);
-        Task CreateAsync(SettingCreateVM setting);
-        Task DeleteAsync(int id);
-    }
+        string GetSettingValue(string key);
+        
+        }
 }

@@ -12,5 +12,7 @@ namespace Final_MozArt.Services.Interfaces
         Task CreateAsync(BlogCreateVM request);
         Task EditAsync(BlogEditVM request);
         Task DeleteAsync(int id);
+        Task<List<BlogVM>> GetBlogsAsync(int skip, int take);
+        Task<int> GetTotalBlogCountAsync();
     }
 }

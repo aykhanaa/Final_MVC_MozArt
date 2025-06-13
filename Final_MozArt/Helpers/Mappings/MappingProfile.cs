@@ -47,7 +47,6 @@ namespace Final_MozArt.Helpers.Mappings
             CreateMap<AboutVM, AboutEditVM>();
 
             CreateMap<Setting, SettingVM>();
-            CreateMap<SettingCreateVM, Setting>();
             CreateMap<SettingEditVM, Setting>();
 
             CreateMap<Video, VideoVM>();
@@ -106,6 +105,7 @@ namespace Final_MozArt.Helpers.Mappings
 
             CreateMap<Product, ProductVM>()
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(i => i.IsMain).Image))
+                   .ForMember(dest => dest.Hower, opt => opt.MapFrom(src => src.Images.FirstOrDefault(i => i.IsHover).Image))
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
                 .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name));
 

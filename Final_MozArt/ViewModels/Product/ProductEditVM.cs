@@ -28,7 +28,7 @@ namespace Final_MozArt.ViewModels.Product
         public ICollection<int> ColorIds { get; set; }
         public ICollection<int> TagIds { get; set; }
 
-        public ICollection<ProductImage> Images { get; set; }
-        public ICollection<IFormFile> Photos { get; set; }
+        public ICollection<ProductImage>? Images { get; set; }
+        public ICollection<IFormFile>? Photos { get; set; }
     }
 }

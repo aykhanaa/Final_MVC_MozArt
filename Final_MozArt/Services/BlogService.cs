@@ -18,12 +18,14 @@ namespace Final_MozArt.Services
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _env;
+        private readonly ISettingService _settingService;
 
-        public BlogService(AppDbContext context, IMapper mapper, IWebHostEnvironment env)
+        public BlogService(AppDbContext context, IMapper mapper, IWebHostEnvironment env, ISettingService settingService)
         {
             _context = context;
             _mapper = mapper;
             _env = env;
+            _settingService = settingService;
         }
 
         public async Task<List<BlogVM>> GetAllAsync()
@@ -35,7 +37,9 @@ namespace Final_MozArt.Services
         public async Task<BlogVM> GetByIdAsync(int id)
         {
             var blog = await _context.Blogs.Include(b => b.BlogCategory).FirstOrDefaultAsync(b => b.Id == id);
-            return _mapper.Map<BlogVM>(blog);
+            var vm= _mapper.Map<BlogVM>(blog);
+            vm.Banner =   _settingService.GetSettingValue("ShopBanner");
+            return vm;
         }
 
         public async Task<Blog> GetEntityByIdAsync(int id)
@@ -93,6 +97,49 @@ namespace Final_MozArt.Services
 
             _context.Blogs.Remove(blog);
             await _context.SaveChangesAsync();
+        }
+
+
+        public async Task<List<BlogVM>> GetBlogsAsync(int skip, int take)
+        {
+            try
+            {
+                var blogs = await _context.Blogs.Include(b=>b.BlogCategory)
+                    .OrderByDescending(b => b.CreateDate) 
+                    .Skip(skip)
+                    .Take(take)
+                    .Select(b => new BlogVM
+                    {
+                        Id = b.Id,
+                        Title = b.Title ?? "",
+                        Description = b.Description ?? "",
+                        Image = b.Image ?? "default.jpg",
+                        CreateDate = b.CreateDate,
+                        BlogCategoryName=b.BlogCategory.Name
+                        
+                    })
+                    .ToListAsync();
+
+                return blogs;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"GetBlogsAsync Error: {ex.Message}");
+                return new List<BlogVM>();
+            }
+        }
+
+        public async Task<int> GetTotalBlogCountAsync()
+        {
+            try
+            {
+                return await _context.Blogs.CountAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"GetTotalBlogCountAsync Error: {ex.Message}");
+                return 0;
+            }
         }
     }
 }

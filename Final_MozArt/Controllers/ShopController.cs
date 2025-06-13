@@ -1,12 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Final_MozArt.Services.Interfaces;
+using Final_MozArt.ViewModels.UI;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Final_MozArt.Controllers
 {
     public class ShopController : Controller
     {
-        public IActionResult Index()
+        private readonly ISettingService _settingService;
+
+
+
+        public ShopController(ISettingService settingService)
         {
-            return View();
+            _settingService = settingService;
+
+
+
+        }
+        public async Task<IActionResult> Index()
+        {
+            var setting = _settingService.GetSettings();
+
+
+            ShopVM model = new ShopVM()
+            {
+                Setting = setting,
+
+
+            };
+            return View(model);
         }
     }
 }

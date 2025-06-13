@@ -3,8 +3,7 @@ using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Account;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
+
 using System.Data;
 
 namespace Final_MozArt.Controllers
