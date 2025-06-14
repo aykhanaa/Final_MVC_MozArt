@@ -42,16 +42,54 @@
                         <td>
                             <a class="btn btn-info" asp-action="Detail" asp-route-id="@slider.Id">Detail</a>
                             <a class="btn btn-primary" asp-action="Edit" asp-route-id="@slider.Id">Edit</a>
-                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@slider.Id">
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-
+                            <button type="button" class="btn btn-danger delete-brand" data-id="@slider.Id">Delete</button>
                         </td>
 
                     </tr>
                 }
             </tbody>
         </table>
+        @Html.AntiForgeryToken()
     </div>
 </div>
+
+
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteButtons = document.querySelectorAll('.delete-brand');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    const row = this.closest('tr');
+
+                    const tokenInput = document.querySelector('input[name="__RequestVerificationToken"]');
+                    const token = tokenInput ? tokenInput.value : '';
+
+                    const formData = new FormData();
+                    formData.append('__RequestVerificationToken', token);
+
+                    fetch(`/Admin/Brand/Delete/${id}`, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            row.remove(); // DOM-dan silir
+                        } else {
+                            alert("Delete failed!");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("An error occurred!");
+                    });
+                });
+            });
+        });
+    </script>
+}
+
 

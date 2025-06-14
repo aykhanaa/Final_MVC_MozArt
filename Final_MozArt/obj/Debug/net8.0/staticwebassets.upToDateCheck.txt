@@ -524,9 +524,9 @@ wwwroot\assets\css\product-details\product-details.css
 wwwroot\assets\css\register\register.css
 wwwroot\assets\css\shop\shop.css
 wwwroot\assets\css\wishlist\wishlist.css
+wwwroot\assets\img\about\a88499c7-9a1a-477b-a7c2-e138c3274f0e-about-1.webp
 wwwroot\assets\img\about\about-1.webp
 wwwroot\assets\img\about\button-play-light.webp
-wwwroot\assets\img\about\ca39454a-ffc1-47d6-b265-a12134e23c36-about-1.webp
 wwwroot\assets\img\about\e78f6743-d06c-44e0-a4c9-c771dcef5e43-video-banner-2.webp
 wwwroot\assets\img\about\instagram-1.webp
 wwwroot\assets\img\about\instagram-2.webp
@@ -560,7 +560,6 @@ wwwroot\assets\img\blog\blog-3.webp
 wwwroot\assets\img\blog\blog-4.webp
 wwwroot\assets\img\blog\blog-5.webp
 wwwroot\assets\img\blog\blog-6.webp
-wwwroot\assets\img\blog\caa725eb-cfd3-4ad2-8055-7f070aad6b9f-blog-1.webp
 wwwroot\assets\img\blog\page-title.webp
 wwwroot\assets\img\contact\page-title.webp
 wwwroot\assets\img\home\0450c555-192c-4381-9ac3-16c95c5100af-Screenshot 2024-04-28 194703.png

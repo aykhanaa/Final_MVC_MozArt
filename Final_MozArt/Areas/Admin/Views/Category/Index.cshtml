@@ -3,10 +3,13 @@
 
 <div class="container my-5" style="margin-left: 22pc !important; width: 68pc !important; margin-top: 120px !important;">
     <h1 class="text-center mt-3 mb-3" style="margin-left:200px; margin-top:150px;">Category</h1>
-    @if (Model.Count < 4)
-    {
-        <a class="btn btn-success text-white" asp-action="Create">Create</a>
-    }
+    <div id="create-button-container">
+        @if (Model.Count < 4)
+        {
+            <a class="btn btn-success text-white" asp-action="Create">Create</a>
+        }
+    </div>
+
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -43,9 +46,8 @@
                         <td>
                             <a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
                             <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@item.Id">
-                               <button type="submit" class="btn btn-danger">Delete</button>
-                           </form>
+                            <button type="button" class="btn btn-danger delete-category" data-id="@item.Id">Delete</button>
+
 
                         </td>
 
@@ -53,6 +55,60 @@
                 }
             </tbody>
         </table>
+        @Html.AntiForgeryToken()
+
     </div>
 </div>
 
+
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteButtons = document.querySelectorAll('.delete-category');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    const row = this.closest('tr');
+
+                    const tokenInput = document.querySelector('input[name="__RequestVerificationToken"]');
+                    const token = tokenInput ? tokenInput.value : '';
+
+                    const formData = new FormData();
+                    formData.append('__RequestVerificationToken', token);
+
+                    fetch(`/Admin/Category/Delete/${id}`, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            row.remove(); // DOM-dan sil
+
+                            // Create düyməsini geri göstər
+                            const tableBody = document.querySelector('tbody');
+                            const currentRowCount = tableBody.querySelectorAll('tr').length;
+
+                            const createContainer = document.getElementById('create-button-container');
+
+                            if (currentRowCount < 5 && !createContainer.querySelector('a')) {
+                                const createBtn = document.createElement('a');
+                                createBtn.href = '/Admin/Category/Create'; // route düzgün olmalıdır
+                                createBtn.className = 'btn btn-success text-white';
+                                createBtn.textContent = 'Create';
+                                createContainer.appendChild(createBtn);
+                            }
+                        } else {
+                            alert("Delete failed!");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("An error occurred!");
+                    });
+                });
+            });
+        });
+    </script>
+}
