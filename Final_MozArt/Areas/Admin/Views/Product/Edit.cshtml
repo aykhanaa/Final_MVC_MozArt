@@ -65,11 +65,11 @@
     <h4 class="mb-3">Existing Images</h4>
     @if (Model.Images != null && Model.Images.Any())
     {
-        <div class="d-flex flex-wrap gap-3">
+        <div class="d-flex flex-wrap gap-3" id="images-container">
             @foreach (var image in Model.Images)
             {
-                <div class="border p-2 rounded text-center" style="width: 150px;">
-                    <img src="~/assets/img/home/@image.Image" class="img-fluid mb-2 rounded" style="max-height: 100px;" />
+                <div class="border p-2 rounded text-center" style="width: 150px;" data-image-id="@image.Id">
+                    <img src="~/assets/img/product-details/@image.Image" class="img-fluid mb-2 rounded" style="max-height: 100px;" />
 
                     <form asp-action="DeleteImage" method="post" class="mb-2">
                         <input type="hidden" name="id" value="@image.Id" />
@@ -77,20 +77,86 @@
                         <button class="btn btn-sm btn-danger w-100">Delete</button>
                     </form>
 
-                    @if (!image.IsMain)
+                    @if (!image.IsMain && !image.IsHover)
                     {
-                        <form asp-action="SetMainImage" method="post">
-                            <input type="hidden" name="ProductId" value="@Model.Id" />
-                            <input type="hidden" name="ImageId" value="@image.Id" />
-                            <button class="btn btn-sm btn-warning w-100">Set Main</button>
+                        <form class="set-main-form" method="post" data-product-id="@Model.Id" data-image-id="@image.Id" action="@Url.Action("SetMainImage", "Product")">
+                            <button type="submit" class="btn btn-sm btn-warning w-100 set-main-btn">Set Main</button>
                         </form>
                     }
-                    else
+                    else if (image.IsMain)
                     {
                         <span class="badge bg-success d-block mt-2">Main</span>
+                    }
+                    else if (image.IsHover)
+                    {
+                        <span class="badge bg-info d-block mt-2">Hover</span>
                     }
                 </div>
             }
         </div>
     }
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.set-main-form').forEach(form => {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const productId = form.getAttribute('data-product-id');
+                    const imageId = form.getAttribute('data-image-id');
+                    const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                    const formData = new FormData();
+                    formData.append('ProductId', productId);
+                    formData.append('ImageId', imageId);
+                    formData.append('__RequestVerificationToken', token);
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        if (response.ok) {
+                            // Səhifəni yeniləmədən "Main" statusunu yenilə
+                            updateMainBadge(imageId);
+                        } else {
+                            alert('Main image olaraq hover seçilə bilməz!');
+                        }
+                    } catch {
+                        alert('Xəta baş verdi.');
+                    }
+                });
+            });
+
+            function updateMainBadge(newMainImageId) {
+                // Bütün "Main" badge-ləri sil
+                document.querySelectorAll('[data-image-id]').forEach(div => {
+                    const badge = div.querySelector('.badge.bg-success');
+                    if (badge) badge.remove();
+
+                    // Əgər həmin divdə set main düyməsi yoxdursa (hover ola bilər)
+                    // set main düyməsini aktiv et
+                    const setMainForm = div.querySelector('.set-main-form');
+                    if (setMainForm) setMainForm.style.display = 'block';
+                });
+
+                // Yeni main şəkilin divini tap
+                const newMainDiv = document.querySelector(`[data-image-id="${newMainImageId}"]`);
+                if (newMainDiv) {
+                    // "Set Main" düyməsini gizlət
+                    const setMainForm = newMainDiv.querySelector('.set-main-form');
+                    if (setMainForm) setMainForm.style.display = 'none';
+
+                    // "Main" badge əlavə et
+                    const badge = document.createElement('span');
+                    badge.classList.add('badge', 'bg-success', 'd-block', 'mt-2');
+                    badge.innerText = 'Main';
+                    newMainDiv.appendChild(badge);
+                }
+            }
+        });
+    </script>
+}

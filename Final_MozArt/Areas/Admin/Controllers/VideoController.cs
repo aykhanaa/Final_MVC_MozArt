@@ -90,7 +90,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _videoService.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+           // return RedirectToAction(nameof(Index));
+           return Ok();
         }
 
         [HttpGet]

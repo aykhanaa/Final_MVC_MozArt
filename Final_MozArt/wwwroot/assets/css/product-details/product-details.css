@@ -302,12 +302,14 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .product-summery-center .product-brands .brands {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
+    .product-summery-center .product-brands .brands {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center;
-  }
+        justify-content: center;
+        list-style-type: none;
+        padding-left: 0;
+    }
   .product-summery-center .product-meta {
     -webkit-box-pack: center;
     -webkit-justify-content: center;

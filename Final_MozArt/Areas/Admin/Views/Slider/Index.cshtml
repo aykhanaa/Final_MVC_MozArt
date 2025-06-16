@@ -44,10 +44,9 @@
                             <a class="btn btn-primary" asp-action="Edit" asp-route-id="@slider.Id">Edit</a>
                             @if (!slider.IsMain)
                             {
-                                <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@slider.Id">
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
+                                <button type="button" class="btn btn-danger delete-btn" data-id="@slider.Id">Delete</button>
                             }
+
 
                         </td>
 
@@ -55,6 +54,37 @@
                 }
             </tbody>
         </table>
+        @Html.AntiForgeryToken()
+
     </div>
 </div>
 
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', async function () {
+                    const id = this.getAttribute('data-id');
+                    const row = this.closest('tr');
+                    const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                    const formData = new FormData();
+                    formData.append('__RequestVerificationToken', token);
+
+                    const response = await fetch(`/Admin/Slider/Delete/${id}`, {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        row.remove();
+                    } else {
+                        alert("Silinmə zamanı xəta baş verdi.");
+                    }
+                });
+            });
+        });
+    </script>
+}

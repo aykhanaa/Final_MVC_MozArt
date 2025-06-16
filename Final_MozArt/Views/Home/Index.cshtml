@@ -111,9 +111,9 @@
                                         <div class="col">
                                             <div class="product">
                                                 <div class="product-thumb">
-                                                    <a asp-controller="ProductDetails" asp-action="Index" class="image">
-                                                        <img src="~/assets/img/home/@item.Image" alt="Product Image">
-                                                        <img class="image-hover " src="~/assets/img/home/@item.Hower"
+                                                    <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="image">
+                                                        <img src="~/assets/img/product-details/@item.Image" alt="Product Image">
+                                                        <img class="image-hover " src="~/assets/img/product-details/@item.Hower"
                                                              alt="Product Image">
                                                     </a>
                                                     <a href="wishlist.html" class="add-to-wishlist hintT-left"
@@ -121,14 +121,16 @@
                                                 </div>
                                                 <div class="product-info">
                                                     <h6 class="title">
-                                                        <a asp-controller="ProductDetails" asp-action="Index">@item.Name</a>
+                                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+
                                                     </h6>
                                                     <span class="price">
                                                         $@item.Price
                                                     </span>
                                                     <div class="product-buttons">
-                                                        <a asp-controller="ProductDetails" asp-action="Index" class="product-button hintT-top"
-                                                           data-hint="View"><i class="fas fa-search"></i></a>
+                                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="product-button hintT-top" data-hint="View">
+                                                            <i class="fas fa-search"></i>
+                                                        </a>
                                                         <a href="#" class="product-button hintT-top"
                                                            data-hint="Add to Cart">
                                                             <i class="fas fa-shopping-cart"></i>

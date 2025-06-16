@@ -99,7 +99,6 @@ namespace Final_MozArt.Services
             await _context.SaveChangesAsync();
         }
 
-
         public async Task<List<BlogVM>> GetBlogsAsync(int skip, int take)
         {
             try

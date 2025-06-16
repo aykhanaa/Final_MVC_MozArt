@@ -17,7 +17,7 @@ namespace Final_MozArt.Services
     {
         private readonly AppDbContext _context; // Burada dəyişdirdik
         private readonly IMapper _mapper;
-        private readonly string _imageFolderPath = "wwwroot/assets/img/home";
+        private readonly string _imageFolderPath = "wwwroot/assets/img/product-details";
 
         public ProductService(AppDbContext context, IMapper mapper) // Konstruktor parametri də dəyişdi
         {
@@ -67,16 +67,32 @@ namespace Final_MozArt.Services
 
             if (product == null) return null;
 
-            var detailVM = _mapper.Map<ProductDetailVM>(product);
+            var detailVM = new ProductDetailVM
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
+                CreateDate = product.CreateDate,
 
-            detailVM.ColorNames = product.ProductColors.Select(pc => pc.Color.Name).ToList();
-            detailVM.TagNames = product.ProductTags.Select(pt => pt.Tag.Name).ToList();
+                CategoryId = product.CategoryId,
+                CategoryName = product.Category?.Name,
 
-            detailVM.ColorIds = product.ProductColors.Select(pc => pc.ColorId).ToList();
-            detailVM.TagIds = product.ProductTags.Select(pt => pt.TagId).ToList();
+                BrandId = product.BrandId,
+                BrandName = product.Brand?.Name,
+
+                ColorIds = product.ProductColors.Select(pc => pc.ColorId).ToList(),
+                ColorNames = product.ProductColors.Select(pc => pc.Color.Name).ToList(),
+
+                TagIds = product.ProductTags.Select(pt => pt.TagId).ToList(),
+                TagNames = product.ProductTags.Select(pt => pt.Tag.Name).ToList(),
+
+                Images = product.Images?.ToList()
+            };
 
             return detailVM;
         }
+
 
         public async Task<ICollection<ProductVM>> GetPaginatedDatasByCategory(int categoryId, int page, int take)
         {
@@ -356,16 +372,26 @@ namespace Final_MozArt.Services
 
             if (product == null)
                 throw new KeyNotFoundException("Product tapilmadi.");
-            var image = await _context.ProductImages.FirstOrDefaultAsync(x=>x.Id == data.ImageId && x.IsHover==true);
-            if(image != null)
+
+            var selectedImage = product.Images.FirstOrDefault(x => x.Id == data.ImageId);
+
+            if (selectedImage == null)
+                throw new KeyNotFoundException("Image tapilmadi.");
+
+            if (selectedImage.IsHover)
             {
+                // Hover şəkil main olaraq seçilə bilməz, sadəcə çıxış
                 return;
             }
+
             foreach (var img in product.Images)
+            {
                 img.IsMain = img.Id == data.ImageId;
+            }
 
             await _context.SaveChangesAsync();
         }
+
 
         private async Task<string> SaveFileAsync(IFormFile file)
         {

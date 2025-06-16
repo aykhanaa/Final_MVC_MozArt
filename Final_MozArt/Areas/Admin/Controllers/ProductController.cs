@@ -125,7 +125,8 @@ namespace Final_MozArt.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _productService.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            //return RedirectToAction(nameof(Index));
+            return Ok();
         }
 
         // GET: /Product/Search
@@ -156,13 +157,13 @@ namespace Final_MozArt.Controllers
             return View("Index", products);
         }
 
-        // POST: /Product/SetMainImage
         [HttpPost]
         public async Task<IActionResult> SetMainImage(SetIsMainVM model)
         {
             await _productService.SetMainImageAsync(model);
-            return RedirectToAction("Edit", new { id = model.ProductId });
+            return Ok();
         }
+
 
         // POST: /Product/DeleteImage
         [HttpPost]
