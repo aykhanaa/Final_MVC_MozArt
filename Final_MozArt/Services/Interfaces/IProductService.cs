@@ -27,6 +27,8 @@ public interface IProductService
     Task DeleteProductImageAsync(int id);
     Task SetMainImageAsync(SetIsMainVM data);
     Task<List<Product>> SearchProductsAsync(string query);
+    Task<ICollection<ProductVM>> FilterAsync(int minPrice, int maxPrice, int page, int take);
+    Task<ICollection<ProductVM>> FilterAllAsync(int minPrice, int maxPrice);
 }
 
 

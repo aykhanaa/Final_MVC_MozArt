@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProductVM>
+﻿@model Paginate<ProductVM>
 
 <div class="container my-5" style="margin-left: 22pc !important; width: 68pc !important; margin-top: 120px !important;">
     <h1 class="text-center mt-3 mb-3" style="margin-left:200px; margin-top:150px;">Products</h1>
@@ -19,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var product in Model)
+                @foreach (var product in Model.Datas)
                 {
                     <tr data-id="@product.Id">
                         <td class="py-1">
@@ -33,16 +33,66 @@
                         <td>
                             <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@product.Id">Detail</a>
                             <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@product.Id">Edit</a>
-
                             <button type="button" class="btn btn-danger btn-sm delete-btn" data-id="@product.Id">Delete</button>
                         </td>
-
                     </tr>
                 }
             </tbody>
         </table>
         @Html.AntiForgeryToken()
 
+        <!-- Simple Pagination -->
+        @if (Model.TotalPage > 1)
+        {
+            <nav aria-label="Product pagination">
+                <ul class="pagination justify-content-center">
+                    <!-- Previous -->
+                    @if (Model.HasPrevios)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)">Previous</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled">
+                            <span class="page-link">Previous</span>
+                        </li>
+                    }
+
+                    <!-- Page Numbers -->
+                    @for (int i = 1; i <= Model.TotalPage; i++)
+                    {
+                        if (i == Model.CurrentPage)
+                        {
+                            <li class="page-item active">
+                                <span class="page-link">@i</span>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                            </li>
+                        }
+                    }
+
+                    <!-- Next -->
+                    @if (Model.HasNext)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)">Next</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled">
+                            <span class="page-link">Next</span>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
     </div>
 </div>
 
@@ -54,8 +104,7 @@
 
             deleteButtons.forEach(button => {
                 button.addEventListener('click', async () => {
-                    // confirm çıxarıldı, birbaşa silir
-
+                    // Təsdiq pəncərəsi yoxdur, dərhal silmə əməliyyatı
                     const id = button.getAttribute('data-id');
                     const row = button.closest('tr');
 
@@ -81,4 +130,3 @@
         });
     </script>
 }
-

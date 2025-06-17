@@ -1,6 +1,7 @@
 using Final_MozArt;
 using Final_MozArt.Data;
 using Final_MozArt.Helpers;
+using Final_MozArt.Middlewares;
 using Final_MozArt.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -28,7 +29,13 @@ var conString = builder.Configuration.GetConnectionString("Default") ??
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(conString));
 
+           //builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+           //builder.Services.AddProblemDetails();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Unauthorized/Index";
+});
 builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
                                                      .AddDefaultTokenProviders();
 builder.Services.Configure<IdentityOptions>(options =>
@@ -44,19 +51,19 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedEmail = true;
 });
 
-//Log.Logger = new LoggerConfiguration()
-//    .MinimumLevel.Information()
-//    .WriteTo.Console()
-//    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
-//    // .WriteTo.Seq("http://localhost:5341") 
-//    .Enrich.FromLogContext()
-//    .CreateLogger();
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+     .WriteTo.Seq("http://localhost:5341")
+    .Enrich.FromLogContext()
+    .CreateLogger();
 
 
 
 builder.Services.AddServiceLayer();
 
-//builder.Host.UseSerilog();
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -69,24 +76,35 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+        //app.UseExceptionHandler();
+app.UseMiddleware<GlobalExceptionHandler>();
+
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthentication();
+app.UseAuthorization(); // Authorization mutlaka StatusCodePages'ten önce olmal?!
 
-app.UseStatusCodePages(async context =>
+app.UseStatusCodePages(context =>
 {
     var response = context.HttpContext.Response;
-    if (response.StatusCode == 404) {
-        response.Redirect("/NotFound/Index");
+    var path = response.StatusCode switch
+    {
+        401 => "/Unauthorized/Index",
+        404 => "/NotFound/Index",
+        _ => null
+    };
+
+    if (path != null)
+    {
+        response.Redirect(path);
     }
 
-    await Task.CompletedTask;
+    return Task.CompletedTask;
 });
 
-
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "areas",

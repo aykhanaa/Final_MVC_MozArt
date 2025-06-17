@@ -1,5 +1,5 @@
 ﻿using Final_MozArt.Areas.Admin.Controllers;
-using Final_MozArt.Services;
+using Final_MozArt.Helpers;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Product;
 using Microsoft.AspNetCore.Mvc;
@@ -30,13 +30,99 @@ namespace Final_MozArt.Controllers
         }
 
         // GET: /Product
-        public async Task<IActionResult> Index(int page = 1, int take = 10)
+        public async Task<IActionResult> Index(int page = 1, int take = 5)
         {
             var products = await _productService.GetPaginatedDatasAsync(page, take);
-            return View(products);
+            var totalCount = await _productService.GetCountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalCount / take);
+
+            var paginatedResult = new Paginate<ProductVM>(
+                products.ToList(),
+                page,
+                totalPages
+            );
+
+            // Debug üçün
+            ViewBag.Debug = $"Page: {page}, Take: {take}, TotalCount: {totalCount}, TotalPages: {totalPages}";
+
+            return View(paginatedResult);
         }
 
-        // GET: /Product/Details/5
+        // GET: /Product/Search - Axtarış üçün pagination
+        public async Task<IActionResult> Search(string query, int page = 1, int take = 10)
+        {
+            var products = await _productService.SearchAsync(query, page, take);
+            var totalCount = await _productService.GetCountBySearch(query);
+            var totalPages = (int)Math.Ceiling((double)totalCount / take);
+
+            var paginatedResult = new Paginate<ProductVM>(
+                products.ToList(),
+                page,
+                totalPages
+            );
+
+            ViewBag.SearchQuery = query;
+            ViewBag.IsSearch = true;
+            return View("Index", paginatedResult);
+        }
+
+        // GET: /Product/OrderByNameAsc - Sıralama üçün pagination
+        public async Task<IActionResult> OrderByNameAsc(int page = 1, int take = 10)
+        {
+            var products = await _productService.OrderByNameAsc(page, take);
+            var totalCount = await _productService.GetCountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalCount / take);
+
+            var paginatedResult = new Paginate<ProductVM>(
+                products.ToList(),
+                page,
+                totalPages
+            );
+
+            ViewBag.SortType = "NameAsc";
+            return View("Index", paginatedResult);
+        }
+
+        // GET: /Product/OrderByPriceDesc - Qiymətə görə sıralama
+        public async Task<IActionResult> OrderByPriceDesc(int page = 1, int take = 10)
+        {
+            var products = await _productService.OrderByPriceDesc(page, take);
+            var totalCount = await _productService.GetCountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalCount / take);
+
+            var paginatedResult = new Paginate<ProductVM>(
+                products.ToList(),
+                page,
+                totalPages
+            );
+
+            ViewBag.SortType = "PriceDesc";
+            return View("Index", paginatedResult);
+        }
+
+        // GET: /Product/Filter - Filtrləmə üçün pagination
+        public async Task<IActionResult> Filter(int minPrice, int maxPrice, int page = 1, int take = 10)
+        {
+            var products = await _productService.FilterAsync(minPrice, maxPrice);
+            var totalCount = await _productService.FilterCountAsync(minPrice, maxPrice);
+            var totalPages = (int)Math.Ceiling((double)totalCount / take);
+
+            // Filter üçün pagination əlavə etmək lazımdır service-də
+            var paginatedProducts = products.Skip((page - 1) * take).Take(take).ToList();
+
+            var paginatedResult = new Paginate<ProductVM>(
+                paginatedProducts,
+                page,
+                totalPages
+            );
+
+            ViewBag.MinPrice = minPrice;
+            ViewBag.MaxPrice = maxPrice;
+            ViewBag.IsFilter = true;
+            return View("Index", paginatedResult);
+        }
+
+        // Digər methodları eyni saxlayırıq...
         public async Task<IActionResult> Details(int id)
         {
             var product = await _productService.GetByIdWithIncludesWithoutTrackingAsync(id);
@@ -44,7 +130,6 @@ namespace Final_MozArt.Controllers
             return View(product);
         }
 
-        // GET: /Product/Create
         public async Task<IActionResult> Create()
         {
             ViewBag.Brands = new SelectList(await _brandService.GetAllAsync(), "Id", "Name");
@@ -68,13 +153,10 @@ namespace Final_MozArt.Controllers
                 return View(vm);
             }
 
-            await _productService.CreateAsync(vm); // <-- burada artıq IsMain düzgün təyin olunur
+            await _productService.CreateAsync(vm);
             return RedirectToAction(nameof(Index));
         }
 
-
-
-        // GET: /Product/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _productService.GetByIdWithIncludesWithoutTrackingAsync(id);
@@ -101,7 +183,6 @@ namespace Final_MozArt.Controllers
             return View(editVM);
         }
 
-        // POST: /Product/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(ProductEditVM vm)
@@ -119,42 +200,12 @@ namespace Final_MozArt.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
             await _productService.DeleteAsync(id);
-            //return RedirectToAction(nameof(Index));
             return Ok();
-        }
-
-        // GET: /Product/Search
-        public async Task<IActionResult> Search(string query, int page = 1, int take = 10)
-        {
-            var products = await _productService.SearchAsync(query, page, take);
-            return View("Index", products);
-        }
-
-        // GET: /Product/OrderByNameAsc
-        public async Task<IActionResult> OrderByNameAsc(int page = 1, int take = 10)
-        {
-            var products = await _productService.OrderByNameAsc(page, take);
-            return View("Index", products);
-        }
-
-        // GET: /Product/OrderByPriceDesc
-        public async Task<IActionResult> OrderByPriceDesc(int page = 1, int take = 10)
-        {
-            var products = await _productService.OrderByPriceDesc(page, take);
-            return View("Index", products);
-        }
-
-        // GET: /Product/Filter
-        public async Task<IActionResult> Filter(int minPrice, int maxPrice)
-        {
-            var products = await _productService.FilterAsync(minPrice, maxPrice);
-            return View("Index", products);
         }
 
         [HttpPost]
@@ -164,8 +215,6 @@ namespace Final_MozArt.Controllers
             return Ok();
         }
 
-
-        // POST: /Product/DeleteImage
         [HttpPost]
         public async Task<IActionResult> DeleteImage(int id, int productId)
         {

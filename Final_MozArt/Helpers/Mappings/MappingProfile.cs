@@ -105,9 +105,11 @@ namespace Final_MozArt.Helpers.Mappings
 
             CreateMap<Product, ProductVM>()
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(i => i.IsMain).Image))
-                   .ForMember(dest => dest.Hower, opt => opt.MapFrom(src => src.Images.FirstOrDefault(i => i.IsHover).Image))
+                .ForMember(dest => dest.Hower, opt => opt.MapFrom(src => src.Images.FirstOrDefault(i => i.IsHover).Image))
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
-                .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name));
+                .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand.Name))
+                .ForMember(dest => dest.CreateDate, opt => opt.MapFrom(src => src.CreateDate));
+
 
             CreateMap<ProductImage, SetIsMainVM>()
                 .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId))

@@ -235,7 +235,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .fw-400 {
   font-weight: 400;
-  width: 16pc;
+  width: 12pc !important;
 
 }
 

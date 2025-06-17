@@ -116,6 +116,7 @@ namespace Final_MozArt.Services
                 .Include(p => p.Category)
                 .Include(p => p.Images)
                 .AsNoTracking()
+                .OrderByDescending(p => p.CreateDate)
                 .Skip((page - 1) * take)
                 .Take(take)
                 .ToListAsync();
@@ -426,6 +427,37 @@ namespace Final_MozArt.Services
             }
 
             return await products.ToListAsync();
+        }
+
+        // ProductService.cs faylında bu methodu əlavə edin və ya mövcud FilterAsync-i dəyişin
+
+        public async Task<ICollection<ProductVM>> FilterAsync(int minPrice, int maxPrice, int page, int take)
+        {
+            var products = await _context.Products
+                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .Skip((page - 1) * take)
+                .Take(take)
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
+        }
+
+        // Mövcud FilterAsync methodunu saxlamaq üçün başqa ad verə bilərsiniz
+        public async Task<ICollection<ProductVM>> FilterAllAsync(int minPrice, int maxPrice)
+        {
+            var products = await _context.Products
+                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .AsNoTracking()
+                .ToListAsync();
+
+            return _mapper.Map<ICollection<ProductVM>>(products);
         }
 
     }

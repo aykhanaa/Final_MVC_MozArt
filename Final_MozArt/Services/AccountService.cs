@@ -48,7 +48,7 @@ namespace Final_MozArt.Services
 
             if (!result.Succeeded) return result;
 
-            await _userManager.AddToRoleAsync(user, Roles.Member.ToString());
+            await _userManager.AddToRoleAsync(user, Roles.Admin.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
@@ -129,6 +129,19 @@ namespace Final_MozArt.Services
             var user = await _userManager.FindByIdAsync(model.UserId);
             if (user is null)
                 return IdentityResult.Failed(new IdentityError { Description = "User not found" });
+
+            var passwordHasher = new PasswordHasher<AppUser>();
+            var passwordVerificationResult = passwordHasher.VerifyHashedPassword(user, user.PasswordHash, model.Password);
+
+            if (passwordVerificationResult == PasswordVerificationResult.Success)
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "New password cannot be the same as the old password." });
+            }
+
+            if (await _userManager.CheckPasswordAsync(user, model.Password))
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "New password can't be same as old password." });
+            }
 
             if (await _userManager.CheckPasswordAsync(user, model.Password))
             {
