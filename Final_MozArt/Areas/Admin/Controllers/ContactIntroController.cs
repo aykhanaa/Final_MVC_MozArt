@@ -2,6 +2,7 @@
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.ContactIntro;
 using Final_MozArt.ViewModels.Support;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_MozArt.Areas.Admin.Controllers
@@ -18,12 +19,15 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Index()
         {
             var contactintros = await _contactIntroService.GetAllAsync();
             return View(contactintros);
         }
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null)
@@ -37,6 +41,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -59,6 +65,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Edit(int id, ContactIntroEditVM request)
         {
             if (id != request.Id) return BadRequest();
@@ -73,6 +81,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
+
         public async Task<IActionResult> Delete(int id)
         {
             await _contactIntroService.DeleteAsync(id);
@@ -81,6 +91,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
+
         public IActionResult Create()
         {
             return View();
@@ -88,6 +100,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
+
         public async Task<IActionResult> Create(ContactIntroCreateVM request)
         {
             if (!ModelState.IsValid)

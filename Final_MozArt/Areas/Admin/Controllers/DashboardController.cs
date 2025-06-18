@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Final_MozArt.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "SuperAdmin, Admin")]
     [Area("Admin")]
+
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class DashboardController : Controller
     {
         public IActionResult Index()

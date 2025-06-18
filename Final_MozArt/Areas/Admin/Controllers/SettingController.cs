@@ -1,7 +1,8 @@
-﻿using Final_MozArt.Services.Interfaces;
+﻿using AutoMapper;
+using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Setting;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
 
 namespace Final_MozArt.Areas.Admin.Controllers
 {
@@ -16,11 +17,15 @@ namespace Final_MozArt.Areas.Admin.Controllers
             _mapper = mapper;
         }
 
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Index()
         {
             var settings = await _settingService.GetAllAsync();
             return View(settings);
         }
+
+        [Authorize(Roles = "Admin,SuperAdmin")]
 
         public async Task<IActionResult> Detail(int? id)
         {
@@ -34,6 +39,9 @@ namespace Final_MozArt.Areas.Admin.Controllers
             var vm = _mapper.Map<SettingVM>(setting);
             return View(vm);
         }
+
+
+        [Authorize(Roles = "Admin,SuperAdmin")]
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -54,6 +62,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Edit(int id, SettingEditVM vm)
         {
             if (id != vm.Id) return BadRequest();

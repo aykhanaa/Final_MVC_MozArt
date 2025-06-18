@@ -82,5 +82,18 @@ namespace Final_MozArt.Services
             _context.Brands.Update(brand);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Dictionary<string, int>> GetProductCountByBrandNameAsync()
+        {
+            var result = await _context.Brands
+                .Select(c => new
+                {
+                    BrandName = c.Name,
+                    ProductCount = _context.Products.Count(p => p.CategoryId == c.Id)
+                })
+                .ToDictionaryAsync(x => x.BrandName, x => x.ProductCount);
+
+            return result;
+        }
     }
 }

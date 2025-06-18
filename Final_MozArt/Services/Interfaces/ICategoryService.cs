@@ -9,5 +9,6 @@ namespace Final_MozArt.Services.Interfaces
         Task CreateAsync(CategoryCreateVM request);
         Task DeleteAsync(int id);
         Task EditAsync(CategoryEditVM request);
+        Task<Dictionary<string, int>> GetProductCountByCategoryNameAsync();
     }
 }

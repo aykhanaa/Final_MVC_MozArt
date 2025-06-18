@@ -1,5 +1,6 @@
 ﻿using Final_MozArt.ViewModels.ContactIntro;
-using Final_MozArt.ViewModels.Slider;
+using Final_MozArt.ViewModels.ContactMessage;
+
 
 namespace Final_MozArt.ViewModels.UI
 {

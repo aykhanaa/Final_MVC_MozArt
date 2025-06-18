@@ -1,4 +1,5 @@
 using Final_MozArt.Models;
+using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Product;
 using Final_MozArt.ViewModels.UI;
@@ -16,19 +17,22 @@ namespace Final_MozArt.Controllers
         private readonly IBrandService _brandService;
         private readonly IInstagramService _instagramService;
         private readonly IProductService _productService;
+        private readonly IContactMessageService _contactMessageService;
 
 
         public HomeController(ISliderService sliderService, 
                               ICategoryService categoryService,
                               IBrandService brandService,
                               IInstagramService instagramService,
-                              IProductService productService)
+                              IProductService productService,
+                              IContactMessageService contactMessageService)
         {
             _sliderService = sliderService;
             _categoryService = categoryService;
             _brandService = brandService;
             _instagramService = instagramService;
             _productService = productService;
+            _contactMessageService = contactMessageService;
         }
         public async Task<IActionResult> Index()
         {
@@ -37,6 +41,8 @@ namespace Final_MozArt.Controllers
             var brands = await _brandService.GetAllAsync();
             var instagrams = await _instagramService.GetAllAsync();
             var products = await _productService.GetAllAsync();
+            var approvedMessages = await _contactMessageService.GetAllApprovedMessagesAsync();
+
 
 
             HomeVM model = new HomeVM()
@@ -46,7 +52,7 @@ namespace Final_MozArt.Controllers
                 Brands = brands,
                 Instagrams = instagrams,
                 Products = products,
-
+                ApprovedMessages = approvedMessages
 
             };
 
@@ -66,8 +72,8 @@ namespace Final_MozArt.Controllers
 
             var model = new HomeVM
             {
-                Products = productVMs // IEnumerable<ProductVM>
-                                      // dig?r sah?l?r
+                Products = productVMs
+                                     
             };
 
             return View("Index", model);

@@ -151,303 +151,42 @@
 
                             <div class="grid-sizer col-1"></div>
 
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/3D pot 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/3D pot 1-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title"><a asp-controller="ProductDetails" asp-action ="Index">3D Attractive Pot</a></h6>
-                                        <span class="price">
-                                            $90.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
+                            @foreach (var item in Model.Products)
+                            {
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="image">
+                                                <img src="~/assets/img/product-details/@item.Image" alt="Product Image">
+                                                <img class="image-hover " src="~/assets/img/product-details/@item.Hower"
+                                                     alt="Product Image">
                                             </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                               data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title">
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
 
+                                            </h6>                                       
+                                            <span class="price">
+                                                $@item.Price
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a asp-controller="ProductDetails" asp-action="Index" class="product-button hintT-top"
+                                                   data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </a>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/abstract pot 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/abstract pot 1-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Abstract Folded Pots</a>
-                                        </h6>
-                                        <span class="price">
-                                            $90.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
+                            }
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/blender 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/blender 1-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Electric Egg Blender</a>
-                                        </h6>
-                                        <span class="price">
-                                            $190.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/camera 1-2.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/camera 1-1.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Digital Camera System</a>
-                                        </h6>
-                                        <span class="price">
-                                            $110.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/teapot 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/teapot 2-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Aluminium Equestrian</a>
-                                        </h6>
-                                        <span class="price">
-                                            $150.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/fish 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/fish 1-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title"><a asp-controller="ProductDetails" asp-action ="Index">Fish Cut Out Set</a></h6>
-                                        <span class="price">
-                                            $70.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/fox 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/fox 2-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Decorative Cristmas Fox</a>
-                                        </h6>
-                                        <span class="price">
-                                            $110.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/fox 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/fox 2-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Decorative Cristmas Fox</a>
-                                        </h6>
-                                        <span class="price">
-                                            $110.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/fox 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/fox 2-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Decorative Cristmas Fox</a>
-                                        </h6>
-                                        <span class="price">
-                                            $110.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item col featured">
-                                <div class="product">
-                                    <div class="product-thumb">
-                                        <a asp-controller="ProductDetails" asp-action ="Index" class="image">
-                                            <img src="~/assets/img/shop/fox 1-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="~/assets/img/shop/fox 2-2.webp"
-                                                 alt="Product Image">
-                                        </a>
-                                        <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                           data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Decorative Cristmas Fox</a>
-                                        </h6>
-                                        <span class="price">
-                                            $110.00
-                                        </span>
-                                        <div class="product-buttons">
-                                            <a asp-controller="ProductDetails" asp-action ="Index" class="product-button hintT-top"
-                                               data-hint="View"><i class="fas fa-search"></i></a>
-                                            <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                         
 
                         </div>
                         <div class="text-center learts-mt-70">
@@ -472,13 +211,41 @@
                         <div class="single-widget learts-mb-40">
                             <h3 class="widget-title product-filter-widget-title">Product categories</h3>
                             <ul class="widget-list">
-                                <li><a href="#">Gift ideas</a> <span class="count">16</span></li>
-                                <li><a href="#">Home Decor</a> <span class="count">16</span></li>
-                                <li><a href="#">Kids &amp; Babies</a> <span class="count">6</span></li>
-                                <li><a href="#">Kitchen</a> <span class="count">15</span></li>
-                                <li><a href="#">Kniting &amp; Sewing</a> <span class="count">4</span></li>
-                                <li><a href="#">Pots</a> <span class="count">4</span></li>
-                                <li><a href="#">Toys</a> <span class="count">6</span></li>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    var count = Model.ProductCount.ContainsKey(item.Name)
+                                    ? Model.ProductCount[item.Name]
+                                    : 0;
+
+                                    <li>
+                                        <a href="#">@item.Name</a>
+                                        <span class="count">@count</span>
+                                    </li>
+                                }
+
+
+                               
+                            </ul>
+                        </div>
+
+                        <div class="single-widget learts-mb-40">
+                            <h3 class="widget-title product-filter-widget-title">Brands</h3>
+                            <ul class="widget-list">
+                                @foreach (var item in Model.Brands)
+                                {
+                                    var count = Model.BrandsProductCount.ContainsKey(item.Name)
+                                    ? Model.BrandsProductCount[item.Name]
+                                    : 0;
+
+
+                                    <li>
+                                        <a href="#">@item.Name</a>
+                                        <span class="count">@count</span> 
+                                    </li>
+                                }
+
+
+                               
                             </ul>
                         </div>
 
@@ -491,75 +258,45 @@
                         </div>
 
                         <div class="single-widget learts-mb-40">
-                            <h3 class="widget-title product-filter-widget-title">Products</h3>
+                            <h3 class="widget-title product-filter-widget-title"> New Products</h3>
                             <ul class="widget-products">
-                                <li class="product">
-                                    <div class="thumbnail">
-                                        <a asp-controller="ProductDetails" asp-action ="Index">
-                                            <img src="~/assets/img/shop/widget-1.webp"
-                                                 alt="List product">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Walnut Cutting Board</a>
-                                        </h6>
-                                        <span class="price">
-                                            $100.00
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="product">
-                                    <div class="thumbnail">
-                                        <a asp-controller="ProductDetails" asp-action ="Index">
-                                            <img src="~/assets/img/shop/widget-2.webp"
-                                                 alt="List product">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">
-                                                Decorative Christmas
-                                                Fox
+
+                                @foreach (var item in Model.Products.OrderByDescending(x=>x.CreateDate).Take(3))
+                                {
+                                    <li class="product">
+                                        <div class="thumbnail">
+                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="image">
+                                                <img src="~/assets/img/product-details/@item.Image"
+                                                     alt="List product">
                                             </a>
-                                        </h6>
-                                        <span class="price">
-                                            $50.00
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="product">
-                                    <div class="thumbnail">
-                                        <a asp-controller="ProductDetails" asp-action ="Index">
-                                            <img src="~/assets/img/shop/widget-3.webp"
-                                                 alt="List product">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="title">
-                                            <a asp-controller="ProductDetails" asp-action ="Index">Lucky Wooden Elephant</a>
-                                        </h6>
-                                        <span class="price">
-                                            $35.00
-                                        </span>
-                                    </div>
-                                </li>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="title">
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="image">
+                                                    @item.Name
+                                                </a>
+                                            </h6>
+                                            <span class="price">
+                                                $@item.Price
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                }
+                               
                             </ul>
                         </div>
 
                         <div class="single-widget learts-mb-40">
                             <h3 class="widget-title product-filter-widget-title">Product Tags</h3>
                             <div class="widget-tags">
-                                <a href="#">handmade</a>
-                                <a href="#">learts</a>
-                                <a href="#">mug</a>
-                                <a href="#">product</a>
-                                <a href="#">learts</a>
+                               @foreach (var item in Model.Tags)
+                                {
+                                    <a href="#">@item.Name</a>
+                                }          
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>

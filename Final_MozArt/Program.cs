@@ -78,7 +78,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
         //app.UseExceptionHandler();
-app.UseMiddleware<GlobalExceptionHandler>();
+//app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseStaticFiles();
 
@@ -87,23 +87,23 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization(); // Authorization mutlaka StatusCodePages'ten önce olmal?!
 
-app.UseStatusCodePages(context =>
-{
-    var response = context.HttpContext.Response;
-    var path = response.StatusCode switch
-    {
-        401 => "/Unauthorized/Index",
-        404 => "/NotFound/Index",
-        _ => null
-    };
+//app.UseStatusCodePages(context =>
+//{
+//    var response = context.HttpContext.Response;
+//    var path = response.StatusCode switch
+//    {
+//        401 => "/Unauthorized/Index",
+//        404 => "/NotFound/Index",
+//        _ => null
+//    };
 
-    if (path != null)
-    {
-        response.Redirect(path);
-    }
+//    if (path != null)
+//    {
+//        response.Redirect(path);
+//    }
 
-    return Task.CompletedTask;
-});
+//    return Task.CompletedTask;
+//});
 
 
 app.MapControllerRoute(

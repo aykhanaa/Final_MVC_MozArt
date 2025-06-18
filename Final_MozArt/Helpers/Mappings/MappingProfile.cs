@@ -8,6 +8,7 @@ using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Color;
 using Final_MozArt.ViewModels.ContactIntro;
+using Final_MozArt.ViewModels.ContactMessage;
 using Final_MozArt.ViewModels.Instagram;
 using Final_MozArt.ViewModels.Product;
 using Final_MozArt.ViewModels.Setting;
@@ -115,7 +116,8 @@ namespace Final_MozArt.Helpers.Mappings
                 .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId))
                 .ForMember(dest => dest.ImageId, opt => opt.MapFrom(src => src.Id));
 
-
+            CreateMap<ContactMessage, ContactMessageVM>();
+            CreateMap<ContactMessageCreateVM, ContactMessage>();
 
 
 

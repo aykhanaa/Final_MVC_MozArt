@@ -18,7 +18,7 @@
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
                                 <li class="breadcrumb-item active">Contact us</li>
-                                </li>
+                              
                             </ul>
                         </div>
                     </div>
@@ -34,10 +34,10 @@
 
                 <div class="section-title text-center">
                     <h2 class="title" style="font-family: system-ui;font-weight: 400;font-size: 33px;">
-                        @Model.ContactIntros.FirstOrDefault().Title
+                        @Model.ContactIntros.FirstOrDefault()?.Title
                     </h2>
                     <p style="width: 40pc; margin-left: 16pc; line-height: 2.0; font-family: system-ui; margin-top: 28px;">
-                        @Model.ContactIntros.FirstOrDefault().Description
+                        @Model.ContactIntros.FirstOrDefault()?.Description
                     </p>
 
                 </div>
@@ -103,27 +103,50 @@
                 <div class="row">
                     <div class="col-lg-8 col-12 mx-auto">
                         <div class="contact-form">
-                            <form action="assets/php/contact-mail.php" id="contact-form" method="post">
+                            <form action="assets/php/contact-mail.php" id="contactForm" method="post">
                                 <div class="row learts-mb-n30">
                                     <div class="col-md-6 col-12 learts-mb-30">
-                                        <input type="text"
-                                               placeholder="Your Name *" name="name">
+                                        <input type="text" name="name" placeholder="Your Name *" required />
                                     </div>
                                     <div class="col-md-6 col-12 learts-mb-30">
-                                        <input type="email"
-                                               placeholder="Email *" name="email">
+                                        <input type="email" name="email" placeholder="Email *" required />
                                     </div>
                                     <div class="col-12 learts-mb-30">
-                                        <textarea name="message"
-                                                  placeholder="Message"></textarea>
+                                        <textarea name="message" placeholder="Message" required></textarea>
                                     </div>
                                     <div class="col-12 text-center learts-mb-30">
-                                        <button class="btn btn-dark btn-outline-hover-dark">
+                                        <button type="submit" class="btn btn-dark btn-outline-hover-dark">
                                             Submit
                                         </button>
                                     </div>
                                 </div>
                             </form>
+                            <div id="contactMessage"></div>
+
+                            <script>
+                                document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                                    e.preventDefault();
+
+                                    const formData = new FormData(this);
+
+                                    const response = await fetch('/Contact/Create', {
+                                        method: 'POST',
+                                        body: formData
+                                    });
+
+                                    const result = await response.json();
+                                    const messageBox = document.getElementById('contactMessage');
+
+                                    if (result.success) {
+                                        messageBox.innerText = result.message;
+                                        messageBox.style.color = 'green';
+                                    } else {
+                                        messageBox.innerText = result.message;
+                                        messageBox.style.color = 'red';
+                                    }
+                                });
+                            </script>
+
                             <p class="form-messege"></p>
                         </div>
                     </div>

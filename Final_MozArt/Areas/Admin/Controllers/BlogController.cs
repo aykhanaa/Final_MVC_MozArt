@@ -3,6 +3,7 @@ using Final_MozArt.Helpers.Extensions;
 using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Blog;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Threading.Tasks;
@@ -22,12 +23,16 @@ namespace Final_MozArt.Areas.Admin.Controllers
             _mapper = mapper;
         }
 
+
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Index()
         {
             var blogs = await _blogService.GetAllAsync();
             return View(blogs);
         }
 
+
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null) return RedirectToAction("Index", "Error");
@@ -38,6 +43,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
             return View(blog);
         }
 
+
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             var categories = await _categoryService.GetAllAsync();
@@ -47,6 +54,7 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(BlogCreateVM request)
         {
             if (!ModelState.IsValid)
@@ -76,6 +84,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return RedirectToAction("Index", "Error");
@@ -100,6 +110,7 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Edit(int id, BlogEditVM request)
         {
             if (id != request.Id) return BadRequest();
@@ -136,10 +147,10 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _blogService.DeleteAsync(id);
-            //return RedirectToAction(nameof(Index));
             return Ok();
         }
     }

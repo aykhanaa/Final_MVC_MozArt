@@ -10,5 +10,7 @@ namespace Final_MozArt.Services.Interfaces
         Task CreateAsync(BrandCreateVM request);
         Task DeleteAsync(int id);
         Task EditAsync(BrandEditVM request);
+        Task<Dictionary<string, int>> GetProductCountByBrandNameAsync();
+
     }
 }

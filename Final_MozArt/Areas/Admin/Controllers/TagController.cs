@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Tag;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_MozArt.Areas.Admin.Controllers
@@ -17,6 +18,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Index()
         {
             var tags = await _tagService.GetAllAsync();
@@ -24,6 +27,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null)
@@ -37,6 +42,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -58,6 +65,7 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Edit(int id, TagEditVM request)
         {
             if (id != request.Id) return BadRequest();
@@ -72,14 +80,17 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
+
         public async Task<IActionResult> Delete(int id)
         {
             await _tagService.DeleteAsync(id);
-            //return RedirectToAction(nameof(Index));
             return Ok();
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
+
         public IActionResult Create()
         {
             return View();
@@ -87,6 +98,8 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
+
         public async Task<IActionResult> Create(TagCreateVM request)
         {
             if (!ModelState.IsValid)

@@ -6,7 +6,10 @@
 }
 
 <main>
-    <section id="main-slider">
+
+    @if (Model.Sliders != null && Model.Sliders.Any())
+    {
+        <section id="main-slider">
         <div class="container">
             <div class="home-slider swiper-container">
                 <div class="swiper-wrapper">
@@ -36,6 +39,8 @@
             </div>
         </div>
     </section>
+    }
+
 
     <section id="main-about-us">
         <div class="about-us section-padding">
@@ -206,70 +211,26 @@
                     </div>
                 </div>
 
-                <div class="testimonial-carousel">
-                    <div class="col">
-                        <div class="testimonial">
-                            <p>
-                                There's nothing would satisfy me much more than a worry-free clean and responsive
-                                theme
-                                for
-                                my high-traffic site.
-                            </p>
-                            <div class="author">
-                                <div class="content">
-                                    <h6 class="name">Anais Coulon</h6>
+                <div class="testimonial-carousel row">
+                    @foreach (var msg in Model.ApprovedMessages)
+                    {
+                        <div class="col">
+                            <div class="testimonial">
+                                <p>@msg.Message</p>
+                                <div class="author">
+                                    <div class="content">
+                                        <h6 class="name">@msg.Name</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="testimonial">
-                            <p>
-                                Really good design/documentation, pretty much everything is nicely setup. The best
-                                choice
-                                for
-                                Woocommerce shop.
-                            </p>
-                            <div class="author">
-                                <div class="content">
-                                    <h6 class="name">Ian Schneider</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="testimonial">
-                            <p>
-                                ThemeMove deserves 5 star for theme’s features, design quality, flexibility,
-                                customizability
-                                and support service!
-                            </p>
-                            <div class="author">
-                                <div class="content">
-                                    <h6 class="name">Florence Polla</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="testimonial">
-                            <p>
-                                Thanks for always keeping your WordPress themes up to date. Your level of support is
-                                second
-                                to none.
-                            </p>
-                            <div class="author">
-                                <div class="content">
-                                    <h6 class="name">Sally Ramsey</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
 
             </div>
         </div>
     </section>
+
 
 
     <section id="instagram-area">

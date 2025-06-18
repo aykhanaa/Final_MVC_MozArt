@@ -3,6 +3,7 @@ using Final_MozArt.Helpers.Extensions;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.About;
 using Final_MozArt.ViewModels.Support;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_MozArt.Areas.Admin.Controllers
@@ -19,12 +20,14 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Index()
         {
             var abouts = await _aboutService.GetAllAsync();
             return View(abouts);
         }
         [HttpGet]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null)
@@ -38,6 +41,7 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -61,6 +65,7 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int id, AboutEditVM request)
         {
             if (id != request.Id) return BadRequest();
@@ -90,10 +95,10 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _aboutService.DeleteAsync(id);
-            //return RedirectToAction(nameof(Index));
             return Ok();
         }
 
@@ -105,6 +110,7 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(AboutCreateVM request)
         {
             if (!ModelState.IsValid)

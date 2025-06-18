@@ -3,10 +3,15 @@
 
 <div class="container my-5" style="margin-left: 22pc !important; width: 68pc !important; margin-top: 120px !important;">
     <h1 class="text-center mt-3 mb-3" style="margin-left:200px; margin-top:150px;">Video</h1>
-    @if (Model.Count < 1)
+    @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
     {
-        <a class="btn btn-success text-white" asp-action="Create">Create</a>
+        @if (Model.Count < 1)
+        {
+            <a class="btn btn-success text-white" asp-action="Create">Create</a>
+        }
+
     }
+   
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -41,9 +46,24 @@
                         </td>
 
                         <td>
-                            <a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
-                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                            <button type="button" class="btn btn-danger delete-btn" data-id="@item.Id">Delete</button>
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                            {
+                                <a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            }
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                            {
+                                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+
+                            }
+
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
+                            {
+                                <button type="button" class="btn btn-danger delete-btn" data-id="@item.Id">Delete</button>
+
+                            }
+                          
+                           
+                          
 
 
                         </td>
