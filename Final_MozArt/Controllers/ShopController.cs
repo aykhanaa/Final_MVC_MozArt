@@ -27,10 +27,32 @@ namespace Final_MozArt.Controllers
             _brandService = brandService;
             _tagService = tagService;
         }
-        public async Task<IActionResult> Index()
+
+       
+
+
+        [HttpGet]
+        public async Task<IActionResult> Index(string? sortKey, string? categoryName, string? brandName, string? tagName)
         {
             var setting = _settingService.GetSettings();
-            var product = await _productService.GetAllAsync();
+
+            ICollection<ProductVM> products;
+
+            if (!string.IsNullOrWhiteSpace(sortKey))
+            {
+                products = await _productService.SortAsync(sortKey);
+            }
+            else if (!string.IsNullOrWhiteSpace(categoryName) || !string.IsNullOrWhiteSpace(brandName) || !string.IsNullOrWhiteSpace(tagName))
+            {
+                products = await _productService.FilterAsync(categoryName, brandName, tagName);
+            }
+            else
+            {
+                products = await _productService.GetAllAsync();
+            }
+
+
+
             var categories = await _categoryService.GetAllAsync();
             var categoryiesWithProductCount = await _categoryService.GetProductCountByCategoryNameAsync();
             var brandWithProductCount = await _brandService.GetProductCountByBrandNameAsync();
@@ -40,15 +62,17 @@ namespace Final_MozArt.Controllers
             ShopVM model = new ShopVM()
             {
                 Setting = setting,
-                Products = product,
+                Products = products,
                 Categories = categories,
                 ProductCount = categoryiesWithProductCount,
                 Brands = brands,
                 Tags = tags,
                 BrandsProductCount = brandWithProductCount
             };
+
             return View(model);
         }
+
 
         public async Task<IActionResult> Detail(int id)
         {
@@ -57,5 +81,28 @@ namespace Final_MozArt.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetSortedProducts(string? sortKey)
+        {
+            ICollection<ProductVM> products;
+
+            if (string.IsNullOrWhiteSpace(sortKey) || sortKey == "default")
+                products = await _productService.GetAllAsync();
+            else
+                products = await _productService.SortAsync(sortKey);
+
+            var result = products.Select(p => new
+            {
+                id = p.Id,
+                name = p.Name,
+                price = p.Price,
+                image = p.Image,
+                hower = p.Hower
+            });
+
+            return Json(result);
+        }
+
     }
 }

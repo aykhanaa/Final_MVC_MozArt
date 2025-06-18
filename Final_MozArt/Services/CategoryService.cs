@@ -85,15 +85,10 @@ namespace Final_MozArt.Services
 
         public async Task<Dictionary<string, int>> GetProductCountByCategoryNameAsync()
         {
-            var result = await _context.Categories
-                .Select(c => new
-                {
-                    CategoryName = c.Name,
-                    ProductCount = _context.Products.Count(p => p.CategoryId == c.Id)
-                })
-                .ToDictionaryAsync(x => x.CategoryName, x => x.ProductCount);
-
-            return result;
+            return await _context.Products
+                .Where(p => p.Category != null)
+                .GroupBy(p => p.Category.Name.Trim())
+                .ToDictionaryAsync(g => g.Key, g => g.Count(), StringComparer.OrdinalIgnoreCase);
         }
     }
 }

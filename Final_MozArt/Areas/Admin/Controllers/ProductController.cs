@@ -67,57 +67,26 @@ namespace Final_MozArt.Controllers
         }
 
 
-        public async Task<IActionResult> OrderByNameAsc(int page = 1, int take = 10)
-        {
-            var products = await _productService.OrderByNameAsc(page, take);
-            var totalCount = await _productService.GetCountAsync();
-            var totalPages = (int)Math.Ceiling((double)totalCount / take);
+      
+        //public async Task<IActionResult> Filter(int minPrice, int maxPrice, int page = 1, int take = 10)
+        //{
+        //    var products = await _productService.FilterAsync(minPrice, maxPrice);
+        //    var totalCount = await _productService.FilterCountAsync(minPrice, maxPrice);
+        //    var totalPages = (int)Math.Ceiling((double)totalCount / take);
 
-            var paginatedResult = new Paginate<ProductVM>(
-                products.ToList(),
-                page,
-                totalPages
-            );
+        //    var paginatedProducts = products.Skip((page - 1) * take).Take(take).ToList();
 
-            ViewBag.SortType = "NameAsc";
-            return View("Index", paginatedResult);
-        }
+        //    var paginatedResult = new Paginate<ProductVM>(
+        //        paginatedProducts,
+        //        page,
+        //        totalPages
+        //    );
 
-        public async Task<IActionResult> OrderByPriceDesc(int page = 1, int take = 10)
-        {
-            var products = await _productService.OrderByPriceDesc(page, take);
-            var totalCount = await _productService.GetCountAsync();
-            var totalPages = (int)Math.Ceiling((double)totalCount / take);
-
-            var paginatedResult = new Paginate<ProductVM>(
-                products.ToList(),
-                page,
-                totalPages
-            );
-
-            ViewBag.SortType = "PriceDesc";
-            return View("Index", paginatedResult);
-        }
-
-        public async Task<IActionResult> Filter(int minPrice, int maxPrice, int page = 1, int take = 10)
-        {
-            var products = await _productService.FilterAsync(minPrice, maxPrice);
-            var totalCount = await _productService.FilterCountAsync(minPrice, maxPrice);
-            var totalPages = (int)Math.Ceiling((double)totalCount / take);
-
-            var paginatedProducts = products.Skip((page - 1) * take).Take(take).ToList();
-
-            var paginatedResult = new Paginate<ProductVM>(
-                paginatedProducts,
-                page,
-                totalPages
-            );
-
-            ViewBag.MinPrice = minPrice;
-            ViewBag.MaxPrice = maxPrice;
-            ViewBag.IsFilter = true;
-            return View("Index", paginatedResult);
-        }
+        //    ViewBag.MinPrice = minPrice;
+        //    ViewBag.MaxPrice = maxPrice;
+        //    ViewBag.IsFilter = true;
+        //    return View("Index", paginatedResult);
+        //}
 
         [Authorize(Roles = "Admin,SuperAdmin")]
 

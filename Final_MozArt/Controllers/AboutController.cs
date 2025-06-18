@@ -15,11 +15,6 @@ namespace Final_MozArt.Controllers
         private readonly IAdvantageService _advantageService;
 
 
-
-
-
-
-
         public AboutController(IAboutService aboutService,
                                ISupportService supportService,
                                IInstagramService ınstagramService,

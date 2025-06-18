@@ -161,85 +161,8 @@ namespace Final_MozArt.Services
 
             return _mapper.Map<ICollection<ProductVM>>(products);
         }
-
-        public async Task<ICollection<ProductVM>> OrderByNameAsc(int page, int take)
-        {
-            var products = await _context.Products
-                .OrderBy(p => p.Name)
-                .Include(p => p.Brand)
-                .Include(p => p.Category)
-                .Include(p => p.Images)
-                .AsNoTracking()
-                .Skip((page - 1) * take)
-                .Take(take)
-                .ToListAsync();
-
-            return _mapper.Map<ICollection<ProductVM>>(products);
-        }
-
-        public async Task<ICollection<ProductVM>> OrderByNameDesc(int page, int take)
-        {
-            var products = await _context.Products
-                .OrderByDescending(p => p.Name)
-                .Include(p => p.Brand)
-                .Include(p => p.Category)
-                .Include(p => p.Images)
-                .AsNoTracking()
-                .Skip((page - 1) * take)
-                .Take(take)
-                .ToListAsync();
-
-            return _mapper.Map<ICollection<ProductVM>>(products);
-        }
-
-        public async Task<ICollection<ProductVM>> OrderByPriceAsc(int page, int take)
-        {
-            var products = await _context.Products
-                .OrderBy(p => p.Price)
-                .Include(p => p.Brand)
-                .Include(p => p.Category)
-                .Include(p => p.Images)
-                .AsNoTracking()
-                .Skip((page - 1) * take)
-                .Take(take)
-                .ToListAsync();
-
-            return _mapper.Map<ICollection<ProductVM>>(products);
-        }
-
-        public async Task<ICollection<ProductVM>> OrderByPriceDesc(int page, int take)
-        {
-            var products = await _context.Products
-                .OrderByDescending(p => p.Price)
-                .Include(p => p.Brand)
-                .Include(p => p.Category)
-                .Include(p => p.Images)
-                .AsNoTracking()
-                .Skip((page - 1) * take)
-                .Take(take)
-                .ToListAsync();
-
-            return _mapper.Map<ICollection<ProductVM>>(products);
-        }
-
-        public async Task<ICollection<ProductVM>> FilterAsync(int minPrice, int maxPrice)
-        {
-            var products = await _context.Products
-                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
-                .Include(p => p.Brand)
-                .Include(p => p.Category)
-                .Include(p => p.Images)
-                .AsNoTracking()
-                .ToListAsync();
-
-            return _mapper.Map<ICollection<ProductVM>>(products);
-        }
-
-        public async Task<int> FilterCountAsync(int minPrice, int maxPrice)
-            => await _context.Products
-                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
-                .CountAsync();
-
+     
+      
         public async Task CreateAsync(ProductCreateVM vm)
         {
             var product = _mapper.Map<Product>(vm);
@@ -271,15 +194,10 @@ namespace Final_MozArt.Services
                     Product = product
                 });
             }
-
-           
-
+          
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
-
-
-
 
         public async Task EditAsync(ProductEditVM vm)
         {
@@ -381,7 +299,6 @@ namespace Final_MozArt.Services
 
             if (selectedImage.IsHover)
             {
-                // Hover şəkil main olaraq seçilə bilməz, sadəcə çıxış
                 return;
             }
 
@@ -429,35 +346,67 @@ namespace Final_MozArt.Services
             return await products.ToListAsync();
         }
 
-        // ProductService.cs faylında bu methodu əlavə edin və ya mövcud FilterAsync-i dəyişin
-
-        public async Task<ICollection<ProductVM>> FilterAsync(int minPrice, int maxPrice, int page, int take)
+        public async Task<ICollection<ProductVM>> SortAsync(string sortKey)
         {
-            var products = await _context.Products
-                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
+            IQueryable<Product> query = _context.Products
                 .Include(p => p.Brand)
                 .Include(p => p.Category)
                 .Include(p => p.Images)
-                .AsNoTracking()
-                .Skip((page - 1) * take)
-                .Take(take)
-                .ToListAsync();
+                .AsNoTracking();
+
+            switch (sortKey)
+            {
+                case "A-Z":
+                    query = query.OrderBy(p => p.Name);
+                    break;
+                case "Z-A":
+                    query = query.OrderByDescending(p => p.Name);
+                    break;
+                case "LowToHigh":
+                    query = query.OrderBy(p => p.Price);
+                    break;
+                case "HighToLow":
+                    query = query.OrderByDescending(p => p.Price);
+                    break;
+                default:
+                    query = query.OrderByDescending(p => p.CreateDate);
+                    break;
+            }
+
+            var products = await query.ToListAsync();
 
             return _mapper.Map<ICollection<ProductVM>>(products);
         }
 
-        // Mövcud FilterAsync methodunu saxlamaq üçün başqa ad verə bilərsiniz
-        public async Task<ICollection<ProductVM>> FilterAllAsync(int minPrice, int maxPrice)
+        public async Task<ICollection<ProductVM>> FilterAsync(string? categoryName, string? brandName, string? tagName)
         {
-            var products = await _context.Products
-                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
-                .Include(p => p.Brand)
+            IQueryable<Product> query = _context.Products
                 .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .Include(p => p.ProductTags).ThenInclude(pt => pt.Tag)
                 .Include(p => p.Images)
-                .AsNoTracking()
-                .ToListAsync();
+                .AsNoTracking();
 
-            return _mapper.Map<ICollection<ProductVM>>(products);
+            if (!string.IsNullOrWhiteSpace(categoryName))
+            {
+                categoryName = categoryName.Trim(); // lowercase YOX!
+                query = query.Where(p => p.Category != null && p.Category.Name == categoryName);
+            }
+
+            if (!string.IsNullOrWhiteSpace(brandName))
+            {
+                brandName = brandName.Trim();
+                query = query.Where(p => p.Brand != null && p.Brand.Name == brandName);
+            }
+
+            if (!string.IsNullOrWhiteSpace(tagName))
+            {
+                tagName = tagName.Trim();
+                query = query.Where(p => p.ProductTags.Any(pt => pt.Tag != null && pt.Tag.Name == tagName));
+            }
+
+            var filteredProducts = await query.ToListAsync();
+            return _mapper.Map<ICollection<ProductVM>>(filteredProducts);
         }
 
     }

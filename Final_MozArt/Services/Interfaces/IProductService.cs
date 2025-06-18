@@ -15,20 +15,14 @@ public interface IProductService
     Task<int> GetCountByCategoryAsync(int id);
     Task<int> GetCountBySearch(string searchText);
     Task<ICollection<ProductVM>> SearchAsync(string searchText, int page, int take);
-    Task<ICollection<ProductVM>> OrderByNameAsc(int page, int take);
-    Task<ICollection<ProductVM>> OrderByNameDesc(int page, int take);
-    Task<ICollection<ProductVM>> OrderByPriceAsc(int page, int take);
-    Task<ICollection<ProductVM>> OrderByPriceDesc(int page, int take);
-    Task<ICollection<ProductVM>> FilterAsync(int value1, int value2);
-    Task<int> FilterCountAsync(int value1, int value2);
     Task CreateAsync(ProductCreateVM product);
     Task EditAsync(ProductEditVM product);
     Task DeleteAsync(int id);
     Task DeleteProductImageAsync(int id);
     Task SetMainImageAsync(SetIsMainVM data);
     Task<List<Product>> SearchProductsAsync(string query);
-    Task<ICollection<ProductVM>> FilterAsync(int minPrice, int maxPrice, int page, int take);
-    Task<ICollection<ProductVM>> FilterAllAsync(int minPrice, int maxPrice);
+    Task<ICollection<ProductVM>> SortAsync(string sortKey);
+    Task<ICollection<ProductVM>> FilterAsync(string? categoryName, string? brandName, string? tagName);
 }
 
 

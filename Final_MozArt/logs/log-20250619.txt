@@ -1,0 +1,1440 @@
+2025-06-19 01:54:54.172 +04:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-19 01:54:54.265 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-19 01:54:54.279 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-19 01:54:54.303 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 01:54:54.307 +04:00 [INF] Hosting environment: Development
+2025-06-19 01:54:54.313 +04:00 [INF] Content root path: C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt
+2025-06-19 01:54:54.878 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-19 01:54:54.943 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 01:54:54.972 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-19 01:54:55.427 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-06-19 01:54:55.734 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-19 01:54:55.794 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:54:55.815 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:54:55.832 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-19 01:54:55.929 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:54:55.948 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-19 01:54:55.966 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:54:56.027 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:54:56.055 +04:00 [INF] Executed ViewResult - view Index executed in 88.3042ms.
+2025-06-19 01:54:56.062 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 1087.3869ms
+2025-06-19 01:54:56.066 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 01:54:56.075 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 1198.431ms
+2025-06-19 01:54:56.130 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:54:56.140 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 10.0568ms
+2025-06-19 01:54:56.147 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/fdc9e13b-db1e-4356-9788-28150fac2769_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - null null
+2025-06-19 01:54:56.147 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/12e4b636-3ee8-4fde-a0e2-361709de8f7d_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - null null
+2025-06-19 01:54:56.147 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/79f83c7e-f120-4968-a84f-ff7423cf0f70_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp - null null
+2025-06-19 01:54:56.147 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/0557ce3a-fbac-488b-bddf-5cf5e5c1116f_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - null null
+2025-06-19 01:54:56.148 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/cf48bdf4-d19e-4989-808e-80ad27f6638f_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - null null
+2025-06-19 01:54:56.148 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/2169a457-e098-4a19-8fb1-98ef564315bc_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - null null
+2025-06-19 01:54:56.148 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/a579592f-1d7f-4daa-8106-f2e21e5f4400_product-4-2.webp - null null
+2025-06-19 01:54:56.148 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/b073d505-3786-4630-88ce-44499bc89245_product-4-1.webp - null null
+2025-06-19 01:54:56.155 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp - null null
+2025-06-19 01:54:56.160 +04:00 [INF] The file /assets/img/product-details/fdc9e13b-db1e-4356-9788-28150fac2769_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp was not modified
+2025-06-19 01:54:56.161 +04:00 [INF] The file /assets/img/product-details/12e4b636-3ee8-4fde-a0e2-361709de8f7d_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp was not modified
+2025-06-19 01:54:56.165 +04:00 [INF] The file /assets/img/product-details/79f83c7e-f120-4968-a84f-ff7423cf0f70_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp was not modified
+2025-06-19 01:54:56.169 +04:00 [INF] The file /assets/img/product-details/0557ce3a-fbac-488b-bddf-5cf5e5c1116f_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp was not modified
+2025-06-19 01:54:56.175 +04:00 [INF] The file /assets/img/product-details/cf48bdf4-d19e-4989-808e-80ad27f6638f_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp was not modified
+2025-06-19 01:54:56.179 +04:00 [INF] The file /assets/img/product-details/2169a457-e098-4a19-8fb1-98ef564315bc_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp was not modified
+2025-06-19 01:54:56.191 +04:00 [INF] The file /assets/img/product-details/a579592f-1d7f-4daa-8106-f2e21e5f4400_product-4-2.webp was not modified
+2025-06-19 01:54:56.199 +04:00 [INF] The file /assets/img/product-details/b073d505-3786-4630-88ce-44499bc89245_product-4-1.webp was not modified
+2025-06-19 01:54:56.204 +04:00 [INF] The file /assets/img/product-details/ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp was not modified
+2025-06-19 01:54:56.207 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/fdc9e13b-db1e-4356-9788-28150fac2769_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - 304 null image/webp 59.7295ms
+2025-06-19 01:54:56.208 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/12e4b636-3ee8-4fde-a0e2-361709de8f7d_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - 304 null image/webp 60.9218ms
+2025-06-19 01:54:56.210 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/79f83c7e-f120-4968-a84f-ff7423cf0f70_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp - 304 null image/webp 62.5928ms
+2025-06-19 01:54:56.212 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/0557ce3a-fbac-488b-bddf-5cf5e5c1116f_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - 304 null image/webp 65.0912ms
+2025-06-19 01:54:56.214 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/cf48bdf4-d19e-4989-808e-80ad27f6638f_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp - 304 null image/webp 65.9591ms
+2025-06-19 01:54:56.215 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/2169a457-e098-4a19-8fb1-98ef564315bc_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp - 304 null image/webp 67.3553ms
+2025-06-19 01:54:56.217 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/a579592f-1d7f-4daa-8106-f2e21e5f4400_product-4-2.webp - 304 null image/webp 68.8724ms
+2025-06-19 01:54:56.219 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/b073d505-3786-4630-88ce-44499bc89245_product-4-1.webp - 304 null image/webp 70.4726ms
+2025-06-19 01:54:56.220 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp - 304 null image/webp 65.2146ms
+2025-06-19 01:54:56.228 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp - null null
+2025-06-19 01:54:56.232 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp - null null
+2025-06-19 01:54:56.240 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp - null null
+2025-06-19 01:54:56.247 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp - null null
+2025-06-19 01:54:56.251 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp - null null
+2025-06-19 01:54:56.256 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/ac37f6c1-7913-4b20-9462-727d34606b61_mug 1-1.webp - null null
+2025-06-19 01:54:56.262 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/83f38da8-b467-48b2-aa4a-68cbc1161af4_mug 1-2.webp - null null
+2025-06-19 01:54:56.268 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:54:56.280 +04:00 [INF] The file /assets/img/product-details/f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp was not modified
+2025-06-19 01:54:56.284 +04:00 [INF] The file /assets/img/product-details/4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp was not modified
+2025-06-19 01:54:56.287 +04:00 [INF] The file /assets/img/product-details/7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp was not modified
+2025-06-19 01:54:56.291 +04:00 [INF] The file /assets/img/product-details/16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp was not modified
+2025-06-19 01:54:56.294 +04:00 [INF] The file /assets/img/product-details/9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp was not modified
+2025-06-19 01:54:56.297 +04:00 [INF] The file /assets/img/product-details/ac37f6c1-7913-4b20-9462-727d34606b61_mug 1-1.webp was not modified
+2025-06-19 01:54:56.329 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/ac37f6c1-7913-4b20-9462-727d34606b61_mug 1-1.webp - 304 null image/webp 72.5211ms
+2025-06-19 01:54:56.308 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp - 304 null image/webp 79.8766ms
+2025-06-19 01:54:56.312 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp - 304 null image/webp 80.5806ms
+2025-06-19 01:54:56.315 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp - 304 null image/webp 74.2679ms
+2025-06-19 01:54:56.319 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp - 304 null image/webp 71.9798ms
+2025-06-19 01:54:56.320 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.8141ms
+2025-06-19 01:54:56.325 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp - 304 null image/webp 73.6406ms
+2025-06-19 01:54:56.300 +04:00 [INF] The file /assets/img/product-details/83f38da8-b467-48b2-aa4a-68cbc1161af4_mug 1-2.webp was not modified
+2025-06-19 01:54:56.367 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/83f38da8-b467-48b2-aa4a-68cbc1161af4_mug 1-2.webp - 304 null image/webp 105.273ms
+2025-06-19 01:54:56.872 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-19 01:54:56.882 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 10.4257ms
+2025-06-19 01:54:56.889 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-19 01:55:35.054 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop - null null
+2025-06-19 01:55:35.067 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:55:35.078 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:55:35.102 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:55:35.139 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:55:35.153 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:55:35.218 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:55:35.255 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:55:35.265 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:55:35.280 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:55:35.299 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:55:35.323 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:55:35.343 +04:00 [INF] Executed ViewResult - view Index executed in 44.0422ms.
+2025-06-19 01:55:35.347 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 262.7942ms
+2025-06-19 01:55:35.352 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:55:35.356 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop - 200 null text/html; charset=utf-8 301.8083ms
+2025-06-19 01:55:35.368 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:55:35.376 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 7.0079ms
+2025-06-19 01:55:35.379 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:55:35.398 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.0559ms
+2025-06-19 01:55:58.381 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/About - null null
+2025-06-19 01:55:58.394 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-19 01:55:58.402 +04:00 [INF] Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.AboutController (Final_MozArt).
+2025-06-19 01:55:58.464 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Image], [a].[IsMain], [a].[Subtitle], [a].[Title]
+FROM [Abouts] AS [a]
+2025-06-19 01:55:58.488 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Description], [s].[Title]
+FROM [Supports] AS [s]
+2025-06-19 01:55:58.530 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-19 01:55:58.554 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:55:58.569 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[CreateDate], [v].[Image], [v].[VideoURL]
+FROM [Videos] AS [v]
+2025-06-19 01:55:58.594 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreateDate], [a].[Description], [a].[Title]
+FROM [Advantages] AS [a]
+2025-06-19 01:55:58.619 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:55:58.635 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:55:58.643 +04:00 [INF] Executed ViewResult - view Index executed in 24.5697ms.
+2025-06-19 01:55:58.648 +04:00 [INF] Executed action Final_MozArt.Controllers.AboutController.Index (Final_MozArt) in 240.7363ms
+2025-06-19 01:55:58.652 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AboutController.Index (Final_MozArt)'
+2025-06-19 01:55:58.654 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/About - 200 null text/html; charset=utf-8 273.4309ms
+2025-06-19 01:55:58.668 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/about/about.css - null null
+2025-06-19 01:55:58.676 +04:00 [INF] The file /assets/css/about/about.css was not modified
+2025-06-19 01:55:58.680 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/about/about.css - 304 null text/css 11.4504ms
+2025-06-19 01:55:58.690 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:55:58.692 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:55:58.698 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 7.8875ms
+2025-06-19 01:55:58.710 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.0248ms
+2025-06-19 01:56:18.965 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog - null null
+2025-06-19 01:56:18.974 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-19 01:56:18.982 +04:00 [INF] Route matched with {action = "Index", controller = "Blog", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-19 01:56:19.012 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Blogs] AS [b]
+2025-06-19 01:56:19.051 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], COALESCE([t].[Title], N'') AS [Title], COALESCE([t].[Description], N'') AS [Description], COALESCE([t].[Image], N'default.jpg') AS [Image], [t].[CreateDate], [b0].[Name] AS [BlogCategoryName]
+FROM (
+    SELECT [b].[Id], [b].[BlogCategoryId], [b].[CreateDate], [b].[Description], [b].[Image], [b].[Title]
+    FROM [Blogs] AS [b]
+    ORDER BY [b].[CreateDate] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [BlogCategories] AS [b0] ON [t].[BlogCategoryId] = [b0].[Id]
+ORDER BY [t].[CreateDate] DESC
+2025-06-19 01:56:19.059 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:56:19.075 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:56:19.097 +04:00 [INF] Executed ViewResult - view Index executed in 39.1824ms.
+2025-06-19 01:56:19.104 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.Index (Final_MozArt) in 115.2738ms
+2025-06-19 01:56:19.108 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.Index (Final_MozArt)'
+2025-06-19 01:56:19.111 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog - 200 null text/html; charset=utf-8 146.1249ms
+2025-06-19 01:56:19.120 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/blog/blog.css - null null
+2025-06-19 01:56:19.121 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog/77ebd331-e7c6-4e7b-b5cf-fbe66697d885-blog-5.webp - null null
+2025-06-19 01:56:19.121 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog/881fbf62-6d81-4b3c-9189-fbb3622980c0-blog-6.webp - null null
+2025-06-19 01:56:19.126 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog/2c1e106e-4423-401b-adc6-50e383f32b8d-blog-4.webp - null null
+2025-06-19 01:56:19.126 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:56:19.127 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:56:19.146 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 20.8098ms
+2025-06-19 01:56:19.151 +04:00 [INF] Sending file. Request path: '/assets/img/blog/77ebd331-e7c6-4e7b-b5cf-fbe66697d885-blog-5.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\blog\77ebd331-e7c6-4e7b-b5cf-fbe66697d885-blog-5.webp'
+2025-06-19 01:56:19.151 +04:00 [INF] Sending file. Request path: '/assets/img/blog/881fbf62-6d81-4b3c-9189-fbb3622980c0-blog-6.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\blog\881fbf62-6d81-4b3c-9189-fbb3622980c0-blog-6.webp'
+2025-06-19 01:56:19.154 +04:00 [INF] Sending file. Request path: '/assets/css/blog/blog.css'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\css\blog\blog.css'
+2025-06-19 01:56:19.154 +04:00 [INF] Sending file. Request path: '/assets/img/blog/2c1e106e-4423-401b-adc6-50e383f32b8d-blog-4.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\blog\2c1e106e-4423-401b-adc6-50e383f32b8d-blog-4.webp'
+2025-06-19 01:56:19.158 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.1204ms
+2025-06-19 01:56:19.162 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog/77ebd331-e7c6-4e7b-b5cf-fbe66697d885-blog-5.webp - 200 5910 image/webp 41.6527ms
+2025-06-19 01:56:19.166 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog/881fbf62-6d81-4b3c-9189-fbb3622980c0-blog-6.webp - 200 5646 image/webp 45.1797ms
+2025-06-19 01:56:19.168 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/blog/blog.css - 200 3882 text/css 48.5149ms
+2025-06-19 01:56:19.171 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog/2c1e106e-4423-401b-adc6-50e383f32b8d-blog-4.webp - 200 3404 image/webp 45.4197ms
+2025-06-19 01:56:34.286 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Blog/LoadMore?skip=3&take=3 - null null
+2025-06-19 01:56:34.290 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.BlogController.LoadMore (Final_MozArt)'
+2025-06-19 01:56:34.294 +04:00 [INF] Route matched with {action = "LoadMore", controller = "Blog", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadMore(Int32, Int32) on controller Final_MozArt.Controllers.BlogController (Final_MozArt).
+2025-06-19 01:56:34.320 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], COALESCE([t].[Title], N'') AS [Title], COALESCE([t].[Description], N'') AS [Description], COALESCE([t].[Image], N'default.jpg') AS [Image], [t].[CreateDate], [b0].[Name] AS [BlogCategoryName]
+FROM (
+    SELECT [b].[Id], [b].[BlogCategoryId], [b].[CreateDate], [b].[Description], [b].[Image], [b].[Title]
+    FROM [Blogs] AS [b]
+    ORDER BY [b].[CreateDate] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [BlogCategories] AS [b0] ON [t].[BlogCategoryId] = [b0].[Id]
+ORDER BY [t].[CreateDate] DESC
+2025-06-19 01:56:34.326 +04:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType1`6[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 01:56:34.334 +04:00 [INF] Executed action Final_MozArt.Controllers.BlogController.LoadMore (Final_MozArt) in 26.2686ms
+2025-06-19 01:56:34.336 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.BlogController.LoadMore (Final_MozArt)'
+2025-06-19 01:56:34.338 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Blog/LoadMore?skip=3&take=3 - 200 null application/json; charset=utf-8 51.7887ms
+2025-06-19 01:56:34.340 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog/64334cd6-6ccd-455f-aa6a-91e07fbc0787-blog-3.webp - null null
+2025-06-19 01:56:34.340 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog/13f1bc81-9073-4d8d-9d85-3b8dba323c9c-blog-2.webp - null null
+2025-06-19 01:56:34.358 +04:00 [INF] Sending file. Request path: '/assets/img/blog/64334cd6-6ccd-455f-aa6a-91e07fbc0787-blog-3.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\blog\64334cd6-6ccd-455f-aa6a-91e07fbc0787-blog-3.webp'
+2025-06-19 01:56:34.360 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog/64334cd6-6ccd-455f-aa6a-91e07fbc0787-blog-3.webp - 200 2742 image/webp 19.9085ms
+2025-06-19 01:56:34.369 +04:00 [INF] Sending file. Request path: '/assets/img/blog/13f1bc81-9073-4d8d-9d85-3b8dba323c9c-blog-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\blog\13f1bc81-9073-4d8d-9d85-3b8dba323c9c-blog-2.webp'
+2025-06-19 01:56:34.387 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog/13f1bc81-9073-4d8d-9d85-3b8dba323c9c-blog-2.webp - 200 6272 image/webp 47.0801ms
+2025-06-19 01:56:50.645 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-19 01:56:50.651 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-19 01:56:50.657 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-19 01:56:50.673 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Description], [c].[Title]
+FROM [ContactIntros] AS [c]
+2025-06-19 01:56:50.701 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:56:50.711 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:56:50.718 +04:00 [INF] Executed ViewResult - view Index executed in 17.4954ms.
+2025-06-19 01:56:50.722 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 58.0894ms
+2025-06-19 01:56:50.724 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-19 01:56:50.734 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 88.6701ms
+2025-06-19 01:56:50.744 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:56:50.750 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.5271ms
+2025-06-19 01:56:50.764 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:56:50.776 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6384ms
+2025-06-19 01:57:23.422 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Login - null null
+2025-06-19 01:57:23.430 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-19 01:57:23.436 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-19 01:57:23.441 +04:00 [INF] Executing ViewResult, running view Login.
+2025-06-19 01:57:23.461 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:57:23.470 +04:00 [INF] Executed ViewResult - view Login executed in 29.1123ms.
+2025-06-19 01:57:23.472 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 34.5356ms
+2025-06-19 01:57:23.478 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-19 01:57:23.480 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Login - 200 null text/html; charset=utf-8 58.4707ms
+2025-06-19 01:57:23.492 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:23.497 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:57:23.498 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.8951ms
+2025-06-19 01:57:23.506 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.1489ms
+2025-06-19 01:57:28.839 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/ForgotPassword - null null
+2025-06-19 01:57:28.848 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.ForgotPassword (Final_MozArt)'
+2025-06-19 01:57:28.850 +04:00 [INF] Route matched with {action = "ForgotPassword", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgotPassword() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-19 01:57:28.855 +04:00 [INF] Executing ViewResult, running view ForgotPassword.
+2025-06-19 01:57:28.867 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:57:28.873 +04:00 [INF] Executed ViewResult - view ForgotPassword executed in 18.8325ms.
+2025-06-19 01:57:28.875 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.ForgotPassword (Final_MozArt) in 22.2729ms
+2025-06-19 01:57:28.876 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.ForgotPassword (Final_MozArt)'
+2025-06-19 01:57:28.881 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/ForgotPassword - 200 null text/html; charset=utf-8 41.0764ms
+2025-06-19 01:57:28.892 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/forget-password/forget-password.css - null null
+2025-06-19 01:57:28.898 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/forget-password/forget-password.js - null null
+2025-06-19 01:57:28.898 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:28.898 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:57:28.905 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.7456ms
+2025-06-19 01:57:28.913 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.9686ms
+2025-06-19 01:57:28.921 +04:00 [INF] Sending file. Request path: '/assets/css/forget-password/forget-password.css'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\css\forget-password\forget-password.css'
+2025-06-19 01:57:28.923 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/forget-password/forget-password.css - 200 9484 text/css 31.3909ms
+2025-06-19 01:57:28.929 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/assets/img/blog/page-title.webp - null null
+2025-06-19 01:57:28.934 +04:00 [INF] Sending file. Request path: '/assets/js/forget-password/forget-password.js'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\js\forget-password\forget-password.js'
+2025-06-19 01:57:28.935 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/assets/img/blog/page-title.webp - 404 0 null 5.3662ms
+2025-06-19 01:57:28.937 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/forget-password/forget-password.js - 200 7287 text/javascript 38.9853ms
+2025-06-19 01:57:28.944 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/Account/assets/img/blog/page-title.webp, Response status code: 404
+2025-06-19 01:57:30.693 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Login - null null
+2025-06-19 01:57:30.698 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-19 01:57:30.700 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-19 01:57:30.715 +04:00 [INF] Executing ViewResult, running view Login.
+2025-06-19 01:57:30.721 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:57:30.723 +04:00 [INF] Executed ViewResult - view Login executed in 8.051ms.
+2025-06-19 01:57:30.724 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 22.072ms
+2025-06-19 01:57:30.725 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-19 01:57:30.730 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Login - 200 null text/html; charset=utf-8 37.171ms
+2025-06-19 01:57:30.750 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:57:30.751 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:30.758 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 7.6234ms
+2025-06-19 01:57:30.759 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.9066ms
+2025-06-19 01:57:33.252 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Register - null null
+2025-06-19 01:57:33.257 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Register (Final_MozArt)'
+2025-06-19 01:57:33.260 +04:00 [INF] Route matched with {action = "Register", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-19 01:57:33.264 +04:00 [INF] Executing ViewResult, running view Register.
+2025-06-19 01:57:33.281 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:57:33.284 +04:00 [INF] Executed ViewResult - view Register executed in 21.4008ms.
+2025-06-19 01:57:33.285 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Register (Final_MozArt) in 23.2506ms
+2025-06-19 01:57:33.286 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Register (Final_MozArt)'
+2025-06-19 01:57:33.288 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Register - 200 null text/html; charset=utf-8 36.0498ms
+2025-06-19 01:57:33.312 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:33.313 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:57:33.316 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.5024ms
+2025-06-19 01:57:33.322 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.8556ms
+2025-06-19 01:57:39.236 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-19 01:57:39.242 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 01:57:39.243 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-19 01:57:39.252 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-19 01:57:39.257 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:57:39.262 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:57:39.265 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-19 01:57:39.273 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:57:39.280 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-19 01:57:39.284 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:57:39.287 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:57:39.291 +04:00 [INF] Executed ViewResult - view Index executed in 7.0071ms.
+2025-06-19 01:57:39.292 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 46.9734ms
+2025-06-19 01:57:39.293 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 01:57:39.295 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 59.689ms
+2025-06-19 01:57:39.320 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:39.326 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.9947ms
+2025-06-19 01:57:39.331 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:57:39.340 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.7101ms
+2025-06-19 01:57:39.362 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-19 01:57:39.368 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 6.2322ms
+2025-06-19 01:57:39.374 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-19 01:57:46.188 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/Detail/35 - null null
+2025-06-19 01:57:46.197 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Detail (Final_MozArt)'
+2025-06-19 01:57:46.203 +04:00 [INF] Route matched with {action = "Detail", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(Int32) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:57:46.235 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-06-19 01:57:46.259 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price], [t].[Id0], [t].[CreateDate0], [t].[Image], [t].[Name0], [t].[Id1], [t].[CreateDate1], [t].[Image0], [t].[Name1], [t0].[Id], [t0].[ColorId], [t0].[CreateDate], [t0].[ProductId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [t1].[Id], [t1].[CreateDate], [t1].[ProductId], [t1].[TagId], [t1].[Id0], [t1].[CreateDate0], [t1].[Name], [p2].[Id], [p2].[CreateDate], [p2].[Image], [p2].[IsHover], [p2].[IsMain], [p2].[ProductId]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id] AS [Id0], [b].[CreateDate] AS [CreateDate0], [b].[Image], [b].[Name] AS [Name0], [c].[Id] AS [Id1], [c].[CreateDate] AS [CreateDate1], [c].[Image] AS [Image0], [c].[Name] AS [Name1]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+    WHERE [p].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[ColorId], [p0].[CreateDate], [p0].[ProductId], [c0].[Id] AS [Id0], [c0].[CreateDate] AS [CreateDate0], [c0].[Name]
+    FROM [ProductColors] AS [p0]
+    INNER JOIN [Colors] AS [c0] ON [p0].[ColorId] = [c0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[ProductId]
+LEFT JOIN (
+    SELECT [p1].[Id], [p1].[CreateDate], [p1].[ProductId], [p1].[TagId], [t2].[Id] AS [Id0], [t2].[CreateDate] AS [CreateDate0], [t2].[Name]
+    FROM [ProductTags] AS [p1]
+    INNER JOIN [Tags] AS [t2] ON [p1].[TagId] = [t2].[Id]
+) AS [t1] ON [t].[Id] = [t1].[ProductId]
+LEFT JOIN [ProductImages] AS [p2] ON [t].[Id] = [p2].[ProductId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1], [t0].[Id], [t0].[Id0], [t1].[Id], [t1].[Id0]
+2025-06-19 01:57:46.266 +04:00 [INF] Executing ViewResult, running view Detail.
+2025-06-19 01:57:46.274 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:57:46.277 +04:00 [INF] Executed ViewResult - view Detail executed in 12.116ms.
+2025-06-19 01:57:46.278 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Detail (Final_MozArt) in 74.5835ms
+2025-06-19 01:57:46.280 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Detail (Final_MozArt)'
+2025-06-19 01:57:46.282 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/Detail/35 - 200 null text/html; charset=utf-8 93.3757ms
+2025-06-19 01:57:46.297 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/product-details/product-details.css - null null
+2025-06-19 01:57:46.301 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/6ba4c5b1-06c7-4e52-a5bc-fbb7b4f12df3_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp - null null
+2025-06-19 01:57:46.304 +04:00 [INF] The file /assets/css/product-details/product-details.css was not modified
+2025-06-19 01:57:46.304 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:46.304 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/3853ab0b-e651-4d4b-8c2e-161d63d1ec8a_3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp - null null
+2025-06-19 01:57:46.304 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/e11b67b8-35df-4768-8ce7-abade5c6e693_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - null null
+2025-06-19 01:57:46.305 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/1462acae-7b83-4b19-9985-92889c755d2b_46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp - null null
+2025-06-19 01:57:46.306 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/e28a324c-52f2-487c-9794-9fcf227a2723_35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp - null null
+2025-06-19 01:57:46.306 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/4b253307-f2b4-45ad-b54f-550071ef2ecd_52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp - null null
+2025-06-19 01:57:46.307 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-2.webp - null null
+2025-06-19 01:57:46.307 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-1.webp - null null
+2025-06-19 01:57:46.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-3.webp - null null
+2025-06-19 01:57:46.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:57:46.311 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/product-details/product-details.css - 304 null text/css 13.7012ms
+2025-06-19 01:57:46.317 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 12.7209ms
+2025-06-19 01:57:46.325 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/6ba4c5b1-06c7-4e52-a5bc-fbb7b4f12df3_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\6ba4c5b1-06c7-4e52-a5bc-fbb7b4f12df3_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp'
+2025-06-19 01:57:46.331 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/3853ab0b-e651-4d4b-8c2e-161d63d1ec8a_3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\3853ab0b-e651-4d4b-8c2e-161d63d1ec8a_3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp'
+2025-06-19 01:57:46.338 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/e11b67b8-35df-4768-8ce7-abade5c6e693_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\e11b67b8-35df-4768-8ce7-abade5c6e693_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp'
+2025-06-19 01:57:46.341 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/1462acae-7b83-4b19-9985-92889c755d2b_46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\1462acae-7b83-4b19-9985-92889c755d2b_46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp'
+2025-06-19 01:57:46.346 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-2.webp - 404 0 null 39.4576ms
+2025-06-19 01:57:46.348 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/e28a324c-52f2-487c-9794-9fcf227a2723_35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\e28a324c-52f2-487c-9794-9fcf227a2723_35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp'
+2025-06-19 01:57:46.351 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/4b253307-f2b4-45ad-b54f-550071ef2ecd_52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\4b253307-f2b4-45ad-b54f-550071ef2ecd_52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp'
+2025-06-19 01:57:46.352 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-1.webp - 404 0 null 44.5707ms
+2025-06-19 01:57:46.355 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-3.webp - 404 0 null 47.2238ms
+2025-06-19 01:57:46.364 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.9587ms
+2025-06-19 01:57:46.366 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/6ba4c5b1-06c7-4e52-a5bc-fbb7b4f12df3_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp - 200 3710 image/webp 65.6585ms
+2025-06-19 01:57:46.367 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/fonts/themify/themify.woff?-fvbane - null null
+2025-06-19 01:57:46.367 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/3853ab0b-e651-4d4b-8c2e-161d63d1ec8a_3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp - 200 8942 image/webp 63.2012ms
+2025-06-19 01:57:46.369 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/e11b67b8-35df-4768-8ce7-abade5c6e693_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp - 200 10692 image/webp 64.3254ms
+2025-06-19 01:57:46.370 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/1462acae-7b83-4b19-9985-92889c755d2b_46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp - 200 10888 image/webp 65.2226ms
+2025-06-19 01:57:46.375 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-2.webp, Response status code: 404
+2025-06-19 01:57:46.376 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/e28a324c-52f2-487c-9794-9fcf227a2723_35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp - 200 8942 image/webp 70.7072ms
+2025-06-19 01:57:46.380 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/4b253307-f2b4-45ad-b54f-550071ef2ecd_52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp - 200 9050 image/webp 73.4182ms
+2025-06-19 01:57:46.383 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-1.webp, Response status code: 404
+2025-06-19 01:57:46.387 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/Shop/Detail/assets/img/product-details/review-3.webp, Response status code: 404
+2025-06-19 01:57:46.400 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/fonts/themify/themify.woff?-fvbane - 404 0 null 32.959ms
+2025-06-19 01:57:46.404 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/fonts/themify/themify.ttf?-fvbane - null null
+2025-06-19 01:57:46.421 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/fonts/themify/themify.woff, Response status code: 404
+2025-06-19 01:57:46.424 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/fonts/themify/themify.ttf?-fvbane - 404 0 null 20.4019ms
+2025-06-19 01:57:46.428 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/fonts/themify/themify.ttf, Response status code: 404
+2025-06-19 01:57:56.091 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/Detail/basket.html - null null
+2025-06-19 01:57:56.098 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Detail (Final_MozArt)'
+2025-06-19 01:57:56.099 +04:00 [INF] Route matched with {action = "Detail", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(Int32) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:57:56.110 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price], [t].[Id0], [t].[CreateDate0], [t].[Image], [t].[Name0], [t].[Id1], [t].[CreateDate1], [t].[Image0], [t].[Name1], [t0].[Id], [t0].[ColorId], [t0].[CreateDate], [t0].[ProductId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [t1].[Id], [t1].[CreateDate], [t1].[ProductId], [t1].[TagId], [t1].[Id0], [t1].[CreateDate0], [t1].[Name], [p2].[Id], [p2].[CreateDate], [p2].[Image], [p2].[IsHover], [p2].[IsMain], [p2].[ProductId]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id] AS [Id0], [b].[CreateDate] AS [CreateDate0], [b].[Image], [b].[Name] AS [Name0], [c].[Id] AS [Id1], [c].[CreateDate] AS [CreateDate1], [c].[Image] AS [Image0], [c].[Name] AS [Name1]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+    WHERE [p].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[ColorId], [p0].[CreateDate], [p0].[ProductId], [c0].[Id] AS [Id0], [c0].[CreateDate] AS [CreateDate0], [c0].[Name]
+    FROM [ProductColors] AS [p0]
+    INNER JOIN [Colors] AS [c0] ON [p0].[ColorId] = [c0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[ProductId]
+LEFT JOIN (
+    SELECT [p1].[Id], [p1].[CreateDate], [p1].[ProductId], [p1].[TagId], [t2].[Id] AS [Id0], [t2].[CreateDate] AS [CreateDate0], [t2].[Name]
+    FROM [ProductTags] AS [p1]
+    INNER JOIN [Tags] AS [t2] ON [p1].[TagId] = [t2].[Id]
+) AS [t1] ON [t].[Id] = [t1].[ProductId]
+LEFT JOIN [ProductImages] AS [p2] ON [t].[Id] = [p2].[ProductId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1], [t0].[Id], [t0].[Id0], [t1].[Id], [t1].[Id0]
+2025-06-19 01:57:56.117 +04:00 [INF] Executing StatusCodeResult, setting HTTP status code 404
+2025-06-19 01:57:56.118 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Detail (Final_MozArt) in 15.9023ms
+2025-06-19 01:57:56.120 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Detail (Final_MozArt)'
+2025-06-19 01:57:56.126 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/Detail/basket.html - 404 0 null 34.8349ms
+2025-06-19 01:57:57.976 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:57:57.981 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.3223ms
+2025-06-19 01:58:07.541 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-19 01:58:07.546 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 01:58:07.548 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-19 01:58:07.553 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-19 01:58:07.557 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:58:07.561 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:58:07.564 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-19 01:58:07.568 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:58:07.572 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-19 01:58:07.575 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:58:07.578 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:58:07.583 +04:00 [INF] Executed ViewResult - view Index executed in 8.6882ms.
+2025-06-19 01:58:07.585 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 34.7281ms
+2025-06-19 01:58:07.586 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 01:58:07.588 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 46.4156ms
+2025-06-19 01:58:07.616 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:58:07.620 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 3.7074ms
+2025-06-19 01:58:07.629 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:58:07.637 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.7664ms
+2025-06-19 01:58:07.664 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-19 01:58:07.675 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 11.6801ms
+2025-06-19 01:58:07.684 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-19 01:58:12.165 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/shop.html - null null
+2025-06-19 01:58:12.170 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/shop.html - 404 0 null 5.424ms
+2025-06-19 01:58:12.173 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/shop.html, Response status code: 404
+2025-06-19 01:58:13.434 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:58:13.438 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.5065ms
+2025-06-19 01:58:37.343 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop - null null
+2025-06-19 01:58:37.360 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:58:37.364 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:58:37.374 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:58:37.383 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:58:37.390 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:58:37.396 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:58:37.403 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:58:37.407 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:58:37.411 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:58:37.415 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:58:37.421 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:58:37.425 +04:00 [INF] Executed ViewResult - view Index executed in 9.4919ms.
+2025-06-19 01:58:37.429 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 59.1212ms
+2025-06-19 01:58:37.433 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:58:37.436 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop - 200 null text/html; charset=utf-8 92.1593ms
+2025-06-19 01:58:37.459 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:58:37.459 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:58:37.464 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.2752ms
+2025-06-19 01:58:37.472 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.1352ms
+2025-06-19 01:58:39.960 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=A-Z - null null
+2025-06-19 01:58:39.966 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:39.985 +04:00 [INF] Route matched with {action = "GetSortedProducts", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSortedProducts(System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:58:40.015 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Name], [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:58:40.019 +04:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Final_MozArt.ViewModels.Product.ProductVM, Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType5`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-19 01:58:40.027 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt) in 33.7239ms
+2025-06-19 01:58:40.029 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:40.030 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=A-Z - 200 null application/json; charset=utf-8 69.5391ms
+2025-06-19 01:58:44.023 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=Z-A - null null
+2025-06-19 01:58:44.027 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:44.032 +04:00 [INF] Route matched with {action = "GetSortedProducts", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSortedProducts(System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:58:44.054 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Name] DESC, [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:58:44.057 +04:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Final_MozArt.ViewModels.Product.ProductVM, Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType5`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-19 01:58:44.059 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt) in 24.8503ms
+2025-06-19 01:58:44.060 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:44.061 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=Z-A - 200 null application/json; charset=utf-8 38.766ms
+2025-06-19 01:58:46.322 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=LowToHigh - null null
+2025-06-19 01:58:46.325 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:46.326 +04:00 [INF] Route matched with {action = "GetSortedProducts", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSortedProducts(System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:58:46.345 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Price], [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:58:46.350 +04:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Final_MozArt.ViewModels.Product.ProductVM, Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType5`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-19 01:58:46.352 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt) in 23.835ms
+2025-06-19 01:58:46.353 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:46.354 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=LowToHigh - 200 null application/json; charset=utf-8 31.9168ms
+2025-06-19 01:58:52.162 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=HighToLow - null null
+2025-06-19 01:58:52.165 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:52.166 +04:00 [INF] Route matched with {action = "GetSortedProducts", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSortedProducts(System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:58:52.186 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Price] DESC, [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:58:52.189 +04:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Final_MozArt.ViewModels.Product.ProductVM, Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType5`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Final_MozArt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-19 01:58:52.191 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt) in 23.2142ms
+2025-06-19 01:58:52.192 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.GetSortedProducts (Final_MozArt)'
+2025-06-19 01:58:52.193 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop/GetSortedProducts?sortKey=HighToLow - 200 null application/json; charset=utf-8 31.0673ms
+2025-06-19 01:59:14.181 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?categoryName=Gift%20Ideas - null null
+2025-06-19 01:59:14.189 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:14.191 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:14.196 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:14.216 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-06-19 01:59:14.235 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__categoryName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [c].[Name] = @__categoryName_0
+ORDER BY [p].[Id], [c].[Id], [b].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 01:59:14.239 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:14.244 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:14.249 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:14.253 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:14.257 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:14.262 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:14.266 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:14.270 +04:00 [INF] Executed ViewResult - view Index executed in 7.6925ms.
+2025-06-19 01:59:14.271 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 77.9112ms
+2025-06-19 01:59:14.273 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:14.276 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?categoryName=Gift%20Ideas - 200 null text/html; charset=utf-8 95.4574ms
+2025-06-19 01:59:14.293 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:14.293 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:14.298 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.8015ms
+2025-06-19 01:59:14.308 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.5646ms
+2025-06-19 01:59:16.964 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?categoryName=Home%20Decor - null null
+2025-06-19 01:59:16.970 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:16.971 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:16.975 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:16.980 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__categoryName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [c].[Name] = @__categoryName_0
+ORDER BY [p].[Id], [c].[Id], [b].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 01:59:16.982 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:16.986 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:16.989 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:16.993 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:16.996 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:16.999 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:17.002 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:17.005 +04:00 [INF] Executed ViewResult - view Index executed in 6.0609ms.
+2025-06-19 01:59:17.006 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 33.2725ms
+2025-06-19 01:59:17.008 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:17.012 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?categoryName=Home%20Decor - 200 null text/html; charset=utf-8 47.1986ms
+2025-06-19 01:59:17.025 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:17.027 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:17.033 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.4348ms
+2025-06-19 01:59:17.035 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 8.3233ms
+2025-06-19 01:59:19.629 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?categoryName=Toys - null null
+2025-06-19 01:59:19.633 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:19.634 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:19.639 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:19.643 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__categoryName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [c].[Name] = @__categoryName_0
+ORDER BY [p].[Id], [c].[Id], [b].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 01:59:19.648 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:19.651 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:19.655 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:19.658 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:19.661 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:19.663 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:19.667 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:19.670 +04:00 [INF] Executed ViewResult - view Index executed in 6.1054ms.
+2025-06-19 01:59:19.672 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 34.9967ms
+2025-06-19 01:59:19.677 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:19.679 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?categoryName=Toys - 200 null text/html; charset=utf-8 49.9191ms
+2025-06-19 01:59:19.694 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:19.694 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:19.699 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.4461ms
+2025-06-19 01:59:19.706 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.344ms
+2025-06-19 01:59:21.732 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?categoryName=Kitchen - null null
+2025-06-19 01:59:21.737 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:21.738 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:21.742 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:21.746 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__categoryName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [c].[Name] = @__categoryName_0
+ORDER BY [p].[Id], [c].[Id], [b].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 01:59:21.750 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:21.753 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:21.758 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:21.761 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:21.764 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:21.765 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:21.769 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:21.771 +04:00 [INF] Executed ViewResult - view Index executed in 5.9174ms.
+2025-06-19 01:59:21.773 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 32.2631ms
+2025-06-19 01:59:21.776 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:21.778 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?categoryName=Kitchen - 200 null text/html; charset=utf-8 45.5456ms
+2025-06-19 01:59:21.800 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:21.804 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:21.807 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.8585ms
+2025-06-19 01:59:21.814 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.396ms
+2025-06-19 01:59:25.093 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?brandName=Carmella - null null
+2025-06-19 01:59:25.099 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:25.101 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:25.105 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:25.117 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-06-19 01:59:25.132 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__brandName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [b].[Name] = @__brandName_0
+ORDER BY [p].[Id], [b].[Id], [c].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 01:59:25.135 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:25.138 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:25.141 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:25.145 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:25.148 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:25.150 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:25.152 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:25.154 +04:00 [INF] Executed ViewResult - view Index executed in 4.4969ms.
+2025-06-19 01:59:25.155 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 51.6545ms
+2025-06-19 01:59:25.158 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:25.159 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?brandName=Carmella - 200 null text/html; charset=utf-8 66.4233ms
+2025-06-19 01:59:25.176 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:25.177 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:25.183 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.7668ms
+2025-06-19 01:59:25.184 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.1046ms
+2025-06-19 01:59:46.228 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?brandName=Carmella - null null
+2025-06-19 01:59:46.251 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:46.268 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:46.274 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:46.285 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__brandName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [b].[Name] = @__brandName_0
+ORDER BY [p].[Id], [b].[Id], [c].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 01:59:46.290 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:46.297 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:46.303 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:46.306 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:46.310 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:46.311 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:46.314 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:46.316 +04:00 [INF] Executed ViewResult - view Index executed in 4.7166ms.
+2025-06-19 01:59:46.318 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 47.9496ms
+2025-06-19 01:59:46.321 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:46.324 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?brandName=Carmella - 200 null text/html; charset=utf-8 96.2595ms
+2025-06-19 01:59:46.336 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:46.336 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:46.343 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.9737ms
+2025-06-19 01:59:46.344 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.5519ms
+2025-06-19 01:59:55.917 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop - null null
+2025-06-19 01:59:55.923 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:55.924 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 01:59:55.927 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:55.933 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 01:59:55.937 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 01:59:55.939 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:55.943 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 01:59:55.946 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 01:59:55.948 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 01:59:55.951 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 01:59:55.953 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 01:59:55.957 +04:00 [INF] Executed ViewResult - view Index executed in 6.2508ms.
+2025-06-19 01:59:55.958 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 33.1638ms
+2025-06-19 01:59:55.960 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 01:59:55.962 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop - 200 null text/html; charset=utf-8 45.7917ms
+2025-06-19 01:59:55.983 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 01:59:55.987 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 3.6505ms
+2025-06-19 01:59:55.988 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 01:59:55.998 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.2552ms
+2025-06-19 02:00:00.139 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?brandName=Juliette - null null
+2025-06-19 02:00:00.146 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:00.148 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 02:00:00.154 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:00.156 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__brandName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [b].[Name] = @__brandName_0
+ORDER BY [p].[Id], [b].[Id], [c].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 02:00:00.159 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 02:00:00.162 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:00.166 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:00.169 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 02:00:00.171 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 02:00:00.173 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:00:00.175 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:00.178 +04:00 [INF] Executed ViewResult - view Index executed in 4.8732ms.
+2025-06-19 02:00:00.180 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 30.1643ms
+2025-06-19 02:00:00.181 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:00.185 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?brandName=Juliette - 200 null text/html; charset=utf-8 45.3976ms
+2025-06-19 02:00:00.197 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:00:00.200 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:00.205 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.2713ms
+2025-06-19 02:00:00.207 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.4991ms
+2025-06-19 02:00:05.853 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?brandName=Emille%20shop - null null
+2025-06-19 02:00:05.857 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:05.858 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 02:00:05.862 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:05.865 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__brandName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [b].[Name] = @__brandName_0
+ORDER BY [p].[Id], [b].[Id], [c].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 02:00:05.868 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 02:00:05.872 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:05.876 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:05.879 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 02:00:05.882 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 02:00:05.884 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:00:05.886 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:05.889 +04:00 [INF] Executed ViewResult - view Index executed in 5.08ms.
+2025-06-19 02:00:05.890 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 30.1112ms
+2025-06-19 02:00:05.891 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:05.892 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?brandName=Emille%20shop - 200 null text/html; charset=utf-8 39.4831ms
+2025-06-19 02:00:05.908 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:00:05.912 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:05.919 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.4684ms
+2025-06-19 02:00:05.920 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 7.4867ms
+2025-06-19 02:00:08.028 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?categoryName=Gift%20Ideas - null null
+2025-06-19 02:00:08.034 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:08.035 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 02:00:08.040 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:08.054 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__categoryName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [c].[Name] = @__categoryName_0
+ORDER BY [p].[Id], [c].[Id], [b].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 02:00:08.062 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 02:00:08.067 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:08.071 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:08.074 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 02:00:08.076 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 02:00:08.078 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:00:08.081 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:08.083 +04:00 [INF] Executed ViewResult - view Index executed in 5.3796ms.
+2025-06-19 02:00:08.085 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 46.1788ms
+2025-06-19 02:00:08.086 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:08.089 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?categoryName=Gift%20Ideas - 200 null text/html; charset=utf-8 60.3984ms
+2025-06-19 02:00:08.109 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:08.109 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:00:08.113 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.1632ms
+2025-06-19 02:00:08.119 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.5496ms
+2025-06-19 02:00:19.068 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?brandName=Juliette - null null
+2025-06-19 02:00:19.073 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:19.074 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 02:00:19.078 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:19.083 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__brandName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [b].[Name] = @__brandName_0
+ORDER BY [p].[Id], [b].[Id], [c].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 02:00:19.085 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 02:00:19.089 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:19.091 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:19.094 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 02:00:19.096 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 02:00:19.098 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:00:19.099 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:19.104 +04:00 [INF] Executed ViewResult - view Index executed in 6.4358ms.
+2025-06-19 02:00:19.110 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 34.2576ms
+2025-06-19 02:00:19.113 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:19.115 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?brandName=Juliette - 200 null text/html; charset=utf-8 46.6907ms
+2025-06-19 02:00:19.123 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:00:19.125 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:19.130 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.7747ms
+2025-06-19 02:00:19.131 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.9851ms
+2025-06-19 02:00:21.319 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Shop?brandName=Jack%20%26%20Ella - null null
+2025-06-19 02:00:21.324 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:21.325 +04:00 [INF] Route matched with {action = "Index", controller = "Shop", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, System.String) on controller Final_MozArt.Controllers.ShopController (Final_MozArt).
+2025-06-19 02:00:21.329 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:21.335 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__brandName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [t0].[Id], [t0].[CreateDate], [t0].[ProductId], [t0].[TagId], [t0].[Id0], [t0].[CreateDate0], [t0].[Name], [p1].[Id], [p1].[CreateDate], [p1].[Image], [p1].[IsHover], [p1].[IsMain], [p1].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [p0].[Id], [p0].[CreateDate], [p0].[ProductId], [p0].[TagId], [t].[Id] AS [Id0], [t].[CreateDate] AS [CreateDate0], [t].[Name]
+    FROM [ProductTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagId] = [t].[Id]
+) AS [t0] ON [p].[Id] = [t0].[ProductId]
+LEFT JOIN [ProductImages] AS [p1] ON [p].[Id] = [p1].[ProductId]
+WHERE [b].[Name] = @__brandName_0
+ORDER BY [p].[Id], [b].[Id], [c].[Id], [t0].[Id], [t0].[Id0]
+2025-06-19 02:00:21.343 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 02:00:21.348 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([c].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:21.355 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Key], [t].[Id], [t].[BrandId], [t].[CategoryId], [t].[CreateDate], [t].[Description], [t].[Name], [t].[Price]
+FROM (
+    SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], LTRIM(RTRIM([b].[Name])) AS [Key]
+    FROM [Products] AS [p]
+    INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+) AS [t]
+ORDER BY [t].[Key]
+2025-06-19 02:00:21.359 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 02:00:21.362 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreateDate], [t].[Name]
+FROM [Tags] AS [t]
+2025-06-19 02:00:21.363 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:00:21.367 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:21.369 +04:00 [INF] Executed ViewResult - view Index executed in 6.2619ms.
+2025-06-19 02:00:21.371 +04:00 [INF] Executed action Final_MozArt.Controllers.ShopController.Index (Final_MozArt) in 44.1652ms
+2025-06-19 02:00:21.374 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ShopController.Index (Final_MozArt)'
+2025-06-19 02:00:21.376 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Shop?brandName=Jack%20%26%20Ella - 200 null text/html; charset=utf-8 57.7659ms
+2025-06-19 02:00:21.396 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:21.399 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:00:21.402 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.4116ms
+2025-06-19 02:00:21.408 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.3202ms
+2025-06-19 02:00:44.299 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-19 02:00:44.305 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 02:00:44.306 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-19 02:00:44.312 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-19 02:00:44.319 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-19 02:00:44.323 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-19 02:00:44.326 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-19 02:00:44.333 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-19 02:00:44.340 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-19 02:00:44.342 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:00:44.346 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:00:44.349 +04:00 [INF] Executed ViewResult - view Index executed in 6.8121ms.
+2025-06-19 02:00:44.350 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 42.4351ms
+2025-06-19 02:00:44.352 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-19 02:00:44.353 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 53.3724ms
+2025-06-19 02:00:44.377 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:44.383 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.1716ms
+2025-06-19 02:00:44.389 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:00:44.398 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.5167ms
+2025-06-19 02:00:44.409 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-19 02:00:44.414 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 4.4836ms
+2025-06-19 02:00:44.417 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-19 02:00:48.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/shop.html - null null
+2025-06-19 02:00:48.716 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/shop.html - 404 0 null 4.5126ms
+2025-06-19 02:00:48.721 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/shop.html, Response status code: 404
+2025-06-19 02:00:51.666 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:51.673 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 7.1341ms
+2025-06-19 02:00:53.159 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/shop.html - null null
+2025-06-19 02:00:53.165 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/shop.html - 404 0 null 5.8813ms
+2025-06-19 02:00:53.169 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/shop.html, Response status code: 404
+2025-06-19 02:00:54.293 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:00:54.299 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.257ms
+2025-06-19 02:01:01.169 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Product/Search?query=boho - null null
+2025-06-19 02:01:01.177 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Product/Search?query=boho - 404 0 null 8.3955ms
+2025-06-19 02:01:01.184 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/Product/Search, Response status code: 404
+2025-06-19 02:01:03.609 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:01:03.614 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.1578ms
+2025-06-19 02:01:07.187 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-19 02:01:07.193 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-19 02:01:07.194 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-19 02:01:07.201 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Description], [c].[Title]
+FROM [ContactIntros] AS [c]
+2025-06-19 02:01:07.207 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:01:07.210 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:01:07.217 +04:00 [INF] Executed ViewResult - view Index executed in 10.0165ms.
+2025-06-19 02:01:07.220 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 24.2086ms
+2025-06-19 02:01:07.222 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-19 02:01:07.223 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 35.8074ms
+2025-06-19 02:01:07.246 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:01:07.251 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.0818ms
+2025-06-19 02:01:07.251 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:01:07.265 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.199ms
+2025-06-19 02:01:24.071 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Contact/Create - multipart/form-data; boundary=----WebKitFormBoundaryvqif7bBU3m0yxsTw 348
+2025-06-19 02:01:24.075 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Create (Final_MozArt)'
+2025-06-19 02:01:24.082 +04:00 [INF] Route matched with {action = "Create", controller = "Contact", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, System.String, System.String) on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-19 02:01:24.110 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__contact_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE [a].[Email] = @__contact_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-06-19 02:01:24.116 +04:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 02:01:24.121 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Create (Final_MozArt) in 37.978ms
+2025-06-19 02:01:24.123 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Create (Final_MozArt)'
+2025-06-19 02:01:24.125 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Contact/Create - 200 null application/json; charset=utf-8 53.2871ms
+2025-06-19 02:01:28.710 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Contact/Create - multipart/form-data; boundary=----WebKitFormBoundaryxl2xCXh5Sh4K41vr 348
+2025-06-19 02:01:28.715 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Create (Final_MozArt)'
+2025-06-19 02:01:28.716 +04:00 [INF] Route matched with {action = "Create", controller = "Contact", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, System.String, System.String) on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-19 02:01:28.722 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contact_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE [a].[Email] = @__contact_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-06-19 02:01:28.724 +04:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 02:01:28.725 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Create (Final_MozArt) in 5.9208ms
+2025-06-19 02:01:28.727 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Create (Final_MozArt)'
+2025-06-19 02:01:28.728 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Contact/Create - 200 null application/json; charset=utf-8 17.4719ms
+2025-06-19 02:01:29.358 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Contact/Create - multipart/form-data; boundary=----WebKitFormBoundaryKIVkA2Ac8P7K3RQd 348
+2025-06-19 02:01:29.365 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Create (Final_MozArt)'
+2025-06-19 02:01:29.370 +04:00 [INF] Route matched with {action = "Create", controller = "Contact", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, System.String, System.String) on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-19 02:01:29.375 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__contact_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE [a].[Email] = @__contact_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-06-19 02:01:29.377 +04:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 02:01:29.379 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Create (Final_MozArt) in 7.2033ms
+2025-06-19 02:01:29.380 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Create (Final_MozArt)'
+2025-06-19 02:01:29.382 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Contact/Create - 200 null application/json; charset=utf-8 23.1952ms
+2025-06-19 02:03:20.617 +04:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-19 02:03:20.753 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-19 02:03:20.769 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-19 02:03:20.800 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 02:03:20.817 +04:00 [INF] Hosting environment: Development
+2025-06-19 02:03:20.822 +04:00 [INF] Content root path: C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt
+2025-06-19 02:03:20.963 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Contact - null null
+2025-06-19 02:03:21.027 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-19 02:03:21.041 +04:00 [INF] Route matched with {action = "Index", controller = "Contact", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.ContactController (Final_MozArt).
+2025-06-19 02:03:21.415 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-06-19 02:03:21.685 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Description], [c].[Title]
+FROM [ContactIntros] AS [c]
+2025-06-19 02:03:21.730 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-19 02:03:21.781 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-19 02:03:21.805 +04:00 [INF] Executed ViewResult - view Index executed in 74.9422ms.
+2025-06-19 02:03:21.830 +04:00 [INF] Executed action Final_MozArt.Controllers.ContactController.Index (Final_MozArt) in 768.4872ms
+2025-06-19 02:03:21.835 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.ContactController.Index (Final_MozArt)'
+2025-06-19 02:03:21.846 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Contact - 200 null text/html; charset=utf-8 884.045ms
+2025-06-19 02:03:21.947 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 02:03:21.947 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-19 02:03:21.955 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 8.23ms
+2025-06-19 02:03:21.970 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.9128ms

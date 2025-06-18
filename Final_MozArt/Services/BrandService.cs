@@ -83,17 +83,25 @@ namespace Final_MozArt.Services
             await _context.SaveChangesAsync();
         }
 
+        //public async Task<Dictionary<string, int>> GetProductCountByBrandNameAsync()
+        //{
+        //    var result = await _context.Brands
+        //        .Select(c => new
+        //        {
+        //            BrandName = c.Name,
+        //            ProductCount = _context.Products.Count(p => p.CategoryId == c.Id)
+        //        })
+        //        .ToDictionaryAsync(x => x.BrandName, x => x.ProductCount);
+
+        //    return result;
+        //}
+
         public async Task<Dictionary<string, int>> GetProductCountByBrandNameAsync()
         {
-            var result = await _context.Brands
-                .Select(c => new
-                {
-                    BrandName = c.Name,
-                    ProductCount = _context.Products.Count(p => p.CategoryId == c.Id)
-                })
-                .ToDictionaryAsync(x => x.BrandName, x => x.ProductCount);
-
-            return result;
+            return await _context.Products
+                .Where(p => p.Brand != null)
+                .GroupBy(p => p.Brand.Name.Trim())
+                .ToDictionaryAsync(g => g.Key, g => g.Count(), StringComparer.OrdinalIgnoreCase);
         }
     }
 }

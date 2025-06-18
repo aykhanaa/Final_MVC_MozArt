@@ -33,18 +33,20 @@
                 <div class="row learts-mb-n20">
                     <div class="col-md-auto col-12 learts-mb-20" style="margin-top: 2pc;margin-left: 3pc;">
                         <ul class="shop-toolbar-controls">
-
                             <li>
                                 <div class="product-sorting">
-                                    <select class="nice-select">
-                                        <option value="menu_order" selected="selected">Default sorting</option>
-                                        <option value="name">Sort by name: A to Z</option>
-                                        <option value="name-desc">Sort by name: Z to A</option>
-                                        <option value="price">Sort by price: low to high</option>
-                                        <option value="price-desc">Sort by price: high to low</option>
+                                    <select id="sortSelect" name="sortKey" class="nice-select">
+                                        <option value="default" selected>Default sorting</option>
+                                        <option value="A-Z">Sort by name: A to Z</option>
+                                        <option value="Z-A">Sort by name: Z to A</option>
+                                        <option value="LowToHigh">Sort by price: Low to High</option>
+                                        <option value="HighToLow">Sort by price: High to Low</option>
                                     </select>
                                 </div>
                             </li>
+
+                           
+
                             <li>
                                 <div class="product-column-toggle d-none d-xl-flex">
                                     <button class="toggle hintT-top" data-hint="5 Column" data-column="5">
@@ -68,77 +70,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="product-filter" class="product-filter section-fluid bg-light">
-            <div class="container-fluid">
-                <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n30">
-
-                    <div class="col learts-mb-30" style="margin-left: 6pc;">
-                        <h3 class="widget-title product-filter-widget-title">Price filter</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li> <a href="#">All</a></li>
-                            <li>
-                                <a href="#">
-                                    <span class="amount"><span class="cur-symbol">$</span>0.00</span> -
-                                    <span class="amount"><span class="cur-symbol">$</span>80.00</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="amount"><span class="cur-symbol">$</span>80.00</span> -
-                                    <span class="amount"><span class="cur-symbol">$</span>160.00</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="amount"><span class="cur-symbol">$</span>160.00</span> -
-                                    <span class="amount"><span class="cur-symbol">$</span>240.00</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="amount"><span class="cur-symbol">$</span>240.00</span> -
-                                    <span class="amount"><span class="cur-symbol">$</span>320.00</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="amount"><span class="cur-symbol">$</span>320.00</span>
-                                    +
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col learts-mb-30" style="margin-left: 9pc;">
-                        <h3 class="widget-title product-filter-widget-title">Categories</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li><a href="#">Gift ideas</a> <span class="count">16</span></li>
-                            <li><a href="#">Home Decor</a> <span class="count">16</span></li>
-                            <li><a href="#">Kids &amp; Babies</a> <span class="count">6</span></li>
-                            <li><a href="#">Kitchen</a> <span class="count">15</span></li>
-                            <li><a href="#">Kniting &amp; Sewing</a> <span class="count">4</span></li>
-                            <li><a href="#">Pots</a> <span class="count">4</span></li>
-                            <li><a href="#">Toys</a> <span class="count">6</span></li>
-                        </ul>
-                    </div>
-                    <div class="col learts-mb-30" style="margin-left: 17pc;">
-                        <h3 class="widget-title product-filter-widget-title">Brands</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li><a href="#">Alexander</a> <span class="count">(2)</span></li>
-                            <li><a href="#">Carmella</a> <span class="count">(4)</span></li>
-                            <li><a href="#">Danielle</a> <span class="count">(7)</span></li>
-                            <li><a href="#">Diana Day</a> <span class="count">(13)</span></li>
-                            <li><a href="#">Emilia</a> <span class="count">(2)</span></li>
-                            <li><a href="#">Gasmine</a> <span class="count">(15)</span></li>
-                            <li><a href="#">Jack &amp; Ella</a> <span class="count">(7)</span></li>
-                            <li><a href="#">Juliette</a> <span class="count">(11)</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <div class="product-size section-fluid learts-mt-70">
             <div class="container">
@@ -218,13 +149,10 @@
                                     : 0;
 
                                     <li>
-                                        <a href="#">@item.Name</a>
+                                        <a href="@Url.Action("Index", "Shop", new { categoryName = item.Name })">@item.Name</a>
                                         <span class="count">@count</span>
                                     </li>
                                 }
-
-
-                               
                             </ul>
                         </div>
 
@@ -237,17 +165,18 @@
                                     ? Model.BrandsProductCount[item.Name]
                                     : 0;
 
-
                                     <li>
-                                        <a href="#">@item.Name</a>
-                                        <span class="count">@count</span> 
+                                        <a href="@Url.Action("Index", "Shop", new { brandName = item.Name })">@item.Name</a>
+                                        <span class="count">@count</span>
                                     </li>
                                 }
-
-
-                               
                             </ul>
                         </div>
+
+
+
+                     
+
 
                         <div class="single-widget learts-mb-40">
                             <h3 class="widget-title product-filter-widget-title">Filters by price</h3>
@@ -259,6 +188,7 @@
 
                         <div class="single-widget learts-mb-40">
                             <h3 class="widget-title product-filter-widget-title"> New Products</h3>
+                            <div id="productList">
                             <ul class="widget-products">
 
                                 @foreach (var item in Model.Products.OrderByDescending(x=>x.CreateDate).Take(3))
@@ -285,6 +215,7 @@
                                 }
                                
                             </ul>
+                            </div>
                         </div>
 
                         <div class="single-widget learts-mb-40">
@@ -306,3 +237,56 @@
 @section scripts {
     <script src="~/assets/js/shop/shop.js"></script>
 }
+
+
+
+<script>
+
+    ///////////////////////////////////////////
+
+
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        var sortKey = this.value;
+
+        fetch(`/Shop/GetSortedProducts?sortKey=${sortKey}`)
+            .then(res => res.json())
+            .then(data => {
+                var container = document.getElementById('shop-products');
+                container.innerHTML = ''; // eski ürünleri sil
+
+                                                data.forEach(item => {
+        var html = `
+        <div class="grid-item col featured">
+            <div class="product">
+                <div class="product-thumb">
+                    <a href="/Shop/Detail/${item.id}" class="image">
+                        <img src="/assets/img/product-details/${item.image}" alt="Product Image" />
+                        <img class="image-hover" src="/assets/img/product-details/${item.hower}" alt="Product Image" />
+                    </a>
+                    <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h6 class="title">
+                        <a href="/Shop/Detail/${item.id}">${item.name}</a>
+                    </h6>
+                    <span class="price">$${item.price}</span>
+                    <div class="product-buttons">
+                        <a href="/ProductDetails/Index" class="product-button hintT-top" data-hint="View">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="product-button hintT-top" data-hint="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        container.insertAdjacentHTML('beforeend', html);
+    });
+
+            });
+    });
+</script>

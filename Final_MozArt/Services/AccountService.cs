@@ -48,7 +48,7 @@ namespace Final_MozArt.Services
 
             if (!result.Succeeded) return result;
 
-            await _userManager.AddToRoleAsync(user, Roles.Admin.ToString());
+            await _userManager.AddToRoleAsync(user, Roles.Member.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
