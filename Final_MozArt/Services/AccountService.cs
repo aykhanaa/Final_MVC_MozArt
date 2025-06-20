@@ -1,11 +1,14 @@
-﻿using Final_MozArt.Helpers.Enums;
+﻿using Azure;
+using Final_MozArt.Helpers.Enums;
 using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Account;
+using Final_MozArt.ViewModels.Basket;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
+using Newtonsoft.Json;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
 namespace Final_MozArt.Services
@@ -17,6 +20,7 @@ namespace Final_MozArt.Services
         private readonly IEmailService _emailService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IUrlHelper _urlHelper;
+        private readonly IBasketService _basketService;
 
         public AccountService(
             UserManager<AppUser> userManager,
@@ -24,7 +28,8 @@ namespace Final_MozArt.Services
             IEmailService emailService,
             IHttpContextAccessor httpContextAccessor,
             IUrlHelperFactory urlHelperFactory,
-            IActionContextAccessor actionContextAccessor)
+            IActionContextAccessor actionContextAccessor,
+            IBasketService basketService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -33,6 +38,8 @@ namespace Final_MozArt.Services
 
             // Create UrlHelper for generating URLs
             _urlHelper = urlHelperFactory.GetUrlHelper(actionContextAccessor.ActionContext);
+            _basketService = basketService;
+            _basketService = basketService;
         }
 
         public async Task<IdentityResult> RegisterAsync(RegisterVM request)
@@ -83,7 +90,25 @@ namespace Final_MozArt.Services
             }
 
             var result = await _signInManager.PasswordSignInAsync(dbUser, request.Password, request.IsRememberMe, false);
+            //List<BasketVM> basket = new();
+            //Basket dbBasket = await _basketService.GetByUserIdAsync(dbUser.Id);
 
+            //if (dbBasket is not null)
+            //{
+            //    List<BasketProduct> basketProducts = await _basketService.GetAllByBasketIdAsync(dbBasket.Id);
+
+            //    foreach (var item in basketProducts)
+            //    {
+            //        basket.Add(new BasketVM
+            //        {
+            //            Id = item.ProductId,
+            //            Count = item.Count
+            //        });
+            //    }
+
+            //    Response.Cookies.Append("basket", JsonConvert.SerializeObject(basket));
+
+            //}
             return result;
         }
 

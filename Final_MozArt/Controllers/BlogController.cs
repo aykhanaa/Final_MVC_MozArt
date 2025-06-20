@@ -10,21 +10,25 @@ namespace Final_MozArt.Controllers
     public class BlogController : Controller
     {
         private readonly IBlogService _blogService;
+        private readonly ISettingService _settingService;
 
-        public BlogController(IBlogService blogService)
+        public BlogController(IBlogService blogService, ISettingService settingService)
         {
             _blogService = blogService;
+            _settingService = settingService;
         }
 
         public async Task<IActionResult> Index()
         {
             var totalCount = await _blogService.GetTotalBlogCountAsync();
             var blogs = await _blogService.GetBlogsAsync(skip: 0, take: 3);
+            var setting = _settingService.GetSettings();
 
-            var model = new BlogUIVM
+            BlogUIVM model = new BlogUIVM
             {
                 Blogs = blogs,
-                TotalCount = totalCount
+                TotalCount = totalCount,
+                Setting = setting,
             };
 
             return View(model);

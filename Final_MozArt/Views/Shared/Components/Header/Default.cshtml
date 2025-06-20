@@ -1,4 +1,6 @@
-﻿<header>
+﻿@using Final_MozArt.ViewModels.Layout
+@model HeaderVM
+<header>
     <section id="navbar">
         <div class="header-section header-menu-center section bg-white d-none d-xl-block">
             <div class="container">
@@ -52,10 +54,11 @@
                             </div>
 
 
-                            @if (User.Identity.IsAuthenticated)
+                            @if (Model.UserFullName is not null)
                             {
 
-                                <form asp-controller="Account" asp-action="Logout" method="post" style="margin: 0;">
+                                <a href="#">@Model.UserFullName</a>
+                                <form asp-controller="Account" asp-action="Logout" asp-route-userId="@Model.UserId" method="post" style="margin: 0;">
                                     <button type="submit" style="background: none; border: none; cursor: pointer;">
                                         <i class="fa-solid fa-arrow-right-from-bracket" style="color: #121212;"></i>
                                     </button>
@@ -78,12 +81,12 @@
 
                             <div class="header-wishlist">
                                 <a asp-controller="Wishlist" asp-action="Index" class="offcanvas-toggle">
-                                    <span class="wishlist-count">3</span><i class="far fa-heart"></i>
+                                    <span class="wishlist-count">@Model.WishlistCount</span><i class="far fa-heart"></i>
                                 </a>
                             </div>
                             <div class="header-cart">
                                 <a asp-controller="Basket" asp-action="Index" class="offcanvas-toggle">
-                                    <span class="cart-count">3</span><i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-count basket-count">@Model.BasketCount</span><i class="fas fa-shopping-cart"></i>
                                 </a>
                             </div>
                         </div>

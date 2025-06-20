@@ -1,12 +1,13 @@
-﻿
+﻿@model ShopVM
+
+
 @section css {
     <link rel="stylesheet" href="~/assets/css/shop/shop.css">
 }
 
-@model ShopVM
+
 
 <main>
-   @*  @Model["Adress"] *@
     <section id="shop-title-area">
         <div class="page-title-size section" style="background-image:url(./assets/img/shop/@Model.Setting["ShopBanner"])">
             <div class="container">
@@ -35,7 +36,7 @@
                         <ul class="shop-toolbar-controls">
                             <li>
                                 <div class="product-sorting">
-                                    <select id="sortSelect" name="sortKey" class="nice-select">
+                                    <select id="sortSelect" name="sortKey" class="nice-select" style="margin-left: 7pc;">
                                         <option value="default" selected>Default sorting</option>
                                         <option value="A-Z">Sort by name: A to Z</option>
                                         <option value="Z-A">Sort by name: Z to A</option>
@@ -44,26 +45,6 @@
                                     </select>
                                 </div>
                             </li>
-
-                           
-
-                            <li>
-                                <div class="product-column-toggle d-none d-xl-flex">
-                                    <button class="toggle hintT-top" data-hint="5 Column" data-column="5">
-                                        <i class="fa-solid fa-braille"></i>
-                                    </button>
-                                    <button class="toggle active hintT-top" data-hint="4 Column" data-column="4">
-                                        <i class="fa-solid fa-table-cells"></i></i>
-                                    </button>
-                                    <button class="toggle hintT-top" data-hint="3 Column" data-column="3">
-                                        <i class="fa-solid fa-table-cells-large"></i>
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="product-filter-toggle" href="#product-filter">Filters</a>
-                            </li>
-
                         </ul>
                     </div>
 
@@ -76,7 +57,6 @@
                 <div class="row learts-mb-n50">
 
                     <div class="col-lg-9 col-12 learts-mb-50 order-lg-2">
-                        <!-- Products Start -->
                         <div id="shop-products"
                              class="products isotope-grid row row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
 
@@ -120,12 +100,17 @@
                          
 
                         </div>
+                        <div id="productsContainer" class="row">
+                            <!-- Məhsullar burada görünəcək -->
+                        </div>
+
                         <div class="text-center learts-mt-70">
-                            <a href="#" class="btn btn-dark btn-outline-hover-dark">
+                            <a href="#" id="loadMoreBtn" class="btn btn-dark btn-outline-hover-dark">
                                 <i class="fa-solid fa-plus"></i>
                                 More
                             </a>
                         </div>
+
                     </div>
 
                     <div class="col-lg-3 col-12 learts-mb-10 order-lg-1">
@@ -191,28 +176,27 @@
                             <div id="productList">
                             <ul class="widget-products">
 
-                                @foreach (var item in Model.Products.OrderByDescending(x=>x.CreateDate).Take(3))
-                                {
-                                    <li class="product">
-                                        <div class="thumbnail">
-                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="image">
-                                                <img src="~/assets/img/product-details/@item.Image"
-                                                     alt="List product">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="title">
+                                    @foreach (var item in Model.AllProducts.OrderByDescending(x => x.CreateDate).Take(3))
+                                    {
+                                        <li class="product">
+                                            <div class="thumbnail">
                                                 <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id" class="image">
-                                                    @item.Name
+                                                    <img src="~/assets/img/product-details/@item.Image" alt="List product">
                                                 </a>
-                                            </h6>
-                                            <span class="price">
-                                                $@item.Price
-                                            </span>
-                                        </div>
-                                    </li>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="title">
+                                                    <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                        @item.Name
+                                                    </a>
+                                                </h6>
+                                                <span class="price">
+                                                    $@item.Price
+                                                </span>
+                                            </div>
+                                        </li>
+                                    }
 
-                                }
                                
                             </ul>
                             </div>
@@ -243,7 +227,56 @@
 <script>
 
     ///////////////////////////////////////////
+     let skip = 0;
+    const take = 3;
 
+    async function loadProducts() {
+        try {
+            const response = await fetch(`/Product/LoadMore?skip=${skip}&take=${take}`);
+            const data = await response.json();
+
+            if (data.success) {
+                const container = document.getElementById("productsContainer");
+
+                if (data.products.length === 0) {
+                    document.getElementById("loadMoreBtn").style.display = "none";
+                    return;
+                }
+
+                data.products.forEach(p => {
+                    const html = `
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="/images/${p.image}" class="card-img-top" alt="${p.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${p.name}</h5>
+                                    <p class="card-text">${p.description}</p>
+                                    <p><strong>Price:</strong> $${p.price}</p>
+                                    <p><strong>Category:</strong> ${p.categoryName}</p>
+                                    <p><strong>Brand:</strong> ${p.brandName}</p>
+                                </div>
+                            </div>
+                        </div>`;
+                    container.insertAdjacentHTML('beforeend', html);
+                });
+
+                skip += take;
+            } else {
+                alert("Error: " + data.message);
+            }
+        } catch (err) {
+            console.error("Error loading products:", err);
+        }
+    }
+
+    // İlk yükləmə
+    document.addEventListener("DOMContentLoaded", loadProducts);
+
+    // "More" düyməsinə klikdə
+    document.getElementById("loadMoreBtn").addEventListener("click", function (e) {
+        e.preventDefault();
+        loadProducts();
+    });
 
     document.getElementById('sortSelect').addEventListener('change', function() {
         var sortKey = this.value;
@@ -252,7 +285,7 @@
             .then(res => res.json())
             .then(data => {
                 var container = document.getElementById('shop-products');
-                container.innerHTML = ''; // eski ürünleri sil
+                container.innerHTML = ''; 
 
                                                 data.forEach(item => {
         var html = `

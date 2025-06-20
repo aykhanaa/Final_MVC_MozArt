@@ -29,9 +29,7 @@ namespace Final_MozArt.Data
         public DbSet<ProductTag>  ProductTags { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
-
-
-
-
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketProduct> BasketProducts { get; set; }
     }
 }

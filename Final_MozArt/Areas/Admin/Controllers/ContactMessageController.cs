@@ -23,22 +23,21 @@ namespace Final_MozArt.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "SuperAdmin")]
+[Authorize(Roles = "SuperAdmin")]
+public async Task<IActionResult> Approve(int id)
+{
+    await _contactMessageService.ApproveMessageAsync(id);
+    return Json(new { success = true });
+}
 
-        public async Task<IActionResult> Approve(int id)
-        {
-            await _contactMessageService.ApproveMessageAsync(id);
+[HttpPost]
+[ValidateAntiForgeryToken]
+[Authorize(Roles = "SuperAdmin")]
+public async Task<IActionResult> Delete(int id)
+{
+    await _contactMessageService.DeleteAsync(id);
+    return Json(new { success = true });
+}
 
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            await _contactMessageService.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
-        }
     }
  }

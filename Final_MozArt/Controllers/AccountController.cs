@@ -1,8 +1,14 @@
 ﻿
+using Final_MozArt.Data;
+using Final_MozArt.Models;
+using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Account;
+using Final_MozArt.ViewModels.Basket;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Data;
 
 namespace Final_MozArt.Controllers
@@ -10,16 +16,29 @@ namespace Final_MozArt.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
-
-        public AccountController(IAccountService accountService)
+        private readonly ISettingService _settingService;
+        private readonly IBasketService _basketService;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly AppDbContext _context;
+        public AccountController(IAccountService accountService, ISettingService settingService, IBasketService basketService, UserManager<AppUser> userManager,AppDbContext context)
         {
             _accountService = accountService;
+            _settingService = settingService;
+            _basketService = basketService;
+            _userManager = userManager;
+            _context = context;
         }
 
         [HttpGet]
         public IActionResult Register()
         {
-            return View();
+            var setting = _settingService.GetSettings();
+            RegisterVM model = new RegisterVM()
+            {
+                Setting = setting,
+            };
+            
+            return View(model);
         }
 
         [HttpPost]
@@ -53,7 +72,6 @@ namespace Final_MozArt.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVM request)
         {
-
             if (!ModelState.IsValid)
             {
                 return View(request);
@@ -63,12 +81,42 @@ namespace Final_MozArt.Controllers
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, "Login informations is wrong");
+                ModelState.AddModelError(string.Empty, "Login information is wrong.");
                 return View(request);
+            }
+
+            AppUser dbUser = await _userManager.Users
+                .FirstOrDefaultAsync(u => u.Email == request.EmailOrUsername || u.UserName == request.EmailOrUsername);
+
+            if (dbUser == null)
+            {
+                ModelState.AddModelError(string.Empty, "User not found.");
+                return View(request);
+            }
+
+            List<BasketVM> basket = new();
+            Basket dbBasket = await _basketService.GetByUserIdAsync(dbUser.Id);
+
+            if (dbBasket is not null)
+            {
+                List<BasketProduct> basketProducts = await _basketService.GetAllByBasketIdAsync(dbBasket.Id);
+
+                foreach (var item in basketProducts)
+                {
+                    basket.Add(new BasketVM
+                    {
+                        Id = item.ProductId,
+                        Count = item.Count
+                    });
+                }
+
+                Response.Cookies.Append("basket", JsonConvert.SerializeObject(basket));
             }
 
             return RedirectToAction("Index", "Home");
         }
+
+
 
 
         [HttpGet]
@@ -156,9 +204,70 @@ namespace Final_MozArt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> Logout(string userId)
         {
             await _accountService.LogoutAsync();
+
+           
+
+            List<BasketVM> basket = _basketService.GetDatasFromCoockies();
+            Basket dbBasket = await _basketService.GetByUserIdAsync(userId);
+
+            if (basket.Count != 0)
+            {
+                if (dbBasket == null)
+                {
+                    dbBasket = new()
+                    {
+                        AppUserId = userId,
+                        BasketProducts = new List<BasketProduct>()
+                    };
+
+                    foreach (var item in basket)
+                    {
+                        dbBasket.BasketProducts.Add(new BasketProduct()
+                        {
+                            ProductId = item.Id,
+                            BasketId = dbBasket.Id,
+                            Count = item.Count
+                        });
+                    }
+                    await _context.Baskets.AddAsync(dbBasket);
+                    await _context.SaveChangesAsync();
+
+                }
+                else
+                {
+                    List<BasketProduct> basketProducts = new();
+
+                    foreach (var item in basket)
+                    {
+                        basketProducts.Add(new BasketProduct()
+                        {
+                            ProductId = item.Id,
+                            BasketId = dbBasket.Id,
+                            Count = item.Count
+                        });
+                    }
+
+                    dbBasket.BasketProducts = basketProducts;
+                    _context.SaveChanges();
+                }
+
+                Response.Cookies.Delete("basket");
+            }
+            else
+            {
+                if (dbBasket is not null)
+                {
+                    _context.Baskets.Remove(dbBasket);
+                    _context.SaveChanges();
+                }
+
+            }
+
+
+
             return RedirectToAction("Index", "Home");
         }
 

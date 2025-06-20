@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $('.product-list-slider').slick({
             rows: 3,
-            prevArrow: '<button class="slick-prev"><i class="ti-angle-left"></i></button>',
-            nextArrow: '<button class="slick-next"><i class="ti-angle-right"></i></button>'
+            prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+            nextArrow: '<button class="slick-next"><<i class="fa-solid fa-angle-right"></i></button>'
         });
 
         $('.product-gallery-slider').slick({
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
             slidesToScroll: 1,
             focusOnSelect: true,
             asNavFor: '.product-gallery-slider',
-            prevArrow: '<button class="slick-prev"><i class="ti-angle-left"></i></button>',
-            nextArrow: '<button class="slick-next"><i class="ti-angle-right"></i></button>'
+            prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+            nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>'
         });
         
         $('.product-thumb-slider-vertical').slick({

@@ -1,6 +1,8 @@
-﻿using Final_MozArt.Services.Interfaces;
+﻿using Final_MozArt.Services;
+using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Product;
 using Final_MozArt.ViewModels.UI;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_MozArt.Controllers
@@ -12,6 +14,7 @@ namespace Final_MozArt.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IBrandService _brandService;
         private  readonly ITagService _tagService;
+        private readonly IBasketService _basketService;
 
 
 
@@ -19,16 +22,17 @@ namespace Final_MozArt.Controllers
                               IProductService productService,
                               ICategoryService categoryService,
                               IBrandService brandService,
-                              ITagService tagService)
+                              ITagService tagService,
+                              IBasketService basketService)
         {
             _settingService = settingService;
             _productService = productService;
             _categoryService = categoryService;
             _brandService = brandService;
             _tagService = tagService;
+            _basketService = basketService;
         }
 
-       
 
 
         [HttpGet]
@@ -37,6 +41,7 @@ namespace Final_MozArt.Controllers
             var setting = _settingService.GetSettings();
 
             ICollection<ProductVM> products;
+            var allProducts = await _productService.GetAllAsync(); // <- bütün məhsullar
 
             if (!string.IsNullOrWhiteSpace(sortKey))
             {
@@ -48,10 +53,8 @@ namespace Final_MozArt.Controllers
             }
             else
             {
-                products = await _productService.GetAllAsync();
+                products = allProducts;
             }
-
-
 
             var categories = await _categoryService.GetAllAsync();
             var categoryiesWithProductCount = await _categoryService.GetProductCountByCategoryNameAsync();
@@ -67,11 +70,13 @@ namespace Final_MozArt.Controllers
                 ProductCount = categoryiesWithProductCount,
                 Brands = brands,
                 Tags = tags,
-                BrandsProductCount = brandWithProductCount
+                BrandsProductCount = brandWithProductCount,
+                AllProducts = allProducts
             };
 
             return View(model);
         }
+
 
 
         public async Task<IActionResult> Detail(int id)
@@ -103,6 +108,74 @@ namespace Final_MozArt.Controllers
 
             return Json(result);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetFilteredProducts(string? categoryName, string? brandName, string? tagName)
+        {
+            var products = await _productService.FilterAsync(categoryName, brandName, tagName);
+
+            var result = products.Select(p => new
+            {
+                id = p.Id,
+                name = p.Name,
+                price = p.Price,
+                image = p.Image,
+                hower = p.Hower
+            });
+
+            return Json(result);
+        }
+
+        public async Task<IActionResult> LoadMore(int skip = 0, int take = 3)
+        {
+            try
+            {
+                var products = await _productService.GetProductAsync(skip, take);
+
+                var formattedProducts = products.Select(p => new
+                {
+                    id = p.Id,
+                    name = p.Name,
+                    description = p.Description,
+                    price = p.Price,
+                    image = p.Image,
+                    hower = p.Hower,
+                    createDate = p.CreateDate,
+                    categoryName = p.CategoryName,
+                    brandName = p.BrandName
+                }).ToList();
+
+                return Json(new { success = true, products = formattedProducts });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"LoadMore Error: {ex.Message}");
+                return Json(new { success = false, message = ex.Message, products = new List<object>() });
+            }
+        }
+
+        [HttpPost]
+
+        [HttpPost]
+        public async Task<IActionResult> AddBasket(int? id)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Unauthorized(); // 401 qaytarır
+            }
+
+            if (id is null) return RedirectToAction("Index", "Error");
+
+            ProductDetailVM product = await _productService.GetByIdWithIncludesWithoutTrackingAsync((int)id);
+
+            if (product is null) return RedirectToAction("Index", "Error");
+
+            _basketService.AddBasket((int)id, product);
+
+            return Ok();
+        }
+
+
 
     }
 }

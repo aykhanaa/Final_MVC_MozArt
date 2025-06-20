@@ -10,22 +10,26 @@ namespace Final_MozArt.Controllers
     {
         private readonly IContactIntroService _contactIntroService;
         private readonly IContactMessageService _contactMessageService;
+        private readonly ISettingService _settingService;
 
-        public ContactController(IContactIntroService contactIntroService, IContactMessageService contactMessageService)
+        public ContactController(IContactIntroService contactIntroService, IContactMessageService contactMessageService, ISettingService settingService)
         {
             _contactIntroService = contactIntroService;
             _contactMessageService = contactMessageService;
+            _settingService = settingService;
         }
 
 
         public async Task<IActionResult> Index()
         {
             var contactintros = await _contactIntroService.GetAllAsync();
+            var setting = _settingService.GetSettings();
             
 
             ContactVM model = new ContactVM()
             {
-                ContactIntros = contactintros
+                ContactIntros = contactintros,
+                Setting = setting
             };
 
             return View(model);

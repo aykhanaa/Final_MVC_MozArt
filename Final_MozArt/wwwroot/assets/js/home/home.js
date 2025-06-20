@@ -268,8 +268,8 @@ function initializeQuickViewSlider() {
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                prevArrow: '<button class="slick-prev"><i class="ti-angle-left"></i></button>',
-                nextArrow: '<button class="slick-next"><i class="ti-angle-right"></i></button>'
+                prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>'
             });
         } else if (typeof Slick !== 'undefined') {
             // Use vanilla Slick if available
@@ -278,8 +278,8 @@ function initializeQuickViewSlider() {
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                prevArrow: '<button class="slick-prev"><i class="ti-angle-left"></i></button>',
-                nextArrow: '<button class="slick-next"><i class="ti-angle-right"></i></button>'
+                prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></i></button>'
             });
         } else {
             // Fallback: Create a simple custom slider
@@ -324,7 +324,7 @@ function createCustomSlider(container) {
     
     const nextButton = document.createElement('button');
     nextButton.className = 'slick-next custom-next';
-    nextButton.innerHTML = '<i class="ti-angle-right"></i>';
+    nextButton.innerHTML = '<i class="fa-solid fa-angle-right"></i>';
     nextButton.style.cssText = `
         position: absolute;
         right: 10px;

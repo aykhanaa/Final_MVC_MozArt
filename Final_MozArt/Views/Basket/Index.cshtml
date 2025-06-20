@@ -1,4 +1,11 @@
-﻿@section css {
+﻿@model List<BasketDetailVM>
+@{
+    // ViewData["Title"] = "Index";
+    decimal grandTotal = Model.Sum(m => m.Total);
+}
+
+
+@section css {
     <link rel="stylesheet" href="~/assets/css/basket/basket.css">
 }
 
@@ -39,6 +46,8 @@
                             </tr>
                         </thead>
                         <tbody>
+                       
+                            
                             <tr>
                                 <td class="thumbnail">
                                     <a href="product-details.html">
@@ -93,6 +102,8 @@
                                 <td class="subtotal"><span>$9.00</span></td>
                                 <td class="remove"><a href="#" class="btn">×</a></td>
                             </tr>
+                
+
                         </tbody>
                     </table>
                     <div class="row justify-content-between mb-n3">
@@ -132,3 +143,81 @@
 @section scripts {
     <script src="~/assets/js/basket/basket.jsjs"></script>
 }
+
+
+
+
+
+
+
+@* @model List<BasketDetailVM>
+@{
+    // ViewData["Title"] = "Index";
+    decimal grandTotal = Model.Sum(m => m.Total);
+}
+
+
+<main>
+    <!-- Banners -->
+    <section id="banner">
+        <div class="banner-all" style="background-image: url(/assets/img/settings/@ViewBag.CartBanner);">
+            <h1>Your cart</h1>
+        </div>
+    </section>
+    <!-- Cart -->
+    <section id="carts">
+        <div class="container">
+            <div class="cart-all">
+                <div class="empty  @(Model.Count == 0 ? "" : "d-none")">
+                    <h1>Your Cart</h1>
+                    <p>Your cart is currently empty.</p>
+                    <a asp-controller="Shop" asp-action="Index">CONTINUE SHOPPING</a>
+                </div>
+
+                <div class="cart-table basket-table @(Model.Count == 0 ? "d-none" : "")">
+                    <h1>Your Cart</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Count</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <img src="~/assets/img/product-details/@item.Image">
+                                    </td>
+                                    <td>@item.Name</td>
+                                    <td><i class="fa-solid fa-minus" data-id="@item.Id"></i> <span style="width:30px;display:inline-block">@item.Count</span> <i class="fa-solid fa-plus" data-id="@item.Id"></i></td>
+                                    <td>@item.Price $</td>
+                                    <td>
+                                        <span>@item.Total</span> $
+                                    </td>
+                                    <td>
+                                        <button type="submit" class="btn btn-outline-danger delete-basket-item" data-id="@item.Id">Delete</button>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+
+                    </table>
+                    <div class="grand-total mt-5">
+                        <span>Grand total: <span class="grandtotal">@grandTotal</span> $</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+ *@

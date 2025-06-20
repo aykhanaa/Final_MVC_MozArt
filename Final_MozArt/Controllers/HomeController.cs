@@ -18,6 +18,7 @@ namespace Final_MozArt.Controllers
         private readonly IInstagramService _instagramService;
         private readonly IProductService _productService;
         private readonly IContactMessageService _contactMessageService;
+       
 
 
         public HomeController(ISliderService sliderService, 
@@ -25,7 +26,8 @@ namespace Final_MozArt.Controllers
                               IBrandService brandService,
                               IInstagramService instagramService,
                               IProductService productService,
-                              IContactMessageService contactMessageService)
+                              IContactMessageService contactMessageService
+                            )
         {
             _sliderService = sliderService;
             _categoryService = categoryService;
@@ -33,6 +35,7 @@ namespace Final_MozArt.Controllers
             _instagramService = instagramService;
             _productService = productService;
             _contactMessageService = contactMessageService;
+          
         }
         public async Task<IActionResult> Index()
         {
@@ -78,6 +81,8 @@ namespace Final_MozArt.Controllers
 
             return View("Index", model);
         }
+
+
 
 
 

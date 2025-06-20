@@ -1,4 +1,5 @@
 ﻿using Final_MozArt.Models;
+using Final_MozArt.ViewModels.Blog;
 using Final_MozArt.ViewModels.Product;
 
 
@@ -23,6 +24,8 @@ public interface IProductService
     Task<List<Product>> SearchProductsAsync(string query);
     Task<ICollection<ProductVM>> SortAsync(string sortKey);
     Task<ICollection<ProductVM>> FilterAsync(string? categoryName, string? brandName, string? tagName);
+    Task<List<ProductVM>> GetProductAsync(int skip, int take);
+    Task<int> GetTotalProductCountAsync();
 }
 
 

@@ -25,13 +25,8 @@ namespace Final_MozArt
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IContactMessageService, ContactMessageService>();
-
-
-
-
-
-
-
+            services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped<ILayoutService, LayoutService>();
 
             return services;
         }

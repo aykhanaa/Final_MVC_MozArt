@@ -2,8 +2,10 @@
 using Final_MozArt.Data;
 using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
+using Final_MozArt.ViewModels.Blog;
 using Final_MozArt.ViewModels.Product;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,11 +17,11 @@ namespace Final_MozArt.Services
 {
     public class ProductService : IProductService
     {
-        private readonly AppDbContext _context; // Burada dəyişdirdik
+        private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly string _imageFolderPath = "wwwroot/assets/img/product-details";
 
-        public ProductService(AppDbContext context, IMapper mapper) // Konstruktor parametri də dəyişdi
+        public ProductService(AppDbContext context, IMapper mapper) 
         {
             _context = context;
             _mapper = mapper;
@@ -409,5 +411,54 @@ namespace Final_MozArt.Services
             return _mapper.Map<ICollection<ProductVM>>(filteredProducts);
         }
 
+        public async Task<List<ProductVM>> GetProductsAsync(int skip, int take)
+        {
+            try
+            {
+                var products = await _context.Products
+                    .Include(p => p.Category)
+                    .Include(p => p.Brand)
+                    .OrderByDescending(p => p.CreateDate)
+                    .Skip(skip)
+                    .Take(take)
+                    .Select(p => new ProductVM
+                    {
+                        Id = p.Id,
+                        Name = p.Name ?? "",
+                        Description = p.Description ?? "",
+                        Price = p.Price,
+                        CategoryName = p.Category != null ? p.Category.Name : "",
+                        BrandName = p.Brand != null ? p.Brand.Name : "",
+                        CreateDate = p.CreateDate
+                    })
+                    .ToListAsync();
+
+                return products;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"GetProductsAsync Error: {ex.Message}");
+                return new List<ProductVM>();
+            }
+        }
+
+
+        public async Task<int> GetTotalProductCountAsync()
+        {
+            try
+            {
+                return await _context.Products.CountAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"GetTotalProductCountAsync Error: {ex.Message}");
+                return 0;
+            }
+        }
+
+        public Task<List<ProductVM>> GetProductAsync(int skip, int take)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

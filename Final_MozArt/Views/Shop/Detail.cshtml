@@ -1,9 +1,7 @@
 ﻿@section css {
     <link rel="stylesheet" href="~/assets/css/product-details/product-details.css">
 }
-
 @model ProductDetailVM
-
 
 <main>
     <section id="product-detail-area">
@@ -55,7 +53,7 @@
                 </div>
 
                 <div class="col-lg-6 col-12 learts-mb-40">
-                    <div class="product-summery">
+                    <div class="product-summery detail" data-id="@Model.Id">
                         <h3 class="product-title">@Model.Name</h3>
                         <div class="product-price">$@Model.Price</div>
                         <div class="product-variations">
@@ -65,7 +63,7 @@
                                         <td class="label"><span>Color</span></td>
                                         <td class="value">
                                             <div class="product-colors">
-                                                
+
                                                 @foreach (var item in Model.ColorNames)
                                                 {
                                                     <span class="color-box" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; border: 1px solid #ccc;background-color:@item;" title="@item"></span>
@@ -86,15 +84,31 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="product-buttons">
-                            <a href="wishlist.html" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
-                               data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
-                            <a href="basket.html" class="btn btn-dark btn-outline-hover-dark">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add
-                                to Cart
-                            </a>
-                        </div>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="product-buttons cart">
+                                <a href="" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
+                                   data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
+                                <a href="" class="btn btn-dark btn-outline-hover-dark">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add
+                                    to Cart
+                                </a>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="product-buttons cart">
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
+                                   data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-dark btn-outline-hover-dark">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add
+                                    to Cart
+                                </a>
+                            </div>
+                        }
+
 
                         <div class="product-meta">
                             <table>
@@ -105,7 +119,7 @@
                                             <ul class="product-brands" style="list-style-type: none; padding-left: 0;">
 
                                                 <li>
-                                                    <a >
+                                                    <a>
                                                         <span>@Model.BrandName</span>
                                                     </a>
                                                 </li>
@@ -250,4 +264,5 @@
 
 @section scripts {
     <script src="~/assets/js/product-details/product-details.js"></script>
+    <script src="~/assets/js/product-details/basket.js"></script>
 }

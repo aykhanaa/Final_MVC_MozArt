@@ -506,7 +506,7 @@ wwwroot\assets\css\login\login.css
 wwwroot\assets\css\new-password\new-password.css
 wwwroot\assets\css\not-found\not-found.css
 wwwroot\assets\css\other\bootstrap.min.css
-wwwroot\assets\css\other\bootstrap.pro.min.css
+wwwroot\assets\css\other\style.min.css
 wwwroot\assets\css\other\font-awesome-pro.min.css
 wwwroot\assets\css\other\fontawesome.min.css
 wwwroot\assets\css\other\ion.rangeSlider.min.css
@@ -517,7 +517,7 @@ wwwroot\assets\css\other\photoswipe-default-skin.css
 wwwroot\assets\css\other\photoswipe.css
 wwwroot\assets\css\other\select2.min.css
 wwwroot\assets\css\other\slick.css
-wwwroot\assets\css\other\style.min.css
+wwwroot\assets\css\other\bootstrap.pro.min.css
 wwwroot\assets\css\other\swiper.min.css
 wwwroot\assets\css\other\themify-icons.css
 wwwroot\assets\css\product-details\product-details.css
@@ -659,23 +659,13 @@ wwwroot\assets\img\home\title-decor-left.webp
 wwwroot\assets\img\home\title-decor-right.webp
 wwwroot\assets\img\home\web-img-white.png
 wwwroot\assets\img\login\login-register-1.jpeg
-wwwroot\assets\img\product-details\0557ce3a-fbac-488b-bddf-5cf5e5c1116f_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp
-wwwroot\assets\img\product-details\12e4b636-3ee8-4fde-a0e2-361709de8f7d_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp
-wwwroot\assets\img\product-details\1462acae-7b83-4b19-9985-92889c755d2b_46c798cf-4412-4aa6-87d4-8144422fe778-slide-3.webp
 wwwroot\assets\img\product-details\16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp
-wwwroot\assets\img\product-details\2169a457-e098-4a19-8fb1-98ef564315bc_2b4a15ce-5a62-4a1d-863c-ac276fcd423e-instagram-2.webp
-wwwroot\assets\img\product-details\3853ab0b-e651-4d4b-8c2e-161d63d1ec8a_3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp
-wwwroot\assets\img\product-details\4b253307-f2b4-45ad-b54f-550071ef2ecd_52bb06c6-8a80-4481-b0e9-ecb60e85a234-slide-2.webp
 wwwroot\assets\img\product-details\4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp
-wwwroot\assets\img\product-details\6ba4c5b1-06c7-4e52-a5bc-fbb7b4f12df3_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
-wwwroot\assets\img\product-details\79f83c7e-f120-4968-a84f-ff7423cf0f70_2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp
 wwwroot\assets\img\product-details\7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp
 wwwroot\assets\img\product-details\83f38da8-b467-48b2-aa4a-68cbc1161af4_mug 1-2.webp
 wwwroot\assets\img\product-details\9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp
-wwwroot\assets\img\product-details\a579592f-1d7f-4daa-8106-f2e21e5f4400_product-4-2.webp
 wwwroot\assets\img\product-details\a9825685-a39d-4d7f-8ca4-808a0673f7b0_fox 1-1.webp
 wwwroot\assets\img\product-details\ac37f6c1-7913-4b20-9462-727d34606b61_mug 1-1.webp
-wwwroot\assets\img\product-details\b073d505-3786-4630-88ce-44499bc89245_product-4-1.webp
 wwwroot\assets\img\product-details\brand-1.webp
 wwwroot\assets\img\product-details\brand-2.webp
 wwwroot\assets\img\product-details\brand-3.webp
@@ -684,12 +674,8 @@ wwwroot\assets\img\product-details\brand-5.webp
 wwwroot\assets\img\product-details\brand-6.webp
 wwwroot\assets\img\product-details\brand-7.webp
 wwwroot\assets\img\product-details\brand-8.webp
-wwwroot\assets\img\product-details\cf48bdf4-d19e-4989-808e-80ad27f6638f_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp
-wwwroot\assets\img\product-details\e11b67b8-35df-4768-8ce7-abade5c6e693_4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp
-wwwroot\assets\img\product-details\e28a324c-52f2-487c-9794-9fcf227a2723_35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp
 wwwroot\assets\img\product-details\ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp
 wwwroot\assets\img\product-details\f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp
-wwwroot\assets\img\product-details\fdc9e13b-db1e-4356-9788-28150fac2769_4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp
 wwwroot\assets\img\product-details\page-title.webp
 wwwroot\assets\img\product-details\product-4.webp
 wwwroot\assets\img\product-details\review-1.webp
@@ -782,9 +768,35 @@ wwwroot\assets\js\other\scrollax.min.js
 wwwroot\assets\js\other\select2.min.js
 wwwroot\assets\js\other\slick.min.js
 wwwroot\assets\js\other\swiper.min.js
-wwwroot\assets\js\product-details\product-details.js
+wwwroot\assets\js\product-details\basket.js
 wwwroot\assets\js\register\register.js
 wwwroot\assets\js\shop\shop.js
 wwwroot\assets\js\wishlist\wishlist.js
 wwwroot\templates\register-confirm.html
 wwwroot\templates\reset-password.html
+wwwroot\assets\img\about\page-title.webp
+wwwroot\assets\img\basket\page-title.webp
+wwwroot\assets\img\blog-details\page-title.webp
+wwwroot\assets\img\forget-password\page-title.webp
+wwwroot\assets\img\login\page-title.webp
+wwwroot\assets\img\new-password\page-title.webp
+wwwroot\assets\img\register\page-title.webp
+wwwroot\assets\img\wishlist\page-title.webp
+wwwroot\assets\img\shop\3D pot 1-1 - Copy.webp
+wwwroot\assets\img\shop\teapot 2-2 - Copy.webp
+wwwroot\assets\img\product-details\46db2ba4-8205-4bc9-9069-3f11e042a907_3D pot 1-1 - Copy.webp
+wwwroot\assets\img\product-details\cae43f70-17b8-4df6-aad1-aaa56227b02c_widget-1.webp
+wwwroot\assets\img\product-details\cec9b85c-8b94-4445-b33a-69389b89ef17_tape16-1.webp
+wwwroot\assets\img\product-details\d170046d-f280-410b-b823-8d46c39c9aa6_tape16-2.webp
+wwwroot\assets\img\product-details\e87ec033-b075-4e77-8a53-b3b32f791e7a_teapot 2-2 - Copy.webp
+wwwroot\assets\img\shop\3D pot 1-1 - Copy - Copy.webp
+wwwroot\assets\img\shop\blender 1-1 - Copy.webp
+wwwroot\assets\img\product-details\02129f35-a75f-4416-8e9c-d6e8e7756df7_3D pot 1-1 - Copy - Copy.webp
+wwwroot\assets\img\product-details\665f6a39-6c77-49a5-adf2-11e59cdef25f_3D pot 1-1.webp
+wwwroot\assets\img\product-details\7369f3ad-5f98-4435-87c8-af258f711ee8_blender 1-1.webp
+wwwroot\assets\img\product-details\8c7e11a1-4d69-4694-8801-e8d754c2c68e_blender 1-1 - Copy.webp
+wwwroot\assets\img\product-details\32680350-e42e-4e00-ac0f-952e528a8ae4_blender 1-2.webp
+wwwroot\assets\img\product-details\451cd836-2f7f-43b5-95b3-761773c5d022_blender 1-1 - Copy.webp
+wwwroot\assets\img\product-details\5a7d52b8-6445-4631-a3ca-05a345104efa_brush 1-2.webp
+wwwroot\assets\img\product-details\9d1fa4f5-9a01-4255-b916-c917001a3f02_brush1-1.webp
+wwwroot\assets\js\product-details\product-details.js

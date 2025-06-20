@@ -14,5 +14,8 @@ namespace Final_MozArt.ViewModels.UI
         public IEnumerable<TagVM> Tags { get; set; }
         public Dictionary<string, int> ProductCount { get; set; }
         public Dictionary<string, int> BrandsProductCount { get; set; }
+        public ICollection<ProductVM> AllProducts { get; set; }
+        public int Count { get; set; }
+
     }
 }
