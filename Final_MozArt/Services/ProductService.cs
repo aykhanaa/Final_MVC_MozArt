@@ -3,6 +3,7 @@ using Final_MozArt.Data;
 using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Blog;
+using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Product;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -459,6 +460,21 @@ namespace Final_MozArt.Services
         public Task<List<ProductVM>> GetProductAsync(int skip, int take)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<List<ProductVM>> FilterByPriceAsync(decimal min, decimal max)
+        {
+           
+            var products = await _context.Products
+               .Where(p => p.Price >= min && p.Price <= max)
+               .Include(p => p.Brand)
+               .Include(p => p.Category)
+               .Include(p => p.Images)
+               .AsNoTracking()
+              
+               .ToListAsync();
+
+            return _mapper.Map<List<ProductVM>>(products);
         }
     }
 }

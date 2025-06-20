@@ -506,7 +506,7 @@ wwwroot\assets\css\login\login.css
 wwwroot\assets\css\new-password\new-password.css
 wwwroot\assets\css\not-found\not-found.css
 wwwroot\assets\css\other\bootstrap.min.css
-wwwroot\assets\css\other\style.min.css
+wwwroot\assets\css\other\bootstrap.pro.min.css
 wwwroot\assets\css\other\font-awesome-pro.min.css
 wwwroot\assets\css\other\fontawesome.min.css
 wwwroot\assets\css\other\ion.rangeSlider.min.css
@@ -517,7 +517,7 @@ wwwroot\assets\css\other\photoswipe-default-skin.css
 wwwroot\assets\css\other\photoswipe.css
 wwwroot\assets\css\other\select2.min.css
 wwwroot\assets\css\other\slick.css
-wwwroot\assets\css\other\bootstrap.pro.min.css
+wwwroot\assets\css\other\style.min.css
 wwwroot\assets\css\other\swiper.min.css
 wwwroot\assets\css\other\themify-icons.css
 wwwroot\assets\css\product-details\product-details.css
@@ -532,12 +532,14 @@ wwwroot\assets\img\about\instagram-1.webp
 wwwroot\assets\img\about\instagram-2.webp
 wwwroot\assets\img\about\instagram-3.webp
 wwwroot\assets\img\about\instagram-4.webp
+wwwroot\assets\img\about\page-title.webp
 wwwroot\assets\img\about\pay.webp
 wwwroot\assets\img\about\salam.jpg
 wwwroot\assets\img\about\video-banner-2.webp
 wwwroot\assets\img\basket\cart-product-1.webp
 wwwroot\assets\img\basket\cart-product-2.webp
 wwwroot\assets\img\basket\cart-product-3.webp
+wwwroot\assets\img\basket\page-title.webp
 wwwroot\assets\img\blog-details\blog-1.webp
 wwwroot\assets\img\blog-details\blog-2.webp
 wwwroot\assets\img\blog-details\blog-3.webp
@@ -545,6 +547,7 @@ wwwroot\assets\img\blog-details\comment-1.webp
 wwwroot\assets\img\blog-details\comment-2.webp
 wwwroot\assets\img\blog-details\comment-3.webp
 wwwroot\assets\img\blog-details\comment-4.webp
+wwwroot\assets\img\blog-details\page-title.webp
 wwwroot\assets\img\blog-details\widget-1.webp
 wwwroot\assets\img\blog-details\widget-2.webp
 wwwroot\assets\img\blog-details\widget-3.webp
@@ -575,6 +578,7 @@ wwwroot\assets\img\blog\blog-5.webp
 wwwroot\assets\img\blog\blog-6.webp
 wwwroot\assets\img\blog\page-title.webp
 wwwroot\assets\img\contact\page-title.webp
+wwwroot\assets\img\forget-password\page-title.webp
 wwwroot\assets\img\home\0450c555-192c-4381-9ac3-16c95c5100af-Screenshot 2024-04-28 194703.png
 wwwroot\assets\img\home\1e89c629-42d5-41cf-8765-0bf45806cc7d-brand-4.webp
 wwwroot\assets\img\home\1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp
@@ -659,11 +663,22 @@ wwwroot\assets\img\home\title-decor-left.webp
 wwwroot\assets\img\home\title-decor-right.webp
 wwwroot\assets\img\home\web-img-white.png
 wwwroot\assets\img\login\login-register-1.jpeg
+wwwroot\assets\img\login\page-title.webp
+wwwroot\assets\img\new-password\page-title.webp
+wwwroot\assets\img\product-details\02129f35-a75f-4416-8e9c-d6e8e7756df7_3D pot 1-1 - Copy - Copy.webp
 wwwroot\assets\img\product-details\16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp
+wwwroot\assets\img\product-details\32680350-e42e-4e00-ac0f-952e528a8ae4_blender 1-2.webp
+wwwroot\assets\img\product-details\451cd836-2f7f-43b5-95b3-761773c5d022_blender 1-1 - Copy.webp
+wwwroot\assets\img\product-details\46db2ba4-8205-4bc9-9069-3f11e042a907_3D pot 1-1 - Copy.webp
 wwwroot\assets\img\product-details\4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp
+wwwroot\assets\img\product-details\5a7d52b8-6445-4631-a3ca-05a345104efa_brush 1-2.webp
+wwwroot\assets\img\product-details\665f6a39-6c77-49a5-adf2-11e59cdef25f_3D pot 1-1.webp
+wwwroot\assets\img\product-details\7369f3ad-5f98-4435-87c8-af258f711ee8_blender 1-1.webp
 wwwroot\assets\img\product-details\7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp
 wwwroot\assets\img\product-details\83f38da8-b467-48b2-aa4a-68cbc1161af4_mug 1-2.webp
+wwwroot\assets\img\product-details\8c7e11a1-4d69-4694-8801-e8d754c2c68e_blender 1-1 - Copy.webp
 wwwroot\assets\img\product-details\9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp
+wwwroot\assets\img\product-details\9d1fa4f5-9a01-4255-b916-c917001a3f02_brush1-1.webp
 wwwroot\assets\img\product-details\a9825685-a39d-4d7f-8ca4-808a0673f7b0_fox 1-1.webp
 wwwroot\assets\img\product-details\ac37f6c1-7913-4b20-9462-727d34606b61_mug 1-1.webp
 wwwroot\assets\img\product-details\brand-1.webp
@@ -674,6 +689,10 @@ wwwroot\assets\img\product-details\brand-5.webp
 wwwroot\assets\img\product-details\brand-6.webp
 wwwroot\assets\img\product-details\brand-7.webp
 wwwroot\assets\img\product-details\brand-8.webp
+wwwroot\assets\img\product-details\cae43f70-17b8-4df6-aad1-aaa56227b02c_widget-1.webp
+wwwroot\assets\img\product-details\cec9b85c-8b94-4445-b33a-69389b89ef17_tape16-1.webp
+wwwroot\assets\img\product-details\d170046d-f280-410b-b823-8d46c39c9aa6_tape16-2.webp
+wwwroot\assets\img\product-details\e87ec033-b075-4e77-8a53-b3b32f791e7a_teapot 2-2 - Copy.webp
 wwwroot\assets\img\product-details\ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp
 wwwroot\assets\img\product-details\f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp
 wwwroot\assets\img\product-details\page-title.webp
@@ -681,6 +700,7 @@ wwwroot\assets\img\product-details\product-4.webp
 wwwroot\assets\img\product-details\review-1.webp
 wwwroot\assets\img\product-details\review-2.webp
 wwwroot\assets\img\product-details\review-3.webp
+wwwroot\assets\img\register\page-title.webp
 wwwroot\assets\img\settings\0abbddd6-cf42-4482-ac93-c87348687ce9-brand-1.webp
 wwwroot\assets\img\settings\3ed6a33b-ceb9-4143-b6c5-c6d7fcef71c4-brand-4.webp
 wwwroot\assets\img\settings\8fec274c-2fd5-4a1a-8d24-f414882ec998-brand-4.webp
@@ -696,10 +716,13 @@ wwwroot\assets\img\settings\e9d26f44-2015-44d0-8ce0-f706e94b82a9-brand-4.webp
 wwwroot\assets\img\settings\page-title-1720e4de-f9eb-45ac-8cea-072c9f8041dc.webp
 wwwroot\assets\img\settings\page-title-6e947a7a-527f-4ce3-9229-b99079320c91.webp
 wwwroot\assets\img\settings\slide-1-36288d91-e639-4d9d-80b0-2a4e6e439fa3.webp
+wwwroot\assets\img\shop\3D pot 1-1 - Copy - Copy.webp
+wwwroot\assets\img\shop\3D pot 1-1 - Copy.webp
 wwwroot\assets\img\shop\3D pot 1-1.webp
 wwwroot\assets\img\shop\3D pot 1-2.webp
 wwwroot\assets\img\shop\abstract pot 1-1.webp
 wwwroot\assets\img\shop\abstract pot 1-2.webp
+wwwroot\assets\img\shop\blender 1-1 - Copy.webp
 wwwroot\assets\img\shop\blender 1-1.webp
 wwwroot\assets\img\shop\blender 1-2.webp
 wwwroot\assets\img\shop\brush 1-2.webp
@@ -724,6 +747,7 @@ wwwroot\assets\img\shop\scissors 1-1.webp
 wwwroot\assets\img\shop\tape16-1.webp
 wwwroot\assets\img\shop\tape16-2.webp
 wwwroot\assets\img\shop\teapot 1-1.webp
+wwwroot\assets\img\shop\teapot 2-2 - Copy.webp
 wwwroot\assets\img\shop\teapot 2-2.webp
 wwwroot\assets\img\shop\widget-1.webp
 wwwroot\assets\img\shop\widget-2.webp
@@ -731,8 +755,10 @@ wwwroot\assets\img\shop\widget-3.webp
 wwwroot\assets\img\wishlist\cart-product-1.webp
 wwwroot\assets\img\wishlist\cart-product-2.webp
 wwwroot\assets\img\wishlist\cart-product-3.webp
+wwwroot\assets\img\wishlist\page-title.webp
 wwwroot\assets\js\about\about.js
 wwwroot\assets\js\basket\basket.js
+wwwroot\assets\js\basket\cart.js
 wwwroot\assets\js\blog-details\blog-details.js
 wwwroot\assets\js\blog\blog.js
 wwwroot\assets\js\checkout\checkout.js
@@ -769,34 +795,10 @@ wwwroot\assets\js\other\select2.min.js
 wwwroot\assets\js\other\slick.min.js
 wwwroot\assets\js\other\swiper.min.js
 wwwroot\assets\js\product-details\basket.js
+wwwroot\assets\js\product-details\product-details.js
 wwwroot\assets\js\register\register.js
 wwwroot\assets\js\shop\shop.js
+wwwroot\assets\js\shop\sorts.js
 wwwroot\assets\js\wishlist\wishlist.js
 wwwroot\templates\register-confirm.html
 wwwroot\templates\reset-password.html
-wwwroot\assets\img\about\page-title.webp
-wwwroot\assets\img\basket\page-title.webp
-wwwroot\assets\img\blog-details\page-title.webp
-wwwroot\assets\img\forget-password\page-title.webp
-wwwroot\assets\img\login\page-title.webp
-wwwroot\assets\img\new-password\page-title.webp
-wwwroot\assets\img\register\page-title.webp
-wwwroot\assets\img\wishlist\page-title.webp
-wwwroot\assets\img\shop\3D pot 1-1 - Copy.webp
-wwwroot\assets\img\shop\teapot 2-2 - Copy.webp
-wwwroot\assets\img\product-details\46db2ba4-8205-4bc9-9069-3f11e042a907_3D pot 1-1 - Copy.webp
-wwwroot\assets\img\product-details\cae43f70-17b8-4df6-aad1-aaa56227b02c_widget-1.webp
-wwwroot\assets\img\product-details\cec9b85c-8b94-4445-b33a-69389b89ef17_tape16-1.webp
-wwwroot\assets\img\product-details\d170046d-f280-410b-b823-8d46c39c9aa6_tape16-2.webp
-wwwroot\assets\img\product-details\e87ec033-b075-4e77-8a53-b3b32f791e7a_teapot 2-2 - Copy.webp
-wwwroot\assets\img\shop\3D pot 1-1 - Copy - Copy.webp
-wwwroot\assets\img\shop\blender 1-1 - Copy.webp
-wwwroot\assets\img\product-details\02129f35-a75f-4416-8e9c-d6e8e7756df7_3D pot 1-1 - Copy - Copy.webp
-wwwroot\assets\img\product-details\665f6a39-6c77-49a5-adf2-11e59cdef25f_3D pot 1-1.webp
-wwwroot\assets\img\product-details\7369f3ad-5f98-4435-87c8-af258f711ee8_blender 1-1.webp
-wwwroot\assets\img\product-details\8c7e11a1-4d69-4694-8801-e8d754c2c68e_blender 1-1 - Copy.webp
-wwwroot\assets\img\product-details\32680350-e42e-4e00-ac0f-952e528a8ae4_blender 1-2.webp
-wwwroot\assets\img\product-details\451cd836-2f7f-43b5-95b3-761773c5d022_blender 1-1 - Copy.webp
-wwwroot\assets\img\product-details\5a7d52b8-6445-4631-a3ca-05a345104efa_brush 1-2.webp
-wwwroot\assets\img\product-details\9d1fa4f5-9a01-4255-b916-c917001a3f02_brush1-1.webp
-wwwroot\assets\js\product-details\product-details.js

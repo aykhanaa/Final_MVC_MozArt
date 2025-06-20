@@ -1,9 +1,12 @@
-﻿using Final_MozArt.Services;
+﻿using Final_MozArt.Models;
+using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Product;
 using Final_MozArt.ViewModels.UI;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace Final_MozArt.Controllers
 {
@@ -125,6 +128,14 @@ namespace Final_MozArt.Controllers
 
             return Json(result);
         }
+        [HttpGet]
+        public async Task<IActionResult> FilterByPrice(decimal min, decimal max)
+        {
+            var products = await _productService.FilterByPriceAsync(min, max);
+
+            return Json(products);
+        }
+
 
         public async Task<IActionResult> LoadMore(int skip = 0, int take = 3)
         {
@@ -154,7 +165,7 @@ namespace Final_MozArt.Controllers
             }
         }
 
-        [HttpPost]
+        
 
         [HttpPost]
         public async Task<IActionResult> AddBasket(int? id)

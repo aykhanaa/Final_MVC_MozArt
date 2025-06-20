@@ -26,6 +26,8 @@ public interface IProductService
     Task<ICollection<ProductVM>> FilterAsync(string? categoryName, string? brandName, string? tagName);
     Task<List<ProductVM>> GetProductAsync(int skip, int take);
     Task<int> GetTotalProductCountAsync();
+    Task<List<ProductVM>> FilterByPriceAsync(decimal min, decimal max);
+
 }
 
 
