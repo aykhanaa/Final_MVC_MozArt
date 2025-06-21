@@ -87,6 +87,7 @@ namespace Final_MozArt.Controllers
             var model = await _productService.GetByIdWithIncludesWithoutTrackingAsync(id);
             if (model == null) return NotFound();
 
+
             return View(model);
         }
 

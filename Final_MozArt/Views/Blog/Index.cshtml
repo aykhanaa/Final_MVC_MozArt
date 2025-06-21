@@ -38,18 +38,18 @@
                                 </div>
                                 <div class="content">
                                     <ul class="meta">
-                                        <li><i class="far fa-calendar"></i><a href="#">@item.CreateDate.ToString("dd/MM/yyyy")</a></li>
+                                        <li><i class="far fa-calendar"></i><a >@item.CreateDate.ToString("dd/MM/yyyy")</a></li>
                                     </ul>
                                     <ul class="meta">
-                                        <li><i class="fa-solid fa-list"></i><a href="#">@item.BlogCategoryName</a></li>
+                                        <li><i class="fa-solid fa-list"></i><a >@item.BlogCategoryName</a></li>
                                     </ul>
                                     <h5 class="title">
-                                        <a asp-controller="BlogDetails" asp-action="Index" asp-route-id="@item.Id">@item.Title</a>
+                                        <a>@item.Title</a>
                                     </h5>
                                     <div class="desc">
                                         <p>@(item.Description.Length > 200 ? item.Description.Substring(0, 200) + "..." : item.Description)</p>
                                     </div>
-                                    <a asp-controller="BlogDetails" asp-action="Index" asp-route-id="@item.Id" class="link">Read More</a>
+                                    <a asp-controller="blog" asp-action="Detail" asp-route-id="@item.Id" class="link">Read More</a>
                                 </div>
                             </div>
                         </div>

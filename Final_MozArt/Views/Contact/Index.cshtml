@@ -48,8 +48,7 @@
                         <div class="contact-info">
                             <h4 class="title" style="font-family: system-ui;">ADDRESS</h4>
                             <span class="info" style="font-family: system-ui;font-size: 16px;">
-                                <i class="icon fas fa-map-marker-alt"></i> 1800 Abbot Kinney Blvd. Unit D & E
-                                Venice
+                                <i class="icon fas fa-map-marker-alt"></i> @Model.Setting["Adress"]
                             </span>
                         </div>
                     </div>
@@ -57,12 +56,11 @@
                         <div class="contact-info">
                             <h4 class="title" style="font-family: system-ui;">CONTACT</h4>
                             <span class="info" style="font-family: system-ui;font-size: 16px;">
-                                <i class="icon fas fa-phone-alt"></i> Mobile: (+88) – 1990 – 6886 <br> Hotline:
-                                1800 –
-                                1102
+                                <i class="icon fas fa-phone-alt"></i> Mobile: @Model.Setting["Mobile"] <br> Hotline:
+                                @Model.Setting["Hotline"]
                             </span>
                             <span class="info" style="font-family: system-ui;font-size: 16px;">
-                                <i class="icon far fa-envelope"></i> Mail: <a href="#">contact@leartsstore.com</a>
+                                <i class="icon far fa-envelope"></i> Mail: <a href="#">@Model.Setting["Mail"]</a>
                             </span>
                         </div>
                     </div>
@@ -70,8 +68,8 @@
                         <div class="contact-info">
                             <h4 class="title" style="font-family: system-ui;"> HOUR OF OPERATION</h4>
                             <span class="info" style="font-family: system-ui;font-size: 16px;">
-                                <i class="icon far fa-clock"></i> Monday – Friday : 09:00 – 20:00 <br> Sunday &
-                                Saturday: 10:30 – 22:00
+                                <i class="icon far fa-clock"></i> Monday – Friday : @Model.Setting["Weekday"] <br> Sunday &
+                                Saturday: @Model.Setting["Weekend"]
                             </span>
                         </div>
                     </div>

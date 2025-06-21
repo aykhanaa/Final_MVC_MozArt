@@ -4,5 +4,7 @@
     {
         public List<BlogVM> Blogs { get; set; }
         public BlogVM Blog { get; set; }
+        public Dictionary<string, string> Setting { get; set; }
+
     }
 }

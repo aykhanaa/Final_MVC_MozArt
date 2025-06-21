@@ -66,10 +66,12 @@ namespace Final_MozArt.Controllers
         {
             var blogs = await _blogService.GetAllAsync();
             var blog = await _blogService.GetByIdAsync(id);
+            var setting = _settingService.GetSettings();
             BlogDetailVM model = new BlogDetailVM()
             {
               Blogs=blogs,
-              Blog=blog
+              Blog=blog,
+              Setting=setting
                
             };
             return View(model);

@@ -25,6 +25,8 @@ namespace Final_MozArt.ViewModels.Product
         public ICollection<ProductImage> Images { get; set; }
 
         public DateTime CreateDate { get; set; }
+
+        public Dictionary<string, string> Setting { get; set; }
     }
 
 }
