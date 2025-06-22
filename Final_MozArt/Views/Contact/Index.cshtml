@@ -153,6 +153,50 @@
             </div>
         </div>
     </section>
+
+    <section id="newsletter-subscribe">
+        <div class="container">
+            <div class="subscribe-box text-center" style="
+          padding: 60px 50px;
+          background-color: white;
+          border-radius: 15px;
+          border: 0.5px solid black;
+          max-width: 100%;
+          width: 100%;
+          margin: 0 auto 80px;
+      ">
+                <h2 style="color: black; font-size: 2.5rem; margin-bottom: 20px; font-family: 'Playfair Display';">
+                    Handcrafted Moments in Every Sip
+                </h2>
+                <p style="color: black; opacity: 0.85; font-size: 1.1rem; margin-bottom: 35px;">
+                    Be part of our artisan coffee circle. Get heart-brewed updates on our newest roasts, cozy café happenings, and special offers crafted just for you.
+                </p>
+
+                @if (TempData["Successs"] != null)
+                {
+                    <div class="alert alert-success text-center">
+                        @TempData["Successs"]
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger text-center">
+                        @TempData["Error"]
+                    </div>
+                }
+
+                <form asp-controller="Subscribe" asp-action="Subscribe" method="post">
+                    <div class="form-group">
+                        <input name="email" class="email-input" placeholder="Your email address" type="email" required />
+                    </div>
+                    <button type="submit" class="subscribe-btn">Join the Brew Circle</button>
+                    @Html.AntiForgeryToken()
+                </form>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 

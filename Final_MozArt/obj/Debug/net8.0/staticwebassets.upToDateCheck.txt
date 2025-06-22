@@ -689,6 +689,7 @@ wwwroot\assets\img\product-details\brand-5.webp
 wwwroot\assets\img\product-details\brand-6.webp
 wwwroot\assets\img\product-details\brand-7.webp
 wwwroot\assets\img\product-details\brand-8.webp
+wwwroot\assets\img\product-details\c9f91b1c-ec24-4df9-a4dd-4107784b5dbf_blender 1-1.webp
 wwwroot\assets\img\product-details\cae43f70-17b8-4df6-aad1-aaa56227b02c_widget-1.webp
 wwwroot\assets\img\product-details\cec9b85c-8b94-4445-b33a-69389b89ef17_tape16-1.webp
 wwwroot\assets\img\product-details\d170046d-f280-410b-b823-8d46c39c9aa6_tape16-2.webp

@@ -15,19 +15,22 @@ namespace Final_MozArt.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IColorService _colorService;
         private readonly ITagService _tagService;
+        private readonly IEmailService _emailService;
 
         public ProductController(
             IProductService productService,
             IBrandService brandService,
             ICategoryService categoryService,
             IColorService colorService,
-            ITagService tagService)
+            ITagService tagService,
+            IEmailService emailService)
         {
             _productService = productService;
             _brandService = brandService;
             _categoryService = categoryService;
             _colorService = colorService;
             _tagService = tagService;
+            _emailService = emailService;
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]

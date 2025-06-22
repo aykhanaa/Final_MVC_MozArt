@@ -22,22 +22,22 @@ namespace Final_MozArt.Areas.Admin.Controllers
             return View(contactMessages);
         }
 
-        [HttpPost]
-[Authorize(Roles = "SuperAdmin")]
-public async Task<IActionResult> Approve(int id)
-{
-    await _contactMessageService.ApproveMessageAsync(id);
-    return Json(new { success = true });
-}
+         [HttpPost]
+         [Authorize(Roles = "SuperAdmin")]
+         public async Task<IActionResult> Approve(int id)
+         {
+            await _contactMessageService.ApproveMessageAsync(id);
+            return Json(new { success = true });
+         }
 
-[HttpPost]
-[ValidateAntiForgeryToken]
-[Authorize(Roles = "SuperAdmin")]
-public async Task<IActionResult> Delete(int id)
-{
-    await _contactMessageService.DeleteAsync(id);
-    return Json(new { success = true });
-}
+      [HttpPost]
+      [ValidateAntiForgeryToken]
+      [Authorize(Roles = "SuperAdmin")]
+      public async Task<IActionResult> Delete(int id)
+      {
+          await _contactMessageService.DeleteAsync(id);
+          return Json(new { success = true });
+      }
 
     }
  }

@@ -21,14 +21,16 @@ namespace Final_MozArt.Services
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly string _imageFolderPath = "wwwroot/assets/img/product-details";
+        private readonly IEmailService _emailService;
 
-        public ProductService(AppDbContext context, IMapper mapper) 
+        public ProductService(AppDbContext context, IMapper mapper, IEmailService emailService)
         {
             _context = context;
             _mapper = mapper;
 
             if (!Directory.Exists(_imageFolderPath))
                 Directory.CreateDirectory(_imageFolderPath);
+            _emailService = emailService;
         }
 
         public async Task<ICollection<ProductVM>> GetAllAsync()
@@ -164,26 +166,29 @@ namespace Final_MozArt.Services
 
             return _mapper.Map<ICollection<ProductVM>>(products);
         }
-     
-      
+
+
         public async Task CreateAsync(ProductCreateVM vm)
         {
+            // VM-dən Product obyektinə xəritələmə
             var product = _mapper.Map<Product>(vm);
-
             product.Images = new List<ProductImage>();
 
+            // Rəng əlaqələri
             product.ProductColors = vm.ColorIds.Select(colorId => new ProductColor
             {
                 ColorId = colorId,
                 Product = product
             }).ToList();
 
+            // Tag əlaqələri
             product.ProductTags = vm.TagIds.Select(tagId => new ProductTag
             {
                 TagId = tagId,
                 Product = product
             }).ToList();
 
+            // Şəkillərin əlavə olunması
             var photos = vm.Photos.ToList();
             for (int i = 0; i < photos.Count; i++)
             {
@@ -197,10 +202,33 @@ namespace Final_MozArt.Services
                     Product = product
                 });
             }
-          
+
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
+
+            var subscribers = await _context.Subscribes.Select(s => s.Email).ToListAsync();
+
+            if (subscribers.Count > 0)
+            {
+                string subject = "Our New Product is Now Available!";
+                string productName = product.Name;
+                string productLink = $"https://localhost:7286/Shop/Detail/{product.Id}";
+
+                string body = $@"
+                    <h2>Hello!</h2>
+                  <p>We’re excited to introduce our latest product: <strong>{productName}</strong>!</p>
+                    <p>Click <a href='{productLink}'>here</a> to explore it in detail and place your order.</p>
+                   <br/>
+                    <p>With creativity,<br/>The MozArt Team</p>";
+
+
+                foreach (var email in subscribers)
+                {
+                    _emailService.Send(email, subject, body);
+                }
+            }
         }
+
 
         public async Task EditAsync(ProductEditVM vm)
         {
