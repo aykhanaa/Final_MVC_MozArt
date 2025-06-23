@@ -46,12 +46,16 @@
 
                             <div style="width: 120px;" class="col-auto d-none d-xl-block">
                                 <div class="header2-search">
-                                    <form id="searchForm" method="get" action="/Product/Search">
-                                        <input type="text" name="query" id="searchInput" placeholder="Search...">
-                                        <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                                    <form id="searchForm" method="get" action="/Shop/Index" class="search-form">
+                                        <input id="searchInput" type="text" name="query" placeholder="Search products..." value="@Context.Request.Query["query"]" />
+                                        <button type="submit" class="btn">
+                                            <i class="fas fa-search"></i>
+                                        </button>
                                     </form>
                                 </div>
                             </div>
+
+                            <div id="searchResults"></div>
 
 
                             @if (Model.UserFullName is not null)

@@ -18,6 +18,7 @@
         public string BrandName { get; set; }
 
         public DateTime CreateDate { get; set; }
+        public int CategoryId { get; set; }
     }
 
 

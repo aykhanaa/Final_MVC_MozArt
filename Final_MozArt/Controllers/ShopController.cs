@@ -37,22 +37,43 @@ namespace Final_MozArt.Controllers
         }
 
 
-
         [HttpGet]
-        public async Task<IActionResult> Index(string? sortKey, string? categoryName, string? brandName, string? tagName)
+        public async Task<IActionResult> Index(string? sortKey, string? categoryName, string? brandName, string? tagName, string? query)
         {
             var setting = _settingService.GetSettings();
-
+            var allProducts = await _productService.GetAllAsync();
             ICollection<ProductVM> products;
-            var allProducts = await _productService.GetAllAsync(); // <- bütün məhsullar
 
-            if (!string.IsNullOrWhiteSpace(sortKey))
+            // Normalizasiya
+            query = query?.Trim().ToLower();
+            categoryName = categoryName?.Trim().ToLower();
+            brandName = brandName?.Trim().ToLower();
+            tagName = tagName?.Trim().ToLower();
+
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                products = allProducts
+                    .Where(p => (p.Name != null && p.Name.ToLower().Contains(query)) ||
+                                (p.CategoryName != null && p.CategoryName.ToLower().Contains(query)))
+                    .ToList();
+
+                if (products == null || products.Count == 0)
+                {
+                    return RedirectToAction("Index", "NotFound");
+                }
+            }
+            else if (!string.IsNullOrWhiteSpace(sortKey))
             {
                 products = await _productService.SortAsync(sortKey);
             }
             else if (!string.IsNullOrWhiteSpace(categoryName) || !string.IsNullOrWhiteSpace(brandName) || !string.IsNullOrWhiteSpace(tagName))
             {
                 products = await _productService.FilterAsync(categoryName, brandName, tagName);
+
+                if (products == null || products.Count == 0)
+                {
+                    return RedirectToAction("Index", "NotFound");
+                }
             }
             else
             {
@@ -65,7 +86,7 @@ namespace Final_MozArt.Controllers
             var brands = await _brandService.GetAllAsync();
             var tags = await _tagService.GetAllAsync();
 
-            ShopVM model = new ShopVM()
+            var model = new ShopVM
             {
                 Setting = setting,
                 Products = products,
@@ -79,8 +100,6 @@ namespace Final_MozArt.Controllers
 
             return View(model);
         }
-
-
 
         public async Task<IActionResult> Detail(int id)
         {
@@ -137,6 +156,7 @@ namespace Final_MozArt.Controllers
             return Json(products);
         }
 
+      
 
         public async Task<IActionResult> LoadMore(int skip = 0, int take = 3)
         {

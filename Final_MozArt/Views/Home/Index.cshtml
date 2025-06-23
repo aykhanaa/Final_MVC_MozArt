@@ -75,12 +75,22 @@
             <div class="container">
                 <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 learts-mb-n40">
 
-                    @foreach (var item in Model.Categories.OrderByDescending(x=>x.CreateDate).Take(4))
+                    @{
+                        var visibleCategories = Model.Categories
+                        .Where(c => Model.Products.Any(p => p.CategoryId == c.Id))
+                        .OrderByDescending(c => c.CreateDate)
+                        .Take(4)
+                        .ToList();
+                    }
+
+                    @foreach (var item in visibleCategories)
                     {
                         <div class="col learts-mb-40">
                             <div class="category-banner-main">
                                 <a href="@Url.Action("Index", "Shop", new { categoryName = item.Name })" class="inner">
-                                    <div class="image"><img src="~/assets/img/home/@item.Image" alt=""></div>
+                                    <div class="image">
+                                        <img src="~/assets/img/home/@item.Image" alt="@item.Name">
+                                    </div>
                                     <div class="content" data-bg-color="#f4ede7">
                                         <h3 class="title">@item.Name</h3>
                                     </div>
@@ -166,8 +176,6 @@
         </div>
     </section>
 
-
-
     <section id="brands-area">
         <div class="brands-size section-padding">
             <div class="container">
@@ -197,7 +205,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="line-area">
         <div class="container">
@@ -233,7 +240,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="newsletter-subscribe">
         <div class="container">
@@ -278,8 +284,6 @@
             </div>
         </div>
     </section> 
-
-
 
     <section id="instagram-area">
         <div class="instagram-size instagram-padding pt-0">
