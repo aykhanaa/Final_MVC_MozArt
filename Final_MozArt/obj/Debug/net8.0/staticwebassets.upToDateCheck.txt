@@ -576,6 +576,7 @@ wwwroot\assets\img\blog\blog-3.webp
 wwwroot\assets\img\blog\blog-4.webp
 wwwroot\assets\img\blog\blog-5.webp
 wwwroot\assets\img\blog\blog-6.webp
+wwwroot\assets\img\blog\d28dbcfe-a723-4bc4-b94e-9522aec9372f-64334cd6-6ccd-455f-aa6a-91e07fbc0787-blog-3 - Copy - Copy.webp
 wwwroot\assets\img\blog\page-title.webp
 wwwroot\assets\img\contact\page-title.webp
 wwwroot\assets\img\forget-password\page-title.webp
@@ -667,11 +668,15 @@ wwwroot\assets\img\login\page-title.webp
 wwwroot\assets\img\new-password\page-title.webp
 wwwroot\assets\img\product-details\02129f35-a75f-4416-8e9c-d6e8e7756df7_3D pot 1-1 - Copy - Copy.webp
 wwwroot\assets\img\product-details\16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp
+wwwroot\assets\img\product-details\1969feaa-3323-4d0c-8f04-8fd62b81c666_3D pot 1-2.webp
+wwwroot\assets\img\product-details\282f1ecd-d61d-4220-98e5-902ebec6a0ec_3D pot 1-1.webp
 wwwroot\assets\img\product-details\32680350-e42e-4e00-ac0f-952e528a8ae4_blender 1-2.webp
 wwwroot\assets\img\product-details\451cd836-2f7f-43b5-95b3-761773c5d022_blender 1-1 - Copy.webp
 wwwroot\assets\img\product-details\46db2ba4-8205-4bc9-9069-3f11e042a907_3D pot 1-1 - Copy.webp
+wwwroot\assets\img\product-details\4da4a792-963c-4ae1-a7ab-96e5aee7dd4d_blender 1-1.webp
 wwwroot\assets\img\product-details\4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp
 wwwroot\assets\img\product-details\5a7d52b8-6445-4631-a3ca-05a345104efa_brush 1-2.webp
+wwwroot\assets\img\product-details\5eb8f583-ee18-4bf7-88b4-dfbcbcb40f78_abstract pot 1-2.webp
 wwwroot\assets\img\product-details\665f6a39-6c77-49a5-adf2-11e59cdef25f_3D pot 1-1.webp
 wwwroot\assets\img\product-details\7369f3ad-5f98-4435-87c8-af258f711ee8_blender 1-1.webp
 wwwroot\assets\img\product-details\7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp
@@ -689,12 +694,15 @@ wwwroot\assets\img\product-details\brand-5.webp
 wwwroot\assets\img\product-details\brand-6.webp
 wwwroot\assets\img\product-details\brand-7.webp
 wwwroot\assets\img\product-details\brand-8.webp
+wwwroot\assets\img\product-details\c0340a43-cd17-43c5-a8e8-d54722175f87_3D pot 1-1.webp
+wwwroot\assets\img\product-details\c5168035-5212-4727-bc6c-f70a51687396_3D pot 1-2.webp
 wwwroot\assets\img\product-details\c9f91b1c-ec24-4df9-a4dd-4107784b5dbf_blender 1-1.webp
 wwwroot\assets\img\product-details\cae43f70-17b8-4df6-aad1-aaa56227b02c_widget-1.webp
 wwwroot\assets\img\product-details\cec9b85c-8b94-4445-b33a-69389b89ef17_tape16-1.webp
 wwwroot\assets\img\product-details\d170046d-f280-410b-b823-8d46c39c9aa6_tape16-2.webp
 wwwroot\assets\img\product-details\e87ec033-b075-4e77-8a53-b3b32f791e7a_teapot 2-2 - Copy.webp
 wwwroot\assets\img\product-details\ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp
+wwwroot\assets\img\product-details\f0c651de-0fc9-44e9-8bb0-8c2d21df36d9_abstract pot 1-2.webp
 wwwroot\assets\img\product-details\f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp
 wwwroot\assets\img\product-details\page-title.webp
 wwwroot\assets\img\product-details\product-4.webp

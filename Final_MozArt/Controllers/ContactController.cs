@@ -1,4 +1,4 @@
-﻿using Final_MozArt.Models;
+﻿    using Final_MozArt.Models;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.ContactMessage;
 using Final_MozArt.ViewModels.UI;
@@ -50,15 +50,18 @@ namespace Final_MozArt.Controllers
                     Message = message
                 };
 
-                var resultMessage = await _contactMessageService.CreateAsync(dto);
-                bool isSuccess = resultMessage == "Your message has been sent successfully!";
+                var success = await _contactMessageService.CreateAsync(dto);
 
-                return Json(new { success = isSuccess, message = resultMessage });
+                if (success)
+                    return Json(new { success = true, message = "Your message has been sent successfully." });
+                else
+                    return Json(new { success = false, message = "Please register first before sending a message." });
             }
             catch
             {
                 return Json(new { success = false, message = "An unexpected error occurred." });
             }
         }
+
     }
 }

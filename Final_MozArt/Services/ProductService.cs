@@ -215,11 +215,21 @@ namespace Final_MozArt.Services
                 string productLink = $"https://localhost:7286/Shop/Detail/{product.Id}";
 
                 string body = $@"
-                    <h2>Hello!</h2>
-                  <p>We’re excited to introduce our latest product: <strong>{productName}</strong>!</p>
-                    <p>Click <a href='{productLink}'>here</a> to explore it in detail and place your order.</p>
-                   <br/>
-                    <p>With creativity,<br/>The MozArt Team</p>";
+  <div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);'>
+    <h1 style='color: #2c3e50;'>🎉 Meet Our New Product!</h1>
+    <p style='font-size: 16px; color: #333;'>Salam!</p>
+    <p style='font-size: 16px; color: #333;'>
+      We are excited to introduce you to our latest product, <strong>{productName}</strong>!
+    </p>
+    <p style='font-size: 16px; color: #333;'>
+      To view all product details and place an order, click on the link below:
+    </p>
+    <div style='text-align: center; margin: 20px 0;'>
+      <a href='{productLink}' style='background-color: #3498db; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;'>View Product</a>
+    </div>
+    <p style='font-size: 16px; color: #333;'>We are always at your service!</p>
+    <p style='font-size: 16px; color: #333;'><em>MozArt team</em></p>
+  </div>";
 
 
                 foreach (var email in subscribers)

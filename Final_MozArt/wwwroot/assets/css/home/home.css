@@ -1,4 +1,4 @@
-*,
+﻿*,
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
@@ -1235,6 +1235,197 @@ only screen and (max-width: 767px) {
     padding-left: 10px;
   }
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#newsletter-subscribe {
+    padding: 64px 0;
+    background-color: #ffffff;
+}
+
+.newsletter-box {
+    max-width: 512px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .newsletter-box h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 16px;
+    }
+
+.description {
+    color: #6b7280;
+    margin-bottom: 32px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Message Styles */
+.message {
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+    .message.hidden {
+        display: none;
+    }
+
+    .message.success {
+        background-color: #f0fdf4;
+        border-color: #bbf7d0;
+        color: #166534;
+    }
+
+    .message.error {
+        background-color: #fef2f2;
+        border-color: #fecaca;
+        color: #dc2626;
+    }
+
+.message-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.message-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.message.success .message-icon::before {
+    content: "✓";
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.message.error .message-icon::before {
+    content: "✕";
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Form Styles */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.email-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+    .email-input:focus {
+        outline: none;
+        border-color: #111827;
+        box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.1);
+    }
+
+    .email-input:disabled {
+        background-color: #f9fafb;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+.subscribe-btn {
+    width: 100%;
+    height: 48px;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .subscribe-btn:hover:not(:disabled) {
+        background-color: #1f2937;
+    }
+
+    .subscribe-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .subscribe-btn.loading {
+        position: relative;
+    }
+
+        .subscribe-btn.loading::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            margin: auto;
+            border: 2px solid transparent;
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.privacy-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    #newsletter-subscribe {
+        padding: 48px 0;
+    }
+
+    .newsletter-box h2 {
+        font-size: 1.75rem;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
+
+
+
 
 #instagram-area .instagram-title { 
   margin-bottom: 80px;

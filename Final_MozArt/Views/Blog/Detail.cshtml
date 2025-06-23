@@ -33,7 +33,7 @@
                     <div class="col-xl-9 col-lg-8 col-12 order-lg-2 learts-mb-50">
                         <div class="single-blog">
                             <div class="image">
-                                <a href="blog-details.html">
+                                <a>
                                     <img src="~/assets/img/blog/@Model.Blog.Image"
                                          alt="Blog Image">
                                 </a>
@@ -57,7 +57,11 @@
                                 <h2 class="title">Related Blog</h2>
                             </div>
                             <div class="row learts-mb-n40">
-                                @foreach (var blog in Model.Blogs.OrderBy(m=>m.BlogCategoryName).Take(2))
+                                @foreach (var blog in Model.Blogs
+                                                                .Where(m => m.BlogCategoryId == Model.Blog.BlogCategoryId && m.Id != Model.Blog.Id)
+                                                                .OrderByDescending(m => m.CreateDate)
+                                                                .Take(2))
+
                                 {
                                     <div class="col-md-6 col-12 learts-mb-40">
                                         <div class="blog">
@@ -69,20 +73,21 @@
                                             <div class="content">
                                                 <ul class="meta">
                                                     <li>
-                                                        <i class="far fa-calendar"></i><a>@Model.Blog.CreateDate.ToString("dd/MM/yyyy")</a>
+                                                        <i class="far fa-calendar"></i><a>@blog.CreateDate.ToString("dd/MM/yyyy")</a>
                                                     </li>
-                                                   
                                                 </ul>
                                                 <h5 class="title mb-0">
                                                     <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">
-                                                        Tile Tray with Brass
-                                                        Handles
+                                                        @blog.Title
                                                     </a>
                                                 </h5>
                                             </div>
                                         </div>
                                     </div>
                                 }
+
+
+
 
                             </div>
                         </div>
@@ -184,7 +189,7 @@
                                             <h6 class="title">
                                                 <a href="blog-details.html">@recent.Title</a>
                                             </h6>
-                                            <span class="date">@recent.CreateDate.ToString("dd MMM yyyy")</span>
+                                            <span class="date">@recent.CreateDate.ToString("dd/MM/yyyy")</span>
 
                                         </div>
                                     </li>

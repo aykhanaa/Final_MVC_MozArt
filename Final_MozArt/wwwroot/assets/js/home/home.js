@@ -674,4 +674,123 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.removeItem("userData")
     sessionStorage.removeItem("userToken")
     window.location.href = "home.html"
-  }
+}
+
+class NewsletterSubscription {
+    constructor() {
+        this.form = document.getElementById("newsletter-form")
+        this.emailInput = document.getElementById("email")
+        this.submitBtn = document.getElementById("submit-btn")
+        this.messageDiv = document.getElementById("message")
+        this.messageText = document.querySelector(".message-text")
+
+        this.init()
+    }
+
+    init() {
+        this.form.addEventListener("submit", (e) => this.handleSubmit(e))
+    }
+
+    async handleSubmit(e) {
+        e.preventDefault()
+
+        const email = this.emailInput.value.trim()
+
+        if (!email) {
+            this.showMessage("Please enter your email address", "error")
+            return
+        }
+
+        if (!this.isValidEmail(email)) {
+            this.showMessage("Please enter a valid email address", "error")
+            return
+        }
+
+        this.setLoading(true)
+        this.hideMessage()
+
+        try {
+            const result = await this.subscribeEmail(email)
+
+            if (result.success) {
+                this.showMessage(result.message, "success")
+                this.emailInput.value = ""
+            } else {
+                this.showMessage(result.message, "error")
+            }
+        } catch (error) {
+            this.showMessage("Something went wrong. Please try again.", "error")
+        } finally {
+            this.setLoading(false)
+        }
+    }
+
+    async subscribeEmail(email) {
+        // Simulate API call
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                // Simulate success/error randomly for demo
+                const isSuccess = Math.random() > 0.3
+
+                resolve({
+                    success: isSuccess,
+                    message: isSuccess
+                        ? "Thank you for subscribing to our newsletter!"
+                        : "Subscription failed. Please try again.",
+                })
+            }, 1000)
+        })
+
+        // Real API call example:
+        /*
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                throw new Error('Network error');
+            }
+            */
+    }
+
+    isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        return emailRegex.test(email)
+    }
+
+    showMessage(text, type) {
+        this.messageText.textContent = text
+        this.messageDiv.className = `message ${type}`
+        this.messageDiv.classList.remove("hidden")
+    }
+
+    hideMessage() {
+        this.messageDiv.classList.add("hidden")
+    }
+
+    setLoading(isLoading) {
+        if (isLoading) {
+            this.submitBtn.disabled = true
+            this.submitBtn.classList.add("loading")
+            this.submitBtn.textContent = "Subscribing..."
+            this.emailInput.disabled = true
+        } else {
+            this.submitBtn.disabled = false
+            this.submitBtn.classList.remove("loading")
+            this.submitBtn.textContent = "Subscribe"
+            this.emailInput.disabled = false
+        }
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    new NewsletterSubscription()
+})

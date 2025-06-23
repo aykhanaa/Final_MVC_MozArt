@@ -18,14 +18,11 @@ namespace Final_MozArt.Services
             _mapper = mapper;
         }
 
-        public async Task<string> CreateAsync(ContactMessageCreateVM contact)
+        public async Task<bool> CreateAsync(ContactMessageCreateVM contact)
         {
             var isRegistered = await _context.Users.AnyAsync(u => u.Email == contact.Email);
 
-            if (!isRegistered)
-            {
-                return "Please register first before sending a message.";
-            }
+            if (!isRegistered) return false;
 
             var entity = _mapper.Map<ContactMessage>(contact);
             entity.IsApproved = false;
@@ -34,8 +31,9 @@ namespace Final_MozArt.Services
             await _context.ContactMessages.AddAsync(entity);
             await _context.SaveChangesAsync();
 
-            return "Your message has been sent successfully.";
+            return true;
         }
+
 
 
         public async Task<List<ContactMessageVM>> GetAllApprovedMessagesAsync()

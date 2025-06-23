@@ -4,9 +4,10 @@ namespace Final_MozArt.Services.Interfaces
 {
     public interface IContactMessageService
     {
-        Task<string> CreateAsync(ContactMessageCreateVM contact);
+        Task<bool> CreateAsync(ContactMessageCreateVM contact);
 
-        
+
+
         Task<List<ContactMessageVM>> GetAllApprovedMessagesAsync();
 
         Task<List<ContactMessageVM>> GetAllMessagesAsync();
