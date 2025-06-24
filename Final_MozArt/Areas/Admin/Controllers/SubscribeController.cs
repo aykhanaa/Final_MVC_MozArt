@@ -39,6 +39,25 @@ namespace Final_MozArt.Areas.Admin.Controllers
             await _subscribeService.DeleteAsync(id);
             return Json(new { success = true });
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Subscribe([FromForm] string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return Json(new { success = false, message = "Email is required." });
+            }
+
+            if (await _subscribeService.CheckEmailExistsAsync(email))
+            {
+                return Json(new { success = false, message = "This email is already subscribed." });
+            }
+
+            await _subscribeService.AddAsync(email);
+            return Json(new { success = true, message = "You have successfully subscribed!" });
+        }
+
     }
 }
 

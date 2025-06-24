@@ -6,8 +6,6 @@ namespace Final_MozArt.Services.Interfaces
     {
         Task<bool> CreateAsync(ContactMessageCreateVM contact);
 
-
-
         Task<List<ContactMessageVM>> GetAllApprovedMessagesAsync();
 
         Task<List<ContactMessageVM>> GetAllMessagesAsync();

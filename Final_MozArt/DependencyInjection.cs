@@ -1,4 +1,5 @@
 ﻿using Final_MozArt.Services;
+using Final_MozArt.Services.Implementations;
 using Final_MozArt.Services.Interfaces;
 
 namespace Final_MozArt
@@ -28,6 +29,7 @@ namespace Final_MozArt
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<ILayoutService, LayoutService>();
             services.AddScoped<ISubscribeService, SubscribeService>();
+            services.AddScoped<IBlogCommentService, BlogCommentService>();
 
             return services;
         }

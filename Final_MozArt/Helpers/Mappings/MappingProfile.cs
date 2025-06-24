@@ -4,6 +4,7 @@ using Final_MozArt.ViewModels.About;
 using Final_MozArt.ViewModels.Advantage;
 using Final_MozArt.ViewModels.Blog;
 using Final_MozArt.ViewModels.BlogCategory;
+using Final_MozArt.ViewModels.BlogComment;
 using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
 using Final_MozArt.ViewModels.Color;
@@ -118,6 +119,12 @@ namespace Final_MozArt.Helpers.Mappings
 
             CreateMap<ContactMessage, ContactMessageVM>();
             CreateMap<ContactMessageCreateVM, ContactMessage>();
+
+
+            CreateMap<BlogComment, BlogCommentVM>();
+
+            CreateMap<BlogCommentCreateVM, BlogComment>();
+
 
 
 

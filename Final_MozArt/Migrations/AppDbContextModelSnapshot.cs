@@ -242,6 +242,9 @@ namespace Final_MozArt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("BlogId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -251,7 +254,48 @@ namespace Final_MozArt.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BlogId");
+
                     b.ToTable("BlogCategories");
+                });
+
+            modelBuilder.Entity("Final_MozArt.Models.BlogComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("BlogId");
+
+                    b.ToTable("BlogComments");
                 });
 
             modelBuilder.Entity("Final_MozArt.Models.Brand", b =>
@@ -830,6 +874,32 @@ namespace Final_MozArt.Migrations
                     b.Navigation("BlogCategory");
                 });
 
+            modelBuilder.Entity("Final_MozArt.Models.BlogCategory", b =>
+                {
+                    b.HasOne("Final_MozArt.Models.Blog", null)
+                        .WithMany("BlogCategories")
+                        .HasForeignKey("BlogId");
+                });
+
+            modelBuilder.Entity("Final_MozArt.Models.BlogComment", b =>
+                {
+                    b.HasOne("Final_MozArt.Models.AppUser", "AppUser")
+                        .WithMany("BlogComments")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Final_MozArt.Models.Blog", "Blog")
+                        .WithMany()
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Blog");
+                });
+
             modelBuilder.Entity("Final_MozArt.Models.Product", b =>
                 {
                     b.HasOne("Final_MozArt.Models.Brand", "Brand")
@@ -949,9 +1019,19 @@ namespace Final_MozArt.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Final_MozArt.Models.AppUser", b =>
+                {
+                    b.Navigation("BlogComments");
+                });
+
             modelBuilder.Entity("Final_MozArt.Models.Basket", b =>
                 {
                     b.Navigation("BasketProducts");
+                });
+
+            modelBuilder.Entity("Final_MozArt.Models.Blog", b =>
+                {
+                    b.Navigation("BlogCategories");
                 });
 
             modelBuilder.Entity("Final_MozArt.Models.Brand", b =>
