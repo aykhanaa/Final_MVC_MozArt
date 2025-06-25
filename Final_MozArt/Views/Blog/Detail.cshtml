@@ -134,7 +134,7 @@
                                     </div>
                                 </form>  *@
 
-                                <form id="commentForm">
+                                @* <form id="commentForm">
                                     <div class="row learts-mb-n20">
                                         <div class="col-md-6 col-12 learts-mb-20">
                                             <input type="text" name="Name" placeholder="Your name (*)" required>
@@ -185,6 +185,70 @@
                                             }
                                         } catch (error) {
                                             const messageBox = document.getElementById('messageBox');
+                                            messageBox.innerText = 'An unexpected error occurred.';
+                                            messageBox.style.color = 'red';
+                                        }
+                                    });
+                                </script> *@
+
+
+                                <form id="commentForm">
+                                    <div class="row learts-mb-n20">
+                                        <div class="col-md-6 col-12 learts-mb-20">
+                                            <input type="text" name="Name" placeholder="Your name (*)" required>
+                                        </div>
+                                        <div class="col-md-6 col-12 learts-mb-20">
+                                            <input type="email" name="Email" placeholder="Mail (*)" required>
+                                        </div>
+                                        <div class="col-12 learts-mb-20">
+                                            <textarea name="Comment" placeholder="Message" required></textarea>
+                                        </div>
+                                        <div class="col-12 text-center learts-mb-20 learts-mt-20">
+                                            <button type="submit" class="btn btn-dark btn-outline-hover-dark">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div id="messageBox"></div>
+
+                                <ul class="comment-list" id="commentList">
+                                </ul>
+
+                                <script>
+                                    const isAuthenticated = @User.Identity.IsAuthenticated.ToString().ToLower();  // true or false
+                                    const YOUR_BLOG_ID = @Model.Blog.Id;
+
+                                    document.getElementById('commentForm').addEventListener('submit', async function (e) {
+                                        e.preventDefault();
+
+                                        const messageBox = document.getElementById('messageBox');
+
+                                        if (!isAuthenticated) {
+                                            messageBox.innerText = "Please login before commenting.";
+                                            messageBox.style.color = 'red';
+                                            return;
+                                        }
+
+                                        const formData = new FormData(this);
+                                        formData.append('BlogId', YOUR_BLOG_ID);
+
+                                        try {
+                                            const response = await fetch('/Blog/Create', {
+                                                method: 'POST',
+                                                body: formData
+                                            });
+
+                                            const result = await response.json();
+
+                                            if (result.success) {
+                                                messageBox.innerText = result.message;
+                                                messageBox.style.color = 'green';
+                                                this.reset();
+                                            } else {
+                                                messageBox.innerText = result.message || 'Failed to submit comment.';
+                                                messageBox.style.color = 'red';
+                                            }
+                                        } catch (error) {
                                             messageBox.innerText = 'An unexpected error occurred.';
                                             messageBox.style.color = 'red';
                                         }
