@@ -4,7 +4,9 @@ namespace Final_MozArt.ViewModels.Color
 {
     public class ColorCreateVM
     {
-        [Required]
+        [RegularExpression(@"^[A-Za-z]+$", 
+        ErrorMessage = "Only letters are allowed.")]
+
         public string Name { get; set; }
     }
 }

@@ -4,16 +4,19 @@ namespace Final_MozArt.ViewModels.About
 {
     public class AboutCreateVM
     {
-        [Required]
+        [RegularExpression(@"^(?=.[A-Za-z])[A-Za-z0-9_:;""'\.,<>!@#$%\^&\(\)\{\}\-=\+\[\]\\|? ]*$",
+        ErrorMessage = "Title must contain at least one letter and can include letters, numbers, and allowed symbols.")]
         public string Title { get; set; }
 
-        [Required]
+        [RegularExpression(@"^(?=.[A-Za-z])[A-Za-z0-9_:;""'\.,<>!@#$%\^&\(\)\{\}\-=\+\[\]\\|? ]*$",
+        ErrorMessage = "Subtitle must contain at least one letter and can include letters, numbers, and allowed symbols.")]
         public string Subtitle { get; set; }
 
-        [Required]
+        [RegularExpression(@"^(?=.[A-Za-z])[A-Za-z0-9_:;""'\.,<>!@#$%\^&\(\)\{\}\-=\+\[\]\\|? ]*$",
+        ErrorMessage = "Description must contain at least one letter and can include letters, numbers, and allowed symbols.")]
         public string Description { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please upload an image.")]
         public IFormFile Photo { get; set; }
     }
 }

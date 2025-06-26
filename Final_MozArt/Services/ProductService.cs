@@ -430,7 +430,7 @@ namespace Final_MozArt.Services
 
             if (!string.IsNullOrWhiteSpace(categoryName))
             {
-                categoryName = categoryName.Trim(); // lowercase YOX!
+                categoryName = categoryName.Trim();
                 query = query.Where(p => p.Category != null && p.Category.Name == categoryName);
             }
 

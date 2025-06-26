@@ -7,7 +7,7 @@ namespace Final_MozArt.ViewModels.Video
         [Required]
         public string VideoURL { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please upload an image.")]
         public IFormFile Photo { get; set; }
     }
 }

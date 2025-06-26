@@ -21,7 +21,15 @@
                 {
                     <tr data-id="@item.Id">
                         <td>@item.Title</td>
-                        <td>@item.Description</td>
+                        <td style="width:29pc;">
+                            @(
+                              string.IsNullOrEmpty(item.Description)
+                              ? ""
+                              : (item.Description.Length > 100
+                              ? item.Description.Substring(0, 100) + "..."
+                              : item.Description)
+                             )
+                    </td>
                         <td>@item.CreateDate.ToString("dd/MM/yyyy")</td>
                         <td>
                             <a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>

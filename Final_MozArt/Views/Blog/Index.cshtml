@@ -23,6 +23,8 @@
         </div>
     </section>
 
+      @if (Model.Blogs != null && Model.Blogs.Any())
+    {
     <section id="blog-area">
         <div class="blog-size section-padding">
             <div class="container">
@@ -67,6 +69,7 @@
             </div>
         </div>
     </section>
+    }
 </main>
 
 @section scripts {

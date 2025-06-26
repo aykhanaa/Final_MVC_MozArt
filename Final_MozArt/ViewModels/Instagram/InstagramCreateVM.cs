@@ -4,7 +4,7 @@ namespace Final_MozArt.ViewModels.Instagram
 {
     public class InstagramCreateVM
     {
-        [Required]
+        [Required(ErrorMessage = "Please upload an image.")]
         public IFormFile Photo { get; set; }
     }
 }

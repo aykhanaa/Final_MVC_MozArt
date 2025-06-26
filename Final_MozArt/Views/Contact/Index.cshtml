@@ -27,13 +27,16 @@
         </div>
     </section>
 
-
+      @if (Model.ContactIntros != null && Model.ContactIntros.Any())
+    {
     <section id="information-map-area">
-        <div class="information-map-size section-padding">
-            <div class="container">
+            <div class="information-map-size section-padding">
+                <div class="container">
 
-                <div class="section-title text-center">
-                    <h2 class="title" style="font-family: system-ui;font-weight: 400;font-size: 33px;">
+                    @if (Model.ContactIntros != null && Model.ContactIntros.Any())
+                    {
+                        <div class="section-title text-center">
+                            <h2 class="title" style="font-family: system-ui;font-weight: 400;font-size: 33px;">
                         @Model.ContactIntros.FirstOrDefault()?.Title
                     </h2>
                     <p style="width: 40pc; margin-left: 16pc; line-height: 2.0; font-family: system-ui; margin-top: 28px;">
@@ -41,6 +44,7 @@
                     </p>
 
                 </div>
+                }
 
 
                 <div class="row learts-mb-n30" style="margin-top: 4pc;">
@@ -88,7 +92,7 @@
             </div>
         </div>
     </section>
-
+    }
 
 
     <section id="contact-area">

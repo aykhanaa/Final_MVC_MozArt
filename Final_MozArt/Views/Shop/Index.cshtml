@@ -49,8 +49,8 @@
         <div class="product-size section-fluid learts-mt-70">
             <div class="container">
                 <div class="row learts-mb-n50">
-
-                    <!-- Product Area -->
+              @if (Model.Products != null && Model.Products.Any())
+               {
                     <div class="col-lg-9 col-12 learts-mb-50 order-lg-2">
                         <div id="shop-products" class="products isotope-grid row row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
                             <div class="grid-sizer col-1"></div>
@@ -94,7 +94,7 @@
                             </div>
                         } 
                     </div>
-
+              }
                     <!-- Sidebar Widgets -->
                     <div class="col-lg-3 col-12 learts-mb-10 order-lg-1">
                         <!-- Categories -->
