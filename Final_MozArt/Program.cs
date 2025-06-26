@@ -85,7 +85,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthentication();
-app.UseAuthorization(); // Authorization mutlaka StatusCodePages'ten önce olmal?!
+app.UseAuthorization(); 
 
 //app.UseStatusCodePages(context =>
 //{

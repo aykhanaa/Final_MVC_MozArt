@@ -37,24 +37,88 @@ namespace Final_MozArt.Controllers
         }
 
 
+        //[HttpGet]
+        //public async Task<IActionResult> Index(string? sortKey, string? categoryName, string? brandName, string? tagName, string? query)
+        //{
+        //    var setting = _settingService.GetSettings();
+        //    var allProducts = await _productService.GetAllAsync();
+        //    ICollection<ProductVM> products;
+
+        //    // Normalizasiya
+        //    query = query?.Trim().ToLower();
+        //    categoryName = categoryName?.Trim().ToLower();
+        //    brandName = brandName?.Trim().ToLower();
+        //    tagName = tagName?.Trim().ToLower();
+
+        //    if (!string.IsNullOrWhiteSpace(query))
+        //    {
+        //        products = allProducts
+        //            .Where(p => (p.Name != null && p.Name.ToLower().Contains(query)) ||
+        //                        (p.CategoryName != null && p.CategoryName.ToLower().Contains(query)))
+        //            .ToList();
+
+        //        if (products == null || products.Count == 0)
+        //        {
+        //            return RedirectToAction("Index", "NotFound");
+        //        }
+        //    }
+        //    else if (!string.IsNullOrWhiteSpace(sortKey))
+        //    {
+        //        products = await _productService.SortAsync(sortKey);
+        //    }
+        //    else if (!string.IsNullOrWhiteSpace(categoryName) || !string.IsNullOrWhiteSpace(brandName) || !string.IsNullOrWhiteSpace(tagName))
+        //    {
+        //        products = await _productService.FilterAsync(categoryName, brandName, tagName);
+
+        //        if (products == null || products.Count == 0)
+        //        {
+        //            return RedirectToAction("Index", "NotFound");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        products = allProducts;
+        //    }
+
+        //    var categories = await _categoryService.GetAllAsync();
+        //    var categoryiesWithProductCount = await _categoryService.GetProductCountByCategoryNameAsync();
+        //    var brandWithProductCount = await _brandService.GetProductCountByBrandNameAsync();
+        //    var brands = await _brandService.GetAllAsync();
+        //    var tags = await _tagService.GetAllAsync();
+
+        //    var model = new ShopVM
+        //    {
+        //        Setting = setting,
+        //        Products = products,
+        //        Categories = categories,
+        //        ProductCount = categoryiesWithProductCount,
+        //        Brands = brands,
+        //        Tags = tags,
+        //        BrandsProductCount = brandWithProductCount,
+        //        AllProducts = allProducts
+        //    };
+
+        //    return View(model);
+        //}
+
+
+
         [HttpGet]
         public async Task<IActionResult> Index(string? sortKey, string? categoryName, string? brandName, string? tagName, string? query)
         {
             var setting = _settingService.GetSettings();
             var allProducts = await _productService.GetAllAsync();
             ICollection<ProductVM> products;
-
-            // Normalizasiya
-            query = query?.Trim().ToLower();
-            categoryName = categoryName?.Trim().ToLower();
-            brandName = brandName?.Trim().ToLower();
-            tagName = tagName?.Trim().ToLower();
+            query = query?.Trim();
+            categoryName = categoryName?.Trim();
+            brandName = brandName?.Trim();
+            tagName = tagName?.Trim();
 
             if (!string.IsNullOrWhiteSpace(query))
             {
                 products = allProducts
-                    .Where(p => (p.Name != null && p.Name.ToLower().Contains(query)) ||
-                                (p.CategoryName != null && p.CategoryName.ToLower().Contains(query)))
+                    .Where(p => (p.Name != null && p.Name.ToLower().Contains(query.ToLower())) ||
+                                (p.CategoryName != null && p.CategoryName.ToLower().Contains(query.ToLower())))
                     .ToList();
 
                 if (products == null || products.Count == 0)
@@ -68,12 +132,9 @@ namespace Final_MozArt.Controllers
             }
             else if (!string.IsNullOrWhiteSpace(categoryName) || !string.IsNullOrWhiteSpace(brandName) || !string.IsNullOrWhiteSpace(tagName))
             {
+                // FilterAsync metoduna original format-da göndər
                 products = await _productService.FilterAsync(categoryName, brandName, tagName);
 
-                if (products == null || products.Count == 0)
-                {
-                    return RedirectToAction("Index", "NotFound");
-                }
             }
             else
             {

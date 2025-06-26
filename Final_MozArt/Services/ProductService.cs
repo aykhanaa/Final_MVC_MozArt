@@ -419,6 +419,38 @@ namespace Final_MozArt.Services
             return _mapper.Map<ICollection<ProductVM>>(products);
         }
 
+        //public async Task<ICollection<ProductVM>> FilterAsync(string? categoryName, string? brandName, string? tagName)
+        //{
+        //    IQueryable<Product> query = _context.Products
+        //        .Include(p => p.Category)
+        //        .Include(p => p.Brand)
+        //        .Include(p => p.ProductTags).ThenInclude(pt => pt.Tag)
+        //        .Include(p => p.Images)
+        //        .AsNoTracking();
+
+        //    if (!string.IsNullOrWhiteSpace(categoryName))
+        //    {
+        //        categoryName = categoryName.Trim();
+        //        query = query.Where(p => p.Category != null && p.Category.Name == categoryName);
+        //    }
+
+        //    if (!string.IsNullOrWhiteSpace(brandName))
+        //    {
+        //        brandName = brandName.Trim();
+        //        query = query.Where(p => p.Brand != null && p.Brand.Name == brandName);
+        //    }
+
+        //    if (!string.IsNullOrWhiteSpace(tagName))
+        //    {
+        //        tagName = tagName.Trim();
+        //        query = query.Where(p => p.ProductTags.Any(pt => pt.Tag != null && pt.Tag.Name == tagName));
+        //    }
+
+        //    var filteredProducts = await query.ToListAsync();
+        //    return _mapper.Map<ICollection<ProductVM>>(filteredProducts);
+        //}
+
+
         public async Task<ICollection<ProductVM>> FilterAsync(string? categoryName, string? brandName, string? tagName)
         {
             IQueryable<Product> query = _context.Products
@@ -431,19 +463,26 @@ namespace Final_MozArt.Services
             if (!string.IsNullOrWhiteSpace(categoryName))
             {
                 categoryName = categoryName.Trim();
-                query = query.Where(p => p.Category != null && p.Category.Name == categoryName);
+                // Case-insensitive comparison əlavə edin
+                query = query.Where(p => p.Category != null &&
+                           EF.Functions.Like(p.Category.Name, categoryName));
+
             }
 
             if (!string.IsNullOrWhiteSpace(brandName))
             {
                 brandName = brandName.Trim();
-                query = query.Where(p => p.Brand != null && p.Brand.Name == brandName);
+                // Case-insensitive comparison əlavə edin
+                query = query.Where(p => p.Brand != null &&
+                                   p.Brand.Name.ToLower() == brandName.ToLower());
             }
 
             if (!string.IsNullOrWhiteSpace(tagName))
             {
                 tagName = tagName.Trim();
-                query = query.Where(p => p.ProductTags.Any(pt => pt.Tag != null && pt.Tag.Name == tagName));
+                // Case-insensitive comparison əlavə edin
+                query = query.Where(p => p.ProductTags.Any(pt => pt.Tag != null &&
+                                   pt.Tag.Name.ToLower() == tagName.ToLower()));
             }
 
             var filteredProducts = await query.ToListAsync();
