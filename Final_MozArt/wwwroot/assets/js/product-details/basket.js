@@ -14,6 +14,8 @@
 //        }
 //    });
 //});
+
+
 $(document).on("click", ".detail .cart .btn-dark", function (e) {
     e.preventDefault();
 
@@ -29,9 +31,29 @@ $(document).on("click", ".detail .cart .btn-dark", function (e) {
         },
         error: function (xhr) {
             if (xhr.status === 401) {
-                // user login olmayıbsa login səhifəsinə yönləndir
                 window.location.href = "/account/login";
             }
         }
     });
 });
+
+
+
+
+$(document).on("click", ".detail .cart .add-wishlist", function () {
+
+
+    let id = $(this).parent().parent().attr("data-id");;
+    let count = $(".wishlist-count").text();
+    $.ajax({
+        url: `/shop/addwishlist?id=${id}`,
+        type: "Post",
+        success: function (res) {
+
+            $(".wishlist-count").text(res);
+
+        }
+    })
+
+})
+

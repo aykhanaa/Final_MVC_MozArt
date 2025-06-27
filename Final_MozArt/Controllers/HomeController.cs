@@ -18,7 +18,9 @@ namespace Final_MozArt.Controllers
         private readonly IInstagramService _instagramService;
         private readonly IProductService _productService;
         private readonly IContactMessageService _contactMessageService;
-       
+        private readonly ISettingService _settingService;
+
+
 
 
         public HomeController(ISliderService sliderService, 
@@ -26,7 +28,8 @@ namespace Final_MozArt.Controllers
                               IBrandService brandService,
                               IInstagramService instagramService,
                               IProductService productService,
-                              IContactMessageService contactMessageService
+                              IContactMessageService contactMessageService,
+                              ISettingService settingService
                             )
         {
             _sliderService = sliderService;
@@ -35,6 +38,7 @@ namespace Final_MozArt.Controllers
             _instagramService = instagramService;
             _productService = productService;
             _contactMessageService = contactMessageService;
+            _settingService = settingService;
           
         }
         public async Task<IActionResult> Index()

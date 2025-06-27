@@ -18,6 +18,7 @@ namespace Final_MozArt.Controllers
         private readonly IBrandService _brandService;
         private  readonly ITagService _tagService;
         private readonly IBasketService _basketService;
+        private readonly IWishlistService _wishlistService; 
 
 
 
@@ -26,7 +27,8 @@ namespace Final_MozArt.Controllers
                               ICategoryService categoryService,
                               IBrandService brandService,
                               ITagService tagService,
-                              IBasketService basketService)
+                              IBasketService basketService,
+                              IWishlistService wishlistService)
         {
             _settingService = settingService;
             _productService = productService;
@@ -34,6 +36,7 @@ namespace Final_MozArt.Controllers
             _brandService = brandService;
             _tagService = tagService;
             _basketService = basketService;
+            _wishlistService = wishlistService;
         }
 
 
@@ -269,6 +272,25 @@ namespace Final_MozArt.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> AddWishlist(int? id)
+        {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Unauthorized(); 
+            }
+
+            if (id is null) return RedirectToAction("Index", "Error"); ;
+
+            ProductVM product = await _productService.GetByIdWithIncludesAsync((int)id);
+
+            if (product is null) return RedirectToAction("Index", "Error"); ;
+
+            int a = _wishlistService.AddWishlist((int)id, product);
+
+            return Ok(a);
+        }
 
     }
 }

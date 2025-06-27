@@ -1,4 +1,6 @@
-﻿@section css {
+﻿@model List<WishlistDetailVM>
+
+@section css {
     <link rel="stylesheet" href="~/assets/css/wishlist/wishlist.css">
 }
 
@@ -38,63 +40,38 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="thumbnail">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/wishlist/cart-product-1.webp"
-                                             alt="wishlist-product-1">
-                                       
-                                    </a>
-                                </td>
-                                <td class="name"> <a href="product-details.html">Walnut Cutting Board</a></td>
-                                <td class="price"><span>$100.00</span></td>
-                                <td class="add-to-cart">
-                                    <a href="basket.html" class="btn btn-light btn-hover-dark">
-                                        <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
-                                    </a>
-                                </td>
-                                <td class="remove"><a href="#" class="btn">×</a></td>
-                            </tr>
-                            <tr>
-                                <td class="thumbnail">
-                                    <a href="product-details.html">
-                                        <img src ="~/assets/img/wishlist/cart-product-2.webp"
-                                             alt="wishlist-product-2">
-                                    </a>
-                                </td>
-                                <td class="name"> <a href="product-details.html">Lucky Wooden Elephant</a></td>
-                                <td class="price"><span>$35.00</span></td>
-                                <td class="add-to-cart">
-                                    <a href="basket.html" class="btn btn-light btn-hover-dark">
-                                        <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
-                                    </a>
-                                </td>
-                                <td class="remove"><a href="" class="btn">×</a></td>
-                            </tr>
-                            <tr>
-                                <td class="thumbnail">
-                                    <a href="product-details.html">
-                                        <img src ="~/assets/img/wishlist/cart-product-3.webp"
-                                             alt="wishlist-product-3">
-                                    </a>
-                                </td>
-                                <td class="name"> <a href="product-details.html">Fish Cut Out Set</a></td>
-                                <td class="price"><span>$9.00</span></td>
-                                <td class="add-to-cart">
-                                    <a href="basket.html" class="btn btn-light btn-hover-dark">
-                                        <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
-                                    </a>
-                                </td>
-                                <td class="remove"><a href="#" class="btn">×</a></td>
-                            </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="thumbnail">
+                                        <a href="product-details.html">
+                                            <img src="~/assets/img/product-details/@item.Image"
+                                                 alt="wishlist-product-1">
+
+                                        </a>
+                                    </td>
+                                    <td class="name"> <a href="product-details.html">@item.Name</a></td>
+                                    <td class="price"><span>$@item.Price</span></td>
+                                    <td class="add-to-cart">
+                                        <a href="basket.html" class="btn btn-light btn-hover-dark">
+                                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                                        </a>
+                                    </td>
+                                    <td class="remove">
+                                        <a href="#" class="btn delete-wishlist-item" data-id="@item.Id">×</a>
+                                    </td>
+
+
+                                </tr>
+
+                            }
                         </tbody>
                     </table>
                     <div class="row">
                         <div class="col text-center mb-n3">
                             <a class="btn btn-light btn-hover-dark mr-3 mb-3" asp-controller="Shop" asp-action="Index">Continue Shopping</a>
                             <a class="btn btn-dark btn-outline-hover-dark mb-3" asp-controller="Basket" asp-action="Index">
-                                View
-                                Cart
+                                View Cart
                             </a>
                         </div>
                     </div>
@@ -108,6 +85,111 @@
 </main>
 
 
+<script>
+
+        $(function () {
+
+            $(document).on("click", ".wishlist-add", function () {
+
+
+                let id = $(this).parent().parent().attr("data-id");;
+                let count = $(".wishlist-count").text();
+                $.ajax({
+                    url: `/shop/addwishlist?id=${id}`,
+                    type: "Post",
+                    success: function (res) {
+
+                        $(".wishlist-count").text(res);
+
+                    }
+                })
+
+
+            })
+
+
+            $(document).on("click", ".cart-add-basket", function () {
+
+
+                let id = $(this).parent().attr("data-id");;
+                let count = $(".basket-count").text();
+                $.ajax({
+                    url: `shop/addbasket?id=${id}`,
+                    type: "Post",
+                    success: function (res) {
+
+                        count++;
+                        $(".basket-count").text(count);
+
+                    }
+                })
+
+            })
+
+
+
+        //        $(document).on("click", ".delete-wishlist-item", function (e) {
+        //     e.preventDefault();
+
+        //     let id = parseInt($(this).attr("data-id"));
+
+        //     $.ajax({
+        //         url: `/wishlist/delete?id=${id}`,
+        //         type: "POST",
+        //         success: function (res) {
+        //             $(e.target).closest("tr").remove();
+        //             $(".wishlist-count").text(res.count);
+
+        //             if (res.count === 0) {
+        //                 $(".wishlist-table").addClass("d-none");
+        //                 $(".empty").removeClass("d-none");
+        //             }
+        //         },
+        //         error: function () {
+        //             alert("Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.");
+        //         }
+        //     });
+        // });
+
+                      $(document).on("click", ".delete-wishlist-item", function (e) {
+            e.preventDefault();
+
+            let id = $(this).data("id");
+
+            $.ajax({
+                url: `/wishlist/delete?id=${id}`,
+                type: "POST",
+                success: function (res) {
+                    // Seçilmiş satırı sil
+                    $(e.target).closest("tr").remove();
+
+                    // Wishlist sayını yenilə
+                    $(".wishlist-count").text(res);
+
+                    // Əgər siyahı boşdursa
+                    if (res === 0) {
+                        $(".cart-wishlist-table").addClass("d-none"); // DÜZGÜN class
+                        $(".cart-form").addClass("d-none"); // Əlavə ehtiyat tədbiri
+                        $(".empty").removeClass("d-none");  // Əgər varsa
+                    }
+                },
+                error: function (xhr) {
+                    console.error("Xəta baş verdi:", xhr);
+                    alert("Silmək mümkün olmadı.");
+                }
+            });
+        });
+
+
+
+
+
+    })
+</script>
+
+
+
 @section scripts {
     <script src="~/assets/js/wishlist/wishlist.js"></script>
 }
+                           

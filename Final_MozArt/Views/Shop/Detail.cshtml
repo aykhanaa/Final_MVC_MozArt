@@ -77,8 +77,12 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <div class="product-buttons cart">
-                                <a href="" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
-                                   data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
+                                @* <a href="" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
+                                   data-hint="Add to Wishlist"><i class="far fa-heart"></i></a> *@
+
+                                <a href="#" class="wishlist-add btn btn-icon btn-outline-body btn-hover-dark hintT-top"
+                                   data-id="@Model.Id" data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
+
                                 <a href="" class="btn btn-dark btn-outline-hover-dark">
                                     <i class="fas fa-shopping-cart"></i>
                                     Add
@@ -249,6 +253,49 @@
         </div>
     </div>
 </main>
+
+
+@* <script>
+    $(document).on("click", ".wishlist-add", function () {
+
+
+               let id = $(this).parent().parent().attr("data-id");;
+               let count = $(".wishlist-count").text();
+               $.ajax({
+                   url: `/shop/addwishlist?id=${id}`,
+                   type: "Post",
+                   success: function (res) {
+
+                       $(".wishlist-count").text(res);
+
+                   }
+               })
+
+
+           })
+</script>
+ *@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).on("click", ".wishlist-add", function (e) {
+        e.preventDefault();
+
+        let id = $(this).data("id");
+
+        $.ajax({
+            url: `/shop/addwishlist?id=${id}`,
+            type: "POST",
+            success: function (res) {
+                $(".wishlist-count").text(res);
+            },
+            error: function (err) {
+                console.log("Wishlist error:", err);
+            }
+        });
+    });
+</script>
 
 
 

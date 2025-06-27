@@ -33,5 +33,7 @@ namespace Final_MozArt.Data
         public DbSet<BasketProduct> BasketProducts { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<BlogComment> BlogComments { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<WishlistProduct> WishlistProducts { get; set; }
     }
 }
