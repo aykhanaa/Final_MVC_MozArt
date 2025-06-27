@@ -38,7 +38,7 @@ namespace Final_MozArt.Services
         {
             var blog = await _context.Blogs.Include(b => b.BlogCategory).FirstOrDefaultAsync(b => b.Id == id);
             var vm= _mapper.Map<BlogVM>(blog);
-            vm.Banner =   _settingService.GetSettingValue("ShopBanner");
+            //vm.Banner =   _settingService.GetSettingValue("BlogBanner");
             return vm;
         }
 

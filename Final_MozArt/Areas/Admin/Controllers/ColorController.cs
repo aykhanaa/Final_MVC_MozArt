@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Color;
 using Microsoft.AspNetCore.Authorization;
@@ -69,7 +70,15 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
             if (!ModelState.IsValid) return View(request);
 
-            await _colorService.EditAsync(request);
+            try
+            {
+                await _colorService.EditAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(request);
+            }
             return RedirectToAction(nameof(Index));
         }
 
@@ -99,8 +108,15 @@ namespace Final_MozArt.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-
-            await _colorService.CreateAsync(request);
+            try
+            {
+                await _colorService.CreateAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View();
+            }
             return RedirectToAction(nameof(Index));
         }
     }

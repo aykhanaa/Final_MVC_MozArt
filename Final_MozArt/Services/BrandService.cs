@@ -35,6 +35,11 @@ namespace Final_MozArt.Services
 
         public async Task CreateAsync(BrandCreateVM request)
         {
+
+            bool exists = await _context.Brands.AnyAsync(c => c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
+
+            if (exists)
+                throw new InvalidOperationException("This brands is already exist");
             string fileName = $"{Guid.NewGuid()}-{request.Photo.FileName}";
             string path = _env.GetFilePath("assets/img/home", fileName);
 
@@ -63,6 +68,13 @@ namespace Final_MozArt.Services
         {
             var brand = await _context.Brands.FirstOrDefaultAsync(s => s.Id == request.Id);
             if (brand == null) throw new Exception("Brand not found");
+
+            bool nameExists = await _context.Brands
+      .AnyAsync(c => c.Id != request.Id &&
+                     c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
+
+            if (nameExists)
+                throw new InvalidOperationException("This brands is already exist.");
 
             string fileName = brand.Image;
 

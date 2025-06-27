@@ -48,18 +48,27 @@
                     <div class="col-xl-7 col-lg-8 col-12 mx-auto">
                         <div class="about-us-home">
                             <div class="inner">
+
+                                @if (Model.Setting?.TryGetValue("AboutTitle", out var title) == true && !string.IsNullOrWhiteSpace(title))
+                                {
                                 <h2 style="font-family: 'Playfair Display', serif; font-size: 71px;" class="title">
-                                    Live out your life
+                                    @title
                                 </h2>
-                                <h5 style="   color: #72A499;" class="sub-title">WELCOME TO MozArt STORE</h5>
+                                }
+
+                                @if (Model.Setting?.TryGetValue("AboutSubtitle", out var subtitle) == true && !string.IsNullOrWhiteSpace(subtitle))
+                                {
+                                    <h5 style="color: #72A499;" class="sub-title">@subtitle</h5>
+                                }
+
                                 <div class="desc">
+
+                                    @if (Model.Setting?.TryGetValue("AboutDescription", out var desc) == true && !string.IsNullOrWhiteSpace(desc))
+                                {
                                     <p>
-                                        MozArt is an online shop of two passionate craftsmen where they sell
-                                        handicrafts
-                                        and
-                                        arts’ works in the world. We provide high-end unique vases, wall arts, home
-                                        accessories, and furniture pieces.
+                                        @desc
                                     </p>
+                                }
                                 </div>
                             </div>
                         </div>
@@ -123,7 +132,7 @@
                         <ul class="product-tab-list nav">
                             <li><a class="active" data-bs-toggle="tab" href="#tab-new-sale">New arrivals</a></li>
                         </ul>
-                        <div class="prodyct-tab-content1 tab-content">
+                        <div class="product-tab-content1 tab-content">
                             <div class="tab-pane fade show active" id="tab-new-sale">
                                 <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
 
@@ -137,8 +146,11 @@
                                                         <img class="image-hover " src="~/assets/img/product-details/@item.Hower"
                                                              alt="Product Image">
                                                     </a>
-                                                    <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                                       data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                                        @* <a href="wishlist.html" class="wishlist-add hintT-left"
+                                                       data-hint="Add to wishlist"><i class="far fa-heart"></i></a> *@
+
+                                                       @*  <a href="#" class="wishlist-add btn btn-icon btn-outline-body btn-hover-dark hintT-top"
+                                                           data-id="@item.Id" data-hint="Add to Wishlist"><i class="far fa-heart"></i></a> *@
                                                 </div>
                                                 <div class="product-info">
                                                     <h6 class="title">
@@ -156,6 +168,10 @@
                                                            data-hint="Add to Cart">
                                                             <i class="fas fa-shopping-cart"></i>
                                                         </a>
+                                                            <a href="#" class="wishlist-add btn btn-icon btn-outline-body product-button hintT-top"
+                                                               data-id="@item.Id" data-hint="Add to Wishlist">
+                                                                <i class="far fa-heart" style="margin-top: -15px;"></i>
+                                                            </a>
 
                                                     </div>
                                                 </div>
@@ -332,6 +348,28 @@
     </section>
     }
 </main>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).on("click", ".wishlist-add", function (e) {
+        e.preventDefault();
+
+        let id = $(this).data("id");
+
+        $.ajax({
+            url: `/shop/addwishlist?id=${id}`,
+            type: "POST",
+            success: function (res) {
+                $(".wishlist-count").text(res);
+            },
+            error: function (err) {
+                console.log("Wishlist error:", err);
+            }
+        });
+    });
+</script>
 
  @section scripts {
     <script src="~/assets/js/home/home.js"></script>

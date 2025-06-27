@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Final_MozArt.Helpers.Extensions;
+using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Brand;
 using Final_MozArt.ViewModels.Category;
@@ -87,8 +88,16 @@ namespace Final_MozArt.Areas.Admin.Controllers
             }
         }
 
-        await _brandService.EditAsync(request);
-        return RedirectToAction(nameof(Index));
+            try
+            {
+                await _brandService.EditAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(request);
+            }
+            return RedirectToAction(nameof(Index));
     }
 
 
@@ -129,8 +138,16 @@ namespace Final_MozArt.Areas.Admin.Controllers
             return View();
         }
 
-        await _brandService.CreateAsync(request);
-        return RedirectToAction(nameof(Index));
+            try
+            {
+                await _brandService.CreateAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View();
+            }
+            return RedirectToAction(nameof(Index));
     }
 }
 }

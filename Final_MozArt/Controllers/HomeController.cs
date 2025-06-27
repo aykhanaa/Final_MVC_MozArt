@@ -49,6 +49,8 @@ namespace Final_MozArt.Controllers
             var instagrams = await _instagramService.GetAllAsync();
             var products = await _productService.GetAllAsync();
             var approvedMessages = await _contactMessageService.GetAllApprovedMessagesAsync();
+            var setting = _settingService.GetSettings();
+
 
 
 
@@ -59,7 +61,8 @@ namespace Final_MozArt.Controllers
                 Brands = brands,
                 Instagrams = instagrams,
                 Products = products,
-                ApprovedMessages = approvedMessages
+                ApprovedMessages = approvedMessages,
+                Setting = setting
 
             };
 

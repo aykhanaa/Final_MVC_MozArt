@@ -61,6 +61,35 @@ namespace Final_MozArt.Areas.Admin.Controllers
             return View(model);
         }
 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[Authorize(Roles = "Admin,SuperAdmin")]
+        //public async Task<IActionResult> Edit(int id, CategoryEditVM request)
+        //{
+        //    if (id != request.Id) return BadRequest();
+
+        //    if (!ModelState.IsValid) return View(request);
+
+        //    if (request.Photo != null)
+        //    {
+        //        if (!request.Photo.CheckFileType("image/"))
+        //        {
+        //            ModelState.AddModelError("Photo", "Only image files are allowed");
+        //            return View(request);
+        //        }
+
+        //        if (!request.Photo.CheckFileSize(2048))
+        //        {
+        //            ModelState.AddModelError("Photo", "Max file size is 2MB");
+        //            return View(request);
+        //        }
+        //    }
+
+
+        //    await _categoryService.EditAsync(request);
+        //    return RedirectToAction(nameof(Index));
+        //}
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin,SuperAdmin")]
@@ -85,10 +114,18 @@ namespace Final_MozArt.Areas.Admin.Controllers
                 }
             }
 
-            await _categoryService.EditAsync(request);
+            try
+            {
+                await _categoryService.EditAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(request);
+            }
+
             return RedirectToAction(nameof(Index));
         }
-
 
 
         [HttpPost]
@@ -106,6 +143,30 @@ namespace Final_MozArt.Areas.Admin.Controllers
         {
             return View();
         }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[Authorize(Roles = "SuperAdmin")]
+        //public async Task<IActionResult> Create(CategoryCreateVM request)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return View();
+
+        //    if (!request.Photo.CheckFileType("image/"))
+        //    {
+        //        ModelState.AddModelError("Photo", "Only image files are allowed");
+        //        return View();
+        //    }
+
+        //    if (!request.Photo.CheckFileSize(2048))
+        //    {
+        //        ModelState.AddModelError("Photo", "Max file size is 2MB");
+        //        return View();
+        //    }
+
+        //    await _categoryService.CreateAsync(request);
+        //    return RedirectToAction(nameof(Index));
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -127,8 +188,18 @@ namespace Final_MozArt.Areas.Admin.Controllers
                 return View();
             }
 
-            await _categoryService.CreateAsync(request);
+            try
+            {
+                await _categoryService.CreateAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View();
+            }
+
             return RedirectToAction(nameof(Index));
         }
+
     }
 }

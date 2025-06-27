@@ -168,7 +168,7 @@ namespace Final_MozArt.Controllers
         public async Task<IActionResult> Detail(int id)
         {
             var model = await _productService.GetByIdWithIncludesWithoutTrackingAsync(id);
-            if (model == null) return NotFound();
+            if (model == null) return RedirectToAction("Index","NotFound");
 
 
             return View(model);

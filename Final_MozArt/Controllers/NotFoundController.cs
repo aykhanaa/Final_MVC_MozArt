@@ -6,7 +6,7 @@ namespace Final_MozArt.Controllers
     {
         public IActionResult Index()
         {
-            //Response.StatusCode = 404;
+            Response.StatusCode = 404;
             return View();
         }
     }

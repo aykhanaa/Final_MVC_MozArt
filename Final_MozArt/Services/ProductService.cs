@@ -32,6 +32,22 @@ namespace Final_MozArt.Services
                 Directory.CreateDirectory(_imageFolderPath);
             _emailService = emailService;
         }
+        public async Task<List<ProductVM>> GetProductsByIdsAsync(List<int> ids)
+        {
+            if (ids == null || !ids.Any())
+                return new List<ProductVM>();
+
+            return await _context.Products
+                .Where(p => ids.Contains(p.Id))
+                .Select(p => new ProductVM
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Price = p.Price,
+                    Image=p.Images.FirstOrDefault(m=>m.IsMain).Image
+                })
+                .ToListAsync();
+        }
 
         public async Task<ICollection<ProductVM>> GetAllAsync()
         {

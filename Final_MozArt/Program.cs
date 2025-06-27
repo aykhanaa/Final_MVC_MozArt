@@ -20,7 +20,8 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 
 var conString = builder.Configuration.GetConnectionString("Default") ??
      throw new InvalidOperationException("Connection string 'Default'" +
@@ -83,7 +84,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization(); 
 

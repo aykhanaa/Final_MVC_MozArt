@@ -593,10 +593,10 @@ wwwroot\assets\img\home\35591de9-de26-4387-82db-e0405ee3b5c8_product-2-1.webp
 wwwroot\assets\img\home\35b9df3d-807a-49d8-afbf-fbcefca42381_blog-1.webp
 wwwroot\assets\img\home\3c2e122c-d499-4255-939e-9e3efe87198c_blog-1 - Copy.webp
 wwwroot\assets\img\home\3c2e122c-d499-4255-939e-9e3efe87198c_blog-1.webp
+wwwroot\assets\img\home\4226e8b3-226f-4941-8cfc-01ab96641d8c-blog-2.webp
 wwwroot\assets\img\home\47e2cbfc-deb5-4cdc-bbeb-1d76ca3de5fe-category-img-2.webp
 wwwroot\assets\img\home\4db1aa24-1488-4577-a429-a42108c16bf3-instagram-3.webp
 wwwroot\assets\img\home\4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1 - Copy.webp
-wwwroot\assets\img\home\4dc95ca6-60ea-4140-82f2-768da0f6380d-category-img-1.webp
 wwwroot\assets\img\home\55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp
 wwwroot\assets\img\home\568044fb-c6ef-4b48-9964-c4d3dda2d71e-about-1.webp
 wwwroot\assets\img\home\631ab022-243f-4e2a-9cb0-bb584105b233_3D pot 1-1.webp

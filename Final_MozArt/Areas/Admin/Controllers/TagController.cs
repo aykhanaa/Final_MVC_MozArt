@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Tag;
 using Microsoft.AspNetCore.Authorization;
@@ -72,7 +73,16 @@ namespace Final_MozArt.Areas.Admin.Controllers
 
             if (!ModelState.IsValid) return View(request);
 
-            await _tagService.EditAsync(request);
+
+            try
+            {
+                await _tagService.EditAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(request);
+            }
             return RedirectToAction(nameof(Index));
         }
 
@@ -106,7 +116,15 @@ namespace Final_MozArt.Areas.Admin.Controllers
                 return View();
 
 
-            await _tagService.CreateAsync(request);
+            try
+            {
+                await _tagService.CreateAsync(request);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View();
+            }
             return RedirectToAction(nameof(Index));
         }
     }

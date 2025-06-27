@@ -90,7 +90,10 @@
                                 <div class="inner">
                                     <div class="content">
                                         <h6 class="title">SECURE PAYMENT</h6>
-                                        <img class="img-hover-color " src="assets/img/about/@Model.Setting["Payment"]" alt="">
+                                         @if (Model.Setting?.TryGetValue("Payment", out var pay) == true && !string.IsNullOrWhiteSpace(pay))
+                                {
+                                        <img class="img-hover-color " src="assets/img/about/@pay" alt="">
+                                }
                                     </div>
                                 </div>
                             </div>

@@ -27,6 +27,7 @@ public interface IProductService
     Task<List<ProductVM>> GetProductAsync(int skip, int take);
     Task<int> GetTotalProductCountAsync();
     Task<List<ProductVM>> FilterByPriceAsync(decimal min, decimal max);
+    Task<List<ProductVM>> GetProductsByIdsAsync(List<int> ids);
 
 }
 

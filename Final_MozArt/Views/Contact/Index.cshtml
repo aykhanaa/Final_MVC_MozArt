@@ -52,17 +52,47 @@
                         <div class="contact-info">
                             <h4 class="title" style="font-family: system-ui;">ADDRESS</h4>
                             <span class="info" style="font-family: system-ui;font-size: 16px;">
-                                <i class="icon fas fa-map-marker-alt"></i> @Model.Setting["Adress"]
+                                    @if (Model.Setting?.TryGetValue("Adress", out var address) == true && !string.IsNullOrWhiteSpace(address))
+                                {
+                                <i class="icon fas fa-map-marker-alt"></i> @address
+                                }
                             </span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                         <div class="contact-info">
                             <h4 class="title" style="font-family: system-ui;">CONTACT</h4>
-                            <span class="info" style="font-family: system-ui;font-size: 16px;">
+                            @* <span class="info" style="font-family: system-ui;font-size: 16px;">
                                 <i class="icon fas fa-phone-alt"></i> Mobile: @Model.Setting["Mobile"] <br> Hotline:
                                 @Model.Setting["Hotline"]
-                            </span>
+                            </span> *@
+                                @{
+                                    string mobile = null;
+                                    string hotline = null;
+
+                                    if (Model.Setting != null)
+                                    {
+                                        Model.Setting.TryGetValue("Mobile", out mobile);
+                                        Model.Setting.TryGetValue("Hotline", out hotline);
+                                    }
+                                }
+
+                               @*  @if (!string.IsNullOrWhiteSpace(mobile) || !string.IsNullOrWhiteSpace(hotline))
+                                {
+                                    <span class="info" style="font-family: system-ui; font-size: 16px;">
+                                        @if (!string.IsNullOrWhiteSpace(mobile))
+                                        {
+                                        <i class="icon fas fa-phone-alt"></i>
+                                        Mobile: @mobile < br />
+                                                                        }
+                                        @if (!string.IsNullOrWhiteSpace(hotline))
+                                        {
+                                        Hotline: @hotline
+                                         }
+                                    </span>
+                                } *@
+
+
                             <span class="info" style="font-family: system-ui;font-size: 16px;">
                                 <i class="icon far fa-envelope"></i> Mail: <a href="#">@Model.Setting["Mail"]</a>
                             </span>

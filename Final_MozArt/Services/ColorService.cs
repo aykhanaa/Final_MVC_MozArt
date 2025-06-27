@@ -39,6 +39,13 @@ namespace Final_MozArt.Services
 
         public async Task CreateAsync(ColorCreateVM request)
         {
+
+            bool exists = await _context.Colors
+                            .AnyAsync(c => c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
+
+            if (exists)
+                throw new InvalidOperationException("This color is already exist..");
+
             var color = _mapper.Map<Color>(request);
 
 
@@ -63,7 +70,12 @@ namespace Final_MozArt.Services
             var color = await _context.Colors.FirstOrDefaultAsync(s => s.Id == request.Id);
             if (color == null) throw new Exception("Color not found");
 
+            bool nameExists = await _context.Colors
+                                            .AnyAsync(c => c.Id != request.Id &&
+                    c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
 
+            if (nameExists)
+                throw new InvalidOperationException("This color is already exist.");
 
             color.Name = request.Name;
 

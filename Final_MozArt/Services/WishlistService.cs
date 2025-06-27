@@ -21,33 +21,58 @@ namespace Final_MozArt.Services
             _context = context;
         }
 
+        //public int AddWishlist(int id, ProductVM product)
+        //{
+        //    List<WishlistVM> wishlist;
+
+        //    if (_httpContextAccessor.HttpContext.Request.Cookies["wishlist"] != null)
+        //    {
+        //        wishlist = JsonConvert.DeserializeObject<List<WishlistVM>>(_httpContextAccessor.HttpContext.Request.Cookies["wishlist"]);
+        //    }
+        //    else
+        //    {
+        //        wishlist = new List<WishlistVM>();
+        //    }
+
+
+
+        //    WishlistVM existProducts = wishlist.FirstOrDefault(m => m.Id == product.Id);
+
+        //    if (existProducts is null)
+        //    {
+        //        wishlist.Add(new WishlistVM { Id = product.Id });
+        //    }
+
+
+        //    _httpContextAccessor.HttpContext.Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlist));
+
+        //    return wishlist.Count();
+        //}
         public int AddWishlist(int id, ProductVM product)
         {
             List<WishlistVM> wishlist;
 
-            if (_httpContextAccessor.HttpContext.Request.Cookies["wishlist"] != null)
+            var cookie = _httpContextAccessor.HttpContext.Request.Cookies["wishlist"];
+            if (cookie != null)
             {
-                wishlist = JsonConvert.DeserializeObject<List<WishlistVM>>(_httpContextAccessor.HttpContext.Request.Cookies["wishlist"]);
+                wishlist = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
             }
             else
             {
                 wishlist = new List<WishlistVM>();
             }
 
-
-
-            WishlistVM existProducts = wishlist.FirstOrDefault(m => m.Id == product.Id);
-
-            if (existProducts is null)
+            var existProduct = wishlist.FirstOrDefault(m => m.Id == id);
+            if (existProduct == null)
             {
-                wishlist.Add(new WishlistVM { Id = product.Id });
+                wishlist.Add(new WishlistVM { Id = id });
             }
-
 
             _httpContextAccessor.HttpContext.Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlist));
 
-            return wishlist.Count();
+            return wishlist.Count;
         }
+
 
         public void DeleteItem(int id)
         {

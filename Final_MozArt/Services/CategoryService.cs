@@ -35,6 +35,12 @@ namespace Final_MozArt.Services
 
         public async Task CreateAsync(CategoryCreateVM request)
         {
+            bool exists = await _context.Categories
+                             .AnyAsync(c => c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
+
+            if (exists)
+                throw new InvalidOperationException("This category is already exist..");
+
             string fileName = $"{Guid.NewGuid()}-{request.Photo.FileName}";
             string path = _env.GetFilePath("assets/img/home", fileName);
 
@@ -63,6 +69,13 @@ namespace Final_MozArt.Services
         {
             var category = await _context.Categories.FirstOrDefaultAsync(s => s.Id == request.Id);
             if (category == null) throw new Exception("Category not found");
+
+            bool nameExists = await _context.Categories
+       .AnyAsync(c => c.Id != request.Id &&
+                      c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
+
+            if (nameExists)
+                throw new InvalidOperationException("This category is already exist.");
 
             string fileName = category.Image;
 

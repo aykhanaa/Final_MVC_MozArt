@@ -68,8 +68,12 @@ namespace Final_MozArt.Controllers
 
         public async Task<IActionResult> Detail(int id)
         {
+            if (id == 0) return RedirectToAction("Index", "NotFound");
+
             var blogs = await _blogService.GetAllAsync();
             var blog = await _blogService.GetByIdAsync(id);
+            if (blog == null) return RedirectToAction("Index", "NotFound");
+
             var setting = _settingService.GetSettings();
             var blogcomment = await _blogCommentService.GetAllByBlogIdAsync(blog.Id);
             BlogDetailVM model = new BlogDetailVM()

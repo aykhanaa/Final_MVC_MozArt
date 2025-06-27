@@ -39,8 +39,12 @@ namespace Final_MozArt.Services
 
         public async Task CreateAsync(TagCreateVM request)
         {
-            var tag = _mapper.Map<Tag>(request);
+            bool exists = await _context.Tags
+                            .AnyAsync(c => c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
 
+            if (exists)
+                throw new InvalidOperationException("This tags is already exist..");
+            var tag = _mapper.Map<Tag>(request);
 
             await _context.Tags.AddAsync(tag);
             await _context.SaveChangesAsync();
@@ -62,7 +66,12 @@ namespace Final_MozArt.Services
         {
             var tag = await _context.Tags.FirstOrDefaultAsync(s => s.Id == request.Id);
             if (tag == null) throw new Exception("Tag not found");
+            bool nameExists = await _context.Tags
+                                            .AnyAsync(c => c.Id != request.Id &&
+                     c.Name.ToLower().Trim() == request.Name.ToLower().Trim());
 
+            if (nameExists)
+                throw new InvalidOperationException("This category is already exist.");
 
 
             tag.Name = request.Name;

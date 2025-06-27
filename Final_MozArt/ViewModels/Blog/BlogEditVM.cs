@@ -22,8 +22,6 @@ namespace Final_MozArt.ViewModels.Blog
         public int BlogCategoryId { get; set; }
 
         public string Image { get; set; }
-
-        [Required(ErrorMessage = "Please upload an image.")]
         public IFormFile? Photo { get; set; } 
     }
 }
