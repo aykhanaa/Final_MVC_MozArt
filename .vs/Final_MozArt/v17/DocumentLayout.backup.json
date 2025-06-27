@@ -3,69 +3,140 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\views\\wishlist\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\wishlist\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\setting\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\setting\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\video\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\video\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\video\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\video\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\subscribe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\subscribe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\services\\wishlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\services\\wishlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\instagram\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\instagram\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\instagram\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\instagram\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\contactintro\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\contactintro\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\color\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\color\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.Wishlists.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\brand\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\brand\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\brand\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\brand\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\blogcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\blogcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\blog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\blog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\advantage\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\advantage\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\about\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\about\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\about\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\about\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\wwwroot\\assets\\css\\register\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\wwwroot\\assets\\css\\register\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\viewmodels\\account\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\account\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.WishlistProducts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.Settings.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\viewmodels\\user\\manageuserrolesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\viewmodels\\user\\manageuserrolesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|c:\\users\\asus\\desktop\\final_mvc_mozart\\final_mozart\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5690D8-22EE-4A03-8EBA-4508FAD460F5}|Final_MozArt\\Final_MozArt.csproj|solutionrelative:final_mozart\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,220 +146,448 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "dbo.Settings [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.Settings.sql",
-              "ToolTip": "dbo.Settings [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-27T12:12:14.65Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\About\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final_MozArt\\Views\\About\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\About\\Index.cshtml",
-              "RelativeToolTip": "Final_MozArt\\Views\\About\\Index.cshtml",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAAF0AAAAhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Setting\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Setting\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Setting\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Setting\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-27T12:06:10.462Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Services\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "Final_MozArt\\Services\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIA2wB0AAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:20:58.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\ProductService.cs",
-              "RelativeToolTip": "Final_MozArt\\Services\\ProductService.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAAAC4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:10:59.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShopController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\ShopController.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\ShopController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\ShopController.cs",
-              "RelativeToolTip": "Final_MozArt\\Controllers\\ShopController.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAcwCEBAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:10:59.359Z",
+              "WhenOpened": "2025-06-27T19:31:09.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WishlistController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\WishlistController.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\WishlistController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\WishlistController.cs",
-              "RelativeToolTip": "Final_MozArt\\Controllers\\WishlistController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T12:48:04.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Wishlist\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final_MozArt\\Views\\Wishlist\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Wishlist\\Index.cshtml*",
-              "RelativeToolTip": "Final_MozArt\\Views\\Wishlist\\Index.cshtml*",
-              "ViewState": "AgIAACUBAAAAAAAAAAAmwDwBAAAAAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-27T12:49:52.06Z",
+              "WhenOpened": "2025-06-27T19:28:46.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final_MozArt\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Final_MozArt\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEkBAAAAAAAAAAAAAGgBAAAQAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Video\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-27T13:16:01.221Z",
+              "WhenOpened": "2025-06-27T19:28:37.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BlogController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\BlogController.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\BlogController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\BlogController.cs",
-              "RelativeToolTip": "Final_MozArt\\Controllers\\BlogController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:15:31.725Z",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Subscribe\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Subscribe\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Subscribe\\Index.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Subscribe\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:28:28.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "WishlistService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\WishlistService.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Services\\WishlistService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\WishlistService.cs",
-              "RelativeToolTip": "Final_MozArt\\Services\\WishlistService.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAADwvy0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:10:59.369Z",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADUAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:28:06.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Final_MozArt\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:15:23.77Z",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADoAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:41.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:36.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Instagram\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:30.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "BasketController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\BasketController.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\BasketController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\BasketController.cs",
-              "RelativeToolTip": "Final_MozArt\\Controllers\\BasketController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T12:53:10.609Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\ContactIntro\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\ContactIntro\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\ContactIntro\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\ContactIntro\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:20.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Program.cs",
-              "RelativeDocumentMoniker": "Final_MozArt\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Program.cs",
-              "RelativeToolTip": "Final_MozArt\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T13:02:21.787Z",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Color\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Color\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Color\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Color\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:12.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "dbo.Wishlists [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.Wishlists.sql",
-              "ToolTip": "dbo.Wishlists [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-27T12:47:43.126Z",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:06.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:27:00.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:25:25.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "dbo.WishlistProducts [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.WishlistProducts.sql",
-              "ToolTip": "dbo.WishlistProducts [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-27T12:47:38.381Z",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:26:52.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Final_MozArt\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\appsettings.Development.json",
-              "RelativeToolTip": "Final_MozArt\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-27T12:47:27.695Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:26:45.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Contact\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final_MozArt\\Views\\Contact\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Contact\\Index.cshtml",
-              "RelativeToolTip": "Final_MozArt\\Views\\Contact\\Index.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAwwCYAAAA2AAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\BlogCategory\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\BlogCategory\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\BlogCategory\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\BlogCategory\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-27T12:07:17.942Z",
+              "WhenOpened": "2025-06-27T19:26:40.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:26:28.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:26:18.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Advantage\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Advantage\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Advantage\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Advantage\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:26:11.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\About\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\About\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\About\\Edit.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\About\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:25:48.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\About\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\About\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\About\\Create.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\About\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T19:24:11.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T19:24:01.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "register.css",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\wwwroot\\assets\\css\\register\\register.css",
+              "RelativeDocumentMoniker": "Final_MozArt\\wwwroot\\assets\\css\\register\\register.css",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\wwwroot\\assets\\css\\register\\register.css",
+              "RelativeToolTip": "Final_MozArt\\wwwroot\\assets\\css\\register\\register.css",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwFsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-27T19:19:27.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Final_MozArt\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAMwB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:41:06.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RegisterVM.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\ViewModels\\Account\\RegisterVM.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\Account\\RegisterVM.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\ViewModels\\Account\\RegisterVM.cs",
+              "RelativeToolTip": "Final_MozArt\\ViewModels\\Account\\RegisterVM.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:40:54.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T15:39:44.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\DependencyInjection.cs",
+              "RelativeToolTip": "Final_MozArt\\DependencyInjection.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwBMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:27:06.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAlwNUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T15:25:26.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T15:24:58.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ManageUserRolesVM.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\ViewModels\\User\\ManageUserRolesVM.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\ViewModels\\User\\ManageUserRolesVM.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\ViewModels\\User\\ManageUserRolesVM.cs",
+              "RelativeToolTip": "Final_MozArt\\ViewModels\\User\\ManageUserRolesVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:24:07.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Final_MozArt\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:22:42.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Services\\Interfaces\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeToolTip": "Final_MozArt\\Services\\Interfaces\\IRoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:20:38.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Program.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Program.cs",
+              "RelativeToolTip": "Final_MozArt\\Program.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAwGQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T14:54:07.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\RoleService.cs",
+              "RelativeDocumentMoniker": "Final_MozArt\\Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\Final_MozArt\\Services\\RoleService.cs",
+              "RelativeToolTip": "Final_MozArt\\Services\\RoleService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:20:53.317Z",
               "EditorCaption": ""
             }
           ]

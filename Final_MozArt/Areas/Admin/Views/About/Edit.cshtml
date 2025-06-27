@@ -30,7 +30,7 @@
 
     <div class="form-group mt-3">
         <label asp-for="Photo" class="control-label">New Photo (optional)</label>
-        <input asp-for="Photo" class="form-control" type="file" />
+        <input asp-for="Photo" class="form-control" type="file" accept="image/*" />
         <span asp-validation-for="Photo" class="text-danger"></span>
     </div>
 

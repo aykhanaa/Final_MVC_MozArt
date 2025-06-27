@@ -274,7 +274,7 @@
                                         <td class="name"><a href="product-details.html">@item.Name</a></td>
                                         <td class="price"><span>$@item.Price</span></td>
                                         <td class="add-to-cart">
-                                            <a href="basket.html" class="btn btn-light btn-hover-dark">
+                                            <a href="#" class="btn btn-light btn-hover-dark add-to-basket" data-id="@item.Id">
                                                 <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
                                             </a>
                                         </td>
@@ -336,3 +336,22 @@
 </script>
 
 
+<script>
+    $(document).on("click", ".add-to-basket", function (e) {
+        e.preventDefault();
+
+        const id = $(this).data("id");
+
+        $.ajax({
+            url: `/shop/addbasket?id=${id}`,
+            type: "POST",
+            success: function (res) {
+                $(".basket-count").text(res); // əgər layout-da count göstərirsə
+                window.location.reload()
+            },
+            error: function () {
+                alert("Could not add product to basket.");
+            }
+        });
+    });
+</script>

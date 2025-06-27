@@ -31,6 +31,8 @@ namespace Final_MozArt
             services.AddScoped<ISubscribeService, SubscribeService>();
             services.AddScoped<IBlogCommentService, BlogCommentService>();
             services.AddScoped<IWishlistService, WishlistService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddHttpContextAccessor();
 
             return services;
         }

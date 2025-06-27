@@ -1,0 +1,99 @@
+﻿@using Final_MozArt.ViewModels.User
+@model ManageUserRolesVM
+@{
+    ViewData["Title"] = "Manage User Roles";
+}
+
+<div class="container py-4">
+    <h2 class="mb-4 text-center" style="font-family: 'Georgia', serif; color: #6b4f3b;">
+        ☕ Manage User Roles
+    </h2>
+
+    <div class="row gy-4 justify-content-center">
+        <div class="col-md-7 col-lg-6">
+            <form asp-action="AddRole" method="post" class="p-4 border rounded shadow-sm bg-white">
+                @Html.AntiForgeryToken()
+                <h4 class="mb-3 text-success">Add Role</h4>
+                <div class="mb-3">
+                    <select name="username" class="form-select" required>
+                        <option value="" disabled selected>Choose Username</option>
+                        @foreach (var username in Model.Usernames)
+                        {
+                            <option value="@username">@username</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select name="role" class="form-select" required>
+                        <option value="" disabled selected>Choose Role</option>
+                        @foreach (var role in Model.Roles.Where(r => r != "SuperAdmin"))
+                        {
+                            <option value="@role">@role</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Add Role</button>
+            </form>
+        </div>
+
+        <!-- Remove Role Form -->
+        <div class="col-md-7 col-lg-6">
+            <form asp-action="RemoveRole" method="post" id="removeRoleForm" class="p-4 border rounded shadow-sm bg-white">
+                @Html.AntiForgeryToken()
+                <h4 class="mb-3 text-danger">Remove Role</h4>
+                <div class="mb-3">
+                    <select name="username" class="form-select" required>
+                        <option value="" disabled selected>Choose Username</option>
+                        @foreach (var username in Model.Usernames)
+                        {
+                            <option value="@username">@username</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select name="role" class="form-select" required>
+                        <option value="" disabled selected>Choose Role</option>
+                        @foreach (var role in Model.Roles.Where(r => r != "SuperAdmin"))
+                        {
+                            <option value="@role">@role</option>
+                        }
+                    </select>
+                </div>
+                <button type="button" id="removeRoleBtn" class="btn btn-danger w-100">Remove Role</button>
+            </form>
+        </div>
+    </div>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-info mt-4 text-center" role="alert" style="font-family: 'Georgia', serif;">
+            @TempData["Message"]
+        </div>
+    }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("removeRoleBtn").addEventListener("click", function () {
+        const form = document.getElementById("removeRoleForm");
+        const username = form.querySelector('select[name="username"]').value;
+        const role = form.querySelector('select[name="role"]').value;
+
+        if (!username || !role) {
+            Swal.fire("Oops", "Please select username and role.", "warning");
+            return;
+        }
+
+        Swal.fire({
+            title: `Remove role '${role}' from user '${username}'?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, remove',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.submit();
+            }
+        });
+    });
+</script>

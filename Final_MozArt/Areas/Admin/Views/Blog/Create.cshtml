@@ -24,7 +24,7 @@
 
         <div class="form-group">
             <label asp-for="Photo">Image</label>
-            <input asp-for="Photo" class="form-control" type="file" />
+            <input asp-for="Photo" class="form-control" type="file" accept="image/*" />
             <span class="text-danger" asp-validation-for="Photo"></span>
         </div>
 

@@ -16,14 +16,12 @@ namespace Final_MozArt.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
-        private readonly ISettingService _settingService;
         private readonly IBasketService _basketService;
         private readonly UserManager<AppUser> _userManager;
         private readonly AppDbContext _context;
-        public AccountController(IAccountService accountService, ISettingService settingService, IBasketService basketService, UserManager<AppUser> userManager,AppDbContext context)
+        public AccountController(IAccountService accountService, IBasketService basketService, UserManager<AppUser> userManager,AppDbContext context)
         {
             _accountService = accountService;
-            _settingService = settingService;
             _basketService = basketService;
             _userManager = userManager;
             _context = context;
@@ -31,14 +29,8 @@ namespace Final_MozArt.Controllers
 
         [HttpGet]
         public IActionResult Register()
-        {
-            var setting = _settingService.GetSettings();
-            RegisterVM model = new RegisterVM()
-            {
-                Setting = setting,
-            };
-            
-            return View(model);
+        {            
+            return View();
         }
 
         [HttpPost]

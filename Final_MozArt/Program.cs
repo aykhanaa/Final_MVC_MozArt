@@ -1,4 +1,4 @@
-using Final_MozArt;
+﻿using Final_MozArt;
 using Final_MozArt.Data;
 using Final_MozArt.Helpers;
 using Final_MozArt.Middlewares;
@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Stripe;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,9 +30,6 @@ var conString = builder.Configuration.GetConnectionString("Default") ??
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(conString));
-
-           //builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-           //builder.Services.AddProblemDetails();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -61,6 +59,11 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
+// Stripe SDK üçün secret key-i təyin et
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
+
 
 builder.Services.AddServiceLayer();
 
@@ -68,17 +71,27 @@ builder.Host.UseSerilog();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+//// Configure the HTTP request pipeline.
+//if (!app.Environment.IsDevelopment())
+//{
+//    app.UseExceptionHandler("/Home/Error");
+//    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+//    app.UseHsts();
+//}
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 
-        //app.UseExceptionHandler();
 //app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseStaticFiles();
@@ -86,7 +99,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 app.UseAuthentication();
-app.UseAuthorization(); 
+app.UseAuthorization();
 
 //app.UseStatusCodePages(context =>
 //{

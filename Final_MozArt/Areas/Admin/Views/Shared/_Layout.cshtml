@@ -206,9 +206,13 @@
             </li><!-- End Client Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="qqqqqqqqqqqq" asp-action="Index">
-                    <i class="bi bi-journal-text"></i><span>Bosss</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
+                {
+                    <a class="nav-link collapsed" asp-area="Admin" asp-controller="User" asp-action="Index">
+                        <i class="bi bi-journal-text"></i><span>Add Role</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                }
+              
             </li><!-- End Client Nav -->
 
             <li class="nav-item">

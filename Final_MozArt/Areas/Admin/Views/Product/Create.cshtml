@@ -56,7 +56,7 @@
 
         <div class="mb-4">
             <label asp-for="Photos" class="form-label">Images</label>
-            <input asp-for="Photos" type="file" class="form-control" multiple />
+            <input asp-for="Photos" type="file" class="form-control" multiple accept="image/*" />
             <span asp-validation-for="Photos" class="text-danger"></span>
         </div>
 
