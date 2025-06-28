@@ -7,10 +7,8 @@ namespace Final_MozArt.ViewModels.Setting
     {
         public int Id { get; set; }
 
-        [Required]
-        public string Key { get; set; }
+        public string? Key { get; set; }
 
-        [Required]
         public string? Value { get; set; }
     }
 }

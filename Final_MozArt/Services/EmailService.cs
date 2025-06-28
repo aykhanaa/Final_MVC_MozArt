@@ -28,7 +28,7 @@ namespace Final_MozArt.Services
             // send email
             using var smtp = new SmtpClient();
             smtp.Connect(_emailSettings.Server, _emailSettings.Port, SecureSocketOptions.StartTls);
-            smtp.Authenticate(from ?? _emailSettings.From, _emailSettings.Password);
+            smtp.Authenticate( _emailSettings.From, _emailSettings.Password);
             smtp.Send(email);
             smtp.Disconnect(true);
         }

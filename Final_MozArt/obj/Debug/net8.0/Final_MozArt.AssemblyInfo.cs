@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Final_MozArt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c8c0f7f5c2665c995bae37cf3d4ba3a2049d8d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+101b3ab930c32f6efd4e09d80cac5a9dce4a2608")]
 [assembly: System.Reflection.AssemblyProductAttribute("Final_MozArt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Final_MozArt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
