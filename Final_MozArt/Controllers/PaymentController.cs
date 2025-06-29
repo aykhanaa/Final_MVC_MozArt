@@ -1,13 +1,10 @@
 ﻿using Final_MozArt.Data;
 using Final_MozArt.Helpers;
 using Final_MozArt.Models;
-using Final_MozArt.Services;
 using Final_MozArt.Services.Interfaces;
 using Final_MozArt.ViewModels.Basket;
-using Humanizer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Stripe.Checkout;
@@ -128,13 +125,13 @@ namespace Final_MozArt.Controllers
             var subject = "Ödəniş uğurla tamamlandı";
 
             string body = $@"
-    <!DOCTYPE html>
-    <html lang='az'>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>Ödəniş Təsdiqi</title>
-        <style>
+              <!DOCTYPE html>
+              <html lang='az'>
+              <head>
+              <meta charset='UTF-8'>
+              <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+              <title>Ödəniş Təsdiqi</title>
+              <style>
             body {{
                 font-family: Arial, sans-serif;
                 background-color: #f4f4f4;
@@ -223,9 +220,5 @@ namespace Final_MozArt.Controllers
 
             _emailService.Send(user.Email, subject, body);
         }
-
     }
 }
-
-
-

@@ -10,7 +10,7 @@
                         <div class="header-logo">
                              <a asp-controller="Home" asp-action="Index">
                             <img style="margin-bottom: 20px;"
-                            src="~/assets/img/home/web-img-white.png" alt="Learts Logo">
+                                     src="~/assets/img/home/@Model.Setting["HeaderImg"]" alt="Learts Logo">
                             </a>  
                         </div>
                     </div>
@@ -42,7 +42,8 @@
                             <div style="width: 120px;" class="col-auto d-none d-xl-block">
                                 <div class="header2-search">
                                     <form id="searchForm" method="get" action="/Shop/Index" class="search-form">
-                                        <input id="searchInput" type="text" name="query" placeholder="Search products..." value="@Context.Request.Query["query"]" />
+                                        <input id="searchInput" type="text" name="query" placeholder="Search"
+                                               value="@Context.Request.Query["query"]" autocomplete="off" />
                                         <button type="submit" class="btn">
                                             <i class="fas fa-search"></i>
                                         </button>

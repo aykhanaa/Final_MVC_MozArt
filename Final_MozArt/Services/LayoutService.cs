@@ -21,12 +21,13 @@ namespace Final_MozArt.Services
             Dictionary<string, string> settingDatas = _settingService.GetSettings();
             int basketCount = _basketService.GetCount();
             int wishlistCount = _wishlistService.GetCount();
+
           
             return new HeaderVM
             {
                 BasketCount = basketCount,
-                WishlistCount = wishlistCount
-              
+                WishlistCount = wishlistCount,
+                Setting = settingDatas 
             };
         }
     }
