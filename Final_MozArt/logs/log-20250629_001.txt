@@ -17768,3 +17768,902 @@ FROM [Settings] AS [s]
 2025-06-29 21:45:10.654 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/a54b856e-2ac8-4bfc-bc4a-829e5fbdab47_product-5-1.webp - 304 null image/webp 68.5196ms
 2025-06-29 21:45:10.659 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 24.4122ms
 2025-06-29 21:45:10.696 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:30:28.695 +04:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-29 23:30:28.824 +04:00 [INF] Now listening on: https://localhost:7286
+2025-06-29 23:30:28.829 +04:00 [INF] Now listening on: http://localhost:5244
+2025-06-29 23:30:28.860 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 23:30:28.863 +04:00 [INF] Hosting environment: Development
+2025-06-29 23:30:28.868 +04:00 [INF] Content root path: C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt
+2025-06-29 23:30:29.338 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:30:29.421 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:30:29.448 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:30:30.060 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-06-29 23:30:30.818 +04:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:30:30.921 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:30:30.954 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:30:30.989 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:30:31.254 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:30:31.320 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:30:31.381 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:30:31.410 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:30:31.574 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:30:31.630 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:30:31.699 +04:00 [INF] Executed ViewResult - view Index executed in 291.1401ms.
+2025-06-29 23:30:31.699 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/select2.min.css - null null
+2025-06-29 23:30:31.708 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/swiper.min.css - null null
+2025-06-29 23:30:31.708 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/perfect-scrollbar.css - null null
+2025-06-29 23:30:31.709 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/nice-select.css - null null
+2025-06-29 23:30:31.709 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/ion.rangeSlider.min.css - null null
+2025-06-29 23:30:31.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/photoswipe.css - null null
+2025-06-29 23:30:31.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/photoswipe-default-skin.css - null null
+2025-06-29 23:30:31.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/magnific-popup.css - null null
+2025-06-29 23:30:31.712 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 2256.8171ms
+2025-06-29 23:30:31.718 +04:00 [INF] The file /assets/css/other/select2.min.css was not modified
+2025-06-29 23:30:31.732 +04:00 [INF] The file /assets/css/other/swiper.min.css was not modified
+2025-06-29 23:30:31.737 +04:00 [INF] The file /assets/css/other/perfect-scrollbar.css was not modified
+2025-06-29 23:30:31.741 +04:00 [INF] The file /assets/css/other/nice-select.css was not modified
+2025-06-29 23:30:31.746 +04:00 [INF] The file /assets/css/other/ion.rangeSlider.min.css was not modified
+2025-06-29 23:30:31.751 +04:00 [INF] The file /assets/css/other/photoswipe.css was not modified
+2025-06-29 23:30:31.756 +04:00 [INF] The file /assets/css/other/photoswipe-default-skin.css was not modified
+2025-06-29 23:30:31.760 +04:00 [INF] The file /assets/css/other/magnific-popup.css was not modified
+2025-06-29 23:30:31.763 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:30:31.766 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/select2.min.css - 304 null text/css 66.9338ms
+2025-06-29 23:30:31.767 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/swiper.min.css - 304 null text/css 58.7901ms
+2025-06-29 23:30:31.768 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/perfect-scrollbar.css - 304 null text/css 59.8666ms
+2025-06-29 23:30:31.769 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/nice-select.css - 304 null text/css 60.1855ms
+2025-06-29 23:30:31.771 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/ion.rangeSlider.min.css - 304 null text/css 62.3229ms
+2025-06-29 23:30:31.772 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/photoswipe.css - 304 null text/css 61.6958ms
+2025-06-29 23:30:31.773 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/photoswipe-default-skin.css - 304 null text/css 62.2516ms
+2025-06-29 23:30:31.775 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/magnific-popup.css - 304 null text/css 63.5883ms
+2025-06-29 23:30:31.780 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/slick.css - null null
+2025-06-29 23:30:31.783 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/bootstrap.min.css - null null
+2025-06-29 23:30:31.784 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 2447.8674ms
+2025-06-29 23:30:31.789 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/bootstrap.pro.min.css - null null
+2025-06-29 23:30:31.795 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/other/themify-icons.css - null null
+2025-06-29 23:30:31.799 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/home/home.css - null null
+2025-06-29 23:30:31.806 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/web-img-white.png - null null
+2025-06-29 23:30:31.810 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/e4e21d31-41fc-4895-b229-ba0fb33deb01-slide-1.webp - null null
+2025-06-29 23:30:31.815 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/e14e7d39-f066-4099-84b0-111bc244128a-slide-4-n.webp - null null
+2025-06-29 23:30:31.818 +04:00 [INF] The file /assets/css/other/slick.css was not modified
+2025-06-29 23:30:31.821 +04:00 [INF] The file /assets/css/other/bootstrap.min.css was not modified
+2025-06-29 23:30:31.826 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/dae38bf1-5f16-4f73-92fc-a9df352d99c1-slide-2.webp - null null
+2025-06-29 23:30:31.829 +04:00 [INF] The file /assets/css/other/bootstrap.pro.min.css was not modified
+2025-06-29 23:30:31.833 +04:00 [INF] The file /assets/css/other/themify-icons.css was not modified
+2025-06-29 23:30:31.837 +04:00 [INF] The file /assets/css/home/home.css was not modified
+2025-06-29 23:30:31.840 +04:00 [INF] The file /assets/img/home/web-img-white.png was not modified
+2025-06-29 23:30:31.843 +04:00 [INF] The file /assets/img/home/e4e21d31-41fc-4895-b229-ba0fb33deb01-slide-1.webp was not modified
+2025-06-29 23:30:31.848 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/slick.css - 304 null text/css 67.2981ms
+2025-06-29 23:30:31.849 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/bootstrap.min.css - 304 null text/css 65.1051ms
+2025-06-29 23:30:31.851 +04:00 [INF] The file /assets/img/home/dae38bf1-5f16-4f73-92fc-a9df352d99c1-slide-2.webp was not modified
+2025-06-29 23:30:31.852 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/2947008d-d98c-4833-91d1-a85f7a507353-slide-3.webp - null null
+2025-06-29 23:30:31.852 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/bootstrap.pro.min.css - 304 null text/css 63.1972ms
+2025-06-29 23:30:31.854 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/other/themify-icons.css - 304 null text/css 58.6075ms
+2025-06-29 23:30:31.855 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/home/home.css - 304 null text/css 55.837ms
+2025-06-29 23:30:31.856 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/web-img-white.png - 304 null image/png 49.6607ms
+2025-06-29 23:30:31.857 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/e4e21d31-41fc-4895-b229-ba0fb33deb01-slide-1.webp - 304 null image/webp 47.2665ms
+2025-06-29 23:30:31.862 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/f90b0735-116b-4a7c-8726-1745034ee946-slider-5-n.png - null null
+2025-06-29 23:30:31.865 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/a69e25ae-a225-47d5-8482-72572d32955e-category-img-5-n.webp - null null
+2025-06-29 23:30:31.867 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/dae38bf1-5f16-4f73-92fc-a9df352d99c1-slide-2.webp - 304 null image/webp 41.0525ms
+2025-06-29 23:30:31.871 +04:00 [INF] The file /assets/img/home/2947008d-d98c-4833-91d1-a85f7a507353-slide-3.webp was not modified
+2025-06-29 23:30:31.875 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/5708a1c6-64f3-4d86-a54f-f3e5910ad98e_product-9-1.webp - null null
+2025-06-29 23:30:31.878 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/8459f917-b53c-49eb-879a-f5be6f7a5135_product-9-2.webp - null null
+2025-06-29 23:30:31.884 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/96f3ce24-c315-443c-ab07-786a72a23a2d_product-4-1.webp - null null
+2025-06-29 23:30:31.888 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/9f4c3273-3cc9-4dca-bc89-c1b16d09d416_product-4-2.webp - null null
+2025-06-29 23:30:31.893 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/fb530cb0-7546-4dea-a973-663693794688_product-7-1.webp - null null
+2025-06-29 23:30:31.901 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/d24e410e-8303-475b-8bac-d3e8b4a28e11_product-7-2.webp - null null
+2025-06-29 23:30:31.906 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/a54b856e-2ac8-4bfc-bc4a-829e5fbdab47_product-5-1.webp - null null
+2025-06-29 23:30:31.910 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/8626c9fc-c957-40eb-8060-5300c1d50f23_product-5-2.webp - null null
+2025-06-29 23:30:31.912 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/2947008d-d98c-4833-91d1-a85f7a507353-slide-3.webp - 304 null image/webp 60.7705ms
+2025-06-29 23:30:31.917 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/99d770fd-8135-4b37-8678-7f0ff7183053_product-10-1.webp - null null
+2025-06-29 23:30:31.921 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/8459f917-b53c-49eb-879a-f5be6f7a5135_product-9-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\8459f917-b53c-49eb-879a-f5be6f7a5135_product-9-2.webp'
+2025-06-29 23:30:31.923 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/96f3ce24-c315-443c-ab07-786a72a23a2d_product-4-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\96f3ce24-c315-443c-ab07-786a72a23a2d_product-4-1.webp'
+2025-06-29 23:30:31.926 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/9f4c3273-3cc9-4dca-bc89-c1b16d09d416_product-4-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\9f4c3273-3cc9-4dca-bc89-c1b16d09d416_product-4-2.webp'
+2025-06-29 23:30:31.928 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/fb530cb0-7546-4dea-a973-663693794688_product-7-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\fb530cb0-7546-4dea-a973-663693794688_product-7-1.webp'
+2025-06-29 23:30:31.932 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/d24e410e-8303-475b-8bac-d3e8b4a28e11_product-7-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\d24e410e-8303-475b-8bac-d3e8b4a28e11_product-7-2.webp'
+2025-06-29 23:30:31.940 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/a54b856e-2ac8-4bfc-bc4a-829e5fbdab47_product-5-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\a54b856e-2ac8-4bfc-bc4a-829e5fbdab47_product-5-1.webp'
+2025-06-29 23:30:31.944 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/8626c9fc-c957-40eb-8060-5300c1d50f23_product-5-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\8626c9fc-c957-40eb-8060-5300c1d50f23_product-5-2.webp'
+2025-06-29 23:30:31.948 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/e2b9ffdb-ce0d-4a2f-89dc-62c02fa63a70_product-10-2.webp - null null
+2025-06-29 23:30:31.949 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/8459f917-b53c-49eb-879a-f5be6f7a5135_product-9-2.webp - 200 3274 image/webp 70.5405ms
+2025-06-29 23:30:31.951 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/96f3ce24-c315-443c-ab07-786a72a23a2d_product-4-1.webp - 200 1136 image/webp 67.2975ms
+2025-06-29 23:30:31.953 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/9f4c3273-3cc9-4dca-bc89-c1b16d09d416_product-4-2.webp - 200 1704 image/webp 65.0424ms
+2025-06-29 23:30:31.954 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/fb530cb0-7546-4dea-a973-663693794688_product-7-1.webp - 200 3126 image/webp 61.2257ms
+2025-06-29 23:30:31.955 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/d24e410e-8303-475b-8bac-d3e8b4a28e11_product-7-2.webp - 200 2654 image/webp 54.2138ms
+2025-06-29 23:30:31.958 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/a54b856e-2ac8-4bfc-bc4a-829e5fbdab47_product-5-1.webp - 200 1156 image/webp 52.087ms
+2025-06-29 23:30:31.959 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/8626c9fc-c957-40eb-8060-5300c1d50f23_product-5-2.webp - 200 1180 image/webp 48.8733ms
+2025-06-29 23:30:31.963 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/e10ec800-6dee-479a-9691-034bbbffbf87-instagram-1.webp - null null
+2025-06-29 23:30:31.967 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/8fca7551-aecd-44aa-83c3-24542640c1e9-instagram-2.webp - null null
+2025-06-29 23:30:31.971 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/ba47c866-169d-4f20-900e-784cc4c693f1-instagram-3.webp - null null
+2025-06-29 23:30:31.976 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:30:31.981 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/313ba257-16f6-4539-961c-5942bb692010-instagram-4.webp - null null
+2025-06-29 23:30:31.985 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/ab94015f-5a77-4499-807c-cc1b2d739cf5-instagram-5.webp - null null
+2025-06-29 23:30:31.989 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/9bca08dc-5f38-45f4-9cee-b7cb64a57ee6-category-img-4.webp - null null
+2025-06-29 23:30:31.995 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp - null null
+2025-06-29 23:30:32.000 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp - null null
+2025-06-29 23:30:32.004 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/modernizr-3.6.0.min.js - null null
+2025-06-29 23:30:32.008 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery-3.4.1.min.js - null null
+2025-06-29 23:30:32.015 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js - null null
+2025-06-29 23:30:32.017 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp - null null
+2025-06-29 23:30:32.021 +04:00 [INF] Sending file. Request path: '/assets/img/home/ab94015f-5a77-4499-807c-cc1b2d739cf5-instagram-5.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\ab94015f-5a77-4499-807c-cc1b2d739cf5-instagram-5.webp'
+2025-06-29 23:30:32.024 +04:00 [INF] The file /assets/img/home/9bca08dc-5f38-45f4-9cee-b7cb64a57ee6-category-img-4.webp was not modified
+2025-06-29 23:30:32.026 +04:00 [INF] The file /assets/img/home/2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp was not modified
+2025-06-29 23:30:32.030 +04:00 [INF] The file /assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp was not modified
+2025-06-29 23:30:32.032 +04:00 [INF] The file /assets/js/other/modernizr-3.6.0.min.js was not modified
+2025-06-29 23:30:32.038 +04:00 [INF] The file /assets/js/other/jquery-3.4.1.min.js was not modified
+2025-06-29 23:30:32.050 +04:00 [INF] The file /assets/js/other/bootstrap.bundle.min.js was not modified
+2025-06-29 23:30:32.055 +04:00 [INF] The file /assets/img/product-details/ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp was not modified
+2025-06-29 23:30:32.057 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/ab94015f-5a77-4499-807c-cc1b2d739cf5-instagram-5.webp - 200 2064 image/webp 71.8134ms
+2025-06-29 23:30:32.058 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/9bca08dc-5f38-45f4-9cee-b7cb64a57ee6-category-img-4.webp - 304 null image/webp 69.0032ms
+2025-06-29 23:30:32.060 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/2a5d2e21-d60a-4a0a-a93e-ef8a214771cb-category-img-3.webp - 304 null image/webp 64.8469ms
+2025-06-29 23:30:32.063 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/208692da-8213-4e61-8a2b-6689e999e920-category-img-2.webp - 304 null image/webp 62.8489ms
+2025-06-29 23:30:32.064 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/modernizr-3.6.0.min.js - 304 null text/javascript 60.6995ms
+2025-06-29 23:30:32.066 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery-3.4.1.min.js - 304 null text/javascript 58.0912ms
+2025-06-29 23:30:32.069 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/bootstrap.bundle.min.js - 304 null text/javascript 54.0835ms
+2025-06-29 23:30:32.071 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/ea73d254-b7fa-4a6a-83b8-82113b4dc665_product-3-1.webp - 304 null image/webp 54.1814ms
+2025-06-29 23:30:32.077 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp - null null
+2025-06-29 23:30:32.084 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp - null null
+2025-06-29 23:30:32.090 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp - null null
+2025-06-29 23:30:32.098 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp - null null
+2025-06-29 23:30:32.103 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/product-details/9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp - null null
+2025-06-29 23:30:32.110 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp - null null
+2025-06-29 23:30:32.117 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp - null null
+2025-06-29 23:30:32.123 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp - null null
+2025-06-29 23:30:32.129 +04:00 [INF] The file /assets/img/product-details/f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp was not modified
+2025-06-29 23:30:32.134 +04:00 [INF] The file /assets/img/product-details/4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp was not modified
+2025-06-29 23:30:32.165 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/4ea199c9-8e31-4a53-9964-434b819efcd6_product-8-1.webp - 304 null image/webp 80.9768ms
+2025-06-29 23:30:32.142 +04:00 [INF] The file /assets/img/product-details/16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp was not modified
+2025-06-29 23:30:32.148 +04:00 [INF] The file /assets/img/product-details/9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp was not modified
+2025-06-29 23:30:32.154 +04:00 [INF] The file /assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp was not modified
+2025-06-29 23:30:32.158 +04:00 [INF] The file /assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp was not modified
+2025-06-29 23:30:32.162 +04:00 [INF] The file /assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp was not modified
+2025-06-29 23:30:32.164 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/f73b4592-09b3-4ffb-b689-82712b30ff8a_product-3-2.webp - 304 null image/webp 86.6233ms
+2025-06-29 23:30:32.139 +04:00 [INF] The file /assets/img/product-details/7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp was not modified
+2025-06-29 23:30:32.171 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp - null null
+2025-06-29 23:30:32.174 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/16f4eb88-b037-4a09-8998-2bc87c582ee3_motocycle  1-1.webp - 304 null image/webp 75.4066ms
+2025-06-29 23:30:32.175 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/9b977a6b-4c75-496e-986f-14e54b209a81_motocycle 1-2.webp - 304 null image/webp 72.6137ms
+2025-06-29 23:30:32.177 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/1f717c99-5ad2-4c7b-8c04-0d89e86bceb3-brand-1.webp - 304 null image/webp 67.2277ms
+2025-06-29 23:30:32.178 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/55f061fa-62f5-44da-8ac1-7004cf01aed5-brand-2.webp - 304 null image/webp 61.1321ms
+2025-06-29 23:30:32.182 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/68b91742-f1f6-441f-bef9-82cf7eddce2f-brand-3.webp - 304 null image/webp 59.1583ms
+2025-06-29 23:30:32.188 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp - null null
+2025-06-29 23:30:32.190 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/7da7d8d1-0839-4591-9570-5ca9976df287_product-8-2.webp - 304 null image/webp 99.1139ms
+2025-06-29 23:30:32.194 +04:00 [INF] The file /assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp was not modified
+2025-06-29 23:30:32.200 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp - null null
+2025-06-29 23:30:32.205 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp - null null
+2025-06-29 23:30:32.211 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp - null null
+2025-06-29 23:30:32.239 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/select2.min.js - null null
+2025-06-29 23:30:32.239 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/mozart_logo_.png - null null
+2025-06-29 23:30:32.239 +04:00 [INF] The file /assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp was not modified
+2025-06-29 23:30:32.240 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.nice-select.min.js - null null
+2025-06-29 23:30:32.241 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/810d09c1-cd6a-4eec-a771-d8794041384f-brand-4.webp - 304 null image/webp 69.8226ms
+2025-06-29 23:30:32.246 +04:00 [INF] The file /assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp was not modified
+2025-06-29 23:30:32.250 +04:00 [INF] The file /assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp was not modified
+2025-06-29 23:30:32.254 +04:00 [INF] The file /assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp was not modified
+2025-06-29 23:30:32.258 +04:00 [INF] The file /assets/js/other/select2.min.js was not modified
+2025-06-29 23:30:32.261 +04:00 [INF] The file /assets/img/home/mozart_logo_.png was not modified
+2025-06-29 23:30:32.262 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/eb878598-5312-46ac-9cc4-0648303c456b-brand-5.webp - 304 null image/webp 73.6384ms
+2025-06-29 23:30:32.265 +04:00 [INF] The file /assets/js/other/jquery.nice-select.min.js was not modified
+2025-06-29 23:30:32.267 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/perfect-scrollbar.min.js - null null
+2025-06-29 23:30:32.269 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/31bde835-a16a-4e49-a4ab-e3df4cd344ea-brand-6.webp - 304 null image/webp 68.8012ms
+2025-06-29 23:30:32.270 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/8db7ad2c-ba8f-4672-b6df-a227080c7242-brand-7.webp - 304 null image/webp 65.357ms
+2025-06-29 23:30:32.271 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/f5fb166d-b2db-4b9e-ab2f-c5e2d241ded6-brand-8.webp - 304 null image/webp 60.2903ms
+2025-06-29 23:30:32.273 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/select2.min.js - 304 null text/javascript 44.3972ms
+2025-06-29 23:30:32.274 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/mozart_logo_.png - 304 null image/png 45.2943ms
+2025-06-29 23:30:32.277 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/swiper.min.js - null null
+2025-06-29 23:30:32.278 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.nice-select.min.js - 304 null text/javascript 38.6098ms
+2025-06-29 23:30:32.281 +04:00 [INF] The file /assets/js/other/perfect-scrollbar.min.js was not modified
+2025-06-29 23:30:32.285 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/slick.min.js - null null
+2025-06-29 23:30:32.288 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/mo.min.js - null null
+2025-06-29 23:30:32.291 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.ajaxchimp.min.js - null null
+2025-06-29 23:30:32.294 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.countdown.min.js - null null
+2025-06-29 23:30:32.298 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/imagesloaded.pkgd.min.js - null null
+2025-06-29 23:30:32.300 +04:00 [INF] The file /assets/js/other/swiper.min.js was not modified
+2025-06-29 23:30:32.304 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/isotope.pkgd.min.js - null null
+2025-06-29 23:30:32.306 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/perfect-scrollbar.min.js - 304 null text/javascript 38.0979ms
+2025-06-29 23:30:32.308 +04:00 [INF] The file /assets/js/other/slick.min.js was not modified
+2025-06-29 23:30:32.310 +04:00 [INF] The file /assets/js/other/mo.min.js was not modified
+2025-06-29 23:30:32.313 +04:00 [INF] The file /assets/js/other/jquery.ajaxchimp.min.js was not modified
+2025-06-29 23:30:32.316 +04:00 [INF] The file /assets/js/other/jquery.countdown.min.js was not modified
+2025-06-29 23:30:32.320 +04:00 [INF] The file /assets/js/other/imagesloaded.pkgd.min.js was not modified
+2025-06-29 23:30:32.321 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/swiper.min.js - 304 null text/javascript 43.8451ms
+2025-06-29 23:30:32.324 +04:00 [INF] The file /assets/js/other/isotope.pkgd.min.js was not modified
+2025-06-29 23:30:32.327 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.matchHeight-min.js - null null
+2025-06-29 23:30:32.328 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/slick.min.js - 304 null text/javascript 43.2631ms
+2025-06-29 23:30:32.329 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/mo.min.js - 304 null text/javascript 41.8843ms
+2025-06-29 23:30:32.331 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.ajaxchimp.min.js - 304 null text/javascript 39.311ms
+2025-06-29 23:30:32.333 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.countdown.min.js - 304 null text/javascript 38.4196ms
+2025-06-29 23:30:32.334 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/imagesloaded.pkgd.min.js - 304 null text/javascript 36.2855ms
+2025-06-29 23:30:32.338 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/ion.rangeSlider.min.js - null null
+2025-06-29 23:30:32.340 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/isotope.pkgd.min.js - 304 null text/javascript 35.9142ms
+2025-06-29 23:30:32.342 +04:00 [INF] The file /assets/js/other/jquery.matchHeight-min.js was not modified
+2025-06-29 23:30:32.347 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/photoswipe.min.js - null null
+2025-06-29 23:30:32.350 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/photoswipe-ui-default.min.js - null null
+2025-06-29 23:30:32.356 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.zoom.min.js - null null
+2025-06-29 23:30:32.359 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/ResizeSensor.js - null null
+2025-06-29 23:30:32.364 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.sticky-sidebar.min.js - null null
+2025-06-29 23:30:32.368 +04:00 [INF] The file /assets/js/other/ion.rangeSlider.min.js was not modified
+2025-06-29 23:30:32.371 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/product360.js - null null
+2025-06-29 23:30:32.372 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.matchHeight-min.js - 304 null text/javascript 44.7495ms
+2025-06-29 23:30:32.377 +04:00 [INF] The file /assets/js/other/photoswipe.min.js was not modified
+2025-06-29 23:30:32.379 +04:00 [INF] The file /assets/js/other/photoswipe-ui-default.min.js was not modified
+2025-06-29 23:30:32.384 +04:00 [INF] The file /assets/js/other/jquery.zoom.min.js was not modified
+2025-06-29 23:30:32.387 +04:00 [INF] The file /assets/js/other/ResizeSensor.js was not modified
+2025-06-29 23:30:32.393 +04:00 [INF] The file /assets/js/other/jquery.sticky-sidebar.min.js was not modified
+2025-06-29 23:30:32.394 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/ion.rangeSlider.min.js - 304 null text/javascript 55.674ms
+2025-06-29 23:30:32.397 +04:00 [INF] The file /assets/js/other/product360.js was not modified
+2025-06-29 23:30:32.400 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.magnific-popup.min.js - null null
+2025-06-29 23:30:32.402 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/photoswipe.min.js - 304 null text/javascript 55.3279ms
+2025-06-29 23:30:32.404 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/photoswipe-ui-default.min.js - 304 null text/javascript 53.0972ms
+2025-06-29 23:30:32.405 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.zoom.min.js - 304 null text/javascript 49.1481ms
+2025-06-29 23:30:32.406 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/ResizeSensor.js - 304 null text/javascript 46.976ms
+2025-06-29 23:30:32.407 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.sticky-sidebar.min.js - 304 null text/javascript 42.7654ms
+2025-06-29 23:30:32.412 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/jquery.scrollUp.min.js - null null
+2025-06-29 23:30:32.413 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/product360.js - 304 null text/javascript 41.8659ms
+2025-06-29 23:30:32.417 +04:00 [INF] The file /assets/js/other/jquery.magnific-popup.min.js was not modified
+2025-06-29 23:30:32.420 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/other/scrollax.min.js - null null
+2025-06-29 23:30:32.425 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/home/home.js - null null
+2025-06-29 23:30:32.428 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:30:32.436 +04:00 [INF] Sending file. Request path: '/assets/img/home/e14e7d39-f066-4099-84b0-111bc244128a-slide-4-n.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\e14e7d39-f066-4099-84b0-111bc244128a-slide-4-n.webp'
+2025-06-29 23:30:32.437 +04:00 [INF] Sending file. Request path: '/assets/img/home/a69e25ae-a225-47d5-8482-72572d32955e-category-img-5-n.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\a69e25ae-a225-47d5-8482-72572d32955e-category-img-5-n.webp'
+2025-06-29 23:30:32.440 +04:00 [INF] The file /assets/js/other/jquery.scrollUp.min.js was not modified
+2025-06-29 23:30:32.446 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/5708a1c6-64f3-4d86-a54f-f3e5910ad98e_product-9-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\5708a1c6-64f3-4d86-a54f-f3e5910ad98e_product-9-1.webp'
+2025-06-29 23:30:32.448 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.magnific-popup.min.js - 304 null text/javascript 47.2606ms
+2025-06-29 23:30:32.451 +04:00 [INF] The file /assets/js/other/scrollax.min.js was not modified
+2025-06-29 23:30:32.453 +04:00 [INF] The file /assets/js/home/home.js was not modified
+2025-06-29 23:30:32.456 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/e14e7d39-f066-4099-84b0-111bc244128a-slide-4-n.webp - 200 16096 image/webp 641.7093ms
+2025-06-29 23:30:32.461 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/a69e25ae-a225-47d5-8482-72572d32955e-category-img-5-n.webp - 200 6082 image/webp 595.2592ms
+2025-06-29 23:30:32.480 +04:00 [INF] Sending file. Request path: '/assets/img/home/e10ec800-6dee-479a-9691-034bbbffbf87-instagram-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\e10ec800-6dee-479a-9691-034bbbffbf87-instagram-1.webp'
+2025-06-29 23:30:32.461 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/99d770fd-8135-4b37-8678-7f0ff7183053_product-10-1.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\99d770fd-8135-4b37-8678-7f0ff7183053_product-10-1.webp'
+2025-06-29 23:30:32.462 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/5708a1c6-64f3-4d86-a54f-f3e5910ad98e_product-9-1.webp - 200 6246 image/webp 586.9892ms
+2025-06-29 23:30:32.467 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/scrollax.min.js - 304 null text/javascript 47.3032ms
+2025-06-29 23:30:32.468 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/home/home.js - 304 null text/javascript 43.0068ms
+2025-06-29 23:30:32.470 +04:00 [INF] Sending file. Request path: '/assets/img/product-details/e2b9ffdb-ce0d-4a2f-89dc-62c02fa63a70_product-10-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\product-details\e2b9ffdb-ce0d-4a2f-89dc-62c02fa63a70_product-10-2.webp'
+2025-06-29 23:30:32.461 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/other/jquery.scrollUp.min.js - 304 null text/javascript 49.4796ms
+2025-06-29 23:30:32.481 +04:00 [INF] Sending file. Request path: '/assets/img/home/8fca7551-aecd-44aa-83c3-24542640c1e9-instagram-2.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\8fca7551-aecd-44aa-83c3-24542640c1e9-instagram-2.webp'
+2025-06-29 23:30:32.499 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/e10ec800-6dee-479a-9691-034bbbffbf87-instagram-1.webp - 200 5322 image/webp 535.8191ms
+2025-06-29 23:30:32.505 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/99d770fd-8135-4b37-8678-7f0ff7183053_product-10-1.webp - 200 4388 image/webp 587.5025ms
+2025-06-29 23:30:32.517 +04:00 [INF] Sending file. Request path: '/assets/img/home/ba47c866-169d-4f20-900e-784cc4c693f1-instagram-3.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\ba47c866-169d-4f20-900e-784cc4c693f1-instagram-3.webp'
+2025-06-29 23:30:32.543 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 567.604ms
+2025-06-29 23:30:32.546 +04:00 [INF] Sending file. Request path: '/assets/img/home/313ba257-16f6-4539-961c-5942bb692010-instagram-4.webp'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\313ba257-16f6-4539-961c-5942bb692010-instagram-4.webp'
+2025-06-29 23:30:32.561 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/title-decor-left.webp - null null
+2025-06-29 23:30:32.563 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/product-details/e2b9ffdb-ce0d-4a2f-89dc-62c02fa63a70_product-10-2.webp - 200 4468 image/webp 614.1868ms
+2025-06-29 23:30:32.581 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/title-decor-right.webp - null null
+2025-06-29 23:30:32.586 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/8fca7551-aecd-44aa-83c3-24542640c1e9-instagram-2.webp - 200 5426 image/webp 619.1279ms
+2025-06-29 23:30:32.602 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/home/category-tab-hover.webp - null null
+2025-06-29 23:30:32.634 +04:00 [INF] Sending file. Request path: '/assets/img/home/f90b0735-116b-4a7c-8726-1745034ee946-slider-5-n.png'. Physical path: 'C:\Users\ASUS\Desktop\Final_MVC_MozArt\Final_MozArt\wwwroot\assets\img\home\f90b0735-116b-4a7c-8726-1745034ee946-slider-5-n.png'
+2025-06-29 23:30:32.641 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/ba47c866-169d-4f20-900e-784cc4c693f1-instagram-3.webp - 200 12832 image/webp 670.4994ms
+2025-06-29 23:30:32.660 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 232.0604ms
+2025-06-29 23:30:32.661 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/313ba257-16f6-4539-961c-5942bb692010-instagram-4.webp - 200 4800 image/webp 680.4148ms
+2025-06-29 23:30:32.669 +04:00 [INF] The file /assets/img/home/title-decor-left.webp was not modified
+2025-06-29 23:30:32.685 +04:00 [INF] The file /assets/img/home/title-decor-right.webp was not modified
+2025-06-29 23:30:32.698 +04:00 [INF] The file /assets/img/home/category-tab-hover.webp was not modified
+2025-06-29 23:30:32.699 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/f90b0735-116b-4a7c-8726-1745034ee946-slider-5-n.png - 200 173769 image/png 837.6653ms
+2025-06-29 23:30:32.720 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/title-decor-left.webp - 304 null image/webp 159.5435ms
+2025-06-29 23:30:32.724 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/title-decor-right.webp - 304 null image/webp 142.8732ms
+2025-06-29 23:30:32.729 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/home/category-tab-hover.webp - 304 null image/webp 127.1385ms
+2025-06-29 23:30:32.775 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:30:32.787 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 11.1985ms
+2025-06-29 23:30:32.795 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:30:32.995 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/favicon.ico - null null
+2025-06-29 23:30:33.015 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/favicon.ico - 404 0 null 19.7583ms
+2025-06-29 23:30:33.028 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/favicon.ico, Response status code: 404
+2025-06-29 23:30:35.099 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Login - null null
+2025-06-29 23:30:35.122 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:30:35.134 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:30:35.155 +04:00 [INF] Executing ViewResult, running view Login.
+2025-06-29 23:30:35.257 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:30:35.269 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:30:35.284 +04:00 [INF] Executed ViewResult - view Login executed in 131.7942ms.
+2025-06-29 23:30:35.292 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 148.5914ms
+2025-06-29 23:30:35.317 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/login/login.css - null null
+2025-06-29 23:30:35.317 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:30:35.318 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/login/login.js - null null
+2025-06-29 23:30:35.318 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:30:35.322 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:30:35.328 +04:00 [INF] The file /assets/css/login/login.css was not modified
+2025-06-29 23:30:35.332 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 15.0463ms
+2025-06-29 23:30:35.338 +04:00 [INF] The file /assets/js/login/login.js was not modified
+2025-06-29 23:30:35.343 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Login - 200 null text/html; charset=utf-8 244.4133ms
+2025-06-29 23:30:35.345 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/login/login.css - 304 null text/css 27.145ms
+2025-06-29 23:30:35.349 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.4215ms
+2025-06-29 23:30:35.355 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/img/blog/page-title.webp - null null
+2025-06-29 23:30:35.358 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/login/login.js - 304 null text/javascript 40.0171ms
+2025-06-29 23:30:35.373 +04:00 [INF] The file /assets/img/blog/page-title.webp was not modified
+2025-06-29 23:30:35.383 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/img/blog/page-title.webp - 304 null image/webp 27.3712ms
+2025-06-29 23:32:36.264 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Account/Login - application/x-www-form-urlencoded 224
+2025-06-29 23:32:36.286 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:32:36.313 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Final_MozArt.ViewModels.Account.LoginVM) on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:32:36.556 +04:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-06-29 23:32:36.591 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-06-29 23:32:36.851 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-06-29 23:32:36.896 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-06-29 23:32:36.930 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-06-29 23:32:36.984 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-06-29 23:32:37.009 +04:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-06-29 23:32:37.032 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_EmailOrUsername_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__request_EmailOrUsername_0 OR [a].[UserName] = @__request_EmailOrUsername_0
+2025-06-29 23:32:37.090 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AppUserId], [t].[CreateDate], [b0].[Id], [b0].[BasketId], [b0].[Count], [b0].[CreateDate], [b0].[ProductId]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[AppUserId], [b].[CreateDate]
+    FROM [Baskets] AS [b]
+    WHERE [b].[AppUserId] = @__userId_0
+) AS [t]
+LEFT JOIN [BasketProducts] AS [b0] ON [t].[Id] = [b0].[BasketId]
+ORDER BY [t].[Id]
+2025-06-29 23:32:37.105 +04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-29 23:32:37.112 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 788.747ms
+2025-06-29 23:32:37.120 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:32:37.124 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Account/Login - 302 0 null 858.8343ms
+2025-06-29 23:32:37.129 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:32:37.163 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:32:37.169 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:32:37.187 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:32:37.201 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:32:37.214 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:32:37.227 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:32:37.244 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:32:37.265 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:32:37.280 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:37.293 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:32:37.310 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:37.339 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-06-29 23:32:37.350 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:37.366 +04:00 [INF] Executed ViewResult - view Index executed in 72.6521ms.
+2025-06-29 23:32:37.385 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 203.9918ms
+2025-06-29 23:32:37.389 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:32:37.405 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 276.182ms
+2025-06-29 23:32:37.420 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:32:37.437 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:32:37.447 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 26.8541ms
+2025-06-29 23:32:37.473 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.8088ms
+2025-06-29 23:32:38.460 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:32:38.469 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 8.5052ms
+2025-06-29 23:32:38.475 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:32:40.030 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Account/Logout?userId=7874ca0a-12a8-4a5f-bd34-2007b33aa88b - application/x-www-form-urlencoded 225
+2025-06-29 23:32:40.064 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Logout (Final_MozArt)'
+2025-06-29 23:32:40.072 +04:00 [INF] Route matched with {action = "Logout", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:32:40.097 +04:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-06-29 23:32:40.101 +04:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-06-29 23:32:40.107 +04:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-06-29 23:32:40.121 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AppUserId], [t].[CreateDate], [b0].[Id], [b0].[BasketId], [b0].[Count], [b0].[CreateDate], [b0].[ProductId]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[AppUserId], [b].[CreateDate]
+    FROM [Baskets] AS [b]
+    WHERE [b].[AppUserId] = @__userId_0
+) AS [t]
+LEFT JOIN [BasketProducts] AS [b0] ON [t].[Id] = [b0].[BasketId]
+ORDER BY [t].[Id]
+2025-06-29 23:32:40.134 +04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-29 23:32:40.139 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Logout (Final_MozArt) in 58.4187ms
+2025-06-29 23:32:40.148 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Logout (Final_MozArt)'
+2025-06-29 23:32:40.155 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Account/Logout?userId=7874ca0a-12a8-4a5f-bd34-2007b33aa88b - 302 0 null 124.2396ms
+2025-06-29 23:32:40.157 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:32:40.178 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:32:40.184 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:32:40.202 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:32:40.211 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:32:40.221 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:32:40.231 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:32:40.241 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:32:40.247 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:32:40.254 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:40.256 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:32:40.260 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:40.268 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:40.275 +04:00 [INF] Executed ViewResult - view Index executed in 19.4025ms.
+2025-06-29 23:32:40.301 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 108.9425ms
+2025-06-29 23:32:40.307 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:32:40.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:32:40.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:32:40.309 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 151.0678ms
+2025-06-29 23:32:40.312 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.1408ms
+2025-06-29 23:32:40.321 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.8894ms
+2025-06-29 23:32:40.399 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:32:40.406 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 6.5555ms
+2025-06-29 23:32:40.411 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:32:43.364 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Login - null null
+2025-06-29 23:32:43.378 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:32:43.384 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:32:43.391 +04:00 [INF] Executing ViewResult, running view Login.
+2025-06-29 23:32:43.399 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:43.407 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:43.419 +04:00 [INF] Executed ViewResult - view Login executed in 27.5956ms.
+2025-06-29 23:32:43.421 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 29.9201ms
+2025-06-29 23:32:43.461 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:32:43.461 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:32:43.465 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:32:43.486 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Login - 200 null text/html; charset=utf-8 122.4296ms
+2025-06-29 23:32:43.468 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 7.1776ms
+2025-06-29 23:32:43.507 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.6431ms
+2025-06-29 23:32:57.485 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Account/Login - application/x-www-form-urlencoded 223
+2025-06-29 23:32:57.496 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:32:57.501 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Final_MozArt.ViewModels.Account.LoginVM) on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:32:57.515 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-06-29 23:32:57.534 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-06-29 23:32:57.682 +04:00 [INF] Executing ViewResult, running view Login.
+2025-06-29 23:32:57.693 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:57.707 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:32:57.718 +04:00 [INF] Executed ViewResult - view Login executed in 35.8106ms.
+2025-06-29 23:32:57.724 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 214.2031ms
+2025-06-29 23:32:57.745 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:32:57.764 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:32:57.770 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.8725ms
+2025-06-29 23:32:57.764 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Account/Login - 200 null text/html; charset=utf-8 279.5169ms
+2025-06-29 23:32:57.764 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:32:57.800 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.8501ms
+2025-06-29 23:33:03.943 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Account/Login - application/x-www-form-urlencoded 223
+2025-06-29 23:33:03.953 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:33:03.958 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Final_MozArt.ViewModels.Account.LoginVM) on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:33:03.970 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-06-29 23:33:03.986 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-06-29 23:33:04.119 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-06-29 23:33:04.131 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-06-29 23:33:04.144 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-06-29 23:33:04.161 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-06-29 23:33:04.175 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-06-29 23:33:04.194 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-06-29 23:33:04.208 +04:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-06-29 23:33:04.218 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_EmailOrUsername_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__request_EmailOrUsername_0 OR [a].[UserName] = @__request_EmailOrUsername_0
+2025-06-29 23:33:04.233 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AppUserId], [t].[CreateDate], [b0].[Id], [b0].[BasketId], [b0].[Count], [b0].[CreateDate], [b0].[ProductId]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[AppUserId], [b].[CreateDate]
+    FROM [Baskets] AS [b]
+    WHERE [b].[AppUserId] = @__userId_0
+) AS [t]
+LEFT JOIN [BasketProducts] AS [b0] ON [t].[Id] = [b0].[BasketId]
+ORDER BY [t].[Id]
+2025-06-29 23:33:04.245 +04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-29 23:33:04.251 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 285.5507ms
+2025-06-29 23:33:04.260 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:33:04.267 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Account/Login - 302 0 null 323.8549ms
+2025-06-29 23:33:04.271 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:33:04.301 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:33:04.307 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:33:04.319 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:33:04.335 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:33:04.351 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:33:04.366 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:33:04.381 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:33:04.395 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:33:04.408 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:33:04.420 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:33:04.429 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:33:04.445 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-06-29 23:33:04.461 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:33:04.475 +04:00 [INF] Executed ViewResult - view Index executed in 54.719ms.
+2025-06-29 23:33:04.493 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 176.1821ms
+2025-06-29 23:33:04.501 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:33:04.510 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 238.8615ms
+2025-06-29 23:33:04.513 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:33:04.513 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:33:04.523 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 10.2938ms
+2025-06-29 23:33:04.545 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.3583ms
+2025-06-29 23:33:04.562 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:33:04.570 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 7.7938ms
+2025-06-29 23:33:04.574 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:33:08.471 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Account/Logout?userId=a00dd975-c0a4-4df1-838b-0f3bd3f15e53 - application/x-www-form-urlencoded 225
+2025-06-29 23:33:08.486 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Logout (Final_MozArt)'
+2025-06-29 23:33:08.491 +04:00 [INF] Route matched with {action = "Logout", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:33:08.503 +04:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-06-29 23:33:08.509 +04:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-06-29 23:33:08.514 +04:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-06-29 23:33:08.517 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AppUserId], [t].[CreateDate], [b0].[Id], [b0].[BasketId], [b0].[Count], [b0].[CreateDate], [b0].[ProductId]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[AppUserId], [b].[CreateDate]
+    FROM [Baskets] AS [b]
+    WHERE [b].[AppUserId] = @__userId_0
+) AS [t]
+LEFT JOIN [BasketProducts] AS [b0] ON [t].[Id] = [b0].[BasketId]
+ORDER BY [t].[Id]
+2025-06-29 23:33:08.525 +04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-29 23:33:08.527 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Logout (Final_MozArt) in 24.9487ms
+2025-06-29 23:33:08.530 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Logout (Final_MozArt)'
+2025-06-29 23:33:08.532 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Account/Logout?userId=a00dd975-c0a4-4df1-838b-0f3bd3f15e53 - 302 0 null 60.6267ms
+2025-06-29 23:33:08.536 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:33:08.549 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:33:08.553 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:33:08.561 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:33:08.567 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:33:08.577 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:33:08.584 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:33:08.592 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:33:08.599 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:33:08.608 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:33:08.615 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:33:08.620 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:33:08.629 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:33:08.641 +04:00 [INF] Executed ViewResult - view Index executed in 25.3887ms.
+2025-06-29 23:33:08.643 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 84.2586ms
+2025-06-29 23:33:08.675 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:33:08.677 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 141.5059ms
+2025-06-29 23:33:08.680 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:33:08.681 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:33:08.689 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 8.2813ms
+2025-06-29 23:33:08.698 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.6173ms
+2025-06-29 23:33:08.728 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:33:08.732 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 3.3781ms
+2025-06-29 23:33:08.736 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:34:03.567 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Register - null null
+2025-06-29 23:34:03.579 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Register (Final_MozArt)'
+2025-06-29 23:34:03.584 +04:00 [INF] Route matched with {action = "Register", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:34:03.587 +04:00 [INF] Executing ViewResult, running view Register.
+2025-06-29 23:34:03.613 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:03.618 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:03.627 +04:00 [INF] Executed ViewResult - view Register executed in 40.4936ms.
+2025-06-29 23:34:03.629 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Register (Final_MozArt) in 43.0926ms
+2025-06-29 23:34:03.670 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:34:03.670 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/css/register/register.css - null null
+2025-06-29 23:34:03.670 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Register (Final_MozArt)'
+2025-06-29 23:34:03.670 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/js/register/register.js - null null
+2025-06-29 23:34:03.671 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:34:03.674 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.3152ms
+2025-06-29 23:34:03.677 +04:00 [INF] The file /assets/css/register/register.css was not modified
+2025-06-29 23:34:03.677 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Register - 200 null text/html; charset=utf-8 110.7278ms
+2025-06-29 23:34:03.681 +04:00 [INF] The file /assets/js/register/register.js was not modified
+2025-06-29 23:34:03.689 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.1553ms
+2025-06-29 23:34:03.691 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/css/register/register.css - 304 null text/css 21.1245ms
+2025-06-29 23:34:03.698 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/js/register/register.js - 304 null text/javascript 27.2218ms
+2025-06-29 23:34:11.337 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:34:11.355 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:34:11.361 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:34:11.365 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:34:11.371 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:34:11.376 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:34:11.383 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:34:11.388 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:34:11.395 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:34:11.401 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:11.407 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:34:11.411 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:11.414 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:11.419 +04:00 [INF] Executed ViewResult - view Index executed in 11.6945ms.
+2025-06-29 23:34:11.460 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:34:11.460 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:34:11.462 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 99.5011ms
+2025-06-29 23:34:11.466 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 5.7743ms
+2025-06-29 23:34:11.502 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:34:11.514 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.6126ms
+2025-06-29 23:34:11.523 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 185.8172ms
+2025-06-29 23:34:11.542 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:34:11.548 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 6.6592ms
+2025-06-29 23:34:11.553 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404
+2025-06-29 23:34:13.641 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/Account/Login - null null
+2025-06-29 23:34:13.654 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:34:13.660 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:34:13.666 +04:00 [INF] Executing ViewResult, running view Login.
+2025-06-29 23:34:13.671 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:13.679 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:13.685 +04:00 [INF] Executed ViewResult - view Login executed in 19.647ms.
+2025-06-29 23:34:13.704 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 39.6669ms
+2025-06-29 23:34:13.706 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:34:13.709 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/Account/Login - 200 null text/html; charset=utf-8 67.602ms
+2025-06-29 23:34:13.723 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:34:13.724 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:34:13.729 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.2549ms
+2025-06-29 23:34:13.749 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.2701ms
+2025-06-29 23:34:27.131 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7286/Account/Login - application/x-www-form-urlencoded 223
+2025-06-29 23:34:27.148 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:34:27.154 +04:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Final_MozArt.ViewModels.Account.LoginVM) on controller Final_MozArt.Controllers.AccountController (Final_MozArt).
+2025-06-29 23:34:27.171 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-06-29 23:34:27.185 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-06-29 23:34:27.286 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-06-29 23:34:27.297 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-06-29 23:34:27.305 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-06-29 23:34:27.310 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-06-29 23:34:27.316 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-06-29 23:34:27.330 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-06-29 23:34:27.343 +04:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-06-29 23:34:27.351 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_EmailOrUsername_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__request_EmailOrUsername_0 OR [a].[UserName] = @__request_EmailOrUsername_0
+2025-06-29 23:34:27.368 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AppUserId], [t].[CreateDate], [b0].[Id], [b0].[BasketId], [b0].[Count], [b0].[CreateDate], [b0].[ProductId]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[AppUserId], [b].[CreateDate]
+    FROM [Baskets] AS [b]
+    WHERE [b].[AppUserId] = @__userId_0
+) AS [t]
+LEFT JOIN [BasketProducts] AS [b0] ON [t].[Id] = [b0].[BasketId]
+ORDER BY [t].[Id]
+2025-06-29 23:34:27.381 +04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-29 23:34:27.389 +04:00 [INF] Executed action Final_MozArt.Controllers.AccountController.Login (Final_MozArt) in 224.2279ms
+2025-06-29 23:34:27.397 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.AccountController.Login (Final_MozArt)'
+2025-06-29 23:34:27.404 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7286/Account/Login - 302 0 null 272.8542ms
+2025-06-29 23:34:27.407 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/ - null null
+2025-06-29 23:34:27.420 +04:00 [INF] Executing endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:34:27.425 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Final_MozArt.Controllers.HomeController (Final_MozArt).
+2025-06-29 23:34:27.430 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Image], [s].[IsMain], [s].[Title]
+FROM [Sliders] AS [s]
+2025-06-29 23:34:27.434 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name]
+FROM [Categories] AS [c]
+2025-06-29 23:34:27.439 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name]
+FROM [Brands] AS [b]
+2025-06-29 23:34:27.442 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreateDate], [i].[Image]
+FROM [Instagrams] AS [i]
+2025-06-29 23:34:27.447 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BrandId], [p].[CategoryId], [p].[CreateDate], [p].[Description], [p].[Name], [p].[Price], [b].[Id], [b].[CreateDate], [b].[Image], [b].[Name], [c].[Id], [c].[CreateDate], [c].[Image], [c].[Name], [p0].[Id], [p0].[CreateDate], [p0].[Image], [p0].[IsHover], [p0].[IsMain], [p0].[ProductId]
+FROM [Products] AS [p]
+INNER JOIN [Brands] AS [b] ON [p].[BrandId] = [b].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+LEFT JOIN [ProductImages] AS [p0] ON [p].[Id] = [p0].[ProductId]
+ORDER BY [p].[Id], [b].[Id], [c].[Id]
+2025-06-29 23:34:27.453 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Email], [c].[IsApproved], [c].[Message], [c].[Name]
+FROM [ContactMessages] AS [c]
+WHERE [c].[IsApproved] = CAST(1 AS bit)
+2025-06-29 23:34:27.466 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:27.474 +04:00 [INF] Executing ViewResult, running view Index.
+2025-06-29 23:34:27.483 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:27.494 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-06-29 23:34:27.503 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreateDate], [s].[Key], [s].[Value]
+FROM [Settings] AS [s]
+2025-06-29 23:34:27.511 +04:00 [INF] Executed ViewResult - view Index executed in 37.6104ms.
+2025-06-29 23:34:27.514 +04:00 [INF] Executed action Final_MozArt.Controllers.HomeController.Index (Final_MozArt) in 86.7168ms
+2025-06-29 23:34:27.527 +04:00 [INF] Executed endpoint 'Final_MozArt.Controllers.HomeController.Index (Final_MozArt)'
+2025-06-29 23:34:27.529 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/ - 200 null text/html; charset=utf-8 122.3392ms
+2025-06-29 23:34:27.555 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-29 23:34:27.555 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/_vs/browserLink - null null
+2025-06-29 23:34:27.559 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.5616ms
+2025-06-29 23:34:27.573 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.3767ms
+2025-06-29 23:34:27.593 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - null null
+2025-06-29 23:34:27.598 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7286/assets/images/title/title-3.webp - 404 0 null 4.398ms
+2025-06-29 23:34:27.601 +04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7286/assets/images/title/title-3.webp, Response status code: 404

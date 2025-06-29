@@ -61,7 +61,6 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
-// Stripe SDK üçün secret key-i təyin et
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
 
@@ -92,7 +91,7 @@ else
 
 app.UseHttpsRedirection();
 
-//app.UseMiddleware<GlobalExceptionHandler>();
+app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseStaticFiles();
 
@@ -101,23 +100,23 @@ app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.UseStatusCodePages(context =>
-//{
-//    var response = context.HttpContext.Response;
-//    var path = response.StatusCode switch
-//    {
-//        401 => "/Unauthorized/Index",
-//        404 => "/NotFound/Index",
-//        _ => null
-//    };
+app.UseStatusCodePages(context =>
+{
+    var response = context.HttpContext.Response;
+    var path = response.StatusCode switch
+    {
+        401 => "/Unauthorized/Index",
+        404 => "/NotFound/Index",
+        _ => null
+    };
 
-//    if (path != null)
-//    {
-//        response.Redirect(path);
-//    }
+    if (path != null)
+    {
+        response.Redirect(path);
+    }
 
-//    return Task.CompletedTask;
-//});
+    return Task.CompletedTask;
+});
 
 
 app.MapControllerRoute(

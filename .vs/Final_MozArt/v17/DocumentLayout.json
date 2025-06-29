@@ -1,46 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Final_MVC_MozArt\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.BlogComments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.Blogs.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Blogs [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.Blogs.sql",
-              "ToolTip": "dbo.Blogs [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-29T17:36:02.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.BlogComments [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_0AGJOQ8_SQLEXPRESS01/MozArtDbb/True/SqlTable/dbo.BlogComments.sql",
-              "ToolTip": "dbo.BlogComments [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-29T17:35:52.043Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
